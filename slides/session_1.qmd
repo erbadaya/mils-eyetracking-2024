@@ -19,3 +19,54 @@ format:
         </style>
 editor: visual
 ---
+
+# Introduction to the course
+
+## Welcome to 'Eye-tracking'
+
+1. Teaching team
+2. Learning objectives
+3. Requirements
+4. Schedule
+
+## The team
+
+::: columns
+::: {.column width="50%"}
+
+- Esperanza Badaya
+    - Research focus: Speech comprehension (esp. paralinguistic cues & social cognition)
+    - esperanza.badaya@ugent.be
+    
+::: 
+::: {.column width="50%"}
+
+- Mariia Baltais
+    - Research focus: Reading (esp.)
+    - mariia.baltais@ugent.be
+
+:::
+:::
+
+## The team
+
+- You are also part of the team now :)
+    - What is your name & your home institution 
+    - What are you interested in & why you chose this module
+    - Do you have any experience with eye-tracking? (be it as a researcher or as a participant)
+
+## Learning objectives
+
+
+## Requirements
+
+- **No coding experience or statistical knowledge is expected**
+- Install the required software for experiment building and 
+
+## Schedule
+
+
+# Session I: Introduction to eye-tracking
+
+## Overview
+
