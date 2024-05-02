@@ -1,0 +1,59 @@
+---
+title: "Eye-tracking - Session 2"
+author: "Badaya & Baltais"
+format: 
+   clean-revealjs:
+    logo: images/logo_ugent.png
+    footer: Session 2 - Visual World Paradigm
+    include-in-header: 
+      text: |
+        <style>
+        .center-xy {
+          margin: 0;
+          position: absolute;
+          top: 40%;
+          left: 40%;
+          -ms-transform: translateY(-50%), translateX(-50%);
+          transform: translateY(-50%), translateX(-50%);
+        }
+        </style>
+editor: visual
+---
+
+How is everyone doing today?
+Any questions from yesterday?
+
+## Plan of today
+
+Visual World Paradigm
+
+1.  History
+2.  Visual World Paradigm
+3.  Confounds of the Visual World Paradigm
+4.  Uses
+5.  Pros & cons
+
+# The Visual World Paradigm
+
+## The Visual World Paradigm
+
+The Visual World Paradigm (VWP) is an eye-tracking paradigm that commonly describes an experiment where [auditory and visual stimuli]{.fg style="--col: #e64173"} are presented to a participant, with the goal of understanding how the latter influences the former around a scene.
+
+## History
+
+"While on a safari in [Africa]{.fg style="--col: #e64173"} \[...\] I noticed a hungry [lion]{.fg style="--col: #e64173"} slowly moving through the tall grass toward a herd of grazing [zebra]{.fg style="--col: #e64173"}".
+
+-   Cooper's (1974) method became later on popularised by Tanenhaus et al. (1995).
+
+![Cooper, 1974](images/session_2/cooper_vwp.jpg)
+
+## Basics of the Visual World Paradigm
+
+1.  Elements
+2.  Structure
+3.  Measures
+4.  Analysis
+5.  Results
+6.  Confounds
+7.  Variations
+
