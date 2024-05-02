@@ -57,3 +57,705 @@ The Visual World Paradigm (VWP) is an eye-tracking paradigm that commonly descri
 6.  Confounds
 7.  Variations
 
+## Visual World Paradigm
+
+Working example: Altmann and Kamide (1999)
+
+Anticipation (\~prediction) of lexical items given verb semantics.
+
+## Elements
+
+What are the elements in Altmann and Kamide that you can identify as characteristic of the Visual World Paradigm?
+
+. . .
+
+-   Auditory stimuli
+-   Visual stimuli
+-   Task
+
+## Auditory stimuli
+
+Example of Altmann and Kamide?
+
+. . .
+
+-   The boy will *eat* the cake (constraining).
+-   The boy will *move* the cake (unconstraining).
+
+Control of stimuli:
+
+- Context matched.
+-   Counterbalancing.
+-   Comparison between levels.
+-   Inter alia.
+
+## Auditory stimuli
+
+Participants *listen* to these sentences.
+
+-   Need to *record* our stimuli.
+
+Tips:
+
+-   All recordings in one session.
+-   Talk to the person recording (to avoid monotonous voice).
+-   Sound-isolating recording studio.
+-   Several recordings of the same sentence.
+-   Consider cross-splicing.
+    -   Editing tools: Audacity, Praat.
+-   Control speaker's traits.
+
+## Auditory stimuli
+
+Eye-movements in the VWP are [time-locked]{.fg style="--col: #e64173"}.
+
+-   Time window of analysis around a critical part of speech e.g., critical word.
+    -   Triggers (coding)
+-   Different time windows to explore [different processes]{.fg style="--col: #e64173"} within speech comprehension.
+    -   Integration versus Prediction (analysis)
+
+## Auditory stimuli
+
+Can you think of other elements of audio that can serve as a time anchor?
+
+. . .
+
+-   Prosodic contour.
+-   Case marking.
+-   Speech errors.
+
+## Auditory stimuli
+
+Can you think of other properties of audio that can be manipulated?
+
+. . .
+
+-   Speech rate.
+-   Traits of the speaker.
+-   Prosody.
+-   Noise.
+-   Inter alia.
+
+## Visual stimuli
+
+::: columns
+::: {.column width="50%"}
+Elements in Altmann and Kamide?
+:::
+
+::: {.column width="50%"}
+![](images/session_2/altmannkamide1999.png)
+:::
+:::
+
+## Visual stimuli
+
+::: columns
+::: {.column width="50%"}
+Elements in Altmann and Kamide?
+
+4: Target (cake) and *distractors* (ball, train, car).
+
+-   And the boy.
+:::
+
+::: {.column width="50%"}
+![](images/session_2/altmannkamide1999.png)
+:::
+:::
+
+## Visual stimuli
+
+Eye-movements in the VWP are space-locked: Areas of Interest
+
+1.  How many items can there be on display?
+2.  How can items be displayed?
+3.  How can we manipulate the items?
+4.  How can we select images?
+
+## Visual stimuli
+
+1.  How many items can there be on display?
+
+-   [\[2, 5\]]{.fg style="--col: #e64173"}
+-   Working memory (see Huettig et al., 2011)
+
+## Visual stimuli
+
+2.  How can items be displayed?
+
+Properties of the display allow for exploration of different processes in speech comprehension.
+
+-   Semirealistic scenes: [World knowledge]{.fg style="--col: #e64173"}.
+-   Arrays: [Conceptual and lexical knowledge]{.fg style="--col: #e64173"} associated with individual words.
+-   Printed words: [Phonological information and orthographic]{.fg style="--col: #e64173"} processing, comprehension of abstract words.
+
+::: notes
+Mention the plausibility bit!!
+:::
+
+## Visual stimuli
+
+2.  How can items be displayed?
+
+::: {columns}
+::: {.column width="30%"}
+![Altmann & Kamide, 1999](images/session_2/altmannkamide1999.png)
+:::
+
+::: {.column width="30%"}
+![Huettig & McQueen, 2007](images/session_3/array_example.jpg)
+:::
+
+::: {.column width="30%"}
+![Huettig & McQueen, 2007](images/session_3/ortho_example.jpg)
+:::
+:::
+
+## Visual stimuli
+
+3.  How can we manipulate the items?
+
+[Relationship between target and distractor(s)]{.fg style="--col: #e64173"}.
+
+-   Semantic distance, phonological distance, etc. - even shape!
+-   Target (critical word) might not even be present.
+
+## Visual stimuli
+
+3.  How can we manipulate the items?
+
+![Allopenna et al., 1996](images/session_3/phonological_manipulation.JPG)
+
+## Visual stimuli
+
+4.  How can we select images?
+
+Databases *or* create your own.
+
+-   Later case: Need for validation cf. confounds.
+    -   Name agreement.
+
+Tips:
+
+-   Control for visual salience.
+-   Control for size (coding).
+-   Familiarisation phase.
+-   If also pupillometry -\> stimuli luminance.
+
+## Task
+
+As a function of your research question.
+
+-   Direct action
+-   Look and listen
+
+But also;
+
+-   Perform a concurrent task? (impair WM)
+-   Interpretation of speech?
+
+Remember: the active viewer (Yarbus).
+
+## Structure
+
+**Before the experiment begins**
+
+-   Calibration and validation.
+
+    -   Number of elements for interest areas.
+    -   Size of interest areas.
+    -   Horizontal and vertical areas.
+
+-   Decide sample rate.
+
+## Structure
+
+![](images/session_3/vwp_trialsequence_example.jpg)
+
+## Drift correction
+
+-   Ensure accuracy.
+-   Where?
+    -   [Middle]{.fg style="--col: #e64173"} (no bias for an image beforehand).
+-   When?
+    -   Beginning of every trial/block.
+
+## Preview window
+
+-   Very specific to the VWP
+-   Presentation of visual stimuli without auditory stimuli, so that participants can inspect the visual scene.
+    -   Remember the linking hypothesis!
+
+[Pros and cons]{.fg style="--col: #e64173"} of preview window (e.g., Huettig & McQueen, 2007).
+
+-   Eye movements towards objects as a function of preview window.
+-   Pre-activation of labels.
+-   Contestable?
+
+## Preview window
+
+Length?
+
+-   [Previous research]{.fg style="--col: #e64173"} e.g., 2000 ms, 1000 ms from target onset, etc.
+    -   Level of interest e.g., phonological activation versus semantic activation.
+
+## Audio presentation
+
+-   Send triggers for audio.
+    -   Give enough time for a measure to occur.
+    -   Altmann and Kamide: Trigger -\> verb onset.
+
+## Measures
+
+Fixations and saccades.
+
+-   When & where
+-   Operationalisation
+    -   Fixation counts, proportion on ROIs,...
+-   100-200 ms to launch a saccade (Matin et al., 1993)
+
+::: notes
+The former much more common than the latter. Because we launch a saccade when we want to fixate on something, we take saccade latency as a measure too. When you consider fixations, you need to acount for the time it takes people to launch a saccade.
+:::
+
+## Measures: Linking hypothesis
+
+Linking hypothesis: Link response to a hypothesized process.
+
+-   Eye movements reflect lexical access.
+    -   (In reading) Time spent looking at a word == how long it takes to process it.
+
+Visual World Parading = [Linguistic + non-linguistic information.]{.fg style="--col: #e64173"}
+
+-   What guides what? Whether and how do they interact?
+-   **How can we be sure that our results eye-movements were linguistically mediated?**
+
+## Measures: Linking hypothesis
+
+"Default": Increases in fixation == increases in activation.
+
+-   Automatised routines; recognising a name triggers these routines, in turn, these routines trigger a saccade and thus fixations on objects (Tanenhaus et al., 2000).
+
+## Measures: Linking hypothesis
+
+Not necessarily (see Magnuson, 2019):
+
+  - Language processing guiding vision (e.g., Allopenna et al., 1998).
+  - Vision also affecting language processing (e.g. Huettig & McQueen, 2007).
+  - Listeners getting ahead of speech (e.g., Altmann & Kamide, 1999).
+
+
+::: notes
+A much better discussion of this can be found in Magnuson (2019). I am only mentioning this because these linking hypothesis highlight different aspects we need to consider about the VWP and how we interpret fixations and saccades (e.g., whether they are language-mediated). Magnuson discusses models for those, as well as caveats for each.
+
+In fact, most papers will not discuss what hypothesis they are relying on (and usually, the assumption is the default one, by Tanenhaus et al., 2010)
+
+The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors.
+
+The second one suggests that visual information can partially mediate fixations. This is idea is much more developed in Huettig et al. (2011). The idea is that representations are activated prior to speech, you can think of it as a way of 'priming'. They also discuss that by necessity, vision and language need to be connected as we need to move our eyes towards something, so we need to link the linguistic information to spatial information (e.g., where is said object). Visual display activates visual features which in turn activate phonological and semantic features associated to those. Similarly, speech activates these. The overlap leads to even more activation. Note that this kind of entails that you are constantly activating labels when you are looking at the world.
+
+The mental world goes back a bit to the first one, but instead of purely describing phonological input, it also considers the possibility that individuals are building a mental world (kind of like a mental representation of what is being said). They then explore scenes with this mental representation. This was developed by Altmann and Kamide, so it kind of makes sense they advocate for something like this: They need to accomodate for prediction.
+
+The final one has components of the other three. Visual and linguistic information interact, what leads what is following Huettig and McQueen e.g., timing and task. One components is deep interaction: when one type of infor alters the other, for example, no showing examples of garden-path when nothing in the display does not support such interpretation (visual information gets ahead of whatever linguistic information may come up, and alters it, as opposed to biasing it).
+:::
+
+## Measures: Linking hypothesis
+
+But why do we care?
+
+-   Role of instructions and presentation
+    -   Click on the red \[target\]
+-   Role of preview window
+    -   Activation of phonological and semantic information
+-   Bottom-up versus top-down effects
+    -   Passive versus active processes (e.g., Pickering & Gambi's (2018) prediction-by-production)
+
+::: notes
+Bottom-up and top-down has to do with mental world
+:::
+
+## Analysis
+
+DV = saccade latency, proportion of fixations, empirical logits, yes/no fixations...
+
+IV = your experimental variables **and time**.
+
+-   Time window of analysis.
+    -   Marked by your triggers (e.g., sentence onset, target onset, target offset...)
+    -   Research question.
+
+## Analysis
+
+Interest: Prediction of a noun following verb semantics, what is more interesting for you? TW from sentence onset, from verb onset, or from noun onset? What reflects prediction?
+
+. . .
+
+Verb onset - noun onset (+200 for saccades)
+
+-   Reference resolution, word recognition, ...
+
+## Analysis
+
+Collapse all samples before and after.
+
+-   Are there more fixations on the cake when is preceded by 'eat' compared to 'move'?
+
+## Analysis
+
+Time binning.
+
+-   Related to sampling frequency.
+-   Group of samples.
+
+With 500 Hz, you have 500 samples per second, one every 2 ms.
+
+-   You can make bins of 10 ms (contains 5 samples), 20 ms (contains 10 samples)...
+-   You cannot make bins of 15 ms.
+
+::: notes
+You hardly explore second by second, but instead, aggregate samples over X amount of milliseconds. We call this time binning analysis. This is the first kind of data pre-processing, of course you can later see how people then analysis into groups of a 100 (e.g., any significance in the first 100, then the next, and so on).
+:::
+
+## Analysis
+
+More on W9 & W11
+
+Divide in approaches (see Ito & Knoeferle, 2023):
+
+::: columns
+::: {.column width="50%"}
+::: r-stack
+**Linear**
+:::
+
+-   (G)LMM/ANOVAs by subjects & items/t-tests
+
+There is an increase or a decrease over time. Cannot tell *when* this increase/decrease happens, but (G)LMMs are the most common analysis. - but cf. models per time interval.
+:::
+
+::: {.column width="50%"}
+::: r-stack
+**Non-linear**
+:::
+
+-   Growth Curve Analysis, cluster analysis, Generalised Additive Mixed Models, BOLTS...
+
+How this increase/decrease over time occurs. Some can assess when the differences in conditions become statistically significant.
+:::
+:::
+
+## Results
+
+Commonly, plots.
+
+-   x: time
+-   y: proportion/probability of fixations.
+-   line style: condition
+
+::: r-stack
+![](images/session_2/altmannkamide_results.png)
+:::
+
+## Results
+
+![](images/session_1/vwp_data.JPG)
+
+## Confounds
+
+<br> <br> <br>
+
+::: r-stack
+Given your knowledge in linguistics & what we've discussed, what should we keep in mind when creating a VWP experiment?
+:::
+
+## Confounds
+
+Image presentation.
+
+-   Salience
+
+::: r-stack
+![](images/session_2/train.png) ![](images/session_2/boat_pic.jpg)
+:::
+
+## Confounds
+
+<br> <br>
+
+Image presentation
+
+::: columns
+::: {.column width="50%"}
+-   Name agreement
+    -   Population
+    -   Clarity
+:::
+
+::: {.column width="50%"}
+::: r-stack
+![](images/session_2/turtle.png)
+:::
+:::
+:::
+
+## Confounds
+
+Image presentation
+
+-   Size & quality
+-   Counterbalance position
+-   Luminance (! pupillometry)
+
+## Confounds
+
+Image relationship
+
+-   Semantic distance
+-   Phonological overlap
+-   Lexical properties e.g., frequency.
+
+## Confounds
+
+Audio properties
+
+-   Same/different voices
+    -   Uncanny valley
+-   Phonetic cues (e.g., co-articulation)
+    -   Cross-splicing audios
+-   Volume
+-   Prosody
+-   Accent
+
+## Confounds
+
+Audio properties
+
+-   Speech rate
+
+![](images/session_2/speechrate_vwp.png)
+
+## Exercise: Huettig & McQueen (2007)
+
+Any questions on the paper?
+
+. . .
+
+1.  What is the visual display? Why?
+2.  How many samples in 20 ms bins?
+3.  What is the time window of analysis? Why?
+4.  What is the difference between Exp 1 and Exp 2?
+
+## Exercise: Huettig & McQueen (2007)
+
+1.  What is the visual display? Why?
+
+. . .
+
+4 images representing 3 related and 1 unrelated items to the target.
+
+-   Phonology, shape, semantics.
+-   No target displayed to maximise fixations to distractors.
+-   Distractors chosen to explore whether fixations are driven by phonology, visual or semantic information.
+
+## Exercise: Huettig & McQueen (2007)
+
+2.  How many samples in 20 ms bins?
+
+. . .
+
+Recording at 250 Hz, 250 samples per second.
+
+-   5 samples.
+
+## Exercise: Huettig & McQueen (2007)
+
+3.  What is the time window of analysis? Why?
+
+. . .
+
+From noun onset +200 (to account for a saccade) - 1000 ms.
+
+## Exercise: Huettig & McQueen (2007)
+
+4.  What is the difference between Exp 1 and Exp 2?
+
+. . .
+
+Preview window.
+
+## Variations
+
+Preferential look paradigm (\~ VWP for infants)
+
+::: columns
+::: {.column width="50%"}
+-   Different tracker
+-   Stimuli presentation
+    -   What is discourse-old versus difficult.
+-   Messier data, fewer trials
+:::
+
+::: {.column width="50%"}
+![](images/session_2/preferential_kids.png)
+:::
+:::
+
+## Variations
+
+Language production.
+
+-   The link between planning and eye movements is less direct.
+
+-   Eye movements \~ labour division of speech production (e.g., Levelt's model)
+
+    -   Conceptual
+    -   Formulation
+    -   Articulation
+
+-   How does looking at an object relate to production stages?
+
+    -   Do people fixate for longer on objects harder to retrieve?
+    -   Do people start producing speech prior to fixating on the object to name?
+
+## Variations
+
+Language production.
+
+::: columns
+::: {.column width="50%"}
+-   Only images.
+    -   [Time-locked to voice onset/offset]{.fg style="--col: #e64173"}.
+    -   Manipulations: Image degradation, word frequency, etc.
+        -   Relation to the level of interest.
+-   Network task
+:::
+
+::: {.column width="50%"}
+<br>
+
+![Pistono & Hartsuiker, 2023](images/session_3/example_pistono.JPG)
+:::
+:::
+
+## Variations
+
+-   Virtual reality e.g., Eichert et al., 2018
+-   Mouse-tracking e.g., King et al., 2019
+-   Web-cam tracking e.g., Slim & Hartsuiker, 2023
+    -   ROIs size
+    -   Display size
+
+## Uses
+
+Different levels of language comprehension (Huettig et al., 2011)
+
+-   Phonological level (e.g., Allopenna et al., 1998)
+    -   Beetle versus beaker
+-   Lexical level (e.g., semantic prediction, Altmann & Kamide, 1999)
+    -   Eat versus move
+-   Syntactic level (e.g., Knoeferle et al., 2005)
+    -   Disambiguation of thematic roles.
+-   Discourse level (e.g., van Bergen & Bosker, 2018)
+    -   Actually versus Indeed
+-   Pragmatic level (e.g., Grodner et al., 2010)
+    -   Adjective informativeness depends on speaker's reliability.
+
+## Uses
+
+-   Dialogue (e.g., Brown-Schmidt & Tanenhaus, 2008)
+    -   Common ground establishment.
+-   Paralinguistic cues (e.g., Arnold et al., 2004)
+    -   New versus given information following a disfluency.
+-   Linguistic relativity (e.g., Papafragou et al., 2008).
+    -   Fixation preference following encoding of motion.
+
+And many more (e.g., bilingualism, semantics/syntax interface,...)
+
+## Uses
+
+Different populations
+
+-   Children
+-   Aphasic patients (e.g., Mirman et al., 2011)
+-   Non-native listeners (e.g., Ito et al., 2018)
+
+## Pros & cons
+
+::: columns
+::: {.column width="50%"}
+::: r-stack
+**Pros**
+:::
+
+-   Ecological validity.
+-   Relatively easy.
+-   Accessible e.g., no meta-linguistic judgements.
+:::
+
+::: {.column width="50%"}
+::: r-stack
+**Cons**
+:::
+
+-   Ecological validity.
+-   Confounding variables.
+-   Linking hypothesis.
+:::
+:::
+
+## References {.smaller}
+
+Allopenna, P. D., Magnuson, J. S., & Tanenhaus, M. K. (1998). Tracking the time course of spoken word recognition using eye movements: Evidence for continuous mapping models. *Journal of memory and language, 38*(4), 419-439.
+
+Altmann, G. T., & Kamide, Y. (1999). Incremental interpretation at verbs: Restricting the domain of subsequent reference. *Cognition, 73*(3), 247-264.
+
+Arnold, J. E., Tanenhaus, M. K., Altmann, R. J., & Fagnano, M. (2004). The old and thee, uh, new: Disfluency and reference resolution. *Psychological science, 15*(9), 578-582.
+
+Brown‐Schmidt, S., & Tanenhaus, M. K. (2008). Real‐time investigation of referential domains in unscripted conversation: A targeted language game approach. *Cognitive science, 32*(4), 643-684.
+
+Cooper, R. M. (1974). The control of eye fixation by the meaning of spoken language: a new methodology for the real-time investigation of speech perception, memory, and language processing. Cognitive psychology.
+
+Eichert, N., Peeters, D., & Hagoort, P. (2018). Language-driven anticipatory eye movements in virtual reality. *Behavior research methods, 50*, 1102-1115.
+
+## References {.smaller}
+
+Grodner, D. J., Klein, N. M., Carbary, K. M., & Tanenhaus, M. K. (2010). "Some," and possibly all, scalar inferences are not delayed: Evidence for immediate pragmatic enrichment. *Cognition, 116*(1), 42-55.
+
+Huettig, F., & McQueen, J. M. (2007). The tug of war between phonological, semantic and shape information in language-mediated visual search. *Journal of memory and language, 57*(4), 460-482.
+
+Huettig, F., Olivers, C. N., & Hartsuiker, R. J. (2011). Looking, language, and memory: Bridging research from the visual world and visual search paradigms. *Acta psychologica, 137*(2), 138-150.
+
+Huettig, F., Rommers, J., & Meyer, A. S. (2011). Using the visual world paradigm to study language processing: A review and critical evaluation. *Acta psychologica, 137*(2), 151-171.
+
+Ito, A., & Knoeferle, P. (2023). Analysing data from the psycholinguistic visual-world paradigm: Comparison of different analysis methods. *Behavior Research Methods, 55*(7), 3461-3493.
+
+Ito, A., Pickering, M. J., & Corley, M. (2018). Investigating the time-course of phonological prediction in native and non-native speakers of English: A visual world eye-tracking study. *Journal of Memory and Language, 98*, 1-11.
+
+## References {.smaller}
+
+King, J. P., Loy, J. E., & Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. *Discourse Processes, 55*(2), 123-135.
+
+Knoeferle, P., Crocker, M. W., Scheepers, C., & Pickering, M. J. (2005). The influence of the immediate visual context on incremental thematic role-assignment: Evidence from eye-movements in depicted events. *Cognition, 95*(1), 95-127.
+
+Magnuson, J. S. (2019). Fixations in the visual world paradigm: where, when, why?. *Journal of Cultural Cognitive Science, 3*(2), 113-139.
+
+Matin, E., Shao, K. C., & Boff, K. R. (1993). Saccadic overhead: Information-processing time with and without saccades. *Perception & psychophysics, 53*, 372-380.
+
+Mirman, D., Yee, E., Blumstein, S. E., & Magnuson, J. S. (2011). Theories of spoken word recognition deficits in aphasia: Evidence from eye-tracking and computational modeling. *Brain and language, 117*(2), 53-68.
+
+Papafragou, A., Hulbert, J., & Trueswell, J. (2008). Does language guide event perception? Evidence from eye movements. *Cognition, 108*(1), 155-184.
+
+Pickering, M. J., & Gambi, C. (2018). Predicting while comprehending language: A theory and review. *Psychological bulletin, 144*(10), 1002.
+
+## References {.smaller}
+
+Pistono, A., & Hartsuiker, R. J. (2023). Can object identification difficulty be predicted based on disfluencies and eye-movements in connected speech?. *Plos one, 18*(3), e0281589.
+
+Slim, M. S., & Hartsuiker, R. J. (2023). Moving visual world experiments online? A web-based replication of Dijkgraaf, Hartsuiker, and Duyck (2017) using PCIbex and WebGazer. js. *Behavior Research Methods, 55*(7), 3786-3804.
+
+Tanenhaus, M. K., Spivey-Knowlton, M. J., Eberhard, K. M., & Sedivy, J. C. (1995). Integration of visual and linguistic information in spoken language comprehension. *Science, 268*(5217), 1632-1634.
+
+Tanenhaus, M. K., Magnuson, J. S., Dahan, D., & Chambers, C. (2000). Eye movements and lexical access in spoken-language comprehension: Evaluating a linking hypothesis between fixations and linguistic processing. *Journal of Psycholinguistic Research,29*, 557--580.
+
+Van Bergen, G., & Bosker, H. R. (2018). Linguistic expectation management in online discourse processing: An investigation of Dutch inderdaad'indeed'and eigenlijk'actually'. *Journal of Memory and Language, 103*, 191-209.
