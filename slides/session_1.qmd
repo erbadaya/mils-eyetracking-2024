@@ -70,3 +70,822 @@ editor: visual
 
 ## Overview
 
+## Technicalities
+
+# Day 1: Introduction to eye-tracking
+
+## Plan of the day
+
+1. What is eye-tracking?
+2. Why do we track eyes?
+   i) The Human Visual System
+   ii) Visual attention
+3. Eye movements
+4. How do eye-trackers work?
+
+## What is eye-tracking?
+
+[Flying object](https://www.youtube.com/watch?v=TDG6j2LkVqU)
+
+## What is eye-tracking?
+
+::: {style="text-align: center"}
+Eye-tracking is a [non-invasive technique]{.fg style="--col: #e64173"} to explore cognitive processes as they unfold (i.e., [online processing]{.fg style="--col: #e64173"}). It has temporal resolution.
+:::
+
+- As opposed to EEG, fMRI
+- As opposed to offline measures (e.g., questionnaires)
+      - Converging evidence
+
+# Why do we track eyes?
+
+## The Human Visual System
+
+::: columns
+::: {.column width="50%"}
+<br> Important parts of the eye's anatomy:
+
+-   Cornea
+-   Pupil
+-   Retina
+    -   Fovea
+    -   Parafovea
+    -   Periphery
+:::
+
+::: {.column width="50%"}
+![](images/session_1/eye_anatomy.png)
+:::
+:::
+
+## The Human Visual System
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+-   Light hits the cornea.
+    -   Some light is reflected (Purkinje reflections)
+-   Light enters the eye via the pupil.
+-   The lens reflects the light onto the retina.
+    -   Photosensitive layer with [cones]{.fg style="--col: #e64173"} and [rodes]{.fg style="--col: #e64173"}.
+:::
+
+::: {.column width="50%"}
+![](images/session_1/eye_anatomy.png)
+:::
+:::
+
+## The Human Visual System
+
+Photoreceptors with different properties (e.g., spectral sensitivity, photopigments).
+
+-   Cones
+    -   [Color vision and spatial frequency]{.fg style="--col: #e64173"} ("visual details").
+    -   Well-illuminated conditions (photopic vision).
+-   Rods
+    -   [Black and white]{.fg style="--col: #e64173"}.
+    -   Low-light conditions (scotopic vision).
+
+## The Human Visual System
+
+::: columns
+::: {.column width="50%"}
+They also differ in where they are located in the fovea.
+
+-   Cones: Highest density in the [fovea]{.fg style="--col: #e64173"}.
+-   Rodes: Higher density in the [fovea's periphery]{.fg style="--col: #e64173"}.
+
+[Consequence]{.fg style="--col: #e64173"}: Vision is sharpest in the fovea.
+
+-   25% of visual cortex devoted to processing 2.5° of the visual scene.
+:::
+
+::: {.column width="50%"}
+![](images/session_1/rod_distribution.png)
+:::
+:::
+
+## The Human Visual System
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+**But** the fovea is a small section of our [visual field]{.fg style="--col: #e64173"}.
+
+-   Space respect to our eyes that we can perceive.
+-   Measured in visual angles.
+    -   [Visual angle]{.fg style="--col: #e64173"} = object size/distance.
+:::
+
+::: {.column width="50%"}
+![](images/session_1/central_vision.png)
+:::
+:::
+
+## The Human Visual System
+
+::: columns
+::: {.column width="50%"}
+Retina:
+
+-   Fovea: 1-2 degrees of visual angle.
+-   Parafovea: 10 degrees of visual angle to either side.
+-   Peripheria: Remaining space beyond the parafovea.
+:::
+
+::: {.column width="50%"}
+::: {layout="[[-1], [1], [-1]]"}
+![Central vision != foveal vision.](images/session_1/vision_angles.png){fig-align="center"}
+:::
+:::
+:::
+
+## The Human Visual System
+
+::: {layout="[[-1], [1], [-1]]"}
+![](images/session_1/foveaparafovea_illustrationreading.JPG){fig-align="center"}
+:::
+
+## The Human Visual System
+
+<br>
+
+::: {style="text-align: center"}
+Therefore, we move our eyes to place visual stimuli in the fovea to process it with the highest acuity. [Eye movements are a consequence of the eyes' anatomy]{.fg style="--col: #e64173"}.
+:::
+
+-   Parafoveal processing: No acute image, words still partially recognizable.
+-   Peripheria: Blurred image, no word/letter recognition.
+
+## Visual attention
+
+What do you notice about the eye movements here? What do you infer from them?
+
+[Playing a video game](https://www.youtube.com/watch?v=jzeBKRjWVwE)
+
+## Visual attention
+
+[Attention]{.fg style="--col: #e64173"} (i.e., [linking hypothesis]{.fg style="--col: #e64173"})
+
+-   Tracking eye movements can tell us what viewers are paying attention to.
+
+## Visual attention
+
+Attention determines what we process and the detail of the representation built.
+
+[Attention test](https://www.youtube.com/watch?v=U1saQoMRD8A)
+
+
+## Visual attention
+
+::: columns
+::: {.column width="50%"}
+[Attention]{.fg style="--col: #e64173"} (i.e., [linking hypothesis]{.fg style="--col: #e64173"})
+
+-   [Bottom-up]{.fg style="--col: #e64173"} and [top-down]{.fg style="--col: #e64173"} processes.
+    -   Details that attract individuals' attention (exogeneous) v. Individuals' strategies (endogeneous).
+-   Individuals as active viewers.
+:::
+
+::: {.column width="50%"}
+![Open University](images/session_1/endogenous.jpg)
+:::
+:::
+
+## Visual attention
+
+Yarbus (1960): Scanpaths guided by attention.
+
+![They Did Not Expect Him, Iliá Repin](images/session_1/unexpected_visitor.png){fig-align="center"}
+
+## Visual attention
+
+::: {layout="[15,-2,10]" layout-valign="bottom"}
+![](images/session_1/unexpected_visitor.png)
+
+![Free viewing](images/session_1/yarbus_freeviewing.png)
+:::
+
+## Visual attention
+
+::: {layout="[15,-2,10]" layout-valign="bottom"}
+![](images/session_1/unexpected_visitor.png)
+
+![Estimate individuals' ages](images/session_1/yarbus_ages.png)
+:::
+
+## Visual attention
+
+::: {layout="[15,-2,10]" layout-valign="bottom"}
+![](images/session_1/unexpected_visitor.png)
+
+![Estimate what they were doing when the visitor arrived](images/session_1/yarbus_guessactivity.png)
+:::
+
+## Visual attention
+
+Attention is a bridge between our minds and eye movements.
+
+[Potential caveat]{.fg style="--col: #e64173"}
+
+-   Covert versus overt attention:
+    -   Covert: Mental shift without physical evidence (e.g., looking at the slides while thinking about lunch).
+    -   Overt: Moving your eyes to check what time it is.
+
+We only have access to overt attention.
+
+-   But they are highly interlinked.
+
+## Visual attention
+
+-   In language[^1]: The [eye-mind hypothesis]{.fg style="--col: #e64173"} (Just & Carpenter, 1980).
+    -   [Where]{.fg style="--col: #e64173"} we look indicates [what we are processing]{.fg style="--col: #e64173"}, [for how long we look]{.fg style="--col: #e64173"} indicates the [cognitive effort it takes to process it]{.fg style="--col: #e64173"}.
+    -   This is an **assumption** (cf. Pickering et al., 2004; Magnuson, 2019).
+
+[^1]: NB later in the course this will be challenged, especially wrt speech comprehension.
+
+## Why do we do it?
+
+-   Visual acuity is highest in the fovea, but the fovea is a rather small section of the retina.
+-   Moving our eyes helps us to 'place' objects on the fovea.
+-   Why do we want to place something there? Arguably, because we are interested in it.
+-   We move our eyes to what captures our attention to process it.
+
+# Eye movements
+
+## Nature of eye-movements
+
+-   One dominant eye[^2].
+-   Binocular disparity:
+    -   Relatively small in healthy subjects.
+    -   Decreases over the time of a fixation.
+    -   No complete temporal synchrony in eye movements.
+
+[^2]: More on this when we cover properly the lab set up.
+
+## Eye movements
+
+::: {style="text-align: center"}
+**What eye movements can you think of?**
+
+::: incremental
+-   Think of how we talk about things: we [fixate]{.fg style="--col: #e64173"} on things, we [move]{.fg style="--col: #e64173"} our eyes.
+-   We also [blink]{.fg style="--col: #e64173"}.
+-   We can also measure [pupil size]{.fg style="--col: #e64173"}.
+:::
+:::
+
+## Eye movements
+
+**What eye movements can you think of?**
+
+::: incremental
+-   Fixations.
+-   Saccades.
+-   Blinks.
+-   Smooth pursuit.
+-   Pupil size changes.
+:::
+
+## Fixations
+
+When our eye 'stops' i.e., multiple gaze points close in time and/or space.
+
+-   Automatic, physiological response.
+
+-   Eye is *relatively* stable.
+
+-   Average duration: 200 - 300 ms.
+
+-   Minimal duration: 20 - 50 ms (not standard).
+
+## Fixations
+
+When our eye 'stops'.
+
+-   Eye is *relatively* stable.
+    -   Tremor, drifts, microsaccades.
+
+![](images/session_1/fixation_tremor.png){fig-align="center"}
+
+## Fixations
+
+::: columns
+::: {.column width="50%"}
+-   Tremor: Smallest of the movements.
+-   Drifts: Slow movement away from the center of the fixation, happens between microsaccades.
+-   Microsaccades: Move back the eye to the center of the fixation.
+    -   Perceptual fading: Troxler fading.
+    -   Only microsaccades can restore it, while drift and microsaccades prevent fading.
+:::
+
+::: {.column width="50%"}
+<br> <br>
+
+![](images/session_1/troxler.jpg){fig-align="center" height="300px"}
+:::
+:::
+
+## Saccades
+
+![](images/session_1/fixation_saccades.png){fig-align="center"}
+
+## Saccades
+
+"Jerky" movement: Fast movement of the eye, usually from one fixation to another.
+
+-   Temporary blindness (i.e., [saccadic suppression]{.fg style="--col: #e64173"}).
+-   Reactive saccades versus Voluntary saccades.
+    -   Sudden appearance of an object versus Exploration.
+
+## Saccades
+
+Parameters
+
+-   Amplitude: distance travelled.
+    -   Average: 15°.
+-   Temporal parameters (onset, offset, duration).
+    -   Average duration: 30 - 80 ms.
+-   Velocity, acceleration and deceleration.
+-   Direction: Forward and backwards (i.e., regressions) saccades.
+-   Accuracy: Over- and under-shooting.
+    -   In simple lab conditions, fall slightly short of the target, thus followed by a small corrective saccade.
+
+## Saccades
+
+Forward and backwards (i.e., regressions) saccades.
+
+-   Short and long regressions.
+
+![From Conklin et al., 2018](images/session_1/example_reading.JPG){fig-align="center"}
+
+## Blinks
+
+By necessity, people blink.
+
+-   Usually, surrounded by saccades.
+-   Pupil changes when eyelids open/close.
+    -   Mostly important for data processing.
+-   Lab conditions.
+
+## Smooth pursuit
+
+A "moving fixation" \~ following a target.
+
+-   Slower than a saccade, but bounded by the velocity of the target being followed.
+-   Asymmetrical: Horizontal \> vertical.
+
+## Pupil size
+
+Pupil dilates for reasons other than light, e.g., [cognitive effort]{.fg style="--col: #e64173"}.
+
+-   Linking hypothesis: Pupil size reflects effort exerted.
+
+    -   Harder tasks = increase in pupil size.
+
+-   Increasing interest in language research e.g., accented-speech comprehension.
+
+-   Changes can take up to 3 s.
+
+    -   Far longer than other eye events.
+
+## Eye movements
+
+-   There are five major eye movements (or events) that an eye-tracker can capture.
+-   Fixations refer to 'stable' gazes on a space for a sustained period of time. We usually describe them in terms of how many they are, when they start, and how long they are.
+-   Saccades are fast movements, commonly from one fixation to another. We describe them in terms of onset, offset, angle, velocity, latency, and acceleration.
+-   Smooth pursuits are fixations that move.
+-   Pupil size can change due to cognitive processing, whereby its size increases when effort is exerted.
+
+
+--------------------------------------------
+
+Questions so far? Thoughts?
+
+# How do eye-trackers work?
+
+## How do eye-trackers work?
+
+::: columns
+::: {.column width="50%"}
+Old, rudimentary eye-trackers.
+
+-   Louis Émile Javal (1879)
+    -   'Naked eye' observations.
+    -   Stop-start pattern in reading.
+-   Edmund Huey (1898)
+    -   Primitive 'eye-tracking' device.
+:::
+
+::: {.column width="50%"}
+<br> <br>
+
+![Huey, 1898; from Hutton, 2019](images/session_1/huey.JPG)
+:::
+:::
+
+## How do eye-trackers work?
+
+::: columns
+::: {.column width="50%"}
+<br> <br> <br>
+
+-   Alfred Yarbus
+    -   Suction cups reflecting onto a photosensitive surface.
+    -   Scan paths
+:::
+
+::: {.column width="50%"}
+<br>
+
+![](images/session_1/oldtrackers.png)
+:::
+:::
+
+## How do eye-trackers work?
+
+Now you can see why nowadays eye-tracking is non-invasive.
+
+::: {layout="[15,-2,10]"}
+![](images/session_1/trackers_today.jpg)
+
+![](images/session_1/headmounted_tracker.png)
+:::
+
+## How do eye-trackers work?
+
+How do (most of them) work?
+
+-   Video-based recording of the location of either one point, the pupil, or two points, the pupil and the corneal reflection.
+-   P-CR ([the pupil and the corneal reflection]{.fg style="--col: #e64173"}) is the most common.
+    -   Two hardware components: A camera and an infrared illuminator (which are fixed in space).
+    -   [1st corneal reflection (Purkinje reflection 1)]{.fg style="--col: #e64173"}.
+
+![](images/session_1/tracking_eyes2.png){fig-align="center"}
+
+## How do eye-trackers work?
+
+How do (most of them) work?
+
+-   Video-based recording of the location of two points: [the pupil and the corneal reflection]{.fg style="--col: #e64173"}.
+    -   Infrared light is reflected on the participant's eyes.
+    -   Camera picks up the corneal reflection.
+    -   Algorithm-based image processing to identify these two locations
+
+![](images/session_1/tracking_eyes3.png){fig-align="center"}
+
+## How do eye-trackers work?
+
+Why pupil and corneal reflection?
+
+-   A 'two-points of reference' system.
+    -   The pupil moves when we move our eyes (and so does its location on the camera).
+    -   But corneal reflection does not (because the light source does not move).
+-   [Compensate for small head movements]{.fg style="--col: #e64173"}.
+
+![](images/session_1/tracking_eyes1.png){fig-align="center"}
+
+## How do eye-trackers work?
+
+Why pupil and corneal reflection?
+
+-   A 'two-points of reference' system.
+    -   Distance between pupil and corneal reflection changes with eye rotation, but is relatively [constant]{.fg style="--col: #e64173"} with head movements.
+    -   Pupil position - CR position.
+
+![Example of view of the pupil when the head moves.](images/session_1/tracking_eyes4.png){fig-align="center"}
+
+## How do eye-trackers work?
+
+Image processing: Feature-based versus model-based detection.
+
+-   [Feature-based]{.fg style="--col: #e64173"}: e.g., thresholding (similar pixel intensity = area), edges.
+
+    -   Issues: Pupil dilation, corneal reflection, eyelids.
+
+-   [Model-based]{.fg style="--col: #e64173"}: Pattern matching e.g., iris and pupil look like an ellipse, pupil is in the middle of the iris.
+
+    -   Most common one, we will come back to this when discussing how to run an eye-tracking experiment.
+
+::: {layout-ncol="2"}
+![Feature-based processing](images/session_1/featurebased.JPG){height="200px"}
+
+![Model-based processing](images/session_1/modelbased.JPG){height="200px"}
+:::
+
+## How do eye-trackers work?
+
+What does the tracker do when recording?
+
+-   Record the x and y coordinates of detected gaze on the screen.
+-   Parse gaze position into eye events e.g., any gaze points nearby close in time are grouped into a *fixation*.
+
+## How do eye-trackers work?
+
+What does the tracker do when recording?
+
+-   [Record]{.fg style="--col: #e64173"} the x and y coordinates of detected gaze on the screen.
+    -   How many times? [Sampling frequency]{.fg style="--col: #e64173"}
+
+## How do eye-trackers work?: Sampling frequency
+
+[Sampling frequency]{.fg style="--col: #e64173"} (or rate): Number of times the tracker measures gaze position per second. Measured in hertz (Hz).
+
+-   300 Hz: 1 data point every \~3 ms, 300 samples per second.
+    -   1 s is 1000 ms.
+    -   1000/300 = 3.33
+-   Higher sampling frequency = more data points, and closer in time.
+
+## How do eye-trackers work?: Sampling frequency
+
+**Question**
+
+::: incremental
+-   If our sampling frequency is 500 Hz, what is the time elapsed between each data point?
+    -   2 ms.
+-   And at 60 Hz?
+    -   \~16 ms.
+-   And 2000 Hz?
+    -   0.5 ms.
+:::
+:::
+
+## How do eye-trackers work?: Sampling frequency
+
+Relationship between sampling frequency and measure of interest.
+
+-   The [faster]{.fg style="--col: #e64173"} it is, the [higher]{.fg style="--col: #e64173"} the sampling frequency needed to detect it.
+    -   Onset, offset, duration.
+
+Example: 50 Hz sampling frequency.
+
+-   50 samples in a second, one every 20 ms.
+    -   A saccade starts in these 20 ms, we miss it.
+    -   A fixation begins in these 20 ms, we get it, but misrepresent its onset.
+
+## How do eye-trackers work?: Sampling frequency
+
+<br> <br>
+
+![Measurement error represented by dashed line; picture taken when the vertical lines cross the horizontal lines.](images/session_1/sample_rate.jpg){fig-align="center"}
+
+## How do eye-trackers work?: Sampling frequency
+
+[This is why sampling frequency matters]{.fg style="--col: #e64173"}.
+
+-   Depends on your research question e.g., reading versus observing a scene.
+
+-   [Reading]{.fg style="--col: #e64173"} usually requires [higher]{.fg style="--col: #e64173"} sampling frequency.
+
+-   Higher sample frequency == [higher precision]{.fg style="--col: #e64173"}.
+
+-   Considering as well the area of interest.
+
+    -   Big IAs --\> can afford low sampling rate, precision and accuracy might be ok.
+    -   Small IAs (e.g., reading) --\> high sampling rate (\>250 Hz).
+
+## How do eye-trackers work?: Sampling frequency
+
+How small (or slow) can you go with the sampling frequency?
+
+-   Nyquist-Shannon sampling theorem
+    -   Twice as large as the event you want to measure.
+
+In reality, more like 'rule-of-thumb':
+
+-   250 Hz
+
+## How do eye-trackers work?: Sampling frequency
+
+How small (or slow) can you go with the sampling frequency?
+
+Relationship between sampling error, sampling frequency, and [data points]{.fg style="--col: #e64173"}.
+
+-   Lower sampling frequencies = more data points (power).
+    -   NB: More data points might not be the solution.
+
+## How do eye-trackers work?
+
+What does the tracker do when recording?
+
+-   Record the [x and y coordinates]{.fg style="--col: #e64173"} of [detected gaze]{.fg style="--col: #e64173"} on the screen.
+    -   How do we know that the x and y detected are good? Accuracy and precision
+
+## How do eye-trackers work?: Accuracy
+
+[Accuracy]{.fg style="--col: #e64173"}: Difference between the measurement and its true value.
+
+-   Recorded gaze position versus the true gaze position.
+-   Particularly relevant for AIs.
+-   Methods to increase accuracy in the experimental session.
+    -   Calibration, validation, drift correction.
+    -   Screen corners.
+-   Data loss.
+
+## How do eye-trackers work?: Precision
+
+[Precision]{.fg style="--col: #e64173"}: Ability to reproduce a reliable measurement. <br>
+
+      - Spatial *and* temporal precision.
+
+![From Holmqvist et al., 2011](images/session_1/precision_accuracy.JPG){fig-align="center" height="300px"}
+
+## How do eye-trackers work?: Precision
+
+[Spatial precision]{.fg style="--col: #e64173"}: Eye fixating on a stationary target.
+
+-   Trade-off with measurement of interest.
+
+[Temporal precision]{.fg style="--col: #e64173"}: Standard deviation of delays from actual movements until they are marked (eye-tracker latencies).
+
+-   High temporal precision: Interval between samples is constant.
+
+## How do eye-trackers work?
+
+These properties impact data quality[^6].
+
+[^6]: It also depends on participant-specific properties, more on this in session 5.
+
+Why do we care about data quality?
+
+The [validity of results]{.fg style="--col: #e64173"} based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2012)
+
+## How do eye-trackers work?
+
+Which eye to track? Binocular versus Monocular
+
+-   Binocular:
+    -   Certain paradigms e.g., gaze contingency, experiments around binocular alignment.
+    -   Certain populations e.g., dyslexic participants.
+    -   Development (i.e., children)
+    -   Small adjacent areas of interest.
+-   Monocular:
+    -   What eye to track? [Dominant eye]{.fg style="--col: #e64173"} for accuracy.
+    -   By default, right eye.
+
+## How do eye-trackers work?: Types
+
+Different eye-tracking systems in the market.
+
+-   SR Research, Tobii, SMI.
+
+Differences in software e.g., parsing of events and subsequent measures.
+
+-   Research question
+
+## How do eye-trackers work?: Types
+
+Different types of trackers in the market as a function of:
+
+-   Position camera wrt eye.
+
+-   Lens zoom.
+
+-   Software for parsing events.
+
+-   Pros and cons of each.
+
+    -   e.g., they differ in sampling frequency (head mounted tend to have lower sampling frequencies).
+
+## How do eye-trackers work?: Types
+
+<br>
+
+![](images/session_1/tracker_types.png){fig-align="center"}
+
+## How do eye-trackers work?: Types
+
+Table-mounted, head fixed:
+
+-   Assumed constant distance.
+    -   Camera and infrared light are above the participant's head or fixed position near the monitor (desktop mounted).
+-   Head movement is restricted.
+-   Pros: High precision.
+-   Cons: Not suitable for all populations.
+
+## How do eye-trackers work?: Types
+
+Table-mounted, head free:
+
+-   Distance changes.
+
+    -   Camera and infrared light can be on the table or monitor.
+    -   Range of head movement.
+        -   Head distance.
+
+-   Pros: Generally, high precision; suitable for more populations.
+
+-   Cons: The lack of head restriction can lower data precision.
+
+-   Portable trackers.
+
+-   Convertible trackers.
+
+## How do eye-trackers work?: Types
+
+Head-mounted:
+
+-   Camera and infrared light are mounted on the participant's head (e.g., with glasses)
+-   Pros: Ecological validaity.
+-   Cons: Usually, lower sampling frequencies, lower accuracy.
+
+## How do eye-trackers work?: Types
+
+Eye-tracking without an eye-tracker.
+
+![](images/session_1/alternative_trackers.png){fig-align="center"}
+
+## How do eye-trackers work?: Types
+
+Eye-tracking without an eye-tracker.
+
+::: {layout-ncol="2"}
+![King et al., 2019](images/session_2/mt_1.png){fig-align="center" height="500px"}
+
+![](images/session_2/mt_2.png){fig-align="center" height="500px"}
+:::
+
+## How do eye-trackers work?: Types
+
+Combination with other techniques.
+
+![](images/session_1/combining_tracking.png){fig-align="center" height="300px"}
+
+## How do eye-trackers work?
+
+-   We track the x and y coordinates of gaze on a screen by figuring out the position of either the pupil or the pupil and the corneal reflection.
+-   How many times we record the x and y coordinates is determined by the sampling frequency.
+-   Our sampling frequency is determined by our measure of interest.
+-   We distinguish eye-trackers depending on the distance between the eyes and the camera.
+
+## How do eye-trackers work?: Types
+
+On Thursday, you will get hands-on experience with the eye-tracking lab of the department.
+
+-   We will be working with an EyeLink 1000+
+
+-----------------------------------------
+
+Questions thus far?
+
+## Eye-tracking: Pros
+
+. . .
+
+-   Widely applicable technique.
+-   Relatively easy to interpret.
+-   Can provide a huge range of online measures.
+-   Temporal precision.
+-   Relatively high ecological validity.
+
+## Eye-tracking: Cons
+
+. . .
+
+-   Relatively expensive.
+    -   In terms of money: up to 30,000 e (but in comparison to EEG?).
+    -   In terms of time: one participant at a time[^7].
+-   Trade-off between accuracy and ecological validity.
+-   Participants' criteria.
+
+[^7]: Dual eye-tracking experiments are being done!
+
+## Is eye-tracking suitable for us?
+
+Eye-tracking is an *online* measurement of cognitive processes.
+
+-   Different online techniques e.g., EEG, fMRI
+    -   Spatial versus temporal resolution.
+-   Offline measurements e.g., comprehension questions.
+
+Ferreira & Yang (2019): [Linking offline and online measures]{.fg style="--col: #e64173"} can provide a better understanding of how speech is processed and represented.
+
+## References {.smaller}
+
+Conklin, K., Pellicer-Sánchez, A., & Carrol, G. (2018). *Eye-tracking: A guide for applied linguistics research*. Cambridge University Press.
+
+Ferreira, F., & Yang, Z. (2019). The problem of comprehension in psycholinguistics. *Discourse Processes, 56*(7), 485-495.
+
+Holmqvist, K., Nyström, M., Andersson, R., Dewhurst, R., Jarodzka, H., & Van de Weijer, J. (2011). *Eye tracking: A comprehensive guide to methods and measures*. OUP Oxford.
+
+Hutton, S. B. (2019). Eye tracking methodology. *Eye movement research: An introduction to its scientific foundations and applications*, 277-308.
+
+Javal, E. (1879). Essai sur la physiologie de la lecture. *Annaels d'oculistique, 82*, 242-25.
+
+Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. *Psychological review, 87*(4), 329.
+
+King, J. P., Loy, J. E., & Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. *Discourse Processes, 55*(2), 123-135.
+
+## References {.smaller}
+
+Magnuson, J. S. (2019). Fixations in the visual world paradigm: where, when, why?. *Journal of Cultural Cognitive Science, 3*(2), 113-139.
+
+Papoutsaki, A., Sangkloy, P., Laskey, J., Daskalova, N., Huang, J., & Hays, J. (2016). WebGazer : Scalable webcam eye tracking using user interactions. *International Joint Conference on Artificial Intelligence*.
+
+Pickering, M. J., Frisson, S., McElree, B., & Traxler, M. J. (2004). Eye movements and semantic composition. *On-line study of sentence comprehension: Eyetracking, ERPs and beyond*, 33-50.
+
+Trueswell, J. C. (2008). Using eye movements as a developmental measure within psycholinguistics. Language acquisition and language disorders, 44, 73.
+
+Yarbus A. L. (1967). \_Eye movements and vision+. New York: Plenum.
