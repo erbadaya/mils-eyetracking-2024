@@ -1,0 +1,9 @@
+This script was developed by Mariia Baltais under a Creative Commons license. Its original use is for the ugent-eyetracking repository.
+
+The script is very simple: no practice, no breaks, no comprehension questions. Just the welcome message, calibration, instructions, 4 trials (with internal randomization), and the goodbye message. It's divided into two presentation lists to implement counterbalancing. It is not deployed, so it can be edited and tested out with Build/Test Run.
+
+The folder also contains the data source separately if you want to have a look at its structure (I import it into EB as an UTF-16 txt file).
+
+Important: if you want to Test Run the script on your computer at home, you should go to "Preferences" and enable "Experiment - Devices - Eyelink - Dummy Mode" (needs to be unchecked in the lab). Also "Experiment - Devices - Display - Width and Height" should be adjusted accordingly (e.g., my laptop is 2560 x 1600, while the dimensions in the lab are 1920 x 1080; but you will be prompted to adjust them anyway if you try the Test Run). Note that the coordinates e.g. for the fixation point are calculated for Display PC in the lab (so based on 1920 x 1080 resolution), so if your computer's resolution is different, the fixation point will be displayed incorrectly (but it's ok).
+
+Note that to collect data, you will need to Deploy your script. It is then saved in a separate folder (_deploy) and cannot be edited.
