@@ -1,0 +1,21 @@
+---
+title: "Eye-tracking - Session 5"
+author: "Badaya & Baltais"
+format: 
+   clean-revealjs:
+    logo: images/logo_ugent.png
+    footer: Session 5 - Data visualization and analysis
+    include-in-header: 
+      text: |
+        <style>
+        .center-xy {
+          margin: 0;
+          position: absolute;
+          top: 40%;
+          left: 40%;
+          -ms-transform: translateY(-50%), translateX(-50%);
+          transform: translateY(-50%), translateX(-50%);
+        }
+        </style>
+editor: visual
+---
