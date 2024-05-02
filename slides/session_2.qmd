@@ -1,6 +1,6 @@
 ---
 title: "Eye-tracking - Session 2"
-author: "Badaya & Baltais"
+author: "Badaya"
 format: 
    clean-revealjs:
     logo: images/logo_ugent.png
