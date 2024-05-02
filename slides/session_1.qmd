@@ -82,6 +82,7 @@ editor: visual
    ii) Visual attention
 3. Eye movements
 4. How do eye-trackers work?
+5. How does an eye-tracking experiment look like?
 
 ## What is eye-tracking?
 
@@ -828,6 +829,16 @@ On Thursday, you will get hands-on experience with the eye-tracking lab of the d
 
 -----------------------------------------
 
+How do you think these measures can be used in language research?
+
+- Fixations
+- Saccades
+- Blinks
+- Smooth pursuit
+- Pupil dilation
+
+-----------------------------------------
+
 Questions thus far?
 
 ## Eye-tracking: Pros
@@ -861,6 +872,615 @@ Eye-tracking is an *online* measurement of cognitive processes.
 -   Offline measurements e.g., comprehension questions.
 
 Ferreira & Yang (2019): [Linking offline and online measures]{.fg style="--col: #e64173"} can provide a better understanding of how speech is processed and represented.
+
+# An eye-tracking experiment
+
+## How does an eye-tracking experiment look like?
+
+
+## The eye-tracking lab
+
+-   Most eye-trackers nowadays are video-based recordings of pupil and corneal reflection.
+-   Two hardware components: A camera and an infrared illuminator.
+-   Gaze position is capture every X ms (depends on sample rate).
+
+
+Question is: How does an eye-tracking lab look like? What elements do you think the lab has?
+
+. . .
+
+A camera, a screen, etc.
+
+## The eye-tracking lab
+
+::: columns
+::: {.column width="50%"}
+
+<br>
+
+Hardware
+
+-   2 PCs (Host and Presentation)
+-   2 Screens (Experimenter and Participants)
+-   Camera and infrared
+-   Peripheral hardware
+
+:::
+:::{.column width="50%"}
+
+![](images/session_2/lab_setup2.jpg){fig-align="center"}
+
+:::
+:::
+
+## The eye-tracking lab
+
+Hardware set up.
+
+- Distance between participant, camera, and participant's screen are measured.
+  - Distance participant - monitor: 40-70 cm 
+  - Distance participant - camera: ideal 50-55 cm
+  - Interplay with screen size.
+  - [/!\\]{.bg style="--col: #e64173"} Trackable range of the tracker 
+  - Constant across participants
+
+All in a sound isolated, no-sunlight room.
+
+## The eye-tracking lab
+
+Camera position: 
+
+  - Slightly below when recording .
+  - Not too low (problems in upper areas)/high (problems in lower areas) or you may lose CR.
+  - In desktop mounted: Alignment with lower part of the monitor.
+  - In tower mounted: Above participants' head.
+
+## The eye-tracking lab
+
+Host PC and camera are connected and synchronized.
+Host PC and Presentation PC are connected and synchronized.
+
+::: columns
+::: {.column width="50%"}
+
+-   Recording/Host PC
+    -   Camera set up.
+    -   Records triggers.
+    -   Processes and records eye-tracking data.
+    -   Observe eye movements in real time.
+    
+:::
+::: {.column width="50%"}
+-   Presentation PC
+    -   Presentation of stimuli.
+    -   Sends triggers and trial information.
+    -   Control when in time gaze is actually recorded.
+    -   Gathers behavioural data.
+    
+:::
+:::
+
+## The eye-tracking lab
+
+What information do you think is sent between the two computers?
+
+. . .
+
+-   Areas of Interest
+-   Triggers
+-   Experimental condition
+-   Stimuli per trial
+-   ...
+
+[/!\\]{.bg style="--col: #e64173"} Keep this in mind when coding the experiment.
+
+## Structure of an eye-tracking experiment
+
+1. Set up
+    -   Welcome participant, instructions
+        -   Including introduction to the eye-tracker
+    -   Check make up
+    -   Camera set up
+        -   Checks prior to experiment
+            -   Comfortable seating
+            -   Focus
+            -   Corners & areas of interest
+            -   Automatic & adjust thresholding
+
+2. Experiment
+
+3. After it
+
+## Structure of an eye-tracking experiment
+
+1. Set up
+
+2. Experiment
+    - Calibration & validation
+    -   Practice trials & familiarisation (optional)
+    -   Experimental phase (recording sequence, block division - optional)
+        -   (Drift correction) Stimulus --\> Trigger --\> Follow-up
+        -   Goodbye screen
+
+3. After it
+
+## Structure of an eye-tracking experiment
+
+1. Set up
+
+2. Experiment
+
+3. After it
+    - Post-experimental questionnaires & debriefing.
+
+## Participant set up
+
+Briefing 
+
+- Explain the experiment and allow them to ask questions. 
+  - Add instructions to the experiment & practice sessions.
+- Let them know in advance the experiment structure (e.g., calibration \> validation \> experiment (practice if there is)). 
+- Explain (briefly) how the eye-tracker works. 
+
+. . .
+
+Tempted to ask to not blink? 
+
+- Not blinking leads to dry eyes, and ultimately more blinking. 
+- Instead: Tell them when it is preferred for them to blink (if you decide to mention anything).
+
+## Participant set up
+
+-   Ensure they are sitting comfortably.
+    -   Not hunching.
+    -   Not stretching their necks.
+        -   To avoid pain & small head movements.
+-   Show them the eye being tracked.
+
+## Participant set up
+
+Adjust seating 
+
+- Chinrest 
+- Chair height 
+- Sitting straight 
+- Head against foreheadrest, chin over chinrest.
+
+## Camera set up
+
+:::columns
+:::{.column width="50%"}
+
+Access to eye image 
+
+- Hidden image: set-up is automatic. 
+  - Easier to handle but potential for poorer data quality e.g., data recording issues may go unnoticed.
+-   [Access]{.fg style="--col: #e64173"} to image.
+    -   Need for technical knowledge.
+
+:::
+:::{.column width="50%"}
+
+![](images/session_2/host_pc_setup.JPG)
+
+:::
+:::
+
+## Camera set up
+
+Detect the eye
+
+:::columns
+:::{.column width="50%"}
+
+![](images/session_2/eye_undetected.JPG){height="300px"}
+
+:::
+:::{.column width="50%"}
+
+![](images/session_2/eye_detected.JPG){height="300px"}
+
+:::
+:::
+
+## Camera set up
+
+Focus
+
+:::columns
+:::{.column width="50%"}
+
+![](images/session_2/unfocused_camera.JPG){height="300px"}
+
+:::
+:::{.column width="50%"}
+
+![](images/session_2/eye_detected.JPG){height="300px"}
+
+:::
+:::
+
+## Camera set up
+
+::columns
+:::{.column width="50%"}
+
+<br>
+<br>
+<br>
+
+-   P-CR tracking:
+    -   Dark blue pupil
+    -   Light blue CR
+
+:::
+:::{.column width="50%"}
+
+![](images/lab_setup/good_captureeye1.png)
+![](images/lab_setup/good_pupil.png)
+
+:::
+:::
+
+## Camera set up
+
+<br>
+
+Automatic thresholding + adjustments
+
+- Reflections == impossible eye movements
+
+Pupil tracking
+
+- Centroid versus Ellipse
+
+:::
+:::{.column width="50%"}
+
+![](images/session_2/options.jpg){height="550px"}
+:::
+:::
+
+
+## Camera set up
+
+-   Ask them to move their eyes around the corners of the screen
+    -   Notice whether we lose track at any place
+    -   Especially near your AOIs
+    -   Ensure pupil is not covered
+        -   e.g., hair, glasses frame
+
+## Camera set up: Issues
+
+-   No mascara
+    -   Dark lashes lead to issues -\> confounded with the pupil.
+-   Eyelids
+    -   Cover the pupil is lower gaze directions
+    -   An issue in some cases (e.g., tired participants)
+    -   Recording from lower than useful.
+
+## Camera set up: Issues
+
+-   Glasses
+    -   Darker image -\> issues in thresholding
+    -   Clean glasses
+    -   Adjust contrast/brightness
+-   Glasses
+    -   Reflect infrared light
+    -   Clean glasses
+    -   Move camera (angle rather than distance)
+        -   Place reflections far awar from pupil and CR
+    -   Move mirror (only possible in tower-mounted eye-trackers)
+
+## Camera set up: Issues
+
+-   Contact lenses
+    -   Air bubles between eye and contact lense interact with CR
+        -   Camera focus
+-   Wet eyes
+    -   Split up the CR
+        -   Breaks
+        -   Stop the experiment
+        -   Dim the light in the lab
+        -   Tell the participant to go home
+
+## Experiment
+
+Beyond the experiment itself, all eye-tracking experiments share these steps.
+
+-   Calibration
+-   Validation
+-   Drift correction
+
+Why?
+
+-   Because of how gaze position is calculated.
+    -   Estimation from known coordinates == calibration points.
+-   Accuracy.
+
+## Calibration
+
+x,y coordinates of gaze position is estimated from measuring the pupil and the CR on known coordinates (i.e., the calibration points).
+
+:::{.r-stack}
+
+{{< video images/lab_setup/calibration_cut.mp4 height="500" >}}
+
+:::
+
+## Calibration
+
+-   Beginning of the experiment (blocks?)
+-   Fixate on a series of points
+    -  \# points \~ accuracy
+        -   9HV standard
+        -   Smaller AOIs need more calibration points
+        -   Higher precision == more calibration points.
+-   Interplay with kind of eye-tracker:
+    -   Portable versus fixed.
+
+## Calibration
+
+-   Automatic versus manual
+    -   Participants moving their gaze before they should.
+-   Adults versus children
+-   Should cover area where stimuli are presented
+
+## Calibration
+
+:::columns
+:::{.column width="50%"}
+
+![Bad calibration](images/lab_setup/bad_calibration.jpg){height="500px"}
+
+:::
+:::{.column width="50%"}
+
+![Good calibration](images/lab_setup/good_calibration.jpg){height="500px"}
+
+:::
+:::
+
+## Calibration
+
+Tips: 
+
+- Check that pupil and CR are stable on the four corners of the screen. 
+- Remind participants not to move during the calibration and afterwards. 
+- Explicitly remind them to look at the center of the point and to look until they disappear. 
+- Random order presentation.
+- Desktop: move camera angle.
+- Tower-mounted: move mirror.
+
+## Validation
+
+Done after calibration to ensure accuracy. Same principle as calibration.
+
+:::{.r-stack}
+
+{{< video images/lab_setup/validation_cut.mp4 height="500" >}}
+
+:::
+
+## Validation
+
+-   Further accuracy check.
+    -   Whole versus subset
+        -   Error \> 0.5, recalibrate.
+
+## Validation
+
+:::columns
+:::{.column width="50%"}
+
+![Bad validation](images/lab_setup/bad_validation.jpg){height="500px"}
+
+:::
+:::{.column width="50%"}
+
+![Good calibration](images/lab_setup/good_validation.jpg){height="500px"}
+
+:::
+:::
+
+------------------------------------------------------------------------
+
+Technically speaking, you could now start recording.
+
+You'd get eye data of your experiment, but...
+
+-   How do we make sure that our calibration points are accurate throughout the experiment?
+-   How can we make sense out of the data after the experiment?
+  - Areas of Interest
+  - Triggers
+
+## During the experiment
+
+During trials
+
+-   Lab log
+    -   Adjustments/recalibrations
+    -   Sneezes, sounds
+    -   Data cleaning
+    -   Blinking
+    -   Are they moving their lips while they read?
+
+## Drift correction
+
+Every so often, re-check our measurement (accuracy): Drift correction.
+
+-   Commonly, each trial/every other trial/blocks
+-   Ensure accuracy
+-   Where the drift appears depends on your task.
+    -   At the position where you want high accuracy.
+    -   Reading e.g., beginning of the sentence/paragraph.
+
+## Drift correction
+
+:::columns
+:::{.column width="50%"}
+
+![Drift single sentence reading](images/lab_setup/drift_reading.jpg){height=500px}
+
+:::
+:::{.column width="50%"}
+
+![Drift VWP](images/lab_setup/drift_vwp.jpg){height=500px}
+
+:::
+:::
+
+## Areas of Interest
+
+Areas of display we are interested in measuring and analysing.
+
+:::columns
+:::{.column width="50%"}
+
+![Single sentence reading](images/session_2/ia_reading.png){height="200px"  fig-align="center"} 
+
+:::
+:::{.column width="50%"}
+
+![VWP](images/session_2/ia_vwp.png){height="300px" fig-align="center"}
+
+:::
+:::
+
+## Areas of Interest
+
+:::columns
+:::{.column width="50%"}
+
+Text
+
+- Word 
+- Sequence of words 
+- Part of a sentence
+
+:::
+:::{.column width="50%"}
+
+VWP
+
+- Individual images 
+- Blank space!
+
+:::
+:::
+
+## Areas of Interest
+
+:::columns
+:::{.column width="50%"}
+
+Text
+
+Careful definition of ROIs. 
+
+- Manually versus automatic (individual words) 
+- Issues: Segmentation of pre-critical and spillover regions. 
+- Issue: Duplicate data. 
+- Issue: Classification of eye-movements (regressions)
+
+:::
+:::{.column width="50%"}
+
+VWP
+
+Difference between comprehension and production. 
+
+- In the latter case, ROIs might not be known in advance.
+
+:::
+:::
+
+## Areas of Interest
+
+Size depends on accuracy and precision of the eye-tracker.
+
+-   Low accuracy/precision: Bigger areas of interest.
+
+-   Do not put stimuli close to margins.
+
+    -   Fixations are generally drawn to the center of a screen.
+    -   Lower precision at margins of a monitor.
+
+-   Overlapping areas of interest.
+
+Particularly relevant for gaze contingent paradigms too!
+
+## Areas of Interest
+
+:::columns
+:::{.column width="50%"}
+
+Text.
+
+-   Span some pixels below and above.
+
+:::
+:::{.column width="50%"}
+
+Pictures
+
+-   Enough separation.
+-   Counterbalance position.
+-   No overlapping.
+
+:::
+:::
+
+## Triggers
+
+Trigger: Information about an event i.e., when it happens.
+
+-   Synchronization stimulus PC - host PC
+
+Most basic trigger:
+
+-   Trial information (e.g., condition, response)
+
+But when you have also audio:
+
+-   When the audio begins and ends, gaze, for example.
+
+Related to stimulus-synchrony!
+
+## End of experiment
+
+Any additional data you may want to explore in relation to eye-tracking data.
+
+- Language proficiency?
+- Personality traits?
+
+Debrief
+
+See also Rodriguez Ronderos et al. (2018) - Eye Tracking During Visually Situated 
+Language Comprehension: Flexibility and Limitations in Uncovering Visual 
+Context Effects
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## References {.smaller}
 
