@@ -1,0 +1,753 @@
+---
+title: "Eye-tracking - Session 3"
+author: "Badaya & Baltais"
+format: 
+   clean-revealjs:
+    logo: images/logo_ugent.png
+    footer: Session 3 - Reading
+    include-in-header: 
+      text: |
+        <style>
+        .center-xy {
+          margin: 0;
+          position: absolute;
+          top: 40%;
+          left: 40%;
+          -ms-transform: translateY(-50%), translateX(-50%);
+          transform: translateY(-50%), translateX(-50%);
+        }
+        </style>
+editor: visual
+---
+
+# Reading
+
+## Reading research
+
+We have a wealth of paradigms to explore how individuals comprehend a piece of written text (from words to several lines, either created stimuli or real texts), considering both low-level processes for word identification (e.g., lexical access) and higher-level processes for sentence and discourse comprehension (e.g., inferences).
+
+## What's so special about reading?
+
+-   Reading is relatively new.
+    -   Homo Sapiens $\pm$ 300.000 BC
+    -   Sumerian pictographic writing $\pm$ 3.300 BC
+    -   Phoenician alphabetic language $\pm$ 2.000 BC
+-   Reading is a skill (exposure, formal instruction, practice)
+    -   We are good at it (250 WPM; Brysbaert, 2019)
+    -   Linked to academic achievement, late L2 acquisition.
+
+## History
+
+-   Javal (1879)
+
+    -   Reading is not smooth.
+
+-   Mid-70s: Technological advances
+
+-   Rayner's work.
+
+    -   Clifton et al., 2016: "Eye movements in reading and information processing: Keith Rayner's 40 year legacy".
+
+## History
+
+Main findings:
+
+-   Individuals are good at reading, but there are some individual characteristics (e.g., proficiency, L1 v L2).
+-   There seems to be some immediacy[^1] when comprehending a text, but we also get ahead of ourselves.
+-   In contrast to spoken language, individuals can go back when they encounter a difficulty, and indeed they do.
+
+[^1]: Serial versus paralllel debate; Just and Carpenter's eye-mind hypothesis
+
+# How to research reading abilities
+
+## Reading research
+
+We need to take a little detour:
+
+-   Eye movements
+    -   Visual human system
+    -   Foveal and parafoveal processing
+
+## Eye movements
+
+Visual Human System
+
+-   Fovea: Highest visual acuity
+-   Parafovea: Still partial recognition of objects.
+-   Periphery: Blurred image.
+
+Fixations versus saccades - Movements (saccades) to place objects on the fovea for processing (fixations)
+
+## Eye movements in reading
+
+What does this mean in the case of reading?
+
+-   A priori: We move our eyes to place objects (words?) on the fovea so we can process them (e.g., information extraction).
+
+But this is not true in reality.
+
+## Eye movements in reading
+
+![From Conklin et al., 2018](images/session_4/perceptual_span_reading.JPG){fig-align="center" width="590"}
+
+## Eye movements in reading
+
+-   Fovea does not equate the perceptual span (= effective visual field).
+-   Reading is asymmetric = asymmetric extraction of information.
+    -   Bias towards the direction of reading in the language.
+    -   In English: L: 3/4 ls, R: 14-15 letter space (3-4 ls/ 1 visual angle).
+
+::: notes
+Fovea \~ 1 visual angle It would appear that we have little to none cognitive resources to process N+1 when we are dealing with N (fixating on N entails using visual, orthographics, phonological... to accessing a lexeme, its morphological information, semantics...)
+
+So why do we need this somewhat technical discussion about the distinction between words in the fovea and parafovea? The next few paragraphs will look at why these distinctions are important in reading, as well as their implications for designing research studies.
+:::
+
+## Eye movements in reading
+
+Fovea = N; N - 1, 2, ... towards the left; N + 1, 2, ... towards the right.
+
+-   What kinds of information can be extracted from either.
+    -   See table 4.1. Conklin et al. (2018)
+-   cf. Confounds and design
+    -   Parafoveal-on-foveal effects
+
+## Eye movements in reading
+
+Fixations
+
+-   Mean duration (silent reading in English): 250 - 250 ms.
+-   Lexical access initiated at about 100 ms. (Sereno & Rayner, 2003).
+-   Optimal Viewing Position
+-   Affected by word length, frequency, part of speech, etc.
+
+![Data from Mariia Baltais](images/session_4/mariia_fix.JPG){fig-align="center" width="500"}
+
+## Eye movements in reading
+
+Saccades
+
+-   Saccadic supression
+-   Mean size (silent reading in English): 7 to 9 letter spaces ($\pm$ 2 words before or after the fixated word)
+    -   Size: distance travelled (amplitude).
+
+![Data from Mariia Baltais](images/session_4/mariia_sac.JPG){fig-align="center" width="500"}
+
+## Eye movements in reading
+
+Regressions
+
+-   10-15% of the saccades are regressions to preceding areas.
+    -   Correct 'overshooting' (short regressions within a word)
+    -   Processing difficulty
+
+![Data from Mariia Baltais](images/session_4/mariia_sac.JPG){fig-align="center" width="500"}
+
+## Eye movements in reading
+
+-   Skipping: When a reader does not fixate on a region when reading.
+
+![](images/session_4/skipping.JPG){fig-align="center"}
+
+## Eye movements in reading
+
+Fovea and parafovea.
+
+Most words are fixated, many are skipped.
+
+-   Content (85%) versus function (35%).
+-   Predictor: length, predictability, frequency.
+    -   Parafoveal processing.
+-   Overshooting versus processing ease.
+
+## Eye movements in reading
+
+Blinking
+
+-   Noise
+    -   Data pre-processing
+
+![Data from Mariia Baltais](images/session_4/mariia_blink.JPG){fig-align="center" width="500"}
+
+## Eye movements in reading
+
+Fixations, saccades, skipping -\> wide range of operationalised measures \~ process of interest.
+
+Reading (during a fixation) entails the use of visual, orthographic, phonological and morphological information to:
+
+-   Identify a word.
+-   Activate its lexical representation.
+-   Integrate with the preceding context.
+
+## Linking hypothesis
+
+Recognition (lexical access) versus integration (syntactic processing).
+
+Just and Carpenter's eye-mind hypothesis (1980).
+
+-   Where we look at = what we are processing.
+-   For how long we look at it = how difficult it is to process it.
+
+::: notes
+The Just and Carpenter reading model proposes that the gaze duration is related to the time to execute comprehension processes.
+
+Longer fixations indicate longer processing caused by the word's infrequency and its thematic importance. The link between eye-fixation data and the Just and Carpenter theory is established based on two crucial assumptions:
+:::
+
+## Linking hypothesis
+
+The more difficult the text...
+
+-   The \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ the fixation durations
+-   The \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ the saccade sizes
+-   The \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ the regressions
+-   The \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ the skipping of words
+
+## Linking hypothesis
+
+The more difficult the text...
+
+-   The longer the fixation durations
+-   The smaller the saccade sizes
+-   The more frequent the regressions
+-   The less frequent the skipping of words
+
+## Linking hypothesis
+
+Assumptions of the mind-eye hypothesis:
+
+-   Immediacy: One word at a time, as it is encountered.
+    -   Serial versus parallel processing.
+-   Strong eye-mind hypothesis: Eye movements only when processing is done.
+
+Too strong of an assumption? (e.g., Mitchell et al., 2008; Boland, 2004; ).
+
+-   Series of underlying assumptions (e.g., serial processing)
+
+-   Pickering et al., 2004: Immediacy assumption.
+
+::: notes
+1.  Immediacy assumption: A reader attempts to interpret each content word as it is seen, even if he / she must make guesses that may turn out to be incorrect later. 2. The strong eye-mind hypothesis: As stated by Just and Carpenter, the strong eye-mind hypothesis is as follows: The eye remains fixated on a word until its processing is done.
+
+Boland, 2004: Eye remains on a word until its structural integration is completed.
+
+First-pass reading shows syntactic constrains.
+
+Other measures (e.g., regression-path duration) reflect higher cognitive processes such as semantic integration or discourse processing.
+:::
+
+# Measures
+
+## Measures
+
+Fixations, saccades, and skipping are groupped into different measures that arguably tap onto different cognitive processes.
+
+-   Global versus local measures.
+    -   Overall reading behaviour versus smaller units of text.
+-   Local measures: Early versus intermediate versus late (see also Clifton et al., 2007).
+
+## Measures
+
+Reflect different stages of processing.
+
+-   Early v Intermediary v Late measures
+    -   Early: Highly automatic word recognition and lexical access processes.
+    -   Late: More conscious, controlled, strategic processes.
+-   Mapped onto first pass and total measures.
+
+Again: No transparent link.
+
+-   Different types of linguistic manipulations (e.g. a lexical manipulation compared with a syntactic manipulation) can produce effects in the same eye movement measure (e.g. first fixation duration, or gaze duration).
+
+## Early measures
+
+First pass measures.
+
+-   1st fixation duration (or single fixation duration, related to gaze duration, 1st pass time reading): Time on an AI.
+-   Skipping rate: % words that receive no fixation during 1st pass.
+    -   Visual and linguistic factors e.g., parafoveal processing.
+-   Factors known to affect: Frequency, familiarity, ambiguity, predictability, semantic association.
+
+::: notes
+1st fix: duration of the 1st fix on a word provided it isn't skipped. single fix dur: when there is only one fix gaze duration: sum of all fixations on a word prior to moving to another one (forward or backwards) skipping more likely due to linguistic factors but also processing it in the parafovea
+
+earliest point for us to see an effect of a variable being manipulated
+:::
+
+## Early measures
+
+::: {r-stack}
+![](images/session_4/earlymeasures.jpg){fig-align="center" width="900"}
+:::
+
+-   First fixation duration: 3
+-   Single fixation duration: NA (there are two fixations in the first pass)
+-   Gaze duration: 3 + 4
+-   Skipping rate: % trials where AI is skipped in first pass.
+
+## Intermediate measures
+
+-   Regression-path duration (or go-past time): time on N, N -1, etc. before N +1,
+    -   Includes regressions out (1st pass regressions) and regressions in.
+
+::: notes
+hard to tell whether they show difficulty of encountering an item and the subsequent time taken to overcome the difficulty
+:::
+
+## Intermediate measures
+
+::: {r-stack}
+![](images/session_4/earlymeasures.jpg){fig-align="center" width="900"}
+:::
+
+-   Regression-path duration/go-past time: 3+4+5+6
+-   Regressions-out (on first pass): %
+-   Regressions-in: %
+
+## Late measures
+
+-   Total reading time: $\Sigma$ fix on N.
+    -   Contextual and discourse-level factors + lexical (i.e., retrieval and integration).
+-   Re-reading time (2nd pass reading time): Different definitions across the literature.
+    -   General comprehension difficulties
+
+## Late measures
+
+::: {r-stack}
+![](images/session_4/earlymeasures.jpg){fig-align="center" width="900"}
+:::
+
+-   Total reading time: 3+4+6+9
+-   Re-reading time: 6+9 (total reading time - gaze duration)
+-   Fixation count: 4
+
+## Measures
+
+Measures are dependent:
+
+-   1st fixation duration - Gaze duration - Total reading time.
+-   Late measures are cumulative.
+-   Not total transparent mapping!
+
+To reiterate...
+
+![Carroll, 2017](images/session_4/reiterate.JPG)
+
+## Measures: Exercise
+
+::: {r-stack}
+![](images/session_4/exercise.jpg){fig-align="center" width="900"}
+:::
+
+-   First fixation duration:
+-   Gaze duration:
+-   Regressions-out:
+-   Regression-path duration:
+-   Re-reading time:
+-   Total reading time:
+
+::: notes
+3 3 2 3+4+5+6+7 5+7 3+5+7
+:::
+
+# Paradigms in reading research
+
+## Paradigms
+
+Ecological validity.
+
+-   Gaze-contigent paradigms: Eye gaze determines changes to the text display.
+-   Reading of experimental stimuli.
+-   Reading of natural text.
+
+## Disappearing text paradigm
+
+Liversedge et al., 2004
+
+-   ROI: Disappears after an amount of time of fixation.
+-   Shows: Fovea processing.
+-   IV: Time to disappear \~ time for normal reading.
+    -   Visual exposure for word recognition.
+
+## Disappearing text paradigm
+
+<br>
+
+{{< video images/session_4/disappearing_text_animation.mp4>}}
+
+## Fast priming paradigm
+
+Sereno & Rayder, 1992
+
+-   ROI: Target word is first a prime, then target word is presented after a fixation on it has occured for some time.
+-   Shows: Prime facilitation
+-   IV: Relationship prime and target.
+
+## Fast priming paradigm
+
+<br>
+
+{{< video images/session_4/fast_priming_paradigm.mp4>}}
+
+## Moving window paradigm
+
+McConkie & Rayder, 1975
+
+-   ROI: Mask around a fixation.
+-   Shows: Parafoveal processing and perceptual span (extraction and use of information).
+-   IV: Size of the window.
+
+::: notes
+By varying the size of the window and the type of mask (e.g., X's, visually similar or dissimilar characters) and comparing the reading times in the window and normal reading conditions, it is possible to define the size of the area from which a reader can efficiently extract and utilize information.
+:::
+
+## Moving window paradigm
+
+<br>
+
+{{< video images/session_4/moving_window.mp4>}}
+
+## Foveal mask
+
+Rayner & Bertera, 1979
+
+-   ROI: Mask within the fixation
+-   Shows: Parafoveal processing and perceptual span.
+-   IV: Size of the window.
+
+## Foveal mask
+
+<br>
+
+{{< video images/session_4/foveal_mask.mp4>}}
+
+## Boundary paradigm
+
+Rayder, 1975
+
+Saccadic suppression.
+
+-   ROI: Masked and then changed after fixations cross an invisible boundary.
+-   Shows: Parafoveal processing and perceptual span (information extracted).
+    -   Preview window effect.
+    -   Parafoveal-on-foveal effect (e.g., Drieghe, 2011).
+-   IV: What information is extracted e.g., visual similarity.
+
+::: notes
+The boundary paradigm (Rayner, 1975) makes use of the saccadic suppression. Saccadic suppression means that during a saccade the intake of visual information is suspended and the reader is practically blind. If a change in the visual environment is made during a saccade or very soon after the eyes have landed (\< 6 ms after the end of a saccade, McConkie & Loschky, 2002), the reader does not become consciously aware of it. The target word ("sentence" in the example of Table 7.1) is initially masked with a character string ("somkasoc"), and when the reader's eyes cross an invisible boundary in the text, the mask is replaced with the actual target word.
+
+If the reader has extracted information from the target word preview prior to its change to the correct form, one should observe increased fixation time on the target word, even though the reader is not consciously aware of this. The size of the slowdown in eye fixation time, i.e. the difference between normal condition inwhich no change was made and a change condition is called the preview effect.
+
+The preview benefit is simply computed as the difference in fixation time between a full preview condition, in which the target word was presented normally, and the preview condition.
+
+Another measure to assess parafoveal processing is the so-called parafoveal-on-foveal effect (Kennedy, 2000). It measures the extent to which parafoveally available information affects fixation time on the previous word (Drieghe, 2011).
+:::
+
+## Boundary paradigm
+
+<br>
+
+{{< video images/session_4/boundary.mp4>}}
+
+## Natural sentence reading (experimental stimuli)
+
+Linguistic and non-linguistic factors affecting eye patterns in reading.
+
+Usually, exploration of how movement patterns over a IA differ as a function of the properties of it.
+
+Frazier & Rayner (1982)
+
+![](images/session_4/fraz.JPG)
+
+## Natural text reading (constructed texts)
+
+Pellicer-Sánchez (2016)
+
+![From Conklin et al., 2016](images/session_4/texts_example.JPG){fig-align="center"}
+
+## Natural text reading
+
+GECO corpus (Cop et al., 2017)
+
+-   The Mysterious Affair At Styles by Agatha Christie (1920)
+
+![](images/session_4/geco.JPG)
+
+Lack of control over text versus ecological validity.
+
+-   Participants' characteristics + matching samples
+    -   Additional questionnaires
+
+# Single sentence reading experiment
+
+## Single sentence reading experiment
+
+Elements:
+
+-   A sentence.
+
+Trial sequence: Drift \> Visual Presentation
+
+## Drift correction
+
+Where the first word appears
+
+![](images/lab_setup/drift_reading.jpg){fig-align="center"}
+
+## Visual Presentation
+
+Visual presentation.
+
+-   Time window of interest is from start to end (so no triggers in between).
+    -   cf. gaze-contingent paradigms.
+
+## Visual Presentation
+
+Visual presentation: Areas of Interest
+
+![](images/session_2/ia_reading.png)
+
+## Areas of Interest
+
+-   Target region but also
+    -   Pre-critical region
+    -   Spillover region
+
+Research question.
+
+-   Single words v phrases v clauses ...
+
+## Areas of Interest
+
+-   Never beginning/end of the line.
+    -   1st and last fixations on a line are 5-7 ls from the edges.
+    -   1st word likely to be skipped.
+    -   1st fix longer, last fix shorter.
+-   AI never clause-final.
+    -   Wrap-up effect.
+
+## Task
+
+-   Move to the next trial
+-   Comprehension (every now and then/every trial)
+
+## Confounds
+
+-   Characteristics of the visual presentation (non-linguistic).
+-   Characteristics of the materials (linguistic)
+-   Characteristics of the human visual system
+
+## Non-linguistic confounds
+
+Text layout:
+
+-   Font style and size
+    -   B&W for dyslexic participants is not good.
+    -   Horizontal space.
+    -   14-18 pt
+    -   Monospace font (e.g., Courier)
+
+## Non-linguistic confounds
+
+::: columns
+::: {.column width="50%"}
+-   Line spacing
+    -   Less accuracy for vertical movements
+    -   Double/triple spacing.
+-   Line breaks
+-   Margins
+    -   Accuracy is low at screen borders.
+:::
+
+::: {.column width="50%"}
+<br>
+
+![](images/session_4/example_spacing.JPG)
+:::
+:::
+
+## Linguistic confounds
+
+Same we have discussed in previous weeks (see Clifton et al., 2016):
+
+-   The Big Three (Frequency, Length, Predictability)
+-   Lexical ambiguity
+-   Orthographic neighbourhood size (differ by 1 letter)
+-   Prevalence
+-   Inter alia
+
+## HVS confounds
+
+Foveal versus parafoveal processing.
+
+-   Sequential nature of reading.
+
+-   How information from one area can influence eye movements on the other.
+
+    -   Predictability, length, etc.
+    -   Parafoveal-on-foveal effects (see Hyönä, 2011).
+    -   Serial versus parallel processing.
+        -   Preview benefit, spillover effects.
+
+-   Spillover: Effects of processing N are seen on N + 1, + 2.
+
+-   Preview: Effects of perceiving N on N - 1.
+
+    -   Match contexts!
+
+## Exercise
+
+Howard et al. (2017)
+
+1.  How did they define the Areas of Interest?
+2.  What factors should be considered for the antecedent? (i.e., hammer/plunger in the example)
+3.  What information do you need from procedure and apparatus to replicate this study?
+
+## Exercise
+
+1.  How did they define the Areas of Interest?
+
+7 AIs, two regions of interest.
+
+![](images/session_4/ias_paper.JPG){fig-align="center"}
+
+## Exercise
+
+2.  What factors should be considered for the antecedent?
+
+-   Typicality (IV)
+-   No matching!
+
+![](images/session_4/matching_exercise.JPG){fig-align="center"}
+
+## Exercise
+
+3.  What information do you need from procedure and apparatus to replicate this study?
+
+![](images/session_4/3a.JPG){fig-align="left" width="500"} ![](images/session_4/3b.JPG){fig-align="right" width="500"}
+
+## Analysis
+
+More on W9 & W11 but:
+
+-   Multiple dependent variables (stages of processing).
+-   Type I error
+-   Tables!
+
+## Uses
+
+-   Word recognition
+    -   Frequency effect, Rayner & Duffy (1986)
+-   Syntactic processing
+    -   Structural ambiguities, Frazier & Rayner (1982)
+-   Semantic integration
+    -   Plausibility effect, Staub et al. (2007)
+-   Predictive processing (Frisson et al., 2017)
+-   Parafoveal processing (Juhasz et al., 2009)
+-   Text comprehension (Dirix et al., 2019)
+-   Multiword units (Carrol et al., 2016)
+
+## Uses
+
+-   L2 speakers
+    -   Gender agreement, Keating (2009)
+-   Children (Blythe et al., 2011)
+-   Older adults (Solan et al., 1995)
+-   Clinical populations
+    -   Children with dyslexia, Hyönä et al. (1995)
+    -   Adults with ASD, Howard et al. (2017)
+
+## Pros & cons
+
+::: columns
+::: {.column width="50%"}
+**Pros**
+
+-   Naturalistic reading.
+-   Non-invasive method.
+-   Different stages of processing.
+-   Combination with offline measures.
+:::
+
+::: {.column width="50%"}
+**Cons**
+
+-   Literacy required.
+-   Dependent variables.
+-   Resources.
+:::
+:::
+
+## References {.smaller}
+
+Blythe, H. I., Häikiö, T., Bertam, R., Liversedge, S. P., & Hyönä, J. (2011). Reading disappearing text: Why do children refixate words? *Vision Research, 51*(1), 84--92. https://doi.org/10.1016/j.visres.2010.10.003
+
+Boland, J. E. (2004). Linking eye movements to sentence comprehension in reading and listening. *The on-line study of sentence comprehension: Eyetracking, ERP, and beyond*, 51-76.
+
+Brysbaert, M. (2019). How many words do we read per minute? A review and meta-analysis of reading rate. *Journal of Memory and Language, 109*, 104047. https://doi.org/10.1016/j.jml.2019.104047
+
+Carrol, G., Conklin, K., & Gyllstad, H. (2016). FOUND IN TRANSLATION: The Influence of the L1 on the Reading of Idioms in a L2. *Studies in Second Language Acquisition, 38*(3), 403--443. https://doi.org/10.1017/S0272263115000492
+
+Carroll, T. (2017). Eye Behavior While Reading Words of Sanskrit and Urdu Origin in Hindi. Brigham Young University.
+
+Clifton, C., Staub, A., & Rayner, K. (2007). Eye movements in reading words and sentences. *Eye movements*, 341-371.
+
+## References {.smaller}
+
+Clifton, C., Ferreira, F., Henderson, J. M., Inhoff, A. W., Liversedge, S. P., Reichle, E. D., & Schotter, E. R. (2016). Eye movements in reading and information processing: Keith Rayner's 40year legacy. *Journal of Memory and Language, 86*, 1--19. https://doi.org/10.1016/j.jml.2015.07.004
+
+Conklin, K., Pellicer-Sánchez, A., & Carrol, G. (2018). Eye-Tracking: A Guide for Applied Linguistics Research. *Cambridge University Press*. https://doi.org/10.1017/9781108233279
+
+Cop, U., Dirix, N., Drieghe, D., & Duyck, W. (2017). Presenting GECO: An eyetracking corpus of monolingual and bilingual sentence reading. *Behavior Research Methods, 49*(2), 602--615. https://doi.org/10.3758/s13428-016-0734-0
+
+Dirix, N., Vander Beken, H., De Bruyne, E., Brysbaert, M., & Duyck, W. (2019). Reading Text When Studying in a Second Language: An Eye-Tracking Study. *Reading Research Quarterly, 55*(3), 371--397. https://doi.org/10.1002/rrq.277
+
+Drieghe, D. (2011). Parafoveal-on-foveal effects on eye movements during reading. In S. P. Liversedge, I. Gilchrist, & S. Everling (Eds.), *The Oxford handbook of eye movements* (pp. 840--855). Oxford: Oxford University Press.
+
+## References {.smaller}
+
+Frazier, L., & Rayner, K. (1982). Making and correcting errors during sentence comprehension: Eye movements in the analysis of structurally ambiguous sentences. *Cognitive Psychology, 14*(2), 178--210. https://doi.org/10.1016/0010-0285(82)90008-1
+
+Frisson, S., Harvey, D. R., & Staub, A. (2017). No prediction error cost in reading: Evidence from eye movements. *Journal of Memory and Language, 95*, 200--214. https://doi.org/10.1016/j.jml.2017.04.007
+
+Hyönä, J. (2011). Foveal and parafoveal processing during reading. In S. P. Liversedge, I. Gilchrist, & S. Everling (Eds.), *The Oxford handbook of eye movements* (pp. 820--838). Oxford: Oxford University Press.
+
+Hyönä, J., Olson, R., Defries, J., Fulker, D., Pennington, B., & Smith, S. (1995). Eye Fixation Patterns Among Dyslexic and Normal Readers: Effects of Word Length and Word Frequency. *Journal of Experimental Psychology: Learning, Memory, and Cognition, 21*, 1430--1440. https://doi.org/10.1037/0278-7393.21.6.1430
+
+Howard, P. L., Liversedge, S. P., & Benson, V. (2017). Processing of co-reference in autism spectrum disorder. *Autism Research, 10*(12), 1968--1980. https://doi.org/10.1002/aur.1845
+
+Juhasz, B. J., Pollatsek, A., Hyönä, J., Drieghe, D., & Rayner, K. (2009). Parafoveal processing within and between words. *Quarterly Journal of Experimental Psychology, 62*(7), 1356--1376. https://doi.org/10.1080/17470210802400010
+
+## References {.smaller}
+
+Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. *Psychological review, 87*(4), 329.
+
+Keating, G. D. (2009). Sensitivity to Violations of Gender Agreement in Native and Nonnative Spanish: An Eye-Movement Investigation. *Language Learning, 59*(3), 503--535. https://doi.org/10.1111/j.1467-9922.2009.00516.x
+
+Liversedge, S. P., Rayner, K., White, S. J., Vergilino-Perez, D., Findlay, J. M., & Kentridge, R. W. (2004). Eye movements when reading disappearing text: is there a gap effect in reading?. *Vision research, 44*(10), 1013-1024.
+
+McConkie, G. W., & Rayner, K. (1975). The span of the effective stimulus during a fixation in reading. *Perception & Psychophysics, 17*, 578--586.
+
+Mitchell, D. C., Shen, X., Green, M. J., & Hodgson, T. L. (2008). Accounting for regressive eye-movements in models of sentence processing: A reappraisal of the Selective Reanalysis hypothesis. *Journal of Memory and Language, 59*(3), 266-293.
+
+Pellicer-Sánchez, A. (2016). INCIDENTAL L2 VOCABULARY ACQUISITION FROM AND WHILE READING: An Eye-Tracking Study. *Studies in Second Language Acquisition, 38*(1), 97--130. https://doi.org/10.1017/S0272263115000224
+
+## References {.smaller}
+
+Pickering, M. J., Frisson, S., McElree, B., & Traxler, M. J. (2004). Eye Movements and Semantic Composition. In M. Carreiras & C. Clifton Jr. (Eds.), *The On-line Study of Sentence Comprehension*. Psychology Press.
+
+Rayner, K. (1975). The perceptual span and peripheral cues in reading. *Cognitive Psychology, 7*, 65--81.
+
+Rayner, K., & Bertera, J. H. (1979). Reading without a fovea. *Science, 206*, 468--469.
+
+Rayner, K., & Duffy, S. A. (1986). Lexical complexity and fixation times in reading: Effects of word frequency, verb complexity, and lexical ambiguity. *Memory & Cognition, 14*(3), 191--201. https://doi.org/10.3758/BF03197692
+
+Sereno, S. C., & Rayner, K. (1992). Fast priming during eye fixations in reading. *Journal of Experimental Psychology: Human Perception and Performance, 18*(1), 173.
+
+Sereno, S. C., & Rayner, K. (2003). Measuring word recognition in reading: Eye movements and event-related potentials. *Trends in Cognitive Sciences, 7*(11), 489--493. https://doi.org/10.1016/j.tics.2003.09.010
+
+Solan, H. A., Feldman, J., & Tujak, L. (1995). Developing Visual and Reading Efficiency in Older Adults. *Optometry and Vision Science, 72*(2), 139.
+
+## References {.smaller}
+
+Staub, A., Rayner, K., Pollatsek, A., Hyönä, J., & Majewski, H. (2007). The time course of plausibility effects on eye movements in reading: Evidence from noun-noun compounds. *Journal of Experimental Psychology. Learning, Memory, and Cognition, 33*(6), 1162--1169. https://doi.org/10.1037/0278-7393.33.6.1162
