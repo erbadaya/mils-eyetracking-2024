@@ -24,7 +24,7 @@ editor: visual
 
 ## Reading research
 
-We have a wealth of paradigms to explore how individuals comprehend a piece of written text (from words to several lines, either created stimuli or real texts), considering both low-level processes for word identification (e.g., lexical access) and higher-level processes for sentence and discourse comprehension (e.g., inferences).
+We have a wealth of paradigms to explore how individuals comprehend a piece of written text (from words to several lines, either created stimuli or real texts), considering both low-level processes for word identification (e.g., lexical access) and higher-level processes for sentence and discourse comprehension (e.g., inferences). !!!
 
 ## What's so special about reading?
 
