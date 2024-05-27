@@ -56,7 +56,7 @@ $selection-bg: #26351c !default;
 // title and headings
 
 #title-slide {
-  text-align: left;
+  text-align: center;
 
   .title {
     color: $body-color;
@@ -181,7 +181,6 @@ $selection-bg: #26351c !default;
 .reveal .slide-logo {
   
   height: 120px !important;
-  width: 150px !important;
   max-width: unset !important;
   max-height: unset !important;
 }

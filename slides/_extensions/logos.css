@@ -1,0 +1,21 @@
+.reveal .slide-logo-right {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 12px;
+  max-height: 2.2rem;
+  height: 100%;
+  width: auto;
+  z-index: 2;
+}
+
+.reveal .slide-logo-left {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 12px;
+  max-height: 2.2rem;
+  height: 100%;
+  width: auto;
+  z-index: 2;
+}

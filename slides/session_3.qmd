@@ -1,10 +1,10 @@
 ---
-title: "Eye-tracking - Session 3"
-author: "Badaya & Baltais"
+title: "Reading"
+author: "Baltais"
 format: 
    clean-revealjs:
-    logo: images/logo_ugent.png
-    footer: Session 3 - Reading
+    logo: images/logo_mils.png
+    footer: "Reading"
     include-in-header: 
       text: |
         <style>
