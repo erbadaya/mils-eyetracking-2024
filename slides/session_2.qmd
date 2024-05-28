@@ -335,6 +335,15 @@ Mention the plausibility bit!!
 
 ## Visual stimuli
 
+2. How can items be displayed?
+
+In some cases:
+
+- Items - blank screen
+  - Short term visual memory
+
+## Visual stimuli
+
 3.  How can we manipulate the items?
 
 [Relationship between target and distractor(s)]{.fg style="--col: #e64173"}.
@@ -425,7 +434,7 @@ Length?
     -   Give enough time for a measure to occur.
     -   Altmann and Kamide: Trigger -\> verb onset.
 
-# End of trial
+## End of trial
 
 - Task?
 - If no task:
@@ -651,6 +660,29 @@ Audio properties
 
 ![](images/session_2/speechrate_vwp.png)
 
+## Pros & cons
+
+::: columns
+::: {.column width="50%"}
+::: r-stack
+**Pros**
+:::
+
+-   Ecological validity.
+-   Relatively easy.
+-   Accessible e.g., no meta-linguistic judgements.
+:::
+
+::: {.column width="50%"}
+::: r-stack
+**Cons**
+:::
+
+-   Ecological validity.
+-   Confounding variables.
+-   Linking hypothesis.
+:::
+:::
 
 
 ## Variations
@@ -674,16 +706,19 @@ Preferential look paradigm (\~ VWP for infants)
 
 Language production.
 
+- No auditory stimuli
+    - Participants are asked to describe what they see
+    - Instructions
+    
+## Variations
+
 -   The link between planning and eye movements is less direct.
-
 -   Eye movements \~ labour division of speech production (e.g., Levelt's model)
-
     -   Conceptual
     -   Formulation
     -   Articulation
 
 -   How does looking at an object relate to production stages?
-
     -   Do people fixate for longer on objects harder to retrieve?
     -   Do people start producing speech prior to fixating on the object to name?
 
@@ -715,34 +750,25 @@ Language production.
     -   ROIs size
     -   Display size
 
+--------------------------
 
-## Pros & cons
-
-::: columns
-::: {.column width="50%"}
-::: r-stack
-**Pros**
-:::
-
--   Ecological validity.
--   Relatively easy.
--   Accessible e.g., no meta-linguistic judgements.
-:::
-
-::: {.column width="50%"}
-::: r-stack
-**Cons**
-:::
-
--   Ecological validity.
--   Confounding variables.
--   Linking hypothesis.
-:::
-:::
+Let's take a break!
 
 # Building a VWP experiment
 
-## 
+## Building a VWP experiment
+
+Download the PsychoPy/OpenSesame script
+
+- Explore the "data source"
+- How to send triggers
+- How to define Areas of Interest (cf. manual on GitHub)
+
+## Building a VWP experiment
+
+Example: A simplified version of Altmann & Kamide (no boy, arrays of objects)
+
+
 
 ## References {.smaller}
 
