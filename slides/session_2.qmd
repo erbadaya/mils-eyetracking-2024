@@ -3,7 +3,8 @@ title: "Eye-tracking - Session 2"
 author: "Badaya"
 format: 
    clean-revealjs:
-    logo: images/logo_ugent.png
+    chalkboard: true
+    logo: images/logo_mils.png
     footer: Session 2 - Visual World Paradigm
     include-in-header: 
       text: |
@@ -20,8 +21,7 @@ format:
 editor: visual
 ---
 
-How is everyone doing today?
-Any questions from yesterday?
+How is everyone doing today? Any questions from yesterday?
 
 ## Plan of today
 
@@ -47,13 +47,122 @@ The Visual World Paradigm (VWP) is an eye-tracking paradigm that commonly descri
 
 ![Cooper, 1974](images/session_2/cooper_vwp.jpg)
 
+## Uses
+
+Different levels of language comprehension (Huettig et al., 2011)
+
+-   Phonological level (e.g., Allopenna et al., 1998)
+    -   Beetle versus beaker
+-   Lexical level (e.g., semantic prediction, Altmann & Kamide, 1999)
+    -   Eat versus move
+-   Syntactic level (e.g., Knoeferle et al., 2005)
+    -   Disambiguation of thematic roles.
+-   Discourse level (e.g., van Bergen & Bosker, 2018)
+    -   Actually versus Indeed
+-   Pragmatic level (e.g., Grodner et al., 2010)
+    -   Adjective informativeness depends on speaker's reliability.
+
+## Uses
+
+-   Dialogue (e.g., Brown-Schmidt & Tanenhaus, 2008)
+    -   Common ground establishment.
+-   Paralinguistic cues (e.g., Arnold et al., 2004)
+    -   New versus given information following a disfluency.
+-   Linguistic relativity (e.g., Papafragou et al., 2008).
+    -   Fixation preference following encoding of motion.
+
+And many more (e.g., bilingualism, semantics/syntax interface,...)
+
+## Uses
+
+Different populations
+
+-   Children
+-   Aphasic patients (e.g., Mirman et al., 2011)
+-   Non-native listeners (e.g., Ito et al., 2018)
+
+## What are we interested in?
+
+(Mostly) Fixations and saccades
+
+-   When & where
+-   Operationalisation
+    -   Fixation counts, proportion on ROIs,...
+-   100-200 ms to launch a saccade (Matin et al., 1993)
+
+::: notes
+The former much more common than the latter. Because we launch a saccade when we want to fixate on something, we take saccade latency as a measure too. When you consider fixations, you need to acount for the time it takes people to launch a saccade.
+:::
+
+## What are we interested in?
+
+(Newer) Pupil size
+
+- Ease of processing
+- Challenges for experimental design
+
+## Linking hypothesis
+
+Linking hypothesis: Link response to a hypothesized process.
+
+-   Eye movements reflect lexical access.
+    -   (In reading) Time spent looking at a word == how long it takes to process it.
+
+Visual World Parading = [Linguistic + non-linguistic information.]{.fg style="--col: #e64173"}
+
+-   What guides what? Whether and how do they interact?
+-   **How can we be sure that our results eye-movements were linguistically mediated?**
+
+## Linking hypothesis
+
+"Default": Increases in fixation == increases in activation.
+
+-   Automatised routines; recognising a name triggers these routines, in turn, these routines trigger a saccade and thus fixations on objects (Tanenhaus et al., 2000).
+
+## Linking hypothesis
+
+Not necessarily (see Magnuson, 2019):
+
+-   Language processing guiding vision (e.g., Allopenna et al., 1998).
+-   Vision also affecting language processing (e.g. Huettig & McQueen, 2007).
+-   Listeners getting ahead of speech (e.g., Altmann & Kamide, 1999).
+
+::: notes
+A much better discussion of this can be found in Magnuson (2019). I am only mentioning this because these linking hypothesis highlight different aspects we need to consider about the VWP and how we interpret fixations and saccades (e.g., whether they are language-mediated). Magnuson discusses models for those, as well as caveats for each.
+
+In fact, most papers will not discuss what hypothesis they are relying on (and usually, the assumption is the default one, by Tanenhaus et al., 2010)
+
+The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors.
+
+The second one suggests that visual information can partially mediate fixations. This is idea is much more developed in Huettig et al. (2011). The idea is that representations are activated prior to speech, you can think of it as a way of 'priming'. They also discuss that by necessity, vision and language need to be connected as we need to move our eyes towards something, so we need to link the linguistic information to spatial information (e.g., where is said object). Visual display activates visual features which in turn activate phonological and semantic features associated to those. Similarly, speech activates these. The overlap leads to even more activation. Note that this kind of entails that you are constantly activating labels when you are looking at the world.
+
+The mental world goes back a bit to the first one, but instead of purely describing phonological input, it also considers the possibility that individuals are building a mental world (kind of like a mental representation of what is being said). They then explore scenes with this mental representation. This was developed by Altmann and Kamide, so it kind of makes sense they advocate for something like this: They need to accomodate for prediction.
+
+The final one has components of the other three. Visual and linguistic information interact, what leads what is following Huettig and McQueen e.g., timing and task. One components is deep interaction: when one type of infor alters the other, for example, no showing examples of garden-path when nothing in the display does not support such interpretation (visual information gets ahead of whatever linguistic information may come up, and alters it, as opposed to biasing it).
+:::
+
+## Linking hypothesis
+
+But why do we care?
+
+-   Role of instructions and presentation
+    -   Click on the red \[target\]
+-   Role of preview window
+    -   Activation of phonological and semantic information
+-   Bottom-up versus top-down effects
+    -   Passive versus active processes (e.g., Pickering & Gambi's (2018) prediction-by-production)
+-   Level of interest
+    - Lexical access v Sentence comprehension versus Discourse comprehension
+
+::: notes
+Bottom-up and top-down has to do with mental world
+:::
+
+
 ## Basics of the Visual World Paradigm
 
 1.  Elements
 2.  Structure
-3.  Measures
-4.  Analysis
-5.  Results
 6.  Confounds
 7.  Variations
 
@@ -61,7 +170,19 @@ The Visual World Paradigm (VWP) is an eye-tracking paradigm that commonly descri
 
 Working example: Altmann and Kamide (1999)
 
+:::columns
+:::{.column width="50%"}
 Anticipation (\~prediction) of lexical items given verb semantics.
+
+- DV: Fixations to objects on screen
+- IV: Verb semantics: [constraining]{.fg style="--col: #FF7F50"} versus [unconstraining]{.fg style="--col: #40E0D0"} 
+    - "The boy will [eat]{.fg style="--col: #FF7F50"} the cake" versus "The boy will [move]{.fg style="--col: #40E0D0"} the cake"
+
+:::
+:::{.column width="50%"}
+![](images/session_2/altmannkamide1999.png)
+:::
+:::
 
 ## Elements
 
@@ -79,12 +200,12 @@ Example of Altmann and Kamide?
 
 . . .
 
--   The boy will *eat* the cake (constraining).
--   The boy will *move* the cake (unconstraining).
+-   The boy will [eat]{.fg style="--col: #FF7F50"} the cake (constraining).
+-   The boy will [move]{.fg style="--col: #40E0D0"} the cake (unconstraining).
 
 Control of stimuli:
 
-- Context matched.
+-   Context matched.
 -   Counterbalancing.
 -   Comparison between levels.
 -   Inter alia.
@@ -204,11 +325,11 @@ Mention the plausibility bit!!
 :::
 
 ::: {.column width="30%"}
-![Huettig & McQueen, 2007](images/session_3/array_example.jpg)
+![Huettig & McQueen, 2007](images/session_2/array_example.jpg)
 :::
 
 ::: {.column width="30%"}
-![Huettig & McQueen, 2007](images/session_3/ortho_example.jpg)
+![Huettig & McQueen, 2007](images/session_2/ortho_example.jpg)
 :::
 :::
 
@@ -225,7 +346,7 @@ Mention the plausibility bit!!
 
 3.  How can we manipulate the items?
 
-![Allopenna et al., 1996](images/session_3/phonological_manipulation.JPG)
+![Allopenna et al., 1996](images/session_2/phonological_manipulation.JPG)
 
 ## Visual stimuli
 
@@ -262,16 +383,14 @@ Remember: the active viewer (Yarbus).
 **Before the experiment begins**
 
 -   Calibration and validation.
-
     -   Number of elements for interest areas.
     -   Size of interest areas.
     -   Horizontal and vertical areas.
-
 -   Decide sample rate.
 
 ## Structure
 
-![](images/session_3/vwp_trialsequence_example.jpg)
+![](images/session_2/vwp_trialsequence_example.jpg)
 
 ## Drift correction
 
@@ -306,74 +425,18 @@ Length?
     -   Give enough time for a measure to occur.
     -   Altmann and Kamide: Trigger -\> verb onset.
 
-## Measures
+# End of trial
 
-Fixations and saccades.
+- Task?
+- If no task:
+  - Give enough time for processes to fully unfold.
 
--   When & where
--   Operationalisation
-    -   Fixation counts, proportion on ROIs,...
--   100-200 ms to launch a saccade (Matin et al., 1993)
+## Exercise: RQ & measures of interest
 
-::: notes
-The former much more common than the latter. Because we launch a saccade when we want to fixate on something, we take saccade latency as a measure too. When you consider fixations, you need to acount for the time it takes people to launch a saccade.
-:::
+- Go [here] and type your idea!
 
-## Measures: Linking hypothesis
+What would you be interested in? How would the design look like?
 
-Linking hypothesis: Link response to a hypothesized process.
-
--   Eye movements reflect lexical access.
-    -   (In reading) Time spent looking at a word == how long it takes to process it.
-
-Visual World Parading = [Linguistic + non-linguistic information.]{.fg style="--col: #e64173"}
-
--   What guides what? Whether and how do they interact?
--   **How can we be sure that our results eye-movements were linguistically mediated?**
-
-## Measures: Linking hypothesis
-
-"Default": Increases in fixation == increases in activation.
-
--   Automatised routines; recognising a name triggers these routines, in turn, these routines trigger a saccade and thus fixations on objects (Tanenhaus et al., 2000).
-
-## Measures: Linking hypothesis
-
-Not necessarily (see Magnuson, 2019):
-
-  - Language processing guiding vision (e.g., Allopenna et al., 1998).
-  - Vision also affecting language processing (e.g. Huettig & McQueen, 2007).
-  - Listeners getting ahead of speech (e.g., Altmann & Kamide, 1999).
-
-
-::: notes
-A much better discussion of this can be found in Magnuson (2019). I am only mentioning this because these linking hypothesis highlight different aspects we need to consider about the VWP and how we interpret fixations and saccades (e.g., whether they are language-mediated). Magnuson discusses models for those, as well as caveats for each.
-
-In fact, most papers will not discuss what hypothesis they are relying on (and usually, the assumption is the default one, by Tanenhaus et al., 2010)
-
-The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors.
-
-The second one suggests that visual information can partially mediate fixations. This is idea is much more developed in Huettig et al. (2011). The idea is that representations are activated prior to speech, you can think of it as a way of 'priming'. They also discuss that by necessity, vision and language need to be connected as we need to move our eyes towards something, so we need to link the linguistic information to spatial information (e.g., where is said object). Visual display activates visual features which in turn activate phonological and semantic features associated to those. Similarly, speech activates these. The overlap leads to even more activation. Note that this kind of entails that you are constantly activating labels when you are looking at the world.
-
-The mental world goes back a bit to the first one, but instead of purely describing phonological input, it also considers the possibility that individuals are building a mental world (kind of like a mental representation of what is being said). They then explore scenes with this mental representation. This was developed by Altmann and Kamide, so it kind of makes sense they advocate for something like this: They need to accomodate for prediction.
-
-The final one has components of the other three. Visual and linguistic information interact, what leads what is following Huettig and McQueen e.g., timing and task. One components is deep interaction: when one type of infor alters the other, for example, no showing examples of garden-path when nothing in the display does not support such interpretation (visual information gets ahead of whatever linguistic information may come up, and alters it, as opposed to biasing it).
-:::
-
-## Measures: Linking hypothesis
-
-But why do we care?
-
--   Role of instructions and presentation
-    -   Click on the red \[target\]
--   Role of preview window
-    -   Activation of phonological and semantic information
--   Bottom-up versus top-down effects
-    -   Passive versus active processes (e.g., Pickering & Gambi's (2018) prediction-by-production)
-
-::: notes
-Bottom-up and top-down has to do with mental world
-:::
 
 ## Analysis
 
@@ -399,7 +462,7 @@ Verb onset - noun onset (+200 for saccades)
 
 Collapse all samples before and after.
 
--   Are there more fixations on the cake when is preceded by 'eat' compared to 'move'?
+-   Are there more fixations on the cake when is preceded by [eat]{.fg style="--col: #FF7F50"} compared to [move]{.fg style="--col: #40E0D0"}?
 
 ## Analysis
 
@@ -419,7 +482,7 @@ You hardly explore second by second, but instead, aggregate samples over X amoun
 
 ## Analysis
 
-More on W9 & W11
+More on Friday
 
 Divide in approaches (see Ito & Knoeferle, 2023):
 
@@ -431,7 +494,10 @@ Divide in approaches (see Ito & Knoeferle, 2023):
 
 -   (G)LMM/ANOVAs by subjects & items/t-tests
 
-There is an increase or a decrease over time. Cannot tell *when* this increase/decrease happens, but (G)LMMs are the most common analysis. - but cf. models per time interval.
+There is an increase or a decrease over time. Cannot tell *when* this increase/decrease happens, but (G)LMMs are the most common analysis. 
+
+  - but cf. models per time interval.
+  
 :::
 
 ::: {.column width="50%"}
@@ -460,6 +526,56 @@ Commonly, plots.
 ## Results
 
 ![](images/session_1/vwp_data.JPG)
+
+
+## Exercise: Huettig & McQueen (2007)
+
+Any questions on the paper?
+
+. . .
+
+1.  What is the visual display? Why?
+2.  How many samples in 20 ms bins?
+3.  What is the time window of analysis? Why?
+4.  What is the difference between Exp 1 and Exp 2?
+
+## Exercise: Huettig & McQueen (2007)
+
+1.  What is the visual display? Why?
+
+. . .
+
+4 images representing 3 related and 1 unrelated items to the target.
+
+-   Phonology, shape, semantics.
+-   No target displayed to maximise fixations to distractors.
+-   Distractors chosen to explore whether fixations are driven by phonology, visual or semantic information.
+
+## Exercise: Huettig & McQueen (2007)
+
+2.  How many samples in 20 ms bins?
+
+. . .
+
+Recording at 250 Hz, 250 samples per second.
+
+-   5 samples.
+
+## Exercise: Huettig & McQueen (2007)
+
+3.  What is the time window of analysis? Why?
+
+. . .
+
+From noun onset +200 (to account for a saccade) - 1000 ms.
+
+## Exercise: Huettig & McQueen (2007)
+
+4.  What is the difference between Exp 1 and Exp 2?
+
+. . .
+
+Preview window.
 
 ## Confounds
 
@@ -535,54 +651,7 @@ Audio properties
 
 ![](images/session_2/speechrate_vwp.png)
 
-## Exercise: Huettig & McQueen (2007)
 
-Any questions on the paper?
-
-. . .
-
-1.  What is the visual display? Why?
-2.  How many samples in 20 ms bins?
-3.  What is the time window of analysis? Why?
-4.  What is the difference between Exp 1 and Exp 2?
-
-## Exercise: Huettig & McQueen (2007)
-
-1.  What is the visual display? Why?
-
-. . .
-
-4 images representing 3 related and 1 unrelated items to the target.
-
--   Phonology, shape, semantics.
--   No target displayed to maximise fixations to distractors.
--   Distractors chosen to explore whether fixations are driven by phonology, visual or semantic information.
-
-## Exercise: Huettig & McQueen (2007)
-
-2.  How many samples in 20 ms bins?
-
-. . .
-
-Recording at 250 Hz, 250 samples per second.
-
--   5 samples.
-
-## Exercise: Huettig & McQueen (2007)
-
-3.  What is the time window of analysis? Why?
-
-. . .
-
-From noun onset +200 (to account for a saccade) - 1000 ms.
-
-## Exercise: Huettig & McQueen (2007)
-
-4.  What is the difference between Exp 1 and Exp 2?
-
-. . .
-
-Preview window.
 
 ## Variations
 
@@ -646,39 +715,6 @@ Language production.
     -   ROIs size
     -   Display size
 
-## Uses
-
-Different levels of language comprehension (Huettig et al., 2011)
-
--   Phonological level (e.g., Allopenna et al., 1998)
-    -   Beetle versus beaker
--   Lexical level (e.g., semantic prediction, Altmann & Kamide, 1999)
-    -   Eat versus move
--   Syntactic level (e.g., Knoeferle et al., 2005)
-    -   Disambiguation of thematic roles.
--   Discourse level (e.g., van Bergen & Bosker, 2018)
-    -   Actually versus Indeed
--   Pragmatic level (e.g., Grodner et al., 2010)
-    -   Adjective informativeness depends on speaker's reliability.
-
-## Uses
-
--   Dialogue (e.g., Brown-Schmidt & Tanenhaus, 2008)
-    -   Common ground establishment.
--   Paralinguistic cues (e.g., Arnold et al., 2004)
-    -   New versus given information following a disfluency.
--   Linguistic relativity (e.g., Papafragou et al., 2008).
-    -   Fixation preference following encoding of motion.
-
-And many more (e.g., bilingualism, semantics/syntax interface,...)
-
-## Uses
-
-Different populations
-
--   Children
--   Aphasic patients (e.g., Mirman et al., 2011)
--   Non-native listeners (e.g., Ito et al., 2018)
 
 ## Pros & cons
 
@@ -703,6 +739,10 @@ Different populations
 -   Linking hypothesis.
 :::
 :::
+
+# Building a VWP experiment
+
+## 
 
 ## References {.smaller}
 
