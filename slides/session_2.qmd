@@ -98,8 +98,8 @@ The former much more common than the latter. Because we launch a saccade when we
 
 (Newer) Pupil size
 
-- Ease of processing
-- Challenges for experimental design
+-   Ease of processing
+-   Challenges for experimental design
 
 ## Linking hypothesis
 
@@ -152,34 +152,33 @@ But why do we care?
 -   Bottom-up versus top-down effects
     -   Passive versus active processes (e.g., Pickering & Gambi's (2018) prediction-by-production)
 -   Level of interest
-    - Lexical access v Sentence comprehension versus Discourse comprehension
+    -   Lexical access v Sentence comprehension versus Discourse comprehension
 
 ::: notes
 Bottom-up and top-down has to do with mental world
 :::
 
-
 ## Basics of the Visual World Paradigm
 
 1.  Elements
 2.  Structure
-6.  Confounds
-7.  Variations
+3.  Confounds
+4.  Variations
 
 ## Visual World Paradigm
 
 Working example: Altmann and Kamide (1999)
 
-:::columns
-:::{.column width="50%"}
+::: columns
+::: {.column width="50%"}
 Anticipation (\~prediction) of lexical items given verb semantics.
 
-- DV: Fixations to objects on screen
-- IV: Verb semantics: [constraining]{.fg style="--col: #FF7F50"} versus [unconstraining]{.fg style="--col: #40E0D0"} 
-    - "The boy will [eat]{.fg style="--col: #FF7F50"} the cake" versus "The boy will [move]{.fg style="--col: #40E0D0"} the cake"
-
+-   DV: Fixations to objects on screen
+-   IV: Verb semantics: [constraining]{.fg style="--col: #FF7F50"} versus [unconstraining]{.fg style="--col: #40E0D0"}
+    -   "The boy will [eat]{.fg style="--col: #FF7F50"} the cake" versus "The boy will [move]{.fg style="--col: #40E0D0"} the cake"
 :::
-:::{.column width="50%"}
+
+::: {.column width="50%"}
 ![](images/session_2/altmannkamide1999.png)
 :::
 :::
@@ -335,12 +334,12 @@ Mention the plausibility bit!!
 
 ## Visual stimuli
 
-2. How can items be displayed?
+2.  How can items be displayed?
 
 In some cases:
 
-- Items - blank screen
-  - Short term visual memory
+-   Items - blank screen
+    -   Short term visual memory
 
 ## Visual stimuli
 
@@ -436,16 +435,15 @@ Length?
 
 ## End of trial
 
-- Task?
-- If no task:
-  - Give enough time for processes to fully unfold.
+-   Task?
+-   If no task:
+    -   Give enough time for processes to fully unfold.
 
 ## Exercise: RQ & measures of interest
 
-- Go [here] and type your idea!
+-   Go \[here\] and type your idea!
 
 What would you be interested in? How would the design look like?
-
 
 ## Analysis
 
@@ -503,10 +501,9 @@ Divide in approaches (see Ito & Knoeferle, 2023):
 
 -   (G)LMM/ANOVAs by subjects & items/t-tests
 
-There is an increase or a decrease over time. Cannot tell *when* this increase/decrease happens, but (G)LMMs are the most common analysis. 
+There is an increase or a decrease over time. Cannot tell *when* this increase/decrease happens, but (G)LMMs are the most common analysis.
 
-  - but cf. models per time interval.
-  
+-   but cf. models per time interval.
 :::
 
 ::: {.column width="50%"}
@@ -535,7 +532,6 @@ Commonly, plots.
 ## Results
 
 ![](images/session_1/vwp_data.JPG)
-
 
 ## Exercise: Huettig & McQueen (2007)
 
@@ -684,7 +680,6 @@ Audio properties
 :::
 :::
 
-
 ## Variations
 
 Preferential look paradigm (\~ VWP for infants)
@@ -706,10 +701,10 @@ Preferential look paradigm (\~ VWP for infants)
 
 Language production.
 
-- No auditory stimuli
-    - Participants are asked to describe what they see
-    - Instructions
-    
+-   No auditory stimuli
+    -   Participants are asked to describe what they see
+    -   Instructions
+
 ## Variations
 
 -   The link between planning and eye movements is less direct.
@@ -717,7 +712,6 @@ Language production.
     -   Conceptual
     -   Formulation
     -   Articulation
-
 -   How does looking at an object relate to production stages?
     -   Do people fixate for longer on objects harder to retrieve?
     -   Do people start producing speech prior to fixating on the object to name?
@@ -750,25 +744,366 @@ Language production.
     -   ROIs size
     -   Display size
 
---------------------------
+------------------------------------------------------------------------
 
 Let's take a break!
+
+# Building an eye-tracking experiment
+
+## Building an eye-tracking experiment
+
+General commercial software:
+
+-   E-Prime
+-   Presentation
+-   PsyScope
+
+Advantages: User-friendly.
+
+Disadvantages: License.
+
+## Building an eye-tracking experiment
+
+Commercial software associated with eye-tracking hardware
+
+-   SMI: Experiment Center
+-   Tobii: Tobii Studio
+-   EyeLink: Experiment Builder
+
+Advantages: User-friendly, created with eye-tracking experiments in mind.
+
+Disadvantages: License (but if you own an eye-tracker, you commonly have one).
+
+## Building an eye-tracking experiment
+
+Programming environments
+
+-   MATLAB (Psychophysics Toolbox)
+-   Python (e.g., PsychoPy, OpenSesame)
+
+Advantages: Free software, nicely documented, versatile, user-friendly interfaces.
+
+Disadvantages: More complex functionalities require coding ("more intimidating").
+
+## Building an eye-tracking experiment
+
+Focus of this course: license-free software
+
+-   But: Packages designed for EyeLink+
+    -   Shouldn't disencourage you
+
+In this course: OpenSesame
+
+-   Best trade-off
+    -   Adaptation to other trackers
+    -   Coding/plugins
+
+## OpenSesame
+
+![](images/session_2/OS_layout.PNG)
+
+## OpenSesame
+
+::: columns
+::: {.column width="50%"}
+Combination of drag-in elements plus the possibility of coding
+
+-   Interaction with the eye-tracker via PyGaze
+:::
+
+::: {.column width="50%"}
+![](images/session_2/OS_plugins.PNG) ![](images/session_2/pygaze_plugins.PNG)
+:::
+:::
+
+## OpenSesame
+
+![](images/session_2/OS_beginning.PNG)
+
+## OpenSesame
+
+::: columns
+::: {.column width="50%"}
+Loop:
+
+-   Data source
+    -   Trial information e.g., items, conditions
+    -   Order of presentation of items
+:::
+
+::: {.columns width="50%"}
+![](images/session_2/OS_loop.PNG)
+:::
+:::
+
+## OpenSesame
+
+Sequence
+
+-   Trial structure
+-   Where the other plugins go inside
+
+![](images/session_2/OS_trialsequence.PNG)
+
+## OpenSesame
+
+Presentation plugins
+
+::: columns
+::: {.column width="30%"}
+![](images/session_2/canvas.PNG)
+:::
+
+::: {.column width="30%"}
+![](images/session_2/audio.PNG)
+:::
+
+::: {.column width="30%"}
+![](images/session_2/response.PNG)
+:::
+:::
+
+## OpenSesame
+
+Eye-tracking components
+
+What is the structure of an experiment?
+
+. . .
+
+
+- Calibration & validation 
+- Drift correction 
+- Recording 
+- Send information
+
+## OpenSesame
+
+Calibration and validation
+
+::: columns
+::: {.column width="50%"}
+-   PyGaze Start recording
+-   (Often times) At the beginning of the experiment
+    -   Not within a loop!
+:::
+
+::: {.column width="50%"}
+![](images/session_2/pygaze_cal.PNG)
+:::
+:::
+
+## OpenSesame
+
+Drift correction
+
+::: columns
+::: {.column width="50%"}
+-   PyGaze Drift correction
+-   (Often times) Inside your trial sequence
+    -   Never after start recording
+:::
+
+::: {.column width="50%"}
+![](images/session_2/pygaze_drift.PNG)
+:::
+:::
+
+## OpenSesame
+
+Start recording
+
+::: columns
+::: {.column width="50%"}
+-   PyGaze Start recording
+-   Inside your trial sequence
+:::
+
+::: {.column width="50%"}
+![](images/session_2/pygaze_record.PNG)
+:::
+:::
+
+## OpenSesame
+
+Log variables
+
+::: columns
+::: {.column width="50%"}
+-   PyGaze Log
+-   Inside your trial sequence
+    -   Never after stop recording
+:::
+
+::: {.column width="50%"}
+![](images/session_2/pygaze_log.PNG)
+:::
+:::
+
+## OpenSesame
+
+Stop recording
+
+::: columns
+::: {.column width="50%"}
+-   PyGaze Stop recording
+-   Inside your trial sequence
+:::
+
+::: {.column width="50%"}
+![](images/session_2/pygaze_stop.PNG)
+:::
+:::
+
+## OpenSesame
+
+![](images/session_2/os_initiallook.PNG)
 
 # Building a VWP experiment
 
 ## Building a VWP experiment
 
-Download the PsychoPy/OpenSesame script
+Within the trial sequence, what plugins do you think we should have? (both for stimuli presentation and eye tracking)
 
-- Explore the "data source"
-- How to send triggers
-- How to define Areas of Interest (cf. manual on GitHub)
+. . .
+
+![](images/session_2/original_idea.PNG)
 
 ## Building a VWP experiment
 
-Example: A simplified version of Altmann & Kamide (no boy, arrays of objects)
+![](images/session_2/actual.PNG)
+
+## Building a VWP experiment
+
+Download the OpenSesame script
+
+-   Explore the "data source"
+-   How to send triggers
+-   How to define Areas of Interest (cf. manual on GitHub)
+
+## Building a VWP experiment
+
+Example: Manner of delivery (fluent/disfluent) biasing interpretations of deceit (Loy et al., 2017)
+
+-   DV: Fixations on either item on the screen.
+-   IV: Manner of delivery
+
+2-images visual array (target v distractor)
+
+## Building a VWP experiment
+
+:::columns 
+:::{.column width="50%"}
+
+The stimuli:
+
+-   8 images (4 pairs, because we have 4 trials)
+-   8 audios (4 carrier sentences, 4 nouns, to ease sending triggers)
+
+You don't need to send the stimuli outside of the script, everything is in the file!
+
+::: 
+:::{.column width="50%"}
+
+![](images/session_2/stimuli.png)
+
+:::
+:::
 
 
+## Building a VWP experiment
+
+The constraints of design:
+
+-   We want to counterbalance the position of the target.
+-   We want to have a preview window and then the audio.
+-   We want participants to click on an item only after the noun is said.
+-   We want participants to only be able to click for 5000 ms.
+-   We want to show participants the instructions at the beginning of the experiment.
+
+## Building a VWP experiment
+
+The constraints of the eye tracker:
+
+-   We want three triggers (audio onset - noun onset - trial offset).
+-   We want two areas of interest (target versus distractor).
+    -   Dynamic values!
+-   We want a drift correction at the beginning of every trial.
+
+## Building a VWP experiment
+
+The loop
+
+-   Each row: a trial
+-   What does the first row represent?
+
+![](images/session_2/loopvwp.png)
+
+## Building a VWP experiment
+
+The trial sequence
+
+![](images/session_2/trialsequencevwp.png)
+
+## Building a VWP experiment
+
+Send Areas of Interest - inline python script
+
+![](images/session_2/inlinescript1.png)
+
+## Building a VWP experiment
+
+Dynamic visual stimuli
+
+![](images/session_2/canvas1.png)
+
+## Building a VWP experiment
+
+Auditory stimuli
+
+:::columns
+:::{.column width="20%"}
+
+
+-   Cross splicing
+
+:::
+:::{.column width="40%"}
+
+![](images/session_2/audio1.png)
+
+:::
+:::{.column width="40%"}
+
+![](images/session_2/audio2.png)
+
+:::
+:::
+
+## Building a VWP
+
+Send triggers - inline python script
+
+## Building a VWP experiment
+
+Your turn now!
+
+-   Try:
+    -   This example.
+    -   A mock experiment
+    -   Your own research question
+
+# Wrap-up
+
+## Plan for tomorrow
+
+-   Eye-tracking-while-reading with Mariia
+-   Coding an experiment in OpenSesame
+
+## "Homework:
+
+-   Play around with OpenSesame
+-   Try to come up with a RQ within your own field where VWP would be useful
 
 ## References {.smaller}
 

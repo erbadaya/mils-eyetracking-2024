@@ -1261,22 +1261,361 @@ Badaya
 <p>Let’s take a break!</p>
 </section></section>
 <section>
+<section id="building-an-eye-tracking-experiment" class="title-slide slide level1 center">
+<h1>Building an eye-tracking experiment</h1>
+
+</section>
+<section id="building-an-eye-tracking-experiment-1" class="slide level2">
+<h2>Building an eye-tracking experiment</h2>
+<p>General commercial software:</p>
+<ul>
+<li>E-Prime</li>
+<li>Presentation</li>
+<li>PsyScope</li>
+</ul>
+<p>Advantages: User-friendly.</p>
+<p>Disadvantages: License.</p>
+</section>
+<section id="building-an-eye-tracking-experiment-2" class="slide level2">
+<h2>Building an eye-tracking experiment</h2>
+<p>Commercial software associated with eye-tracking hardware</p>
+<ul>
+<li>SMI: Experiment Center</li>
+<li>Tobii: Tobii Studio</li>
+<li>EyeLink: Experiment Builder</li>
+</ul>
+<p>Advantages: User-friendly, created with eye-tracking experiments in mind.</p>
+<p>Disadvantages: License (but if you own an eye-tracker, you commonly have one).</p>
+</section>
+<section id="building-an-eye-tracking-experiment-3" class="slide level2">
+<h2>Building an eye-tracking experiment</h2>
+<p>Programming environments</p>
+<ul>
+<li>MATLAB (Psychophysics Toolbox)</li>
+<li>Python (e.g., PsychoPy, OpenSesame)</li>
+</ul>
+<p>Advantages: Free software, nicely documented, versatile, user-friendly interfaces.</p>
+<p>Disadvantages: More complex functionalities require coding (“more intimidating”).</p>
+</section>
+<section id="building-an-eye-tracking-experiment-4" class="slide level2">
+<h2>Building an eye-tracking experiment</h2>
+<p>Focus of this course: license-free software</p>
+<ul>
+<li>But: Packages designed for EyeLink+
+<ul>
+<li>Shouldn’t disencourage you</li>
+</ul></li>
+</ul>
+<p>In this course: OpenSesame</p>
+<ul>
+<li>Best trade-off
+<ul>
+<li>Adaptation to other trackers</li>
+<li>Coding/plugins</li>
+</ul></li>
+</ul>
+</section>
+<section id="opensesame" class="slide level2">
+<h2>OpenSesame</h2>
+
+<img data-src="images/session_2/OS_layout.PNG" class="r-stretch"></section>
+<section id="opensesame-1" class="slide level2">
+<h2>OpenSesame</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Combination of drag-in elements plus the possibility of coding</p>
+<ul>
+<li>Interaction with the eye-tracker via PyGaze</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/OS_plugins.PNG"> <img data-src="images/session_2/pygaze_plugins.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-2" class="slide level2">
+<h2>OpenSesame</h2>
+
+<img data-src="images/session_2/OS_beginning.PNG" class="r-stretch"></section>
+<section id="opensesame-3" class="slide level2">
+<h2>OpenSesame</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Loop:</p>
+<ul>
+<li>Data source
+<ul>
+<li>Trial information e.g., items, conditions</li>
+<li>Order of presentation of items</li>
+</ul></li>
+</ul>
+</div><div class="columns" width="50%">
+<p><img data-src="images/session_2/OS_loop.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-4" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Sequence</p>
+<ul>
+<li>Trial structure</li>
+<li>Where the other plugins go inside</li>
+</ul>
+
+<img data-src="images/session_2/OS_trialsequence.PNG" class="r-stretch"></section>
+<section id="opensesame-5" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Presentation plugins</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/session_2/canvas.PNG"></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/session_2/audio.PNG"></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/session_2/response.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-6" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Eye-tracking components</p>
+<p>What is the structure of an experiment?</p>
+<div class="fragment">
+<ul>
+<li>Calibration &amp; validation</li>
+<li>Drift correction</li>
+<li>Recording</li>
+<li>Send information</li>
+</ul>
+</div>
+</section>
+<section id="opensesame-7" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Calibration and validation</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PyGaze Start recording</li>
+<li>(Often times) At the beginning of the experiment
+<ul>
+<li>Not within a loop!</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/pygaze_cal.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-8" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Drift correction</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PyGaze Drift correction</li>
+<li>(Often times) Inside your trial sequence
+<ul>
+<li>Never after start recording</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/pygaze_drift.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-9" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Start recording</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PyGaze Start recording</li>
+<li>Inside your trial sequence</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/pygaze_record.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-10" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Log variables</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PyGaze Log</li>
+<li>Inside your trial sequence
+<ul>
+<li>Never after stop recording</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/pygaze_log.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-11" class="slide level2">
+<h2>OpenSesame</h2>
+<p>Stop recording</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PyGaze Stop recording</li>
+<li>Inside your trial sequence</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/pygaze_stop.PNG"></p>
+</div>
+</div>
+</section>
+<section id="opensesame-12" class="slide level2">
+<h2>OpenSesame</h2>
+
+<img data-src="images/session_2/os_initiallook.PNG" class="r-stretch"></section></section>
+<section>
 <section id="building-a-vwp-experiment" class="title-slide slide level1 center">
 <h1>Building a VWP experiment</h1>
 
 </section>
 <section id="building-a-vwp-experiment-1" class="slide level2">
 <h2>Building a VWP experiment</h2>
-<p>Download the PsychoPy/OpenSesame script</p>
+<p>Within the trial sequence, what plugins do you think we should have? (both for stimuli presentation and eye tracking)</p>
+<div class="fragment">
+<p><img data-src="images/session_2/original_idea.PNG"></p>
+</div>
+</section>
+<section id="building-a-vwp-experiment-2" class="slide level2">
+<h2>Building a VWP experiment</h2>
+
+<img data-src="images/session_2/actual.PNG" class="r-stretch"></section>
+<section id="building-a-vwp-experiment-3" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>Download the OpenSesame script</p>
 <ul>
 <li>Explore the “data source”</li>
 <li>How to send triggers</li>
 <li>How to define Areas of Interest (cf.&nbsp;manual on GitHub)</li>
 </ul>
 </section>
-<section id="building-a-vwp-experiment-2" class="slide level2">
+<section id="building-a-vwp-experiment-4" class="slide level2">
 <h2>Building a VWP experiment</h2>
-<p>Example: A simplified version of Altmann &amp; Kamide (no boy, arrays of objects)</p>
+<p>Example: Manner of delivery (fluent/disfluent) biasing interpretations of deceit (Loy et al., 2017)</p>
+<ul>
+<li>DV: Fixations on either item on the screen.</li>
+<li>IV: Manner of delivery</li>
+</ul>
+<p>2-images visual array (target v distractor)</p>
+</section>
+<section id="building-a-vwp-experiment-5" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The stimuli:</p>
+<ul>
+<li>8 images (4 pairs, because we have 4 trials)</li>
+<li>8 audios (4 carrier sentences, 4 nouns, to ease sending triggers)</li>
+</ul>
+<p>You don’t need to send the stimuli outside of the script, everything is in the file!</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_2/stimuli.png"></p>
+</div>
+</div>
+</section>
+<section id="building-a-vwp-experiment-6" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>The constraints of design:</p>
+<ul>
+<li>We want to counterbalance the position of the target.</li>
+<li>We want to have a preview window and then the audio.</li>
+<li>We want participants to click on an item only after the noun is said.</li>
+<li>We want participants to only be able to click for 5000 ms.</li>
+<li>We want to show participants the instructions at the beginning of the experiment.</li>
+</ul>
+</section>
+<section id="building-a-vwp-experiment-7" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>The constraints of the eye tracker:</p>
+<ul>
+<li>We want three triggers (audio onset - noun onset - trial offset).</li>
+<li>We want two areas of interest (target versus distractor).
+<ul>
+<li>Dynamic values!</li>
+</ul></li>
+<li>We want a drift correction at the beginning of every trial.</li>
+</ul>
+</section>
+<section id="building-a-vwp-experiment-8" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>The loop</p>
+<ul>
+<li>Each row: a trial</li>
+<li>What does the first row represent?</li>
+</ul>
+
+<img data-src="images/session_2/loopvwp.png" class="r-stretch"></section>
+<section id="building-a-vwp-experiment-9" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>The trial sequence</p>
+
+<img data-src="images/session_2/trialsequencevwp.png" class="r-stretch"></section>
+<section id="building-a-vwp-experiment-10" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>Send Areas of Interest - inline python script</p>
+
+<img data-src="images/session_2/inlinescript1.png" class="r-stretch"></section>
+<section id="building-a-vwp-experiment-11" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>Dynamic visual stimuli</p>
+
+<img data-src="images/session_2/canvas1.png" class="r-stretch"></section>
+<section id="building-a-vwp-experiment-12" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>Auditory stimuli</p>
+<div class="columns">
+<div class="column" style="width:20%;">
+<ul>
+<li>Cross splicing</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/session_2/audio1.png"></p>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/session_2/audio2.png"></p>
+</div>
+</div>
+</section>
+<section id="building-a-vwp" class="slide level2">
+<h2>Building a VWP</h2>
+<p>Send triggers - inline python script</p>
+</section>
+<section id="building-a-vwp-experiment-13" class="slide level2">
+<h2>Building a VWP experiment</h2>
+<p>Your turn now!</p>
+<ul>
+<li>Try:
+<ul>
+<li>This example.</li>
+<li>A mock experiment</li>
+<li>Your own research question</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="wrap-up" class="title-slide slide level1 center">
+<h1>Wrap-up</h1>
+
+</section>
+<section id="plan-for-tomorrow" class="slide level2">
+<h2>Plan for tomorrow</h2>
+<ul>
+<li>Eye-tracking-while-reading with Mariia</li>
+<li>Coding an experiment in OpenSesame</li>
+</ul>
+</section>
+<section id="homework" class="slide level2">
+<h2>“Homework:</h2>
+<ul>
+<li>Play around with OpenSesame</li>
+<li>Try to come up with a RQ within your own field where VWP would be useful</li>
+</ul>
 </section>
 <section id="references" class="slide level2 smaller">
 <h2>References</h2>
