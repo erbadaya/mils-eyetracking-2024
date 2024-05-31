@@ -1,5 +1,5 @@
 ---
-title: "Introduction to eye-tracking"
+title: "Eye-tracking data visualization and analysis"
 author: "Badaya & Baltais"
 format: 
    clean-revealjs:
@@ -156,15 +156,15 @@ Different kinds of data are better explored in different visualizations.
 
 Pattern of fixations and saccades during a trial.
 
-![](images/session_7/scanpath.png){fig-align="center"}
+![](images/session_5/scanpath.png){fig-align="center"}
 
 ## Bee swarm
 
-![](images/session_7/beeswarm.png){fig-align="center"}
+![](images/session_5/beeswarm.png){fig-align="center"}
 
 ## Heat map
 
-![](images/session_7/heatmap.png){fig-align="center"}
+![](images/session_5/heatmap.png){fig-align="center"}
 
 ## Visual World Paradigm
 
@@ -177,15 +177,15 @@ Pattern of fixations and saccades during a trial.
 
 ## Visual World Paradigm
 
-![](images/session_7/liedetection.jpg){fig-align="center"}
+![](images/session_5/liedetection.jpg){fig-align="center"}
 
 ## Visual World Paradigm
 
-![Amos et al., 2022](images/session_7/amos2022.png){fig-align="center"}
+![Amos et al., 2022](images/session_5/amos2022.png){fig-align="center"}
 
 ## Visual World Paradigm
 
-![Corley, 2010](images/session_7/corley2010.png){fig-align="center"}
+![Corley, 2010](images/session_5/corley2010.png){fig-align="center"}
 
 ## Reading
 
@@ -197,7 +197,7 @@ Many measures → many plots, so only report the most important (if at all).
 :::
 
 ::: {.column width="50%"}
-![Clifton et al., 2007](images/session_7/reading6.png){fig-align="center"}
+![Clifton et al., 2007](images/session_5/reading6.png){fig-align="center"}
 
 :::
 :::
@@ -214,19 +214,19 @@ Often entire pages occupied by tables...
 
 ## Reading
 
-![Staub et al., 2007](images/session_7/reading5.png){fig-align="center"}
+![Staub et al., 2007](images/session_5/reading5.png){fig-align="center"}
 
 ## Reading
 
 Separate table per AI.
 
-![Frisson et al., 2017](images/session_7/reading4.png){fig-align="center"}
+![Frisson et al., 2017](images/session_5/reading4.png){fig-align="center"}
 
 ## Reading
 
 Model output
 
-![Frisson et al., 2017](images/session_7/reading3.png){fig-align="center"}
+![Frisson et al., 2017](images/session_5/reading3.png){fig-align="center"}
 
 ## Reading
 
@@ -234,11 +234,11 @@ Model output
 ::: {.column width="50%"}
 More interesting plots possible if e.g., repeated exposure (development over time) or continuous predictors.
 
-![Cop et al., 2017](images/session_7/reading2.png){fig-align="center"}
+![Cop et al., 2017](images/session_5/reading2.png){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
-![Drighe & Chan Seem, 2022](images/session_7/reading1.png){fig-align="center"}
+![Drighe & Chan Seem, 2022](images/session_5/reading1.png){fig-align="center"}
 :::
 :::
 
@@ -459,7 +459,7 @@ Example of average empirical logit on a time window: Dijkgraaf et al., 2017
 :::
 
 ::: {.column width="50%"}
-![](images/session_7/1.png){fig-align="center"} ![](images/session_7/2.png){fig-align="center"}
+![](images/session_5/1.png){fig-align="center"} ![](images/session_5/2.png){fig-align="center"}
 :::
 :::
 
@@ -477,7 +477,7 @@ Example of binary fixations, time course analysis (bin analysis): Ito et al., 20
 :::
 
 ::: {.column width="50%"}
-![](images/session_7/3.png){fig-align="center"}
+![](images/session_5/3.png){fig-align="center"}
 
 :::
 :::
@@ -490,7 +490,7 @@ Example of binary fixations, time course analysis (time continuous): Bosker et a
 -   DV: Is there a fixation on the LF object in this time bin (1) or not (0)?
 -   Time window: Different time windows (fluent/disfluent).
 
-![](images/session_7/4.png){fig-align="center"} ![](images/session_7/5.png){fig-align="center"}
+![](images/session_5/4.png){fig-align="center"} ![](images/session_5/5.png){fig-align="center"}
 
 ## Visual World Paradigm
 
@@ -509,5 +509,5 @@ Sometimes our questions revolve around specific times, or rate of increase/decre
 
 ## Visual World Paradigm
 
-![](images/session_7/9.png){fig-align="center"}
+![](images/session_5/9.png){fig-align="center"}
 
