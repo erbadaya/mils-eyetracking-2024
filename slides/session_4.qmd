@@ -1,10 +1,10 @@
 ---
-title: "Eye-tracking - Session 4"
+title: "Data pre-processing"
 author: "Badaya & Baltais"
 format: 
    clean-revealjs:
-    logo: images/logo_ugent.png
-    footer: Session 4 - Data pre-processing
+    logo: images/logo_mils.png
+    footer: Data pre-processing
     include-in-header: 
       text: |
         <style>
@@ -19,3 +19,482 @@ format:
         </style>
 editor: visual
 ---
+
+# Welcome back!
+
+## Overview of today
+
+
+# Raw data
+
+## Raw data
+
+Project directory
+
+![](images/session_6/projdir1.JPG){fig-align="center"}
+
+## Raw data
+
+Data directory (eye data & behavioural data)
+
+![](images/session_6/projdir2.JPG){fig-align="center"}
+
+## Raw data
+
+The eye-tracker is actually just recording gaze coordinates on the screen (i.e., gaze points) as well as timestamps in each interval (defined by the sampling rate).
+
+It also includes:
+
+-   Timestamps for stimuli on- and offsets (i.e., the triggers/messages we sent)
+-   Timestamps for participants' responses.
+-   What they responded.
+-   Trial information.
+
+## Raw data
+
+ASCIII files
+
+-   Sampling rate
+-   x,y coordinates of gaze
+
+![](images/session_6/asciii1.JPG){fig-align="center"}
+
+## Raw data
+
+ASCIII files
+
+-   Sampling rate
+-   x,y coordinates of gaze
+
+![](images/session_6/asciii2.png){fig-align="center"}
+
+## Software
+
+Licensed software
+
+-   User-friendly, no need to code.
+-   A function of your eye-tracker.
+    -   Data Viewer - EyeLink (SR Research)
+    -   Tobii Pro Studio/Lab - Tobii
+    -   BeGaze - SMI
+
+Open software
+
+-   MATLAB, Python, R packages.
+    -   gazeR, eyetrackingR
+
+## Data Viewer
+
+EDF files
+
+::: columns
+::: {.column width="50%"}
+<br> <br>
+
+-   Conversion of ASCIII files.
+:::
+
+::: {.column width="50%"}
+![](images/session_6/8.png){fig-align="center"}
+
+![](images/session_6/20.png){fig-align="center"}
+:::
+:::
+
+## Data Viewer
+
+EDF files
+
+::: columns
+::: {.column width="50%"}
+<br> <br>
+
+-   List of all participants and trials from each participant.
+-   List of all events pertaining to each trial.
+:::
+
+::: {.column width="50%"}
+![](images/session_6/34.png){fig-aling="center"}
+:::
+:::
+
+# Data processing
+
+## Data processing
+
+-   Pre-process data
+-   Export data
+-   Visualization
+-   Data wrangling
+-   Analysis
+
+## Data processing
+
+1.  Import data into software
+2.  Assess data
+    -   Checks
+3.  (Automatized) cleaning
+4.  Prepare data for analysis
+    -   Time windows
+    -   Areas of Interest
+
+## Import data
+
+Different software = different data files.
+
+-   Data Viewer: .edf files
+-   R packages: ASCIII files, reports from DV.
+
+Different software = additional steps.
+
+-   R packages: binning, assigning AIs...
+
+## Assess data
+
+Divided into two aspects:
+
+-   Pre-processing due to eye-movements.
+    -   Short/long fixations, track loss.
+-   Pre-processing due to participants.
+    -   Missed trials, participation criteria.
+
+## Assess data
+
+\~ Sanity check (!= visualization)
+
+-   Does everything make sense?
+-   Is there anything missing?
+    -   Trial-by-trial visual check
+
+## Assess data
+
+Unusable participants
+
+-   Rare?
+-   File corrupted?
+    -   Lab log
+    -   Example: A participant blinked too much during the experiment, too many unusable trials.
+    -   If large data loss, it may be easier to exclude the participant.
+
+## Assess data
+
+Unusable trials
+
+-   More common
+-   Poor calibration (cf. drift correction)
+    -   Umbrella term: "track loss" (could mean anything: participant sneezed, distraction, too fast)
+-   Field specific.
+-   Lab log!
+
+## Assess data
+
+Common sense + lab log
+
+-   Remove participants (lab log? other exclusion criteria?)
+-   Items to discard.
+    -   Misunderstood sentences?
+    -   Unforeseen confounds?
+
+![](images/session_6/ex_loglab.JPG){fig-align="center"}
+
+## Cleaning
+
+-   Keep a log of all changes (trial & participant exclusion)
+    -   Especially if you did not save the viewing session.
+    -   Write up e.g., % trials removed.
+
+Try to think ahead (pre-registration!) and report all your steps and motivation.
+
+![](images/session_6/reading_cleaning_logbook.png){fig-align="center"}
+
+## Exporting
+
+Prepare data to be analysed elsewhere (e.g., R, SPSS) Data Viewer has different reports.
+
+![](images/session_6/9.png)
+
+# Data Viewer
+
+## Interface
+
+![](images/session_6/viewing_dv1.JPG)
+
+## Interface
+
+![](images/session_6/viewing_dv2.jpg)
+
+## Interface
+
+Time window of analysis
+
+![](images/session_6/25.png){fig-align="center"}
+
+## Interface
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+Make sure your AIs are displayed when setting TW.
+
+-   Preferences \> Data Filters \> Show AIs
+:::
+
+::: {.column width="50%"}
+![](images/session_6/29.png){fig-align="center"}
+:::
+:::
+
+## Importing data
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+.edf (Eyelink Data File) --\> .evs (Eyelink Viewing Session)
+
+-   /results in experiment folder (project directory)
+-   One .edf per participant
+-   Always copy and save the entire folder with subfolders.
+:::
+
+::: {.column width="50%"}
+![](images/session_6/33.png)
+
+![](images/session_6/32.png)
+:::
+:::
+
+## Importing data
+
+**Tip** : After importing, save the session (e.g. "data-uncleaned") and then save it again in a separate copy where you'll perform cleaning.
+
+Note: **You can't go back with DataViewer**
+
+-   Save the viewing session regularly.
+
+![](images/session_6/31.png){fig-align="center"}
+
+
+# Visual World Paradigm pipeline
+
+## Check data
+
+Fixations etc. across the screen (both in defined AIs and elsewhere).
+
+-   What do we look for?
+    -   \~ Subjective decisions e.g., not looking \~ not processing speech
+    -   Individual differences e.g., different strategies (L1 v L2)
+-   Inspect trials with unusual behaviour for that participant (e.g., fewer fixations than average)
+-   Check AIs and triggers
+    -   Did we code the AIs name?
+    -   Did the send triggers?
+
+## Automatized cleaning
+
+What are we thinking of?
+
+-   Track loss: Eyes traveled outside of viewing screen
+    -   In DV, marked as blinks.
+    -   In DV, no direct report.
+
+## Automatized cleaning
+
+Track loss.
+
+-   Trial report: AVERAGE_BLINK_DURECTION, BLINK_DURATION, IP_DURATION
+-   Proportion of track loss computed as: (AVERAGE_BLINK_DURATION \* BLINK_COUNT) / IP_DURATION
+    -   But this will also include blinks! So not ideal.
+
+## Automatized cleaning
+
+What are we thinking of?
+
+::: columns
+::: {.column width="50%"}
+-   (Short and too long) fixations and blinks.
+    -   Merge fixations (\~inspection)
+    -   Add blinks and fixations to the previous one.
+        -   A blink can interrupt a fixation and make it look like two.
+:::
+
+::: {.column width="50%"}
+![](images/session_6/dv_filter.JPG){height="500px"}
+:::
+:::
+
+## Automatized cleaning
+
+Automatized cleaning done together with exporting data.
+
+-   Only samples on IAs, or also including on-screen but not on IAs?
+    -   Trade-off.
+    - Affects how _proportions_ are calculated
+
+Familiarity with previous literature is **key**.
+
+## Automatized cleaning
+
+What does each mean?
+
+- Across All Samples: Number of samples in each IA/Total number of samples per bin
+- Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.
+- Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.
+
+
+## Automatized cleaning
+
+What does this really mean?
+
+Assuming that we have 200 samples in a bin:
+
+- But 15 are blinks, 30 off-screen events, and 5 are data excluded.
+- There are 50 samples in uncoded areas of interest (i.e., IA 0)
+- There are 10 samples with data for IA 1.
+
+- In the All Samples report:
+  - The proportion of samples related to IA 1 is 5% (10/200)
+- In the All On-Screen Samples:
+  - The proportion of samples related to IA 1 is 6.7% (10/200 - 30 - 15 - 5)
+- In All Interest Area Samples:
+  - The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)
+  
+## Automatized cleaning
+
+What do we count as samples for analysis?
+
+- All Samples in Fixations and Saccades
+- Exclude Samples during Saccades
+- Exclude Samples during Saccade and Exclude Bins that Contains Non-Fixation Samples
+
+Not straightforward answer.
+
+## Example data pre-processing
+
+![Knoeferle & Crocker, 2006](images/session_6/knoerfele1.JPG){fig-align="center"} ![Arantzeta et al., 2017](images/session_6/basque.JPG){fig-align="center"} ![Apfelbaum et al., 2021](images/session_6/names.JPG){fig-align="center"}
+
+## Interest Period in VWP
+
+::: columns
+::: {.column width="50%"}
+<br> <br>
+
+Triggers e.g., target_onset - target_offset
+
+-   Strict matching unchecked
+    -   What if there is a time out?
+-   Several TWs
+:::
+
+::: {.column width="50%"}
+![](images/session_6/27.png)
+:::
+:::
+
+## Interest Period in VWP
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+Make sure your AIs are displayed when setting TW.
+
+-   Preferences \> Data Filters \> Show AIs
+:::
+
+::: {.column width="50%"}
+![](images/session_6/29.png){fig-align="center"}
+:::
+:::
+
+## Exporting: Visual World Paradigm
+
+Recap: Fixations *over a scene at a particular time*
+
+::: columns
+::: {.column width="50%"}
+-   Time window, defined \@ triggers.
+    -   Trigger timestamp: zero, beginning of the timeline.
+    -   Determines which gaze points are counted as part of the same fixation by DV algorithms.
+-   Keep AIs in the report.
+:::
+
+::: {.column width="50%"}
+![](images/session_6/10.png)
+:::
+:::
+
+## Exporting: Visual World Paradigm
+
+Common reports: Time binning and Interest Area
+
+Time course (binning) analysis report
+
+-   How much do we want to discretize time?
+    -   Time bins e.g., every 20 or 50 ms.
+    -   Smaller bins: finer analysis, detect nuanced differences.
+    -   Depends on our sample rate.
+
+![](images/session_6/11.png){fig-align="center"}
+
+## Exporting: Visual World Paradigm
+
+::: columns
+::: {.column width="50%"}
+-   Choose variables (or just export all)
+-   Define the size of your bin.
+-   On-screen events only (unless you want that information)
+-   Separate report unchecked
+:::
+
+::: {.column width="50%"}
+![](images/session_6/12.png)
+:::
+:::
+
+## Output: Visual World Paradigm
+
+Time binning report
+
+Participant ID (RECORDING_SESSION_LABEL), trial number (TRIAL_LABEL/INDEX) (added automatically by Data Viewer) +
+
+BIN_INDEX: Which bin it is. This will help us figure out time (by taking the bin number and multiplying it by the size of your time bin, but you can also use 'BIN_START_TIME').
+
+![](images/session_6/7.png)
+
+## Output: Visual World Paradigm
+
+Time binning report
+
+Non-eye movement related variables that we need, i.e., most (except participant ID & trial number) variables that you coded yourself (can be found at the end of the list in blue)
+
+![](images/session_6/6.png)
+
+## Output: Visual World Paradigm {.smaller}
+
+Time binning report
+
+Variables of interest when looking at fixations: you have duplicated columns per eye. Since you'll most likely do monocular tracking, you'll only need one set.
+
+Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (*IA_x*).
+
+-   IA_1_ID, IA_2_ID and so on: The label of the item that was presented in that region (target/distractor).
+- SAMPLE_COUNT: The number of samples per bin
+- 
+-   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
+-   RIGHT_IA_1_SAMPLE_COUNT\_%, RIGHT_IA_2_SAMPLE_COUNT\_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).
+
+## Output: Visual World Paradigm
+
+But what is 'IA_0'?
+
+-   Participants not only look at the images, they also look at areas where we don't have IAs defined (e.g., the center of the screen).
+    -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything).
+    -   However! You don't know where exactly they were looking at (only that it was not defined!).
+
+## Output: Visual World Paradigm
+
+.txt → import in Excel and save as .xlsx or .csv
+
+![](images/session_6/5.png)
+
