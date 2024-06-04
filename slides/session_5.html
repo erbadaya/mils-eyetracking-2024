@@ -826,12 +826,9 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <section id="visual-world-paradigm-5" class="slide level2">
 <h2>Visual World Paradigm</h2>
 <p>Visualization of proportions versus empirical logits</p>
-</section>
+
+<img data-src="session_5_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="visual-world-paradigm-6" class="slide level2">
-<h2>Visual World Paradigm</h2>
-<p>Note that it can also be minus saccades and blinks - Why would you do that? - What are the consequences? - What is the consensus?</p>
-</section>
-<section id="visual-world-paradigm-7" class="slide level2">
 <h2>Visual World Paradigm</h2>
 <p>In R</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a></span>
@@ -840,7 +837,7 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <span id="cb5-4"><a href=""></a>etdat <span class="ot">&lt;-</span>  etdat <span class="sc">%&gt;%</span></span>
 <span id="cb5-5"><a href=""></a>  <span class="fu">mutate</span>(</span>
 <span id="cb5-6"><a href=""></a>    <span class="at">target_FixCount =</span> <span class="fu">case_when</span>(</span>
-<span id="cb5-7"><a href=""></a>      IA_1_ID <span class="sc">==</span> <span class="st">"1: TARGET"</span> <span class="sc">~</span> <span class="st">`</span><span class="at">RIGHT_IA_1_SAMPLE_COUNT</span><span class="st">`</span>,</span>
+<span id="cb5-7"><a href=""></a>      IA_1_ID <span class="sc">==</span> <span class="st">"1: TARGET"</span> <span class="sc">~</span> <span class="st">`</span><span class="at">RIGHT_IA_1_SAMPLE_COUNT</span><span class="st">`</span>, <span class="co"># NB you may not need to do this (in fact, most likely)</span></span>
 <span id="cb5-8"><a href=""></a>      IA_2_ID <span class="sc">==</span> <span class="st">"2: TARGET"</span> <span class="sc">~</span> <span class="st">`</span><span class="at">RIGHT_IA_2_SAMPLE_COUNT</span><span class="st">`</span>,</span>
 <span id="cb5-9"><a href=""></a>      <span class="cn">FALSE</span> <span class="sc">~</span> <span class="cn">NA</span></span>
 <span id="cb5-10"><a href=""></a>    )</span>
@@ -848,6 +845,15 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <span id="cb5-12"><a href=""></a>  <span class="fu">mutate</span>(</span>
 <span id="cb5-13"><a href=""></a>    <span class="at">elog_target =</span> <span class="fu">log</span>((target_FixCount <span class="sc">+</span> .<span class="dv">5</span>)<span class="sc">/</span>(sample_count <span class="sc">-</span> target_FixCount <span class="sc">+</span> .<span class="dv">5</span>))</span>
 <span id="cb5-14"><a href=""></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="visual-world-paradigm-7" class="slide level2">
+<h2>Visual World Paradigm</h2>
+<p>Note that it can also be minus saccades and blinks</p>
+<ul>
+<li>Why would you do that?</li>
+<li>What are the consequences?</li>
+<li>What is the consensus?</li>
+</ul>
 </section>
 <section id="visual-world-paradigm-8" class="slide level2">
 <h2>Visual World Paradigm</h2>

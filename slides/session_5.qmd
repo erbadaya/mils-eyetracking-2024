@@ -24,15 +24,14 @@ editor: visual
 
 ## Welcome back!
 
-Any questions from yesterday?
-Has anyone gotten around their data?
+Any questions from yesterday? Has anyone gotten around their data?
 
 ## Plan of today
 
-1. Data wrangling
-2. Data visualization
-3. Data analysis
-4. Extra: write up
+1.  Data wrangling
+2.  Data visualization
+3.  Data analysis
+4.  Extra: write up
 
 ## Data wrangling
 
@@ -40,18 +39,17 @@ Has anyone gotten around their data?
     -   Visual inspection of raw data (participant and trial exclusion, short/long fixations, fixation adjustment)
     -   Export data for analysis
 
- Analysis done in R/jamovi/SPSS
- 
+Analysis done in R/jamovi/SPSS
 
 ## Data wrangling
 
 Prior to analysis:
 
-- Import data
-- (Re)code levels of interest
-- Filter data (e.g., practice/filler trials, trials with no click)
-- Transform variables
-- Explore data
+-   Import data
+-   (Re)code levels of interest
+-   Filter data (e.g., practice/filler trials, trials with no click)
+-   Transform variables
+-   Explore data
 
 ## Data wrangling
 
@@ -123,8 +121,8 @@ Visual World Paradigm
 -   BIN_INDEX
 -   IA_X_ID, where X is the number of each interest area in your experiment.
 -   RIGHT_IA_X_SAMPLE_COUNT\_%, where X is the number of the interest area (NB LEFT/RIGHT).
-- sample_count
-- BLINK_IN_SAMPLE/SACCADE_IN_SAMPLE
+-   sample_count
+-   BLINK_IN_SAMPLE/SACCADE_IN_SAMPLE
 :::
 
 ::: {.column width="50%"}
@@ -198,7 +196,6 @@ Many measures → many plots, so only report the most important (if at all).
 
 ::: {.column width="50%"}
 ![Clifton et al., 2007](images/session_5/reading6.png){fig-align="center"}
-
 :::
 :::
 
@@ -377,17 +374,47 @@ This does not mean you have to add them.
     -   Other authors have proposed different transformations.
     -   Some might still argue is not ideal (alternative: beta distribution?)
 
-
 ## Visual World Paradigm
 
 Visualization of proportions versus empirical logits
 
-## Visual World Paradigm
+```{r echo=FALSE}
 
-Note that it can also be minus saccades and blinks
-- Why would you do that?
-- What are the consequences?
-- What is the consensus?
+library(tidyverse)
+library(patchwork)
+
+etdat <- read_csv('et_experimentdata.csv')
+
+etdat <- etdat %>%
+  select(., c(RECORDING_SESSION_LABEL, TRIAL_INDEX, BIN_INDEX, AVERAGE_IA_1_SAMPLE_COUNT, `AVERAGE_IA_1_SAMPLE_COUNT_%`, BIN_SAMPLE_COUNT, AVERAGE_IA_2_SAMPLE_COUNT, `AVERAGE_IA_2_SAMPLE_COUNT_%`, d_pos)) %>%
+  rename(., subject = RECORDING_SESSION_LABEL) %>%
+  mutate(
+    ref_fix = ifelse(d_pos == "(-256", AVERAGE_IA_2_SAMPLE_COUNT, AVERAGE_IA_1_SAMPLE_COUNT),
+    ref_prop = ifelse(d_pos == "(-256", `AVERAGE_IA_2_SAMPLE_COUNT_%`, `AVERAGE_IA_1_SAMPLE_COUNT_%`)
+  )  %>%
+  mutate(
+    ref_elog = log(ref_fix + 0.5/(BIN_SAMPLE_COUNT - ref_fix + 0.5))
+  )
+
+# visualization
+
+dist_prop <- etdat %>%
+  ggplot(., aes(x = ref_prop)) + geom_density() + labs(
+    title = "Density plot of proportion of fixations on the target",
+    x = "Proportion of fixations",
+    y = "Density"
+  ) + theme_bw()
+  
+dist_elog <- etdat %>%
+  ggplot(., aes(x = ref_elog)) + geom_density() + labs(
+    title = "Density plot of empirical logit fixations on the target",
+    x = "Empirical logit of fixations",
+    y = "Density"
+  ) + theme_bw()
+
+dist_prop | dist_elog
+
+```
 
 ## Visual World Paradigm
 
@@ -400,7 +427,7 @@ In R
 etdat <-  etdat %>%
   mutate(
     target_FixCount = case_when(
-      IA_1_ID == "1: TARGET" ~ `RIGHT_IA_1_SAMPLE_COUNT`,
+      IA_1_ID == "1: TARGET" ~ `RIGHT_IA_1_SAMPLE_COUNT`, # NB you may not need to do this (in fact, most likely)
       IA_2_ID == "2: TARGET" ~ `RIGHT_IA_2_SAMPLE_COUNT`,
       FALSE ~ NA
     )
@@ -409,6 +436,14 @@ etdat <-  etdat %>%
     elog_target = log((target_FixCount + .5)/(sample_count - target_FixCount + .5))
   )
 ```
+
+## Visual World Paradigm
+
+Note that it can also be minus saccades and blinks 
+
+- Why would you do that? 
+- What are the consequences? 
+- What is the consensus?
 
 ## Visual World Paradigm
 
@@ -422,7 +457,7 @@ Interest: Time window.
 
 -   Do fixations increase/decrease over time?
 -   When does this increase happen?
-- Linear v Non-linear analysis
+-   Linear v Non-linear analysis
 
 ## Visual World Paradigm
 
@@ -478,7 +513,6 @@ Example of binary fixations, time course analysis (bin analysis): Ito et al., 20
 
 ::: {.column width="50%"}
 ![](images/session_5/3.png){fig-align="center"}
-
 :::
 :::
 
@@ -510,4 +544,3 @@ Sometimes our questions revolve around specific times, or rate of increase/decre
 ## Visual World Paradigm
 
 ![](images/session_5/9.png){fig-align="center"}
-
