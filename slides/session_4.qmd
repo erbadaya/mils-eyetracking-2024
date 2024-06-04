@@ -24,20 +24,19 @@ editor: visual
 
 ## Overview of today
 
-
 # Raw data
 
 ## Raw data
 
 Project directory
 
-![](images/session_6/projdir1.JPG){fig-align="center"}
+![](images/session_4/projdir1.JPG){fig-align="center"}
 
 ## Raw data
 
 Data directory (eye data & behavioural data)
 
-![](images/session_6/projdir2.JPG){fig-align="center"}
+![](images/session_4/projdir2.JPG){fig-align="center"}
 
 ## Raw data
 
@@ -57,7 +56,7 @@ ASCIII files
 -   Sampling rate
 -   x,y coordinates of gaze
 
-![](images/session_6/asciii1.JPG){fig-align="center"}
+![](images/session_4/asciii1.JPG){fig-align="center"}
 
 ## Raw data
 
@@ -66,7 +65,7 @@ ASCIII files
 -   Sampling rate
 -   x,y coordinates of gaze
 
-![](images/session_6/asciii2.png){fig-align="center"}
+![](images/session_4/asciii2.png){fig-align="center"}
 
 ## Software
 
@@ -95,9 +94,9 @@ EDF files
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/8.png){fig-align="center"}
+![](images/session_4/8.png){fig-align="center"}
 
-![](images/session_6/20.png){fig-align="center"}
+![](images/session_4/20.png){fig-align="center"}
 :::
 :::
 
@@ -114,7 +113,7 @@ EDF files
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/34.png){fig-aling="center"}
+![](images/session_4/34.png){fig-aling="center"}
 :::
 :::
 
@@ -195,7 +194,7 @@ Common sense + lab log
     -   Misunderstood sentences?
     -   Unforeseen confounds?
 
-![](images/session_6/ex_loglab.JPG){fig-align="center"}
+![](images/session_4/ex_loglab.JPG){fig-align="center"}
 
 ## Cleaning
 
@@ -205,29 +204,29 @@ Common sense + lab log
 
 Try to think ahead (pre-registration!) and report all your steps and motivation.
 
-![](images/session_6/reading_cleaning_logbook.png){fig-align="center"}
+![](images/session_4/reading_cleaning_logbook.png){fig-align="center"}
 
 ## Exporting
 
 Prepare data to be analysed elsewhere (e.g., R, SPSS) Data Viewer has different reports.
 
-![](images/session_6/9.png)
+![](images/session_4/9.png)
 
 # Data Viewer
 
 ## Interface
 
-![](images/session_6/viewing_dv1.JPG)
+![](images/session_4/viewing_dv1.JPG)
 
 ## Interface
 
-![](images/session_6/viewing_dv2.jpg)
+![](images/session_4/viewing_dv2.jpg)
 
 ## Interface
 
 Time window of analysis
 
-![](images/session_6/25.png){fig-align="center"}
+![](images/session_4/25.png){fig-align="center"}
 
 ## Interface
 
@@ -241,7 +240,7 @@ Make sure your AIs are displayed when setting TW.
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/29.png){fig-align="center"}
+![](images/session_4/29.png){fig-align="center"}
 :::
 :::
 
@@ -259,9 +258,9 @@ Make sure your AIs are displayed when setting TW.
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/33.png)
+![](images/session_4/33.png)
 
-![](images/session_6/32.png)
+![](images/session_4/32.png)
 :::
 :::
 
@@ -273,8 +272,7 @@ Note: **You can't go back with DataViewer**
 
 -   Save the viewing session regularly.
 
-![](images/session_6/31.png){fig-align="center"}
-
+![](images/session_4/31.png){fig-align="center"}
 
 # Visual World Paradigm pipeline
 
@@ -319,7 +317,7 @@ What are we thinking of?
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/dv_filter.JPG){height="500px"}
+![](images/session_4/dv_filter.JPG){height="500px"}
 :::
 :::
 
@@ -329,7 +327,8 @@ Automatized cleaning done together with exporting data.
 
 -   Only samples on IAs, or also including on-screen but not on IAs?
     -   Trade-off.
-    - Affects how _proportions_ are calculated
+    -   Affects how *proportions* are calculated
+      - But counts are still there.
 
 Familiarity with previous literature is **key**.
 
@@ -337,10 +336,9 @@ Familiarity with previous literature is **key**.
 
 What does each mean?
 
-- Across All Samples: Number of samples in each IA/Total number of samples per bin
-- Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.
-- Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.
-
+-   Across All Samples: Number of samples in each IA/Total number of samples per bin
+-   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.
+-   Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.
 
 ## Automatized cleaning
 
@@ -348,30 +346,50 @@ What does this really mean?
 
 Assuming that we have 200 samples in a bin:
 
-- But 15 are blinks, 30 off-screen events, and 5 are data excluded.
-- There are 50 samples in uncoded areas of interest (i.e., IA 0)
-- There are 10 samples with data for IA 1.
+-   But 15 are blinks, 30 off-screen events, and 5 are data excluded.
 
-- In the All Samples report:
-  - The proportion of samples related to IA 1 is 5% (10/200)
-- In the All On-Screen Samples:
-  - The proportion of samples related to IA 1 is 6.7% (10/200 - 30 - 15 - 5)
-- In All Interest Area Samples:
-  - The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)
-  
+-   There are 50 samples in uncoded areas of interest (i.e., IA 0)
+
+-   There are 10 samples with data for IA 1.
+
+-   In the All Samples report:
+
+    -   The proportion of samples related to IA 1 is 5% (10/200)
+
+-   In the All On-Screen Samples:
+
+    -   The proportion of samples related to IA 1 is 6.7% (10/200 - 30 - 15 - 5)
+
+-   In All Interest Area Samples:
+
+    -   The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)
+
+## Automatized cleaning
+
+In reality, this does not really matter because of transformations!
+
+But: How to calculate proportions?
+
+-   Only on Areas of Interest, or Everything On Screen?
+
 ## Automatized cleaning
 
 What do we count as samples for analysis?
 
-- All Samples in Fixations and Saccades
-- Exclude Samples during Saccades
-- Exclude Samples during Saccade and Exclude Bins that Contains Non-Fixation Samples
+-   All Samples in Fixations and Saccades
+-   Exclude Samples during Saccades
+-   Exclude Samples during Saccades and Exclude Bins that Contains Non-Fixation Samples
 
 Not straightforward answer.
+Things to consider:
+
+- Fixations and Saccades:
+- Only fixations: Proportions more 'true' to fixation behaviour **but** also less 'true' to actual behaviour.
+- Only bins with fixations: Loss of data. 
 
 ## Example data pre-processing
 
-![Knoeferle & Crocker, 2006](images/session_6/knoerfele1.JPG){fig-align="center"} ![Arantzeta et al., 2017](images/session_6/basque.JPG){fig-align="center"} ![Apfelbaum et al., 2021](images/session_6/names.JPG){fig-align="center"}
+![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} ![Arantzeta et al., 2017](images/session_4/basque.JPG){fig-align="center"} ![Apfelbaum et al., 2021](images/session_4/names.JPG){fig-align="center"}
 
 ## Interest Period in VWP
 
@@ -387,7 +405,7 @@ Triggers e.g., target_onset - target_offset
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/27.png)
+![](images/session_4/27.png)
 :::
 :::
 
@@ -403,7 +421,7 @@ Make sure your AIs are displayed when setting TW.
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/29.png){fig-align="center"}
+![](images/session_4/29.png){fig-align="center"}
 :::
 :::
 
@@ -420,7 +438,7 @@ Recap: Fixations *over a scene at a particular time*
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/10.png)
+![](images/session_4/10.png)
 :::
 :::
 
@@ -435,7 +453,7 @@ Time course (binning) analysis report
     -   Smaller bins: finer analysis, detect nuanced differences.
     -   Depends on our sample rate.
 
-![](images/session_6/11.png){fig-align="center"}
+![](images/session_4/11.png){fig-align="center"}
 
 ## Exporting: Visual World Paradigm
 
@@ -448,7 +466,7 @@ Time course (binning) analysis report
 :::
 
 ::: {.column width="50%"}
-![](images/session_6/12.png)
+![](images/session_4/12.png)
 :::
 :::
 
@@ -460,7 +478,7 @@ Participant ID (RECORDING_SESSION_LABEL), trial number (TRIAL_LABEL/INDEX) (adde
 
 BIN_INDEX: Which bin it is. This will help us figure out time (by taking the bin number and multiplying it by the size of your time bin, but you can also use 'BIN_START_TIME').
 
-![](images/session_6/7.png)
+![](images/session_4/7.png)
 
 ## Output: Visual World Paradigm
 
@@ -468,7 +486,7 @@ Time binning report
 
 Non-eye movement related variables that we need, i.e., most (except participant ID & trial number) variables that you coded yourself (can be found at the end of the list in blue)
 
-![](images/session_6/6.png)
+![](images/session_4/6.png)
 
 ## Output: Visual World Paradigm {.smaller}
 
@@ -476,12 +494,13 @@ Time binning report
 
 Variables of interest when looking at fixations: you have duplicated columns per eye. Since you'll most likely do monocular tracking, you'll only need one set.
 
-Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (*IA_x*).
+Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (*IA_x* & Information duplicated per eye (even if it was monocular recording, it preserves columns for each eye).
 
 -   IA_1_ID, IA_2_ID and so on: The label of the item that was presented in that region (target/distractor).
-- SAMPLE_COUNT: The number of samples per bin
-- 
--   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
+-   BIN_SAMPLE_COUNT: The number of samples per bin
+-   RIGHT_BLINK_SAMPLE_COUNT: Number of samples in a given bin that were a blink.
+- RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display. 
+-   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on^[Or AVERAGE_, because we have done binocular reading, the average equals the count on our eye recorded]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
 -   RIGHT_IA_1_SAMPLE_COUNT\_%, RIGHT_IA_2_SAMPLE_COUNT\_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).
 
 ## Output: Visual World Paradigm
@@ -496,5 +515,4 @@ But what is 'IA_0'?
 
 .txt → import in Excel and save as .xlsx or .csv
 
-![](images/session_6/5.png)
-
+![](images/session_4/5.png)
