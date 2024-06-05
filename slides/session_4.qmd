@@ -24,6 +24,13 @@ editor: visual
 
 ## Overview of today
 
+1. Raw data
+2. Data processing
+3. General pipeline
+4. Software for pre-processing
+5. Visual World Paradigm pipeline
+6. Reading pipeline
+
 # Raw data
 
 ## Raw data
@@ -113,7 +120,8 @@ EDF files
 :::
 
 ::: {.column width="50%"}
-![](images/session_4/34.png){fig-aling="center"}
+
+![](images/session_4/34.png)
 :::
 :::
 
@@ -129,11 +137,20 @@ EDF files
 
 ## Data processing
 
+-   [Pre-process data]{.fg style="--col: #e64173"}
+-   [Export data for analysis]{.fg style="--col: #e64173"}
+-   Visualization
+-   Data wrangling
+-   Analysis
+
+
+## Data processing
+
 1.  Import data into software
 2.  Assess data
     -   Checks
 3.  (Automatized) cleaning
-4.  Prepare data for analysis
+4.  Prepare data for analysis & export
     -   Time windows
     -   Areas of Interest
 
@@ -292,9 +309,9 @@ Fixations etc. across the screen (both in defined AIs and elsewhere).
 
 What are we thinking of?
 
--   Track loss: Eyes traveled outside of viewing screen
-    -   In DV, marked as blinks.
-    -   In DV, no direct report.
+-   Track loss: When there is no data of eye recorded (e.g., blinks, participant moves, low validity of the sample)
+    -   In DV, marked as blinks -> no direct report.
+    
 
 ## Automatized cleaning
 
@@ -303,6 +320,8 @@ Track loss.
 -   Trial report: AVERAGE_BLINK_DURECTION, BLINK_DURATION, IP_DURATION
 -   Proportion of track loss computed as: (AVERAGE_BLINK_DURATION \* BLINK_COUNT) / IP_DURATION
     -   But this will also include blinks! So not ideal.
+- Not common to encounter this step in reports.
+    - Kids v adults
 
 ## Automatized cleaning
 
@@ -328,7 +347,7 @@ Automatized cleaning done together with exporting data.
 -   Only samples on IAs, or also including on-screen but not on IAs?
     -   Trade-off.
     -   Affects how *proportions* are calculated
-      - But counts are still there.
+    -   But counts are still there.
 
 Familiarity with previous literature is **key**.
 
@@ -344,6 +363,9 @@ What does each mean?
 
 What does this really mean?
 
+:::columns
+:::{.column width="50%"}
+
 Assuming that we have 200 samples in a bin:
 
 -   But 15 are blinks, 30 off-screen events, and 5 are data excluded.
@@ -351,6 +373,9 @@ Assuming that we have 200 samples in a bin:
 -   There are 50 samples in uncoded areas of interest (i.e., IA 0)
 
 -   There are 10 samples with data for IA 1.
+
+:::
+:::{.column width="50%"}
 
 -   In the All Samples report:
 
@@ -364,13 +389,16 @@ Assuming that we have 200 samples in a bin:
 
     -   The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)
 
+:::
+:::
+
 ## Automatized cleaning
 
-In reality, this does not really matter because of transformations!
-
-But: How to calculate proportions?
-
--   Only on Areas of Interest, or Everything On Screen?
+- All Interest Area Samples
+  - IA_0 == trackloss.
+  - Trade off
+- All On Screen
+  - Overall increased attention.
 
 ## Automatized cleaning
 
@@ -380,12 +408,11 @@ What do we count as samples for analysis?
 -   Exclude Samples during Saccades
 -   Exclude Samples during Saccades and Exclude Bins that Contains Non-Fixation Samples
 
-Not straightforward answer.
-Things to consider:
+Not straightforward answer. Things to consider:
 
-- Fixations and Saccades:
-- Only fixations: Proportions more 'true' to fixation behaviour **but** also less 'true' to actual behaviour.
-- Only bins with fixations: Loss of data. 
+-   Fixations and Saccades:
+-   Only fixations: Proportions more 'true' to fixation behaviour **but** also less 'true' to actual behaviour.
+-   Only bins with fixations: Loss of data.
 
 ## Example data pre-processing
 
@@ -499,9 +526,11 @@ Information duplicated per Interest Area. If you have two visuals, then two; thr
 -   IA_1_ID, IA_2_ID and so on: The label of the item that was presented in that region (target/distractor).
 -   BIN_SAMPLE_COUNT: The number of samples per bin
 -   RIGHT_BLINK_SAMPLE_COUNT: Number of samples in a given bin that were a blink.
-- RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display. 
--   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on^[Or AVERAGE_, because we have done binocular reading, the average equals the count on our eye recorded]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
+-   RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display.
+-   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on[^1]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
 -   RIGHT_IA_1_SAMPLE_COUNT\_%, RIGHT_IA_2_SAMPLE_COUNT\_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).
+
+[^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded
 
 ## Output: Visual World Paradigm
 

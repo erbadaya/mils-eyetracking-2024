@@ -354,6 +354,14 @@ Badaya &amp; Baltais
 </section>
 <section id="overview-of-today" class="slide level2">
 <h2>Overview of today</h2>
+<ol type="1">
+<li>Raw data</li>
+<li>Data processing</li>
+<li>General pipeline</li>
+<li>Software for pre-processing</li>
+<li>Visual World Paradigm pipeline</li>
+<li>Reading pipeline</li>
+</ol>
 </section></section>
 <section>
 <section id="raw-data" class="title-slide slide level1 center">
@@ -453,7 +461,7 @@ Badaya &amp; Baltais
 <li>List of all events pertaining to each trial.</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/session_4/34.png" data-fig-aling="center"></p>
+<p><img data-src="images/session_4/34.png"></p>
 </div>
 </div>
 </section></section>
@@ -474,6 +482,16 @@ Badaya &amp; Baltais
 </section>
 <section id="data-processing-2" class="slide level2">
 <h2>Data processing</h2>
+<ul>
+<li><span class="fg" style="--col: #e64173">Pre-process data</span></li>
+<li><span class="fg" style="--col: #e64173">Export data for analysis</span></li>
+<li>Visualization</li>
+<li>Data wrangling</li>
+<li>Analysis</li>
+</ul>
+</section>
+<section id="data-processing-3" class="slide level2">
+<h2>Data processing</h2>
 <ol type="1">
 <li>Import data into software</li>
 <li>Assess data
@@ -481,7 +499,7 @@ Badaya &amp; Baltais
 <li>Checks</li>
 </ul></li>
 <li>(Automatized) cleaning</li>
-<li>Prepare data for analysis
+<li>Prepare data for analysis &amp; export
 <ul>
 <li>Time windows</li>
 <li>Areas of Interest</li>
@@ -669,10 +687,9 @@ Badaya &amp; Baltais
 <h2>Automatized cleaning</h2>
 <p>What are we thinking of?</p>
 <ul>
-<li>Track loss: Eyes traveled outside of viewing screen
+<li>Track loss: When there is no data of eye recorded (e.g., blinks, participant moves, low validity of the sample)
 <ul>
-<li>In DV, marked as blinks.</li>
-<li>In DV, no direct report.</li>
+<li>In DV, marked as blinks -&gt; no direct report.</li>
 </ul></li>
 </ul>
 </section>
@@ -684,6 +701,10 @@ Badaya &amp; Baltais
 <li>Proportion of track loss computed as: (AVERAGE_BLINK_DURATION * BLINK_COUNT) / IP_DURATION
 <ul>
 <li>But this will also include blinks! So not ideal.</li>
+</ul></li>
+<li>Not common to encounter this step in reports.
+<ul>
+<li>Kids v adults</li>
 </ul></li>
 </ul>
 </section>
@@ -732,11 +753,16 @@ Badaya &amp; Baltais
 <section id="automatized-cleaning-5" class="slide level2">
 <h2>Automatized cleaning</h2>
 <p>What does this really mean?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
 <p>Assuming that we have 200 samples in a bin:</p>
 <ul>
 <li><p>But 15 are blinks, 30 off-screen events, and 5 are data excluded.</p></li>
 <li><p>There are 50 samples in uncoded areas of interest (i.e., IA 0)</p></li>
 <li><p>There are 10 samples with data for IA 1.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
 <li><p>In the All Samples report:</p>
 <ul>
 <li>The proportion of samples related to IA 1 is 5% (10/200)</li>
@@ -750,13 +776,21 @@ Badaya &amp; Baltais
 <li>The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)</li>
 </ul></li>
 </ul>
+</div>
+</div>
 </section>
 <section id="automatized-cleaning-6" class="slide level2">
 <h2>Automatized cleaning</h2>
-<p>In reality, this does not really matter because of transformations!</p>
-<p>But: How to calculate proportions?</p>
 <ul>
-<li>Only on Areas of Interest, or Everything On Screen?</li>
+<li>All Interest Area Samples
+<ul>
+<li>IA_0 == trackloss.</li>
+<li>Trade off</li>
+</ul></li>
+<li>All On Screen
+<ul>
+<li>Overall increased attention.</li>
+</ul></li>
 </ul>
 </section>
 <section id="automatized-cleaning-7" class="slide level2">
