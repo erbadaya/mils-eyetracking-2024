@@ -518,10 +518,12 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <p>Visual World Paradigm</p>
 <ul>
 <li>BIN_INDEX</li>
+<li>BIN_SAMPLE_COUNT, the number of samples per bin (cf.&nbsp;session 4)</li>
 <li>IA_X_ID, where X is the number of each interest area in your experiment.</li>
-<li>RIGHT_IA_X_SAMPLE_COUNT_%, where X is the number of the interest area (NB LEFT/RIGHT).</li>
-<li>sample_count</li>
-<li>BLINK_IN_SAMPLE/SACCADE_IN_SAMPLE</li>
+<li>RIGHT_IA_X_SAMPLE_COUNT, , where X is the number of the interest area (NB LEFT/RIGHT), counts (cf.&nbsp;session 4).</li>
+<li>RIGHT_IA_X_SAMPLE_COUNT_%, where X is the number of the interest area (NB LEFT/RIGHT), proportions (cf.&nbsp;session 4).</li>
+<li>RIGHT_EXCLUDED_SAMPLE_COUNT, number of samples excluded from counts (NB LEFT/RIGHT; cf.&nbsp;session 4).</li>
+<li>RIGHT_BLINK_SAMPLE_COUNT (NB LEFT/RIGHT)</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p>Reading</p>
@@ -701,6 +703,7 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 </div><div class="column" style="width:50%;">
 <p>VWP</p>
 <ul>
+<li>NB: Visualizations, DV.</li>
 <li>Total fixation duration/Average fixation duration/Fixation count/Saccade count (per IA)</li>
 <li><strong>Proportion of fixations to each IA per time window</strong></li>
 </ul>
@@ -769,7 +772,7 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <li>Models have assumptions that eye-tracking data does not meet.</li>
 </ol>
 <ul>
-<li>Where the eye is at time t depends on where it was at time t-1 (i.e., eye movements are not independent from one another).</li>
+<li>Where the eye is at time t depends on where it was at time t-1 (i.e., eye movements are not independent from one another, <strong>autocorrelation</strong>).</li>
 <li>Eye-tracking data might not be continuous.
 <ul>
 <li>Proportions are bounded.</li>
@@ -789,7 +792,8 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <li>Include an autocorrelation factor.</li>
 </ul></li>
 </ul>
-</section>
+
+<img data-src="images/session_5/autocorrelation.PNG" class="r-stretch quarto-figure-center"><p class="caption">Stone et al., 2020</p></section>
 <section id="data-analysis-7" class="slide level2">
 <h2>Data analysis</h2>
 <ol start="2" type="1">
@@ -808,15 +812,15 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <ul>
 <li>Binary: Is there a fixation on this area of interest?
 <ul>
-<li>Doesn’t consider other areas.</li>
-<li>Depends on your RQ.</li>
+<li>Size of time bins</li>
+<li>Donnelly &amp; Verkuilen (2017)</li>
 </ul></li>
 <li><strong>Work with proportions</strong>
 <ul>
 <li>Bounded [0, 1]</li>
 <li>Transformation: Empirical logits (Barr, 2008): log(count of fixations + .5 / (N - count of fixations + .5))
 <ul>
-<li>Where N will be the number of samples per bin (when working with time binning anlaysis)</li>
+<li>Where N will be the number of samples per bin (when working with time binning analysis)</li>
 </ul></li>
 <li>Other authors have proposed different transformations.</li>
 <li>Some might still argue is not ideal (alternative: beta distribution?)</li>
@@ -825,7 +829,6 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 </section>
 <section id="visual-world-paradigm-5" class="slide level2">
 <h2>Visual World Paradigm</h2>
-<p>Visualization of proportions versus empirical logits</p>
 
 <img data-src="session_5_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
 <section id="visual-world-paradigm-6" class="slide level2">
@@ -848,11 +851,9 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 </section>
 <section id="visual-world-paradigm-7" class="slide level2">
 <h2>Visual World Paradigm</h2>
-<p>Note that it can also be minus saccades and blinks</p>
+<p>Note that when computing empirical logits you may also substract blinks and off-screen fixations.</p>
 <ul>
-<li>Why would you do that?</li>
-<li>What are the consequences?</li>
-<li>What is the consensus?</li>
+<li>No consensus</li>
 </ul>
 </section>
 <section id="visual-world-paradigm-8" class="slide level2">

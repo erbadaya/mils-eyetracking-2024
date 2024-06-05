@@ -119,10 +119,12 @@ Recap of variables of interest (besides your experimental variables and session 
 Visual World Paradigm
 
 -   BIN_INDEX
+- BIN_SAMPLE_COUNT, the number of samples per bin (cf. session 4)
 -   IA_X_ID, where X is the number of each interest area in your experiment.
--   RIGHT_IA_X_SAMPLE_COUNT\_%, where X is the number of the interest area (NB LEFT/RIGHT).
--   sample_count
--   BLINK_IN_SAMPLE/SACCADE_IN_SAMPLE
+- RIGHT_IA_X_SAMPLE_COUNT, , where X is the number of the interest area (NB LEFT/RIGHT), counts (cf. session 4).
+-   RIGHT_IA_X_SAMPLE_COUNT\_%, where X is the number of the interest area (NB LEFT/RIGHT), proportions (cf. session 4).
+- RIGHT_EXCLUDED_SAMPLE_COUNT, number of samples excluded from counts (NB LEFT/RIGHT; cf. session 4).
+-   RIGHT_BLINK_SAMPLE_COUNT (NB LEFT/RIGHT)
 :::
 
 ::: {.column width="50%"}
@@ -280,6 +282,7 @@ Reading
 ::: {.column width="50%"}
 VWP
 
+- NB: Visualizations, DV.
 -   Total fixation duration/Average fixation duration/Fixation count/Saccade count (per IA)
 -   **Proportion of fixations to each IA per time window**
 :::
@@ -332,16 +335,14 @@ This does not mean you have to add them.
 -   (Generalised) linear models cannot account for clusters in our data (e.g., participants' differences, items' differences).
 
 -   Most papers using eye-tracking in the language sciences will employ (generalised) linear mixed models to account for these factors.
-
--   Random effects for participant and item (at least).
-
--   Multiple comparisons problem (see reading).
+  -   Random effects for participant and item (at least).
+  -   Multiple comparisons problem (see reading).
 
 ## Data analysis
 
 2.  Models have assumptions that eye-tracking data does not meet.
 
--   Where the eye is at time t depends on where it was at time t-1 (i.e., eye movements are not independent from one another).
+-   Where the eye is at time t depends on where it was at time t-1 (i.e., eye movements are not independent from one another, **autocorrelation**).
 -   Eye-tracking data might not be continuous.
     -   Proportions are bounded.
     -   Reaction times are not normally distributed.
@@ -354,6 +355,8 @@ This does not mean you have to add them.
     -   Aggregate into time bins and transformations (Barr, 2008).
     -   Include an autocorrelation factor.
 
+![Stone et al., 2020](images/session_5/autocorrelation.PNG)
+
 ## Data analysis
 
 2.  Models have assumptions that eye-tracking data does not meet.
@@ -365,18 +368,17 @@ This does not mean you have to add them.
 ## Visual World Paradigm
 
 -   Binary: Is there a fixation on this area of interest?
-    -   Doesn't consider other areas.
-    -   Depends on your RQ.
+    - Size of time bins
+    - Donnelly & Verkuilen (2017)
 -   **Work with proportions**
     -   Bounded \[0, 1\]
     -   Transformation: Empirical logits (Barr, 2008): log(count of fixations + .5 / (N - count of fixations + .5))
-        -   Where N will be the number of samples per bin (when working with time binning anlaysis)
+        -   Where N will be the number of samples per bin (when working with time binning analysis)
     -   Other authors have proposed different transformations.
     -   Some might still argue is not ideal (alternative: beta distribution?)
 
 ## Visual World Paradigm
 
-Visualization of proportions versus empirical logits
 
 ```{r echo=FALSE}
 
@@ -439,11 +441,9 @@ etdat <-  etdat %>%
 
 ## Visual World Paradigm
 
-Note that it can also be minus saccades and blinks 
+Note that when computing empirical logits you may also substract blinks and off-screen fixations.
 
-- Why would you do that? 
-- What are the consequences? 
-- What is the consensus?
+  - No consensus
 
 ## Visual World Paradigm
 
@@ -457,7 +457,7 @@ Interest: Time window.
 
 -   Do fixations increase/decrease over time?
 -   When does this increase happen?
--   Linear v Non-linear analysis
+  -   Linear v Non-linear analysis
 
 ## Visual World Paradigm
 
