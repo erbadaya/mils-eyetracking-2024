@@ -28,82 +28,76 @@ Teaching team
 
 ::: columns
 ::: {.column width="50%"}
-
 -   Esperanza Badaya
     -   Research focus: Speech comprehension (esp. paralinguistic cues & social cognition)
     -   esperanza.badaya\@ugent.be
-    
 :::
+
 ::: {.column width="50%"}
 -   Mariia Baltais
     -   Research focus: Reading (esp.)
     -   mariia.baltais\@ugent.be
-    
 :::
 :::
 
 ## Welcome to the course
 
-
 What about yourselves?
 
-- Name & uni/department
-- Research interest
-- Goal for this course?
+-   Name & uni/department
+-   Research interest
+-   Goal for this course?
 
 ## Overview of the course
 
 Learning objectives
 
-- Basic knowledge of how eye-trackers work and how to ensure high quality data 
-  - Practice with EyeLink 1000+ 
-- Understanding of eye-tracking measurements and their meaning in psycholinguistics 
-- Introduction to the Visual World Paradigm and reading.
-  - Set up, confounds, measures of interest.
-- Introduction to eye-tracking data from raw data to analysis.
-  - Data pre-processing, wrangling, models and visualization.
-  
+-   Basic knowledge of how eye-trackers work and how to ensure high quality data
+    -   Practice with EyeLink 1000+
+-   Understanding of eye-tracking measurements and their meaning in psycholinguistics
+-   Introduction to the Visual World Paradigm and reading.
+    -   Set up, confounds, measures of interest.
+-   Introduction to eye-tracking data from raw data to analysis.
+    -   Data pre-processing, wrangling, models and visualization.
+
 ## Overview of the course
 
 ::: columns
 ::: {.column width="50%"}
-
 Materials (all available on Ufora and GitHub)
 
-- Slides 
-- Template scripts in PsychoPy/OpenSesame/Experiment Builder
-  - Focus in class: PsychoPy
-- Eye-tracking datasets
-- Template scripts for pre-processing and analysis
-- Further resources (papers & book chapters)
-
+-   Slides
+-   Template scripts in PsychoPy/OpenSesame/Experiment Builder
+    -   Focus in class: PsychoPy
+-   Eye-tracking datasets
+-   Template scripts for pre-processing and analysis
+-   Further resources (papers & book chapters)
 :::
-::: {.column width="50%"}
 
+::: {.column width="50%"}
 Requirements
 
-- Install PsychoPy
-  - version
-- Install R, RStudio 
-  - version
-  - packages
-- Install DataViewer
-- Readings
-  - Experimental design .pdf
-  - Recommended readings per day
-
+-   Install PsychoPy
+    -   version
+-   Install R, RStudio
+    -   version
+    -   packages
+-   Install DataViewer
+-   Readings
+    -   Experimental design .pdf
+    -   Recommended readings per day
 :::
 :::
 
 ## Overview of the course
 
-|   Date   |             Content             | Materials |
-|:--------:|:-------------------------------:|:--------------:|
-| Day 1 | Introduction to eye-tracking       | None |
-| Day 2 | Visual World Paradigm              | Experimental design .pdf, RR_1, PsychoPy |
-| Day 3 | Reading                            | RR_2 |
-| Day 4 | Lab session & Data pre-processing  | DataViewer / R, datasets|
-| Day 5 | Data visualization and analysis    | R, datasets |
+| Date  |              Content              |                Materials                 |
+|:---------------:|:------------------------------------:|:----------------:|
+| Day 1 |   Introduction to eye-tracking    |                   None                   |
+| Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, PsychoPy |
+| Day 3 |              Reading              |                   RR_2                   |
+| Day 4 | Lab session & Data pre-processing |         DataViewer / R, datasets         |
+| Day 5 |  Data visualization and analysis  |               R, datasets                |
 
 Any issues with installation, come to Mariia or myself!
 
@@ -118,10 +112,10 @@ Any issues with installation, come to Mariia or myself!
 3.  Eye movements
 4.  How do eye-trackers work?
 5.  An eye-tracking experiment
-    i) The eye-tracking lab
+    i)  The eye-tracking lab
     ii) Basic structure of the experiment
 6.  Eye-tracking in language research
-    i) Visual World Paradigm
+    i)  Visual World Paradigm
     ii) Reading
 
 ## What is eye-tracking?
@@ -422,6 +416,7 @@ When our eye 'stops'.
     -   Sudden appearance of an object versus Exploration.
 
 ## Saccades
+
 -   Amplitude: distance travelled.
     -   Average: 15°.
 -   Average duration: 30 - 80 ms.
@@ -530,7 +525,6 @@ Now you can see why nowadays eye-tracking is non-invasive.
 ![](images/session_1/headmounted_tracker.png)
 :::
 
-
 ## How do eye-trackers work?
 
 -   Detects gaze and records its x and y coordinates on the screen.
@@ -538,14 +532,13 @@ Now you can see why nowadays eye-tracking is non-invasive.
 
 ## How do eye-trackers work?
 
-[Detects gaze]{.fg style="--col: #e64173"}  and records its x and y coordinates on the screen.
-
+[Detects gaze]{.fg style="--col: #e64173"} and records its x and y coordinates on the screen.
 
 -   Video-based recording of the location of either one point, the pupil, or two points, the pupil and the corneal reflection.
 -   P-CR ([the pupil and the corneal reflection]{.fg style="--col: #e64173"}) is the most common.
     -   Two hardware components: A camera and an infrared illuminator (which are fixed in space).
     -   [1st corneal reflection (Purkinje reflection 1)]{.fg style="--col: #e64173"}.
-    
+
 ![](images/session_1/tracking_eyes2.png){fig-align="center"}
 
 ## How do eye-trackers work?
@@ -638,6 +631,7 @@ Example: 50 Hz sampling frequency.
 -   Higher sample frequency == [higher precision]{.fg style="--col: #e64173"}.
 
 -   Considering as well the size of the object we are interested in.
+
     -   Big --\> can afford low sampling rate, precision and accuracy might be ok.
     -   Small (e.g., reading) --\> high sampling rate (\>250 Hz).
 
@@ -666,8 +660,8 @@ Relationship between sampling error, sampling frequency, and [data points]{.fg s
 Detects gaze and records its [x and y coordinates]{.fg style="--col: #e64173"} on the screen.
 
 -   How do we know that the x and y detected are good? Accuracy and precision
-  - [Accuracy]{.fg style="--col: #e64173"}: Difference between the measurement and its true value.
-  - [Precision]{.fg style="--col: #e64173"}: Ability to reproduce a reliable measurement. 
+-   [Accuracy]{.fg style="--col: #e64173"}: Difference between the measurement and its true value.
+-   [Precision]{.fg style="--col: #e64173"}: Ability to reproduce a reliable measurement.
 
 ![From Holmqvist et al., 2011](images/session_1/precision_accuracy.JPG){fig-align="center" height="300px"}
 
@@ -677,23 +671,20 @@ Detects gaze and records its [x and y coordinates]{.fg style="--col: #e64173"} o
 
 ::: columns
 ::: {.column width="50%"}
-
 Accuracy
 
-- Recorded gaze position versus the true gaze position.
-- Methods to increase accuracy in the experimental session.
+-   Recorded gaze position versus the true gaze position.
+-   Methods to increase accuracy in the experimental session.
     -   Calibration, validation, drift correction.
     -   Screen corners.
 -   Data loss.
-
 :::
-::: {.column width="50%"}
 
+::: {.column width="50%"}
 Precision
 
-- Spatial precision: Eye fixating on a stationary target.
-- Temporal precision: Standard deviation of delays from actual movements until they are marked (eye-tracker latencies).
-
+-   Spatial precision: Eye fixating on a stationary target.
+-   Temporal precision: Standard deviation of delays from actual movements until they are marked (eye-tracker latencies).
 :::
 :::
 
@@ -701,7 +692,7 @@ Precision
 
 These properties impact data quality.
 
-- The [validity of results]{.fg style="--col: #e64173"} based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2012)
+-   The [validity of results]{.fg style="--col: #e64173"} based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2012)
 
 ## How do eye-trackers work?: Types
 
@@ -814,20 +805,17 @@ Combination with other techniques.
 
 -   Relatively expensive.
     -   In terms of money: up to 30,000 e (but in comparison to EEG?).
-    -   In terms of time: one participant at a time[^7].
+    -   In terms of time: one participant at a time[^3].
 -   Trade-off between accuracy and ecological validity.
 -   Participants' criteria.
 
-[^7]: Dual eye-tracking experiments are being done!
+[^3]: Dual eye-tracking experiments are being done!
 
-
---------------------------------------
+------------------------------------------------------------------------
 
 Let's take a break!
 
-
 # An eye-tracking experiment
-
 
 ## The eye-tracking lab
 
@@ -954,7 +942,6 @@ What information do you think is sent between the two computers?
 
 3.  After it
 
-
 ## Structure of an eye-tracking experiment
 
 1.  Set up
@@ -1009,8 +996,7 @@ Access to eye image
 
 ## Camera set up
 
-What eye to track?
-  - Dominant eye (by default, right eye)
+What eye to track? - Dominant eye (by default, right eye)
 
 Detect the eye
 
@@ -1040,28 +1026,24 @@ Focus
 
 ## Camera set up
 
-::: columns 
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 <br> <br> <br>
 
 -   P-CR tracking:
     -   Dark blue pupil
     -   Light blue CR
+:::
 
-::: 
-:::{.column width="50%"}
-
+::: {.column width="50%"}
 ![](images/lab_setup/good_captureeye1.png) ![](images/lab_setup/good_pupil.png)
-
-::: 
+:::
 :::
 
 ## Camera set up
 
-::: columns 
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 <br>
 
 Automatic thresholding + adjustments
@@ -1071,12 +1053,11 @@ Automatic thresholding + adjustments
 Pupil tracking
 
 -   Centroid versus Ellipse
+:::
 
-::: 
-:::{.column width="50%"}
-
-![](images/session_1/options.jpg){height="550px"} 
-::: 
+::: {.column width="50%"}
+![](images/session_1/options.jpg){height="550px"}
+:::
 :::
 
 ## Camera set up
@@ -1370,15 +1351,13 @@ Debrief
 
 See also Rodriguez Ronderos et al. (2018) - Eye Tracking During Visually Situated Language Comprehension: Flexibility and Limitations in Uncovering Visual Context Effects
 
-
 # Eye-tracking in languge research
 
 ## Eye-tracking in languge research
 
 Thus far, we have covered why we are measuring eye movements, how we measure them, and what eye movements we can measure.
 
-- How does this transfer to language research?
-
+-   How does this transfer to language research?
 
 # Eye-tracking in languge research
 
@@ -1390,40 +1369,37 @@ Eye-tracking is an *online* measurement of cognitive processes.
 
 Ferreira & Yang (2019): [Linking offline and online measures]{.fg style="--col: #e64173"} can provide a better understanding of how speech is processed and represented.
 
-## Eye-tracking in language research 
+## Eye-tracking in language research
 
 Focus of this course:
 
-- Visual World Paradigm (i.e., speech comprehension)
-- Reading Paradigms (i.e., written text comprehension)
+-   Visual World Paradigm (i.e., speech comprehension)
+-   Reading Paradigms (i.e., written text comprehension)
 
 ## Eye-tracking in languge research
 
 Visual World Paradigm
 
-- VWP has predominantly been used to investigate speech comprehension as it unfolds, to answer questions such as lexical access, prediction of upcoming elements in the speech signal, or even the interpretation of an utterance away from its propositional content.
+-   VWP has predominantly been used to investigate speech comprehension as it unfolds, to answer questions such as lexical access, prediction of upcoming elements in the speech signal, or even the interpretation of an utterance away from its propositional content.
 
 ## Eye-tracking in languge research
 
 Visual World Paradigm
 
-Communication is multimodal: Both verbal and non-verbal features exist when we produce and comprehend spoken language, and they can facilitate communication.
-Disfluencies (e.g., um or uh in English) are predominant in spontaneous speech.
+Communication is multimodal: Both verbal and non-verbal features exist when we produce and comprehend spoken language, and they can facilitate communication. Disfluencies (e.g., um or uh in English) are predominant in spontaneous speech.
 
-- Do they affect listeners because of beliefs about disfluencies, or because of social reasoning?
-    - Research question: Whether and how disfluent speech can be interpreted as deceitful, and whether there is an effect of interlocutors’ linguistic background (i.e., native versus non-native interlocutors).
-
-## Eye-tracking in languge research
-
-Visual World Paradigm
-
-- Treasure hunt paradigm
-
+-   Do they affect listeners because of beliefs about disfluencies, or because of social reasoning?
+    -   Research question: Whether and how disfluent speech can be interpreted as deceitful, and whether there is an effect of interlocutors' linguistic background (i.e., native versus non-native interlocutors).
 
 ## Eye-tracking in languge research
 
 Visual World Paradigm
 
+-   Treasure hunt paradigm
+
+## Eye-tracking in languge research
+
+Visual World Paradigm
 
 ## Eye-tracking in languge research
 
@@ -1435,9 +1411,9 @@ Visual World Paradigm
 
 Conclusions:
 
-- Participants made their decision shortly after the potential location was said (circa 400 ms.)
-- The presence of a disfluency not only led to more interpretations of deceit, as reflected in the object selected, but also biased eye movements early.
-- There was no difference between native and non-native speakers.
+-   Participants made their decision shortly after the potential location was said (circa 400 ms.)
+-   The presence of a disfluency not only led to more interpretations of deceit, as reflected in the object selected, but also biased eye movements early.
+-   There was no difference between native and non-native speakers.
 
 The interpretation of deceit triggered by disfluencies is inflexible, and likely heavily anchored in a stereotype of how deceit sounds (without any form of social reasoning).
 
@@ -1473,28 +1449,28 @@ Reading
 
 ## Wrap up
 
-- Eye movements are a window to individuals’ minds because attention mediates them.
-- In the case of language, we take that people process what they are looking at, and for how long they look signifies how costly it is to process.
-- Eye-trackers work by locating the relative position of the pupil thanks to a camera.
-- You can investigate both spoken and written language, production and comprehension via the VWP and reading paradigms.
+-   Eye movements are a window to individuals' minds because attention mediates them.
+-   In the case of language, we take that people process what they are looking at, and for how long they look signifies how costly it is to process.
+-   Eye-trackers work by locating the relative position of the pupil thanks to a camera.
+-   You can investigate both spoken and written language, production and comprehension via the VWP and reading paradigms.
 
 ## Plan for tomorrow
 
 Visual World Paradigm
 
-- Install PsychoPy
-- Download template script
-- Recommended reading:
-  - Altmann & Kamide
+-   Install PsychoPy
+-   Download template script
+-   Recommended reading:
+    -   Altmann & Kamide
 
 ## Plan for this week
 
-- Think about a research question
-    - If only questions regarding one paradigm come to mind, that’s alright.
-- Decide on an appropriate paradigm
-- Maybe already materials? (pictures & audios, or sentences…)
+-   Think about a research question
+    -   If only questions regarding one paradigm come to mind, that's alright.
+-   Decide on an appropriate paradigm
+-   Maybe already materials? (pictures & audios, or sentences...)
 
-You can come up with your own idea, or you can take an existing study (see some papers on our GitHub page). Otherwise, tomorrow you can just use the exercise materials we prepared for you if you don’t have time today, so don’t stress it :)
+You can come up with your own idea, or you can take an existing study (see some papers on our GitHub page). Otherwise, tomorrow you can just use the exercise materials we prepared for you if you don't have time today, so don't stress it :)
 
 ## References {.smaller}
 
@@ -1522,5 +1498,4 @@ Pickering, M. J., Frisson, S., McElree, B., & Traxler, M. J. (2004). Eye movemen
 
 Trueswell, J. C. (2008). Using eye movements as a developmental measure within psycholinguistics. Language acquisition and language disorders, 44, 73.
 
-Yarbus A. L. (1967). _Eye movements and vision_. New York: Plenum.
-
+Yarbus A. L. (1967). *Eye movements and vision*. New York: Plenum.
