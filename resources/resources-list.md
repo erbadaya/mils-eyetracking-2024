@@ -2,7 +2,7 @@
 
 Designing an experiment _might_ be the easy part of the task. Things (in my opinion) get more complicated when you start working on its implementation: What verbs should I use? Where do I get the images? Where do people get their stimuli?
 
-Thankfully, there are a lot of databases and resources availabe online - and lots of folks that have put them all together! Here are a few:
+Thankfully, there are a lot of databases and resources available online - and lots of folks that have put them all together! Here are a few:
 
 - Dr. Aine Ito's website has a page dedicated to resources, from databases to tutorials. You can find it [here](https://aineito.github.io/resources.html).
 
