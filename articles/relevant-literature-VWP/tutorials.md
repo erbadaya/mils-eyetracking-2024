@@ -1,0 +1,1 @@
+While you can learn how to write a VWP experiment in OpenSesame with the slides, the creators of OS have actually a tutorial online. Note that there a few things are done differently (e.g., we tried to use as less code as possible). You can check it out [here](https://osdoc.cogsci.nl/3.3/tutorials/visual-world/#step-10-define-instructions-and-goodbye-screen).
