@@ -678,6 +678,129 @@ More on W9 & W11 but:
 :::
 :::
 
+------------------------------------------------------------------------
+
+Let's take a break!
+
+## Building an eye-tracking experiment
+
+We are going to code a reading eye-tracking experiment on OS.
+
+- Many of the things we learnt yesterday can be used today!
+    - Especially, we will use the same eye-tracking plugins
+
+## Building a reading experiment
+
+Example: high/low frequency words (Rayner & Duffy,1986))
+
+- DV: Fixations on an area of interest
+- IV: Word frequency
+
+5 areas of interest
+
+## Building a reading experiment
+
+The constraints of design:
+
+- We want to counterbalance particants across lists
+- We want participants to progress in the experiment by pressing the spacebar
+- We want to show participants the instructions at the beginning of the experiment
+
+## Building a reading experiment
+
+The constraints of the eye tracker:
+
+- We want five areas of interest
+- We want a drift correction at the beginning of every trial
+    - Drift should appear where the sentence starts
+
+## Building a reading experiment
+
+The loop
+
+-   Each row: a trial
+-   What does the first row represent?
+
+![](images/session_3/OS/datasource.jpg)
+
+## Building a reading experiment
+
+The trial sequence
+
+![](images/session_3/OS/trialsequence.JPG)
+
+## Building a reading experiment
+
+Send backdrop to .edf (before trial sequence)
+
+![](images/session_3/OS/examplebackdrop.JPG)
+
+## Building a reading experiment
+
+Send backdrop to .edf (before trial sequence)
+
+![](images/session_3/OS/psychoend.JPG)
+
+## Building a reading experiment
+
+Send backdrop to .edf (before trial sequence)
+
+![](images/session_3/OS/importmodules.JPG)
+
+## Building a reading experiment
+
+Drift correction
+
+![](images/session_3/OS/drift.JPG)
+
+## Building a reading experiment
+
+Present stimuli and sending areas of interest done via inline python script
+
+![The prepare tab](images/session_3/OS/prepare.JPG)
+
+## Building a reading experiment
+
+Present stimuli: text drawn on an area of interest basis
+
+- Get where one area ends so the next one starts there
+  - "Draw" rectangles
+
+![The run tab](images/session_3/OS/presentstimuli1.JPG)
+
+## Building a reading experiment
+
+Calculate the edges of the areas of interest
+
+![The run tab](images/session_3/OS/sendIAs.JPG)
+
+## Building a reading experiment
+
+Present the text
+
+![The run tab](images/session_3/OS/showtext.JPG)
+
+## Building a reading experiment
+
+Record the areas of interest
+
+![The run tab](images/session_3/OS/recordIAs.JPG)
+
+## Building a reading experiment
+
+Take a screenshot of the screen + send it to the tracker
+
+![The run tab](images/session_3/OS/sendIAs.JPG)
+
+## Building a reading experiment
+
+Your turn now!
+
+-   Try:
+    -   This example.
+    -   A mock experiment
+    -   Your own research question
+
 ## References {.smaller}
 
 Blythe, H. I., Häikiö, T., Bertam, R., Liversedge, S. P., & Hyönä, J. (2011). Reading disappearing text: Why do children refixate words? *Vision Research, 51*(1), 84--92. https://doi.org/10.1016/j.visres.2010.10.003
