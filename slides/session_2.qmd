@@ -987,7 +987,7 @@ Example: Lexical access (loose adaptation of Allopenna et al., 1996)
 -   DV: Fixations on referred item on the screen.
 -   IV: Relationship target and other items on the screen (cohort competitor, rhyme competitor, distractor)
 
-4-images visual array 
+4-images visual array
 
 ## Building a VWP experiment
 
@@ -1040,9 +1040,9 @@ The trial sequence
 
 ## Building a VWP experiment
 
-Send Areas of Interest 
+Send Areas of Interest
 
-- inline python script (but NB label is position, not object on position)
+-   inline python script (but NB label is position, not object on position)
 
 ![](images/session_2/OS/sendIAs.JPG)
 
@@ -1050,7 +1050,7 @@ Send Areas of Interest
 
 Dynamic visual stimuli
 
-- NB pseudo-randomised
+-   NB pseudo-randomised
 
 ![](images/session_2/OS/dynamicposition.JPG)
 
@@ -1074,9 +1074,9 @@ Auditory stimuli
 
 ## Building a VWP
 
-Send triggers 
+Send triggers
 
-- inline python script (NB order of sending! _before_ the event)
+-   inline python script (NB order of sending! *before* the event)
 
 ![](images/session_2/OS/trigger_code.JPG)
 
