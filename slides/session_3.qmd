@@ -28,14 +28,13 @@ Any questions from yesterday?
 
 Eye-tracking during reading
 
-- Theory
-  - Why and how to research reading
-  - Reading measures
-  - Reading paradigms
-  - Example: single sentence reading
-  
-- Practice
-  - Build a reading study in...
+-   Theory
+    -   Why and how to research reading
+    -   Reading measures
+    -   Reading paradigms
+    -   Example: single sentence reading
+-   Practice
+    -   Build a reading study in...
 
 # Why and how
 
@@ -701,15 +700,15 @@ Let's take a break!
 
 We are going to code a reading eye-tracking experiment on OS.
 
-- Many of the things we learnt yesterday can be used today!
-    - Especially, we will use the same eye-tracking plugins
+-   Many of the things we learnt yesterday can be used today!
+    -   Especially, we will use the same eye-tracking plugins
 
 ## Building a reading experiment
 
 Example: high/low frequency words (Rayner & Duffy,1986))
 
-- DV: Fixations on an area of interest
-- IV: Word frequency
+-   DV: Fixations on an area of interest
+-   IV: Word frequency
 
 5 areas of interest
 
@@ -717,17 +716,17 @@ Example: high/low frequency words (Rayner & Duffy,1986))
 
 The constraints of design:
 
-- We want to counterbalance particants across lists
-- We want participants to progress in the experiment by pressing the spacebar
-- We want to show participants the instructions at the beginning of the experiment
+-   We want to counterbalance particants across lists
+-   We want participants to progress in the experiment by pressing the spacebar
+-   We want to show participants the instructions at the beginning of the experiment
 
 ## Building a reading experiment
 
 The constraints of the eye tracker:
 
-- We want five areas of interest
-- We want a drift correction at the beginning of every trial
-    - Drift should appear where the sentence starts
+-   We want five areas of interest
+-   We want a drift correction at the beginning of every trial
+    -   Drift should appear where the sentence starts
 
 ## Building a reading experiment
 
@@ -778,8 +777,8 @@ Present stimuli and sending areas of interest done via inline python script
 
 Present stimuli: text drawn on an area of interest basis
 
-- Get where one area ends so the next one starts there
-  - "Draw" rectangles
+-   Get where one area ends so the next one starts there
+    -   "Draw" rectangles
 
 ![The run tab](images/session_3/OS/presentstimuli1.JPG)
 
