@@ -871,11 +871,10 @@ What is the structure of an experiment?
 
 . . .
 
-
-- Calibration & validation 
-- Drift correction 
-- Recording 
-- Send information
+-   Calibration & validation
+-   Drift correction
+-   Recording
+-   Send information
 
 ## OpenSesame
 
@@ -983,33 +982,29 @@ Download the OpenSesame script
 
 ## Building a VWP experiment
 
-Example: Manner of delivery (fluent/disfluent) biasing interpretations of deceit (Loy et al., 2017)
+Example: Lexical access (loose adaptation of Allopenna et al., 1996)
 
--   DV: Fixations on either item on the screen.
--   IV: Manner of delivery
+-   DV: Fixations on referred item on the screen.
+-   IV: Relationship target and other items on the screen (cohort competitor, rhyme competitor, distractor)
 
-2-images visual array (target v distractor)
+4-images visual array
 
 ## Building a VWP experiment
 
-:::columns 
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 The stimuli:
 
--   8 images (4 pairs, because we have 4 trials)
--   8 audios (4 carrier sentences, 4 nouns, to ease sending triggers)
+-   18 images (some pictures are recycled)
+-   32 audios (16 carrier sentences, 16 nouns, to ease sending triggers)
 
 You don't need to send the stimuli outside of the script, everything is in the file!
-
-::: 
-:::{.column width="50%"}
-
-![](images/session_2/stimuli.png)
-
-:::
 :::
 
+::: {.column width="50%"}
+![](images/session_2/OS/items.JPG)
+:::
+:::
 
 ## Building a VWP experiment
 
@@ -1018,7 +1013,6 @@ The constraints of design:
 -   We want to counterbalance the position of the target.
 -   We want to have a preview window and then the audio.
 -   We want participants to click on an item only after the noun is said.
--   We want participants to only be able to click for 5000 ms.
 -   We want to show participants the instructions at the beginning of the experiment.
 
 ## Building a VWP experiment
@@ -1026,8 +1020,7 @@ The constraints of design:
 The constraints of the eye tracker:
 
 -   We want three triggers (audio onset - noun onset - trial offset).
--   We want two areas of interest (target versus distractor).
-    -   Dynamic values!
+-   We want four areas of interest (target versus distractor).
 -   We want a drift correction at the beginning of every trial.
 
 ## Building a VWP experiment
@@ -1037,52 +1030,55 @@ The loop
 -   Each row: a trial
 -   What does the first row represent?
 
-![](images/session_2/loopvwp.png)
+![](images/session_2/OS/datasource.jpg)
 
 ## Building a VWP experiment
 
 The trial sequence
 
-![](images/session_2/trialsequencevwp.png)
+![](images/session_2/OS/trialsequence.JPG)
 
 ## Building a VWP experiment
 
-Send Areas of Interest - inline python script
+Send Areas of Interest
 
-![](images/session_2/inlinescript1.png)
+-   inline python script (but NB label is position, not object on position)
+
+![](images/session_2/OS/sendIAs.JPG)
 
 ## Building a VWP experiment
 
 Dynamic visual stimuli
 
-![](images/session_2/canvas1.png)
+-   NB pseudo-randomised
+
+![](images/session_2/OS/dynamicposition.JPG)
 
 ## Building a VWP experiment
 
 Auditory stimuli
 
-:::columns
-:::{.column width="20%"}
-
-
+::: columns
+::: {.column width="20%"}
 -   Cross splicing
-
 :::
-:::{.column width="40%"}
 
-![](images/session_2/audio1.png)
-
+::: {.column width="40%"}
+![](images/session_2/OS/carrier.JPG)
 :::
-:::{.column width="40%"}
 
-![](images/session_2/audio2.png)
-
+::: {.column width="40%"}
+![](images/session_2/OS/noun.JPG)
 :::
 :::
 
 ## Building a VWP
 
-Send triggers - inline python script
+Send triggers
+
+-   inline python script (NB order of sending! *before* the event)
+
+![](images/session_2/OS/trigger_code.JPG)
 
 ## Building a VWP experiment
 
@@ -1100,7 +1096,7 @@ Your turn now!
 -   Eye-tracking-while-reading with Mariia
 -   Coding an experiment in OpenSesame
 
-## "Homework:
+## Homework:
 
 -   Play around with OpenSesame
 -   Try to come up with a RQ within your own field where VWP would be useful

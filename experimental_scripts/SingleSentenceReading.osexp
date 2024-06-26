@@ -1,0 +1,583 @@
+---
+API: 3
+OpenSesame: 4.0.1
+Platform: nt
+---
+set width 1920
+set uniform_coordinates yes
+set title "New experiment"
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend psycho
+set round_decimals 2
+set mouse_backend psycho
+set keyboard_backend psycho
+set height 1080
+set fullscreen no
+set form_clicks no
+set foreground black
+set font_underline no
+set font_size 18
+set font_italic False
+set font_family mono
+set font_bold False
+set experiment_path "C:\\Users\\eramosba\\OneDrive - UGent\\Misc - Eye-tracking support\\ugent-eyetracking\\experimental-scripts\\opensesame\\SingleSentenceReading"
+set disable_garbage_collection False
+set description "The main experiment item"
+set coordinates uniform
+set compensation 0
+set color_backend psycho
+set clock_backend psycho
+set canvas_backend psycho
+set background white
+
+define form_multiple_choice counterbalance_group
+	set timeout infinite
+	set spacing 10
+	set question "Please, select participant group."
+	__options__
+	1
+	2
+	__end__
+	set margins "50;50;50;50"
+	set form_var counterbalance_group
+	set form_title "Participant group"
+	set description "A simple multiple choice item"
+	set button_text Ok
+	set allow_multiple yes
+	set advance_immediately yes
+	set _theme gray
+
+define pygaze_drift_correct drift_correct
+	set ypos 0
+	set xpos -416
+	set target_style default
+	set target_color "[foreground]"
+	set fixation_triggered no
+	set draw_target yes
+	set description "Perform eye-tracker drift correction"
+
+define pygaze_drift_correct drift_correct_2
+	set ypos 0
+	set xpos -416
+	set target_style default
+	set target_color "[foreground]"
+	set fixation_triggered no
+	set draw_target yes
+	set description "Perform eye-tracker drift correction"
+
+define sequence experiment
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run counterbalance_group always
+	run instructions_calibration always
+	run initialise_eyetracker always
+	run instructions_task always
+	run import_modules True
+	run group1_four_trials "[counterbalance_group] = 1"
+	run group2_four_trials "[counterbalance_group] = 2"
+	run goodbye_screen always
+
+define sketchpad goodbye_screen
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=black font_bold=no font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Thank participants etc." x=0 y=0 z_index=0
+
+define loop group1_four_trials
+	set source_file ""
+	set source table
+	set repeat 1
+	set order random
+	set description "Repeatedly runs another item"
+	set cycles 4
+	set continuous no
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 IA_1 "The&nbsp;"
+	setcycle 0 IA_2 "shiny&nbsp;"
+	setcycle 0 IA_3 "gondola&nbsp;"
+	setcycle 0 IA_4 "moved&nbsp;"
+	setcycle 0 IA_5 "slowly."
+	setcycle 0 item infreq_1
+	setcycle 0 condition infrequent
+	setcycle 0 counterbalance 1
+	setcycle 0 type critical
+	setcycle 0 identifier 1
+	setcycle 1 IA_1 "The&nbsp;"
+	setcycle 1 IA_2 "large&nbsp;"
+	setcycle 1 IA_3 "mosque&nbsp;"
+	setcycle 1 IA_4 "remained&nbsp;"
+	setcycle 1 IA_5 "mostly empty."
+	setcycle 1 item infreq_2
+	setcycle 1 condition infrequent
+	setcycle 1 counterbalance 1
+	setcycle 1 type critical
+	setcycle 1 identifier 2
+	setcycle 2 IA_1 "The&nbsp;"
+	setcycle 2 IA_2 "noisy&nbsp;"
+	setcycle 2 IA_3 "chicken&nbsp;"
+	setcycle 2 IA_4 "chased&nbsp;"
+	setcycle 2 IA_5 "the sparrows."
+	setcycle 2 item freq_3
+	setcycle 2 condition frequent
+	setcycle 2 counterbalance 1
+	setcycle 2 type critical
+	setcycle 2 identifier 3
+	setcycle 3 IA_1 "The&nbsp;"
+	setcycle 3 IA_2 "sandy&nbsp;"
+	setcycle 3 IA_3 "beach&nbsp;"
+	setcycle 3 IA_4 "stretched&nbsp;"
+	setcycle 3 IA_5 "for many miles."
+	setcycle 3 item freq_4
+	setcycle 3 condition frequent
+	setcycle 3 counterbalance 1
+	setcycle 3 type critical
+	setcycle 3 identifier 4
+	run trial_sequence
+
+define loop group2_four_trials
+	set source_file ""
+	set source table
+	set repeat 1
+	set order random
+	set description "Repeatedly runs another item"
+	set cycles 4
+	set continuous no
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 IA_1 "The&nbsp;"
+	setcycle 0 IA_2 "shiny&nbsp;"
+	setcycle 0 IA_3 "vehicle&nbsp;"
+	setcycle 0 IA_4 "moved&nbsp;"
+	setcycle 0 IA_5 "slowly."
+	setcycle 0 item freq_1
+	setcycle 0 condition frequent
+	setcycle 0 counterbalance 1
+	setcycle 0 type critical
+	setcycle 0 identifier 1
+	setcycle 1 IA_1 "The&nbsp;"
+	setcycle 1 IA_2 "large&nbsp;"
+	setcycle 1 IA_3 "church&nbsp;"
+	setcycle 1 IA_4 "remained&nbsp;"
+	setcycle 1 IA_5 "mostly empty."
+	setcycle 1 item freq_2
+	setcycle 1 condition frequent
+	setcycle 1 counterbalance 1
+	setcycle 1 type critical
+	setcycle 1 identifier 2
+	setcycle 2 IA_1 "The&nbsp;"
+	setcycle 2 IA_2 "noisy&nbsp;"
+	setcycle 2 IA_3 "rooster&nbsp;"
+	setcycle 2 IA_4 "chased&nbsp;"
+	setcycle 2 IA_5 "the sparrows."
+	setcycle 2 item infreq_3
+	setcycle 2 condition infrequent
+	setcycle 2 counterbalance 1
+	setcycle 2 type critical
+	setcycle 2 identifier 3
+	setcycle 3 IA_1 "The&nbsp;"
+	setcycle 3 IA_2 "sandy&nbsp;"
+	setcycle 3 IA_3 "dunes&nbsp;"
+	setcycle 3 IA_4 "stretched&nbsp;"
+	setcycle 3 IA_5 "for many miles."
+	setcycle 3 item infreq_4
+	setcycle 3 condition infrequent
+	setcycle 3 counterbalance 1
+	setcycle 3 type critical
+	setcycle 3 identifier 4
+	run trial_sequence_2
+
+define inline_script import_modules
+	set description "Executes Python code"
+	___run__
+	import os
+	import pylink
+	global ppt_folder
+	
+	ppt_folder = os.makedirs(os.path.join(exp.experiment_path, "sub_" + str(var.subject_nr))) # first, we create the directory with the function os.makedirst, which takes the directory of where our experimental script is saved, and adds a new folder named "sub_" and the participant number, saved in "subject_nr"
+	
+	ppt_folder = os.path.join(exp.experiment_path, "sub_" + str(var.subject_nr)) # we then save this path in our object, to later call it to save the images
+	
+	global reading_canvas, my_keyboard
+	
+	reading_canvas = canvas()
+	my_keyboard = keyboard()
+	__end__
+	set _prepare ""
+
+define pygaze_init initialise_eyetracker
+	set tracker_type EyeLink
+	set tobiiglasses_udpport 49152
+	set tobiiglasses_address "192.168.71.50"
+	set smi_send_port 4444
+	set smi_recv_port 5555
+	set smi_ip "127.0.0.1"
+	set sacc_vel_thr 35
+	set sacc_acc_thr 9500
+	set eyelink_pupil_size_mode area
+	set eyelink_force_drift_correct yes
+	set description "Initialize and calibrate eye tracker"
+	set calibrate yes
+	set calbeep yes
+	set alea_api_key "Contact Alea for an API key"
+	set alea_animated_calibration no
+	set _logfile automatic
+
+define sketchpad instructions_calibration
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=black font_bold=no font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Some instructions here explaining the calibration and validation procedures." x=0 y=0 z_index=0
+
+define sketchpad instructions_task
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color=black font_bold=no font_family=mono font_italic=no font_size=18 html=yes show_if=always text="Some instructions here explaining the task." x=0 y=0 z_index=0
+
+define logger log_variables_behavioural
+	set description "Logs experimental data"
+	set auto_log yes
+
+define logger log_variables_behavioural_2
+	set description "Logs experimental data"
+	set auto_log yes
+
+define pygaze_log log_variables_eyetracker
+	set throttle 2
+	__msg__
+	!V TRIAL_VAR sentence [sentence]
+	!V TRIAL_VAR condition [condition]
+	!V TRIAL_VAR counterbalance [counterbalance]
+	!V TRIAL_VAR type [type]
+	!V TRIAL_VAR identifier [identifier]
+	__end__
+	set description "Writes information to the eye-tracker logfile"
+	set auto_log no
+
+define pygaze_log log_variables_eyetracker_2
+	set throttle 2
+	set msg ""
+	set description "Writes information to the eye-tracker logfile"
+	set auto_log yes
+
+define inline_script read_sentence_sizes
+	set description "Executes Python code"
+	___run__
+	# draw each part on canvas
+	# calculate a rectangle around it (for ROIs & to calculate the start of the next part of the sentence) 
+	
+	# draw
+	
+	reading_canvas['IA1'] = Text(part1, center = False, x = -416, y = 0, html = True)
+	
+	# calculate rectangle
+	
+	x, y, w1, h1 = reading_canvas['IA1'].rect
+	
+	reading_canvas['IA2'] = Text(part2, x = -416 + w1, y = 0, center = False)
+	
+	x, y, w2, h2 = reading_canvas['IA2'].rect
+	
+	reading_canvas['IA3'] = Text(part3, x = -416 + w1 + w2, y = 0, center = False)
+	
+	x, y, w3, h3 = reading_canvas['IA3'].rect
+	
+	reading_canvas['IA4'] = Text(part4, x = -416 + w1 + w2 + w3, y = 0, center = False)
+	
+	x, y, w4, h4 = reading_canvas['IA4'].rect
+	
+	reading_canvas['IA5'] = Text(part5, x = -416 + w1 + w2 + w3 + w4, y = 0, center = False)
+	
+	x, y, w5, h5 = reading_canvas['IA5'].rect
+	
+	# calculate sides for areas of interest
+	
+	start_sentence = -416 # because begins on the left (300-1)
+	
+	# now we can also calculate the spaces for IAs
+	# NB: We need to transform -416 to the set of coordinates of the eye-tracker! (i.e., 0,0 is the top left)
+	# therefore, -416 is this case becomes 96 (W is 1920, then 0,0 is 960, 960 -416 is 544
+	# and 0 becomes 540 (H is 1080/2 = 540)
+	
+	start_IA_left = 544
+	
+	part1_left = start_IA_left 
+	part1_right = start_IA_left + w1
+	part1_top = 540 + h1
+	part1_bottom = 540 - h1
+	
+	part2_left = start_IA_left + w1
+	part2_right = start_IA_left + w1 + w2 
+	part2_top = 540 + h2
+	part2_bottom = 540 - h2
+	
+	part3_left = start_IA_left + w1 + w2
+	part3_right = start_IA_left + w1 + w2 + w3
+	part3_top = 540 + h3
+	part3_bottom = 540 - h3
+	
+	part4_left = start_IA_left + w1 + w2 + w3 
+	part4_right = start_IA_left + w1 + w2 + w3 + w4 
+	part4_top = 540 + h4
+	part4_bottom = 540 - h4
+	
+	part5_left = start_IA_left + w1 + w2 + w3 + w4 
+	part5_right = start_IA_left + w1 + w2 + w3 + w4 + w5
+	part5_top = 540 + h5
+	part5_bottom = 540 - h5
+	
+	# show the text
+	
+	reading_canvas.show()
+	
+	# record the IAs for the eye tracker
+	# IAs go right-side top left-side bottom
+	
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 1 {0} {1} {2} {3} PART1'.format(part1_right,part1_top,part1_left,part1_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 2 {0} {1} {2} {3} PART2'.format(part2_right,part2_top,part2_left,part2_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 3 {0} {1} {2} {3} PART3'.format(part3_right,part3_top,part3_left,part3_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 4 {0} {1} {2} {3} PART4'.format(part4_right,part4_top,part4_left,part4_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 5 {0} {1} {2} {3} PART5'.format(part5_right,part5_top,part5_left,part5_bottom))
+	
+	# get a picture for backdrop
+	
+	self.experiment.window.getMovieFrame() # takes a screenshot of the canvas
+	
+	scn_name = var.item + '.png'
+	filepath = os.path.join(ppt_folder, scn_name)
+	self.experiment.window.saveMovieFrames(filepath)
+	
+	el = pylink.getEYELINK()
+	
+	bgcolor = (116, 116, 116)
+	el.sendMessage('!V CLEAR %d %d %d' % bgcolor)
+	el.sendMessage('!V IMGLOAD FILL %s' % filepath )
+	
+	
+	# display the text until the participant presses the spacebar
+	my_keyboard.get_key()
+	#clean the screen
+	self.experiment.window.flip()
+	__end__
+	___prepare__
+	reading_canvas = canvas()
+	
+	# bring in information about each part of the text
+	
+	part1 = var.IA_1
+	part2 = var.IA_2
+	part3 = var.IA_3
+	part4 = var.IA_4
+	part5 = var.IA_5
+	__end__
+
+define inline_script read_sentence_sizes_2
+	set description "Executes Python code"
+	___run__
+	# draw each part on canvas
+	# calculate a rectangle around it (for ROIs & to calculate the start of the next part of the sentence) 
+	
+	# draw
+	
+	reading_canvas['IA1'] = Text(part1, center = False, x = -416, y = 0, html = True)
+	
+	# calculate rectangle
+	
+	x, y, w1, h1 = reading_canvas['IA1'].rect
+	
+	reading_canvas['IA2'] = Text(part2, x = -416 + w1, y = 0, center = False)
+	
+	x, y, w2, h2 = reading_canvas['IA2'].rect
+	
+	reading_canvas['IA3'] = Text(part3, x = -416 + w1 + w2, y = 0, center = False)
+	
+	x, y, w3, h3 = reading_canvas['IA3'].rect
+	
+	reading_canvas['IA4'] = Text(part4, x = -416 + w1 + w2 + w3, y = 0, center = False)
+	
+	x, y, w4, h4 = reading_canvas['IA4'].rect
+	
+	reading_canvas['IA5'] = Text(part5, x = -416 + w1 + w2 + w3 + w4, y = 0, center = False)
+	
+	x, y, w5, h5 = reading_canvas['IA5'].rect
+	
+	# calculate sides for areas of interest
+	
+	start_sentence = -416 # because begins on the left (300-1)
+	
+	# now we can also calculate the spaces for IAs
+	# NB: We need to transform -416 to the set of coordinates of the eye-tracker! (i.e., 0,0 is the top left)
+	# therefore, -416 is this case becomes 96 (W is 1920, then 0,0 is 960, 960 -416 is 544
+	# and 0 becomes 540 (H is 1080/2 = 540)
+	
+	start_IA_left = 544
+	
+	part1_left = start_IA_left 
+	part1_right = start_IA_left + w1
+	part1_top = 540 + h1
+	part1_bottom = 540 - h1
+	
+	part2_left = start_IA_left + w1
+	part2_right = start_IA_left + w1 + w2 
+	part2_top = 540 + h2
+	part2_bottom = 540 - h2
+	
+	part3_left = start_IA_left + w1 + w2
+	part3_right = start_IA_left + w1 + w2 + w3
+	part3_top = 540 + h3
+	part3_bottom = 540 - h3
+	
+	part4_left = start_IA_left + w1 + w2 + w3 
+	part4_right = start_IA_left + w1 + w2 + w3 + w4 
+	part4_top = 540 + h4
+	part4_bottom = 540 - h4
+	
+	part5_left = start_IA_left + w1 + w2 + w3 + w4 
+	part5_right = start_IA_left + w1 + w2 + w3 + w4 + w5
+	part5_top = 540 + h5
+	part5_bottom = 540 - h5
+	
+	# show the text
+	
+	reading_canvas.show()
+	
+	# record the IAs for the eye tracker
+	# IAs go right-side top left-side bottom
+	
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 1 {0} {1} {2} {3} PART1'.format(part1_right,part1_top,part1_left,part1_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 2 {0} {1} {2} {3} PART2'.format(part2_right,part2_top,part2_left,part2_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 3 {0} {1} {2} {3} PART3'.format(part3_right,part3_top,part3_left,part3_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 4 {0} {1} {2} {3} PART4'.format(part4_right,part4_top,part4_left,part4_bottom))
+	exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 5 {0} {1} {2} {3} PART5'.format(part5_right,part5_top,part5_left,part5_bottom))
+	
+	# get a picture for backdrop
+	
+	self.experiment.window.getMovieFrame() # takes a screenshot of the canvas
+	
+	scn_name = var.item + '.png'
+	filepath = os.path.join(ppt_folder, scn_name)
+	self.experiment.window.saveMovieFrames(filepath)
+	
+	el = pylink.getEYELINK()
+	
+	bgcolor = (116, 116, 116)
+	el.sendMessage('!V CLEAR %d %d %d' % bgcolor)
+	el.sendMessage('!V IMGLOAD FILL %s' % filepath )
+	
+	
+	# display the text until the participant presses the spacebar
+	my_keyboard.get_key()
+	#clean the screen
+	self.experiment.window.flip()
+	__end__
+	___prepare__
+	reading_canvas = canvas()
+	
+	# bring in information about each part of the text
+	
+	part1 = var.IA_1
+	part2 = var.IA_2
+	part3 = var.IA_3
+	part4 = var.IA_4
+	part5 = var.IA_5
+	part6 = "&nbsp;"
+	sentence_file = part1 + " " + part2 + " " + part3 + " " + part4 + " " + part5
+	
+	# add a space between each part
+	
+	part1 = part1 + "&nbsp;"
+	part2 = part2 + "&nbsp;"
+	part3 = part3 + "&nbsp;"
+	part4 = part4 + "&nbsp;"
+	
+	# figure out the sizes of the text
+	
+	w1, h1 = reading_canvas.text_size(part1, center = False)
+	w2, h2 = reading_canvas.text_size(part2, center = False)
+	w3, h3 = reading_canvas.text_size(part3, center = False)
+	w4, h4 = reading_canvas.text_size(part4, center = False)
+	w5, h5 = reading_canvas.text_size(part5, center = False)
+	w6, h6 = reading_canvas.text_size(part6, center = False)
+	print(w6)
+	start_sentence = -416 # because begins on the left (300-1)
+	
+	# now we can calculate where part2 and so on should begin on the screen
+	
+	part2_px = start_sentence + w1 + w6
+	part3_px = start_sentence + w1 + w6 + w2 
+	part4_px = start_sentence + w1 + w2 + w3 
+	part5_px = start_sentence + w1 + w2 + w3 + w4 
+	
+	# now we can also calculate the spaces for IAs
+	# NB: We need to transform -416 to the set of coordinates of the eye-tracker! (i.e., 0,0 is the top left)
+	# therefore, -416 is this case becomes 96 (W is 1920, then 0,0 is 960, 960 -416 is 544
+	# and 0 becomes 540 (H is 1080/2 = 540)
+	
+	start_IA_left = 544
+	
+	part1_left = start_IA_left 
+	part1_right = start_IA_left + w1 + w6
+	part1_top = 540 + h1
+	part1_bottom = 540 - h1
+	
+	part2_left = start_IA_left + w1+ w6
+	part2_right = start_IA_left + w1 + w6 + w2 + w6 
+	part2_top = 540 + h2
+	part2_bottom = 540 - h2
+	
+	part3_left = start_IA_left + w1 + w6 + w2 + w6 
+	part3_right = start_IA_left + w1 + w6 + w2 + w6 + w3 + w6
+	part3_top = 540 + h3
+	part3_bottom = 540 - h3
+	
+	part4_left = start_IA_left + w1 + w6 + w2 + w6 + w3 + w6
+	part4_right = start_IA_left + w1 + w6 + w2 + w6 + w3 + w6 + w4 + w6  
+	part4_top = 540 + h4
+	part4_bottom = 540 - h4
+	
+	part5_left = start_IA_left + w1 + w6 + w2 + w6 + w3 + w6 + w4 + w6  
+	part5_right = start_IA_left + w1 + w6 + w2 + w6 + w3 + w6 + w4 + w6 + w5 + w6 
+	part5_top = 540 + h5
+	part5_bottom = 540 - h5
+	__end__
+
+define pygaze_start_recording start_recording
+	set status_msg start_trial
+	set description "Puts the eye tracker into recording mode"
+
+define pygaze_start_recording start_recording_2
+	set status_msg start_trial
+	set description "Puts the eye tracker into recording mode"
+
+define pygaze_stop_recording stop_recording
+	set status_msg stop_trial
+	set description "Stops recording of eye tracking data"
+
+define pygaze_stop_recording stop_recording_2
+	set status_msg stop_trial
+	set description "Stops recording of eye tracking data"
+
+define sequence trial_sequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run drift_correct always
+	run start_recording always
+	run read_sentence_sizes always
+	run log_variables_eyetracker always
+	run log_variables_behavioural always
+	run stop_recording always
+
+define sequence trial_sequence_2
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run drift_correct_2 always
+	run start_recording_2 always
+	run read_sentence_sizes_2 always
+	run log_variables_eyetracker_2 always
+	run log_variables_behavioural_2 always
+	run stop_recording_2 always
+
