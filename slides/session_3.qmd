@@ -20,63 +20,78 @@ format:
 editor: visual
 ---
 
-# Reading
+## Welcome back!
+
+Any questions from yesterday?
+
+## Overview of today
+
+Eye-tracking during reading
+
+- Theory
+  - Why and how to research reading
+  - Reading measures
+  - Reading paradigms
+  - Example: single sentence reading
+  
+- Practice
+  - Build a reading study in...
+
+# Why and how
 
 ## Reading research
 
-We have a wealth of paradigms to explore how individuals comprehend a piece of written text (from words to several lines, either created stimuli or real texts), considering both low-level processes for word identification (e.g., lexical access) and higher-level processes for sentence and discourse comprehension (e.g., inferences). !!!
+We have a wealth of paradigms to explore how individuals comprehend a piece of written text (from words to several lines, either created stimuli or real texts), considering both low-level processes for word identification (e.g., lexical access) and higher-level processes for sentence and discourse comprehension (e.g., inferences).
 
 ## What's so special about reading?
 
--   Reading is relatively new.
+-   Reading is relatively new
     -   Homo Sapiens $\pm$ 300.000 BC
     -   Sumerian pictographic writing $\pm$ 3.300 BC
     -   Phoenician alphabetic language $\pm$ 2.000 BC
 -   Reading is a skill (exposure, formal instruction, practice)
-    -   We are good at it (250 WPM; Brysbaert, 2019)
-    -   Linked to academic achievement, late L2 acquisition.
+    -   We are good at it ($\pm$ 250 WPM; Brysbaert, 2019)
+    -   Linked to academic achievement, late L2 acquisition
 
 ## History
 
 -   Javal (1879)
 
-    -   Reading is not smooth.
+    -   Reading is not smooth
 
 -   Mid-70s: Technological advances
 
--   Rayner's work.
+-   Rayner's work
 
-    -   Clifton et al., 2016: "Eye movements in reading and information processing: Keith Rayner's 40 year legacy".
+    -   Clifton et al., 2016: "Eye movements in reading and information processing: Keith Rayner's 40 year legacy"
 
 ## History
 
 Main findings:
 
--   Individuals are good at reading, but there are some individual characteristics (e.g., proficiency, L1 v L2).
--   There seems to be some immediacy[^1] when comprehending a text, but we also get ahead of ourselves.
--   In contrast to spoken language, individuals can go back when they encounter a difficulty, and indeed they do.
+-   Individuals are good at reading, but there are individual differences (e.g., reading proficiency, L1 vs. L2...)
+-   There seems to be some immediacy[^1] when comprehending a text, but we also get ahead of ourselves
+-   In contrast to spoken language, individuals can go back when they encounter a difficulty, and indeed they do
 
-[^1]: Serial versus paralllel debate; Just and Carpenter's eye-mind hypothesis
+[^1]: Serial versus parallel processing debate; Just and Carpenter's eye-mind hypothesis
 
-# How to research reading abilities
-
-## Reading research
+## How to research reading?
 
 We need to take a little detour:
 
 -   Eye movements
-    -   Visual human system
+    -   Human visual system
     -   Foveal and parafoveal processing
 
 ## Eye movements
 
-Visual Human System
+Human Visual System
 
--   Fovea: Highest visual acuity
--   Parafovea: Still partial recognition of objects.
--   Periphery: Blurred image.
+-   *Fovea*: highest visual acuity
+-   *Parafovea*: still partial recognition of objects
+-   *Periphery*: blurred image
 
-Fixations versus saccades - Movements (saccades) to place objects on the fovea for processing (fixations)
+**Fixations vs. saccades**: movements (saccades) to place objects on the fovea for processing (fixations)
 
 ## Eye movements in reading
 
@@ -84,7 +99,7 @@ What does this mean in the case of reading?
 
 -   A priori: We move our eyes to place objects (words?) on the fovea so we can process them (e.g., information extraction).
 
-But this is not true in reality.
+But this is not quite literally so.
 
 ## Eye movements in reading
 
