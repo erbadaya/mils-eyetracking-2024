@@ -92,7 +92,7 @@ Requirements
 ## Overview of the course
 
 | Date  |              Content              |                Materials                 |
-|:----------------:|:----------------------------------:|:----------------:|
+|:-----------------:|:----------------------------------:|:-----------------:|
 | Day 1 |   Introduction to eye-tracking    |                   None                   |
 | Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, PsychoPy |
 | Day 3 |              Reading              |                   RR_2                   |
@@ -1421,18 +1421,19 @@ The interpretation of deceit triggered by disfluencies is inflexible, and likely
 
 Reading
 
-- We investigate naturalistic reading behaviour to make inferences about underlying linguistic processing mechanisms (lexical access, semantic and syntactic integration, prediction...).
-- Stimuli of different length (single sentence vs. text), different tasks (skim for gist, answer specific questions, etc.).
+-   We investigate naturalistic reading behaviour to make inferences about underlying linguistic processing mechanisms (lexical access, semantic and syntactic integration, prediction...).
+-   Stimuli of different length (single sentence vs. text), different tasks (skim for gist, answer specific questions, etc.).
 
 ## Eye-tracking in language research
 
 Reading
 
-(Syntactic) constructions = grammatical patterns/rules. They differ in productivity (= number of different lexical items they can be used with). 
-If productivity is high, there are many possible continuations that a sentence containing this construction can have (example: "He started to..."). 
+Constructions = abstract grammatical patterns.
+Their productivity = the number of different words they can be used with.
+If productivity is high, there are many possible continuations that a sentence containing this construction can have (example: "He started to...").
 If productivity is low, there are very few possible continuations (example: "He burst into... ").
 
-- In this low uncertainty situation, will a prediction error occur if readers see a continuation they did not expect?
+-   In this low uncertainty situation, will a prediction error occur if readers see a continuation they did not expect?
     -   Research question: Does low productivity of syntactic constructions lead to processing difficulty for unexpected lexical items?
 
 ## Eye-tracking in language research
@@ -1441,18 +1442,18 @@ Reading
 
 High productivity condition:
 
-- Francisco | **se metió a** | [hablar]{.fg style="--col: #e64173"} | de política | con sus amigos
+- Francisco \| **se metió a** \| [hablar]{.fg style="--col: #e64173"} \| de política \| con sus amigos
 
 Low productivity condition:
 
-- Francisco | **rompió a** | [hablar]{.fg style="--col: #e64173"} | de política | con sus amigos
+- Francisco \| **rompió a** \| [hablar]{.fg style="--col: #e64173"} \| de política \| con sus amigos
 
 ## Eye-tracking in language research
 
 Reading
 
-- Single sentence reading
-- Comprehension questions as attention check
+-   Single sentence reading
+-   Comprehension questions as attention check
 
 ![](images/session_1/reading_trial-structure.png){fig-align="center"}
 
@@ -1479,9 +1480,9 @@ Reading
 :::
 
 ::: {layout-ncol="2"}
-![](images/session_1/reading_resultsV.png){fig-align="center" height="500px"}
+![](images/session_1/reading_resultsV.png){fig-align="center" height="400px"}
 
-![](images/session_1/reading_resultsINF.png){fig-align="center" height="500px"}
+![](images/session_1/reading_resultsINF.png){fig-align="center" height="400px"}
 :::
 
 ## Eye-tracking in language research
@@ -1490,10 +1491,9 @@ Reading
 
 Conclusions:
 
-- Low productivity was not associated with prediction error cost, so processing was not hindered by any unmet expectations. 
+- Low productivity was not associated with prediction error cost, so processing was not hindered by any unmet expectations.
 - Low productivity affected reading (integration and interpretation) of the construction/sentence as a whole.
-
-Psycholinguistic evidence for the reality of the productivity phenomenon.
+- Psycholinguistic evidence for the reality of the productivity phenomenon.
 
 # Wrap up
 
