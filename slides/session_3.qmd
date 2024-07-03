@@ -34,7 +34,7 @@ Eye-tracking during reading
     -   Reading paradigms
     -   Example: single sentence reading
 -   Practice
-    -   Build a reading study
+    -   Building a reading experiment
 
 # What's special about reading
 
@@ -110,8 +110,8 @@ Fixations
 -   Mean duration (silent reading in English): 200 - 250 ms
 -   Lexical access initiated at about 100 ms (Sereno & Rayner, 2003)
 -   Optimal Viewing Position
--   Affected by word length, frequency, predictability, etc.
 - Most reading measures are based on fixation durations
+-   Affected by word length, frequency, predictability, etc.
 
 ![Data from Mariia Baltais](images/session_3/mariia_fix.JPG){fig-align="center" width="500"}
 
@@ -124,6 +124,7 @@ The Optimal Viewing Position (OVP) effect shows that word identification is best
 Saccades
 
 -   Saccadic supression
+- Saccadic latency (about 200 ms)
 -   Mean size (silent reading in English): 7 to 9 letter spaces ($\pm$ 2 words before or after the fixated word)
     -   Size: distance travelled (amplitude)
 - Not analyzed except for backward saccades (regressions)
@@ -132,6 +133,8 @@ Saccades
 
 ::: notes
 Saccadic suppression refers to the behavioral observation that healthy humans under normal circumstances do not perceive this motion.
+
+Saccadic latency (150-250 ms): time needed to program and launch a saccade. This latency period includes the time required for the brain to process visual information, make a decision about where to move the eyes next, and initiate the eye movement.
 :::
 
 ## Eye movements in reading
@@ -251,7 +254,7 @@ Boland, 2004: The eyes do not leave a word until it has been structurally integr
 ::: notes
 Pickering et al. (2004): some aspects of lexical, syntactic, and semantic processing do (largely) respect the immediacy and eye-mind assumptions (with some important caveats), but that **many aspects of sentence interpretation are somewhat delayed**. Semantic processing may not all occur “at once” (readers do look at difficult words such as Finland - in "A lot of Americans protested during Finland", - but they largely do this during later processing rather than during first pass).
 
-Mitchell et al. (2008): the purpose of regressive fixations (and, indeed, re-fixations on the same word) is not to refresh the evidence but merely a delaying tactic used to provide "time out" for as-yet-incomplete parsing operations (to postpone new input).
+Mitchell et al. (2008): the purpose of regressive fixations (and, indeed, re-fixations on the same word) is not to refresh the evidence but merely a delaying tactic used to provide "time out" for as-yet-incomplete parsing operations (to postpone new input). Linguistic and other forms of eye-movement control are rather loosely-, not tightly-coupled.
 :::
 
 ## Linking hypothesis
@@ -261,14 +264,14 @@ Asymmetrical perceptual span:
 - **Preview benefit**: some info about *n+1* while still on *n* -\> shorter reading times *n+1*
     -   Lexical processing can start before a word is fixated
     
-- **Parafoveal-on-foveal effects**: *n+1* characteristics influence reading times for *n*
-    -   Cf. Table 4.1 in Conklin et al. (2018: 83)
+- **Parafoveal-on-foveal effects**: characteristics of *n+1* influence reading times for *n*
+    -   Mixed findings, see Table 4.1 in Conklin et al., 2018 (p. 83)
 
 ## Linking hypothesis
 
 As well as
 
-- **Spillover effects**: *n* characteristics influence reading times for *n+1*
+- **Spillover effects**: characteristics of *n* influence reading times for *n+1*
     -   Processing has not been completed
 
 Therefore,
@@ -278,11 +281,12 @@ Therefore,
     -   Different models of reading (E-Z Reader vs. SWIFT; OB1-Reader)
 
 ::: notes
-Serial: words are processed one at a time in a linear sequence.
+Serial: words are processed one at a time in a linear sequence. E-Z: eee-zee (easy).
 
-Parallel: words are processed simultaneously. The cognitive system processes information from several words at once, allowing for faster and more efficient reading.
+Parallel: words are processed simultaneously. The cognitive system processes information from several words at once, allowing for faster and more efficient reading. Attention is distributed dynamically across several words, with a gradient of attention decreasing from the point of fixation outward. 
+SWIFT: Saccade-Generation with Inhibition by Foveal Targets. The word currently fixated (the foveal target) inhibits the generation of saccades. This inhibition ensures that the word is sufficiently processed before the eyes move to the next word. Once a threshold of processing is reached, the inhibition decreases, allowing for the initiation of the next saccade. The SWIFT model emphasizes parallel processing and dynamic attention distribution, while the E-Z Reader model focuses on serial processing with some degree of parafoveal preview.
 
-The OB1-Reader model (upgrade of E-Z?) incorporates both serial and parallel processing components.
+The OB1-Reader model (upgrade of E-Z?) incorporates both serial and parallel processing components: Optimal Viewing Position-Based Reading.
 :::
 
 # Measures
@@ -302,26 +306,25 @@ Reading measures \<\-\> specific cognitive events?
 
 Traditionally,
 
--   **Early measures**: highly automatic word recognition and lexical access processes
-- **Late measures**: more conscious, controlled, strategic processes
+-   **Early measures**: highly automatic word *recognition* and lexical access processes
+- **Late measures**: more conscious, controlled, strategic processes, such as syntactic and semantic *integration*
 
-NB:
-
--   Different types of linguistic manipulations (e.g., lexical vs. syntactic) can produce effects in the same reading measure (e.g., gaze duration or total reading time).
+NB: Different types of linguistic manipulations (e.g., lexical vs. syntactic) can produce effects in the same reading measures, so it's conventional to report both early and late measures.
 
 ## Early measures
 
-First-pass measures.
+First-pass measures (before moving to *n+1*):
 
--   First fixation duration, (single fixation duration), gaze duration: Time on an AI.
--   Skipping rate: % words that receive no fixation during 1st pass.
-    -   Visual and linguistic factors e.g., parafoveal processing.
--   Factors known to affect: Frequency, familiarity, ambiguity, predictability, semantic association.
+-   **First fixation duration, single fixation duration, gaze duration (= first-pass reading time / first-run dwell time)**: time spent on an IA
+-   **Skipping rate**: % trials where the IA was skipped on first pass
+-   Influenced by length, frequency, predictability, etc.
 
-::: notes
-1st fix: duration of the 1st fix on a word provided it isn't skipped. single fix dur: when there is only one fix gaze duration: sum of all fixations on a word prior to moving to another one (forward or backwards) skipping more likely due to linguistic factors but also processing it in the parafovea
+:::notes
+Clifton et al., 2007:
 
-earliest point for us to see an effect of a variable being manipulated
+Skipping: length, predictability.
+FFD: earliest point to observe an effect due to properties of a word, e.g., frequency.
+GD: sensitive to semantic and syntactic anomalies.
 :::
 
 ## Early measures
@@ -331,17 +334,21 @@ earliest point for us to see an effect of a variable being manipulated
 :::
 
 -   First fixation duration: 3
--   Single fixation duration: NA (there are two fixations in the first pass)
--   Gaze duration: 3 + 4
--   Skipping rate: % trials where AI is skipped in first pass.
+-   Single fixation duration: NA (two first-pass fixations)
+-   Gaze duration: 3+4
+-   Skipping: no (IA wasn't skipped in this trial)
 
 ## Intermediate measures
 
--   Regression-path duration (or go-past time): time on N, N -1, etc. before N +1,
-    -   Includes regressions out (1st pass regressions) and regressions in.
+-   **Regression-path duration (go-past time)**: time on *n*, *n-1*, etc., before moving to *n+1*
+- **(First-pass) regressions-out rate**: % trials where there was a regression out of the IA
+- Lexical and integration difficulties
 
-::: notes
-hard to tell whether they show difficulty of encountering an item and the subsequent time taken to overcome the difficulty
+:::notes
+Clifton et al., 2007:
+
+RPD: lexical and integration difficulties.
+Regr-out: difficulties in higher-level processing (e.g., discourse processing) of a text.
 :::
 
 ## Intermediate measures
@@ -350,16 +357,24 @@ hard to tell whether they show difficulty of encountering an item and the subseq
 ![](images/session_3/earlymeasures.jpg){fig-align="center" width="900"}
 :::
 
--   Regression-path duration/go-past time: 3+4+5+6
--   Regressions-out (on first pass): %
--   Regressions-in: %
+-   Regression-path duration: 3+4+5+6
+-   First-pass regressions-out: yes (between fix 4 and 5)
 
 ## Late measures
 
--   Total reading time: $\Sigma$ fix on N.
-    -   Contextual and discourse-level factors + lexical (i.e., retrieval and integration).
--   Re-reading time (2nd pass reading time): Different definitions across the literature.
-    -   General comprehension difficulties
+-   **Re-reading time, second-pass reading time**: different definitions across literature
+-   **Regressions-in rate**: % trials where there was a regression back into the IA
+    -   Re-analysis, integration difficulties
+-   **Total reading time (= dwell time)**: sum of all fixations
+-   **Fixation count**
+    -   Could be early and/or late processing effects
+
+:::notes
+Clifton et al., 2007:
+
+Re-reading time (RPD-GD): indication of the time spent resolving a problem.
+TRT: impacted by both early and late processing. Effect in TRT but not in early measures -\> late effect on processing.
+:::
 
 ## Late measures
 
@@ -367,21 +382,30 @@ hard to tell whether they show difficulty of encountering an item and the subseq
 ![](images/session_3/earlymeasures.jpg){fig-align="center" width="900"}
 :::
 
+-   Re-reading time: 5+6 (regression-path duration - gaze duration)
+-   Second-pass reading time: 6+9 (total reading time - gaze duration)
+- Regressions-in: yes (between fix 8 and 9)
 -   Total reading time: 3+4+6+9
--   Re-reading time: 6+9 (total reading time - gaze duration)
 -   Fixation count: 4
 
 ## Measures
 
 Measures are dependent:
 
--   1st fixation duration - Gaze duration - Total reading time.
--   Late measures are cumulative.
--   Not total transparent mapping!
+-   First fixation duration $\subseteq$ gaze duration $\subseteq$ total reading time, etc.
+-   Late measures are cumulative
+-   No transparent mapping!
 
-To reiterate...
+Therefore,
 
-![Carroll, 2017](images/session_3/reiterate.JPG)
+- An effect must be visible in \> 1 measure
+- Analysis: correction for multiple comparisons
+
+## Measures
+
+Recap:
+
+![From Carroll, 2017](images/session_3/reiterate.JPG)
 
 ## Measures: Exercise
 
@@ -391,33 +415,34 @@ To reiterate...
 
 -   First fixation duration:
 -   Gaze duration:
--   Regressions-out:
+-   First-pass regressions-out:
 -   Regression-path duration:
--   Re-reading time:
+-   Second-pass reading time:
 -   Total reading time:
+- Fixation count:
 
 ::: notes
-3 3 2 3+4+5+6+7 5+7 3+5+7
+3 3 yes(two) 3+4+5+6+7 5+7 3+5+7 three
 :::
 
 # Paradigms in reading research
 
 ## Paradigms
 
-Ecological validity.
+Differ in ecological validity.
 
--   Gaze-contigent paradigms: Eye gaze determines changes to the text display.
--   Reading of experimental stimuli.
--   Reading of natural text.
+-   Gaze-contigent paradigms: eye gaze determines changes to the text display
+-   Reading of experimental stimuli
+-   Reading of natural text
 
 ## Disappearing text paradigm
 
 Liversedge et al., 2004
 
--   ROI: Disappears after an amount of time of fixation.
--   Shows: Fovea processing.
--   IV: Time to disappear \~ time for normal reading.
-    -   Visual exposure for word recognition.
+-   IA: Disappears after having been fixated for a certain time.
+-   Shows: Parafoveal + foveal processing.
+-   IV: Time to disappear.
+    -   Amount of visual exposure necessary for word recognition.
 
 ## Disappearing text paradigm
 
@@ -427,10 +452,10 @@ Liversedge et al., 2004
 
 ## Fast priming paradigm
 
-Sereno & Rayder, 1992
+Sereno & Rayner, 1992
 
--   ROI: Target word is first a prime, then target word is presented after a fixation on it has occured for some time.
--   Shows: Prime facilitation
+-   IA: First there is a prime in the target location. After the target location has been fixated for some time, the target word appears.
+-   Shows: Priming effect (facilitation).
 -   IV: Relationship prime and target.
 
 ## Fast priming paradigm
@@ -441,9 +466,9 @@ Sereno & Rayder, 1992
 
 ## Moving window paradigm
 
-McConkie & Rayder, 1975
+McConkie & Rayner, 1975
 
--   ROI: Mask around a fixation.
+-   IA: Mask everything that's not fixated.
 -   Shows: Parafoveal processing and perceptual span (extraction and use of information).
 -   IV: Size of the window.
 
@@ -461,7 +486,7 @@ By varying the size of the window and the type of mask (e.g., X's, visually simi
 
 Rayner & Bertera, 1979
 
--   ROI: Mask within the fixation
+-   IA: Mask what's fixated.
 -   Shows: Parafoveal processing and perceptual span.
 -   IV: Size of the window.
 
@@ -473,20 +498,20 @@ Rayner & Bertera, 1979
 
 ## Boundary paradigm
 
-Rayder, 1975
+Rayner, 1975
 
 Saccadic suppression.
 
--   ROI: Masked and then changed after fixations cross an invisible boundary.
--   Shows: Parafoveal processing and perceptual span (information extracted).
-    -   Preview window effect.
-    -   Parafoveal-on-foveal effect (e.g., Drieghe, 2011).
--   IV: What information is extracted e.g., visual similarity.
+-   IA: Masked and then changed to target word after the gaze crosses an invisible boundary.
+-   Shows: Parafoveal processing and perceptual span.
+    -   Preview effect (slowdown) / preview benefit when no mask in the control condition.
+    -   Parafoveal-on-foveal effects (e.g., Drieghe, 2011).
+-   IV: What information is extracted, e.g., visual similarity mask-target.
 
 ::: notes
 The boundary paradigm (Rayner, 1975) makes use of the saccadic suppression. Saccadic suppression means that during a saccade the intake of visual information is suspended and the reader is practically blind. If a change in the visual environment is made during a saccade or very soon after the eyes have landed (\< 6 ms after the end of a saccade, McConkie & Loschky, 2002), the reader does not become consciously aware of it. The target word ("sentence" in the example of Table 7.1) is initially masked with a character string ("somkasoc"), and when the reader's eyes cross an invisible boundary in the text, the mask is replaced with the actual target word.
 
-If the reader has extracted information from the target word preview prior to its change to the correct form, one should observe increased fixation time on the target word, even though the reader is not consciously aware of this. The size of the slowdown in eye fixation time, i.e. the difference between normal condition inwhich no change was made and a change condition is called the preview effect.
+If the reader has extracted information from the target word preview prior to its change to the correct form, one should observe increased fixation time on the target word, even though the reader is not consciously aware of this. The size of the slowdown in eye fixation time, i.e. the difference between normal condition in which no change was made and a change condition is called the preview effect.
 
 The preview benefit is simply computed as the difference in fixation time between a full preview condition, in which the target word was presented normally, and the preview condition.
 
@@ -501,19 +526,19 @@ Another measure to assess parafoveal processing is the so-called parafoveal-on-f
 
 ## Natural sentence reading (experimental stimuli)
 
-Linguistic and non-linguistic factors affecting eye patterns in reading.
+Linguistic and non-linguistic factors affecting eye movement patterns in reading.
 
-Usually, exploration of how movement patterns over a IA differ as a function of the properties of it.
+Usually, exploration of how patterns over a IA differ as a function of its properties.
 
-Frazier & Rayner (1982)
+Frazier & Rayner, 1982
 
 ![](images/session_3/fraz.JPG)
 
 ## Natural text reading (constructed texts)
 
-Pellicer-Sánchez (2016)
+Pellicer-Sánchez, 2016
 
-![From Conklin et al., 2016](images/session_3/texts_example.JPG){fig-align="center"}
+![From Conklin et al., 2018](images/session_3/texts_example.JPG){fig-align="center"}
 
 ## Natural text reading
 
@@ -523,12 +548,12 @@ GECO corpus (Cop et al., 2017)
 
 ![](images/session_3/geco.JPG)
 
-Lack of control over text versus ecological validity.
+Ecological validity but lack of control over text:
 
 -   Participants' characteristics + matching samples
-    -   Additional questionnaires
+- Control variables in statistical analysis
 
-# Single sentence reading experiment
+# Example: single sentence reading
 
 ## Single sentence reading experiment
 
@@ -536,54 +561,61 @@ Elements:
 
 -   A sentence.
 
-Trial sequence: Drift \> Visual Presentation
+Trial sequence: Drift \> Visual presentation.
 
 ## Drift correction
 
-Where the first word appears
+Where the first word appears:
 
 ![](images/lab_setup/drift_reading.jpg){fig-align="center"}
 
-## Visual Presentation
+## Visual presentation
 
-Visual presentation.
+-   Time window of interest is from start to end (no triggers in between)
+    -   Cf. gaze-contingent paradigms
 
--   Time window of interest is from start to end (so no triggers in between).
-    -   cf. gaze-contingent paradigms.
+## Visual presentation
 
-## Visual Presentation
+Interest Areas:
 
-Visual presentation: Areas of Interest
+![Data from Mariia Baltais](images/session_2/ia_reading.png)
 
-![](images/session_2/ia_reading.png)
+## Interest Areas
 
-## Areas of Interest
+-   Target region (*n*) but also
+    -   Pre-critical region (*n-1*)
+    -   Spillover region (*n+1*)
 
--   Target region but also
-    -   Pre-critical region
-    -   Spillover region
+Size depends on the research question:
 
-Research question.
+-   Single words, phrases, clauses...
 
--   Single words v phrases v clauses ...
+## Interest Areas
 
-## Areas of Interest
+Target (& spillover) IA:
 
--   Never beginning/end of the line.
-    -   1st and last fixations on a line are 5-7 ls from the edges.
-    -   1st word likely to be skipped.
-    -   1st fix longer, last fix shorter.
--   AI never clause-final.
-    -   Wrap-up effect.
+-   Never beginning/end of the line
+    -   1st and last fixations on a line are 5-7 ls from the edges
+    -   1st word likely to be skipped
+    -   1st fix longer, last fix shorter
+-   Never clause-final
+    -   Wrap-up effect
+
+## Interest Areas
+
+-   Vertically large enough
+    -   Pre-processing: vertical drift correction
+
+![Data from Mariia Baltais](images/session_3/mariia_verticaldrift.png){fig-align="center" width="500"}
 
 ## Task
 
--   Move to the next trial
--   Comprehension (every now and then/every trial)
+-   Move to the next trial (button press)
+-   Comprehension questions (every now and then / every trial)
 
 ## Confounds
 
--   Characteristics of the visual presentation (non-linguistic).
+-   Characteristics of the visual presentation (non-linguistic)
 -   Characteristics of the materials (linguistic)
 -   Characteristics of the human visual system
 
@@ -592,72 +624,89 @@ Research question.
 Text layout:
 
 -   Font style and size
-    -   B&W for dyslexic participants is not good.
-    -   Horizontal space.
-    -   14-18 pt
+    -   B&W is not recommended for dyslexic participants
     -   Monospace font (e.g., Courier)
+    -   14-18 pt[^3] (3 letters = 1 degree)
+
+[^3]: Depends on the distance to monitor.
+
+:::notes
+Conklin et al., 2018: a study with dyslexic participants might use pastel colours for the background to help reduce contrast levels.
+:::
+
+## Non-linguistic confounds
+
+-   Margins
+    -   Tracking less accurate at screen borders
+-   Line breaks
+    - Readers under-/overshoot the first word
+    
+:::notes
+Conklin et al., 2018: Aside from the problem of sentence wrap-up effects, fixations are not always stable when readers move from one line to the next, and often there is a tendency to under- or overshoot the target (the first word of the next line). Minor corrective saccades would influence reading times.
+:::
 
 ## Non-linguistic confounds
 
 ::: columns
 ::: {.column width="50%"}
--   Line spacing
-    -   Less accuracy for vertical movements
-    -   Double/triple spacing.
--   Line breaks
--   Margins
-    -   Accuracy is low at screen borders.
+
+-   Line spacing[^4]
+    -   Tracking less accurate for vertical movements
+    -   Vertical drift
+    -   Double/triple spacing
 :::
 
 ::: {.column width="50%"}
 <br>
 
-![](images/session_3/example_spacing.JPG)
+![From Conklin et al., 2018](images/session_3/example_spacing.JPG)
 :::
 :::
+
+[^4]: Less important for global measures (\> sentence-level processing).
 
 ## Linguistic confounds
 
-Same we have discussed in previous weeks (see Clifton et al., 2016):
+See Clifton et al., 2016; Conklin et al., 2018 (Ch. 4):
 
--   The Big Three (Frequency, Length, Predictability)
--   Lexical ambiguity
--   Orthographic neighbourhood size (differ by 1 letter)
--   Prevalence
--   Inter alia
+-   **The Big Three (Frequency, Length, Predictability)**
+
+As well as...
+
+-   Familiarity, plausibility, prevalence, age of acquisition, lexical ambiguity, orthographic neighbourhood size, etc.
+
+:::notes
+Plausibility (real world knowledge). Prevalence (word knowledge in the population). Lexical ambiguity (number of word meanings). Orthographic neighbourhood size (neighbours differ by 1 letter).
+:::
 
 ## HVS confounds
 
-Foveal versus parafoveal processing.
+Foveal vs. parafoveal processing.
 
 -   Sequential nature of reading.
 
--   How information from one area can influence eye movements on the other.
+-   Information from one area can influence eye movements in another area.
 
     -   Predictability, length, etc.
-    -   Parafoveal-on-foveal effects (see Hyönä, 2011).
-    -   Serial versus parallel processing.
-        -   Preview benefit, spillover effects.
-
--   Spillover: Effects of processing N are seen on N + 1, + 2.
-
--   Preview: Effects of perceiving N on N - 1.
+    -   Serial vs. parallel processing:
+        -   Preview benefit, parafoveal-on-foveal effects (see Drieghe, 2011; Hyönä, 2011)
+        -   Spillover effects
 
     -   Match contexts!
 
 ## Exercise
 
-Howard et al. (2017)
+Howard et al., 2017
 
-1.  How did they define the Areas of Interest?
-2.  What factors should be considered for the antecedent? (i.e., hammer/plunger in the example)
+1.  How did they define their Interest Areas?
+2.  What factors should be considered for the antecedent? (i.e., *hammer/plunger* in the example)
 3.  What information do you need from procedure and apparatus to replicate this study?
 
 ## Exercise
 
-1.  How did they define the Areas of Interest?
+1.  How did they define their Interest Areas?
 
-7 AIs, two regions of interest.
+Seven IAs in total, two critical (target, post-target).
 
 ![](images/session_3/ias_paper.JPG){fig-align="center"}
 
@@ -666,9 +715,14 @@ Howard et al. (2017)
 2.  What factors should be considered for the antecedent?
 
 -   Typicality (IV)
--   No matching!
+-   No matching! Why?
 
 ![](images/session_3/matching_exercise.JPG){fig-align="center"}
+
+:::notes
+Typical/atypical instance of a category. Plunger: to unclog the WC.
+Matching is not important (large distance from the target).
+:::
 
 ## Exercise
 
@@ -678,10 +732,10 @@ Howard et al. (2017)
 
 ## Analysis
 
-More on W9 & W11 but:
+More on Day 5 but:
 
--   Multiple dependent variables (stages of processing).
--   Type I error
+-   Multiple dependent variables (\<-\> stages of processing)
+-   Multiple comparisons (Type I error)
 -   Tables!
 
 ## Uses
@@ -716,14 +770,14 @@ More on W9 & W11 but:
 -   Naturalistic reading.
 -   Non-invasive method.
 -   Different stages of processing.
--   Combination with offline measures.
+-   Combination with offline measures possible.
 :::
 
 ::: {.column width="50%"}
 **Cons**
 
 -   Literacy required.
--   Dependent variables.
+-   Many dependent variables.
 -   Resources.
 :::
 :::
@@ -732,28 +786,30 @@ More on W9 & W11 but:
 
 Let's take a break!
 
-## Building an eye-tracking experiment
+# Building a reading experiment
 
-We are going to code a reading eye-tracking experiment on OS.
+## Building a reading experiment
+
+We are going to code an eye-tracking during reading experiment on OS.
 
 -   Many of the things we learnt yesterday can be used today!
-    -   Especially, we will use the same eye-tracking plugins
+    -   Especially, we will use the same eye-tracking plug-ins
 
 ## Building a reading experiment
 
-Example: high/low frequency words (Rayner & Duffy,1986))
+Example: high/low frequency words (Rayner & Duffy, 1986)
 
--   DV: Fixations on an area of interest
+-   DVs: Fixations on an area of interest, regressions, skipping
 -   IV: Word frequency
 
-5 areas of interest
+5 areas of interest in total
 
 ## Building a reading experiment
 
-The constraints of design:
+The constraints of the design:
 
--   We want to counterbalance particants across lists
--   We want participants to progress in the experiment by pressing the spacebar
+-   We want to counterbalance participants across lists
+-   We want participants to progress in the experiment by pressing the space bar
 -   We want to show participants the instructions at the beginning of the experiment
 
 ## Building a reading experiment
