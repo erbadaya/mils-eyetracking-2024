@@ -1096,7 +1096,7 @@ Your turn now!
 -   Eye-tracking-while-reading with Mariia
 -   Coding an experiment in OpenSesame
 
-## Homework:
+## Homework
 
 -   Play around with OpenSesame
 -   Try to come up with a RQ within your own field where VWP would be useful

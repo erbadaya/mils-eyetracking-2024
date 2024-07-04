@@ -25,11 +25,11 @@ editor: visual
 ## Overview of today
 
 1. Raw data
-2. Data processing
-3. General pipeline
-4. Software for pre-processing
-5. Visual World Paradigm pipeline
-6. Reading pipeline
+2. Data processing steps
+3. Data Viewer
+4. Visual World Paradigm pipeline
+5. Reading pipeline
+6. Practice time
 
 # Raw data
 
@@ -51,7 +51,7 @@ The eye-tracker is actually just recording gaze coordinates on the screen (i.e.,
 
 It also includes:
 
--   Timestamps for stimuli on- and offsets (i.e., the triggers/messages we sent)
+-   Timestamps for stimuli on- and offsets (i.e., the triggers/messages we sent).
 -   Timestamps for participants' responses.
 -   What they responded.
 -   Trial information.
@@ -120,7 +120,6 @@ EDF files
 :::
 
 ::: {.column width="50%"}
-
 ![](images/session_4/34.png)
 :::
 :::
@@ -142,7 +141,6 @@ EDF files
 -   Visualization
 -   Data wrangling
 -   Analysis
-
 
 ## Data processing
 
@@ -169,7 +167,7 @@ Different software = additional steps.
 
 Divided into two aspects:
 
--   Pre-processing due to eye-movements.
+-   Pre-processing due to eye movements.
     -   Short/long fixations, track loss.
 -   Pre-processing due to participants.
     -   Missed trials, participation criteria.
@@ -199,7 +197,7 @@ Unusable trials
 -   More common
 -   Poor calibration (cf. drift correction)
     -   Umbrella term: "track loss" (could mean anything: participant sneezed, distraction, too fast)
--   Field specific.
+-   Field-specific
 -   Lab log!
 
 ## Assess data
@@ -207,7 +205,7 @@ Unusable trials
 Common sense + lab log
 
 -   Remove participants (lab log? other exclusion criteria?)
--   Items to discard.
+-   Items to discard
     -   Misunderstood sentences?
     -   Unforeseen confounds?
 
@@ -225,7 +223,9 @@ Try to think ahead (pre-registration!) and report all your steps and motivation.
 
 ## Exporting
 
-Prepare data to be analysed elsewhere (e.g., R, SPSS) Data Viewer has different reports.
+Prepare data to be analysed elsewhere (e.g., R, SPSS).
+
+Data Viewer has different reports.
 
 ![](images/session_4/9.png)
 
@@ -271,7 +271,7 @@ Make sure your AIs are displayed when setting TW.
 
 -   /results in experiment folder (project directory)
 -   One .edf per participant
--   Always copy and save the entire folder with subfolders.
+-   Always copy and save the entire experiment folder with subfolders (not just the results)!
 :::
 
 ::: {.column width="50%"}
@@ -298,20 +298,19 @@ Note: **You can't go back with DataViewer**
 Fixations etc. across the screen (both in defined AIs and elsewhere).
 
 -   What do we look for?
-    -   \~ Subjective decisions e.g., not looking \~ not processing speech
-    -   Individual differences e.g., different strategies (L1 v L2)
+    -   \~ Subjective decisions, e.g., not looking \~ not processing speech
+    -   Individual differences, e.g., different strategies (L1 v L2)
 -   Inspect trials with unusual behaviour for that participant (e.g., fewer fixations than average)
 -   Check AIs and triggers
     -   Did we code the AIs name?
-    -   Did the send triggers?
+    -   Did we send triggers?
 
 ## Automatized cleaning
 
 What are we thinking of?
 
 -   Track loss: When there is no data of eye recorded (e.g., blinks, participant moves, low validity of the sample)
-    -   In DV, marked as blinks -> no direct report.
-    
+    -   In DV, marked as blinks -\> no direct report.
 
 ## Automatized cleaning
 
@@ -320,8 +319,12 @@ Track loss.
 -   Trial report: AVERAGE_BLINK_DURECTION, BLINK_DURATION, IP_DURATION
 -   Proportion of track loss computed as: (AVERAGE_BLINK_DURATION \* BLINK_COUNT) / IP_DURATION
     -   But this will also include blinks! So not ideal.
-- Not common to encounter this step in reports.
-    - Kids v adults
+-   Not common to encounter this step in reports.
+    -   Kids v adults
+
+:::notes
+DURECTION
+:::
 
 ## Automatized cleaning
 
@@ -346,7 +349,7 @@ Automatized cleaning done together with exporting data.
 
 -   Only samples on IAs, or also including on-screen but not on IAs?
     -   Trade-off.
-    -   Affects how *proportions* are calculated
+    -   Affects how *proportions* are calculated.
     -   But counts are still there.
 
 Familiarity with previous literature is **key**.
@@ -359,13 +362,16 @@ What does each mean?
 -   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.
 -   Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.
 
+:::notes
+each what?
+:::
+
 ## Automatized cleaning
 
 What does this really mean?
 
-:::columns
-:::{.column width="50%"}
-
+::: columns
+::: {.column width="50%"}
 Assuming that we have 200 samples in a bin:
 
 -   But 15 are blinks, 30 off-screen events, and 5 are data excluded.
@@ -373,32 +379,30 @@ Assuming that we have 200 samples in a bin:
 -   There are 50 samples in uncoded areas of interest (i.e., IA 0)
 
 -   There are 10 samples with data for IA 1.
-
 :::
-:::{.column width="50%"}
 
+::: {.column width="50%"}
 -   In the All Samples report:
 
     -   The proportion of samples related to IA 1 is 5% (10/200)
 
 -   In the All On-Screen Samples:
 
-    -   The proportion of samples related to IA 1 is 6.7% (10/200 - 30 - 15 - 5)
+    -   The proportion of samples related to IA 1 is 6.7% (10/(200 - 30 - 15 - 5))
 
 -   In All Interest Area Samples:
 
-    -   The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)
-
+    -   The proportion of samples related to IA 1 is 10% (10/(200 - 30 - 15 - 5 - 50))
 :::
 :::
 
 ## Automatized cleaning
 
-- All Interest Area Samples
-  - IA_0 == trackloss.
-  - Trade off
-- All On Screen
-  - Overall increased attention.
+-   All Interest Area Samples
+    -   IA_0 = track loss.
+    -   Trade-off.
+-   All On Screen
+    -   Overall increased attention.
 
 ## Automatized cleaning
 
@@ -406,9 +410,9 @@ What do we count as samples for analysis?
 
 -   All Samples in Fixations and Saccades
 -   Exclude Samples during Saccades
--   Exclude Samples during Saccades and Exclude Bins that Contains Non-Fixation Samples
+-   Exclude Samples during Saccades and Exclude Bins that Contain Non-Fixation Samples
 
-Not straightforward answer. Things to consider:
+No straight-forward answer. Things to consider:
 
 -   Fixations and Saccades:
 -   Only fixations: Proportions more 'true' to fixation behaviour **but** also less 'true' to actual behaviour.
@@ -418,16 +422,20 @@ Not straightforward answer. Things to consider:
 
 ![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} ![Arantzeta et al., 2017](images/session_4/basque.JPG){fig-align="center"} ![Apfelbaum et al., 2021](images/session_4/names.JPG){fig-align="center"}
 
+:::notes
+References are not displayed.
+:::
+
 ## Interest Period in VWP
 
 ::: columns
 ::: {.column width="50%"}
 <br> <br>
 
-Triggers e.g., target_onset - target_offset
+Triggers, e.g., target_onset - target_offset
 
 -   Strict matching unchecked
-    -   What if there is a time out?
+    -   What if there is a time-out?
 -   Several TWs
 :::
 
@@ -454,7 +462,7 @@ Make sure your AIs are displayed when setting TW.
 
 ## Exporting: Visual World Paradigm
 
-Recap: Fixations *over a scene at a particular time*
+Recap: Fixations *over a scene at a particular time*.
 
 ::: columns
 ::: {.column width="50%"}
@@ -476,7 +484,7 @@ Common reports: Time binning and Interest Area
 Time course (binning) analysis report
 
 -   How much do we want to discretize time?
-    -   Time bins e.g., every 20 or 50 ms.
+    -   Time bins, e.g., every 20 or 50 ms.
     -   Smaller bins: finer analysis, detect nuanced differences.
     -   Depends on our sample rate.
 
@@ -487,7 +495,7 @@ Time course (binning) analysis report
 ::: columns
 ::: {.column width="50%"}
 -   Choose variables (or just export all)
--   Define the size of your bin.
+-   Define the size of your bin
 -   On-screen events only (unless you want that information)
 -   Separate report unchecked
 :::
@@ -495,6 +503,10 @@ Time course (binning) analysis report
 ::: {.column width="50%"}
 ![](images/session_4/12.png)
 :::
+:::
+
+:::notes
+suggestion re order of slides: wouldn't the all-samples info come more naturally after this part?
 :::
 
 ## Output: Visual World Paradigm
@@ -511,7 +523,7 @@ BIN_INDEX: Which bin it is. This will help us figure out time (by taking the bin
 
 Time binning report
 
-Non-eye movement related variables that we need, i.e., most (except participant ID & trial number) variables that you coded yourself (can be found at the end of the list in blue)
+Non-eye movement related variables that we need, i.e., most (except participant ID & trial number) variables that you coded yourself (can be found at the end of the list in blue).
 
 ![](images/session_4/6.png)
 
@@ -521,27 +533,308 @@ Time binning report
 
 Variables of interest when looking at fixations: you have duplicated columns per eye. Since you'll most likely do monocular tracking, you'll only need one set.
 
-Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (*IA_x* & Information duplicated per eye (even if it was monocular recording, it preserves columns for each eye).
+Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (*IA_x* & Information duplicated per eye). Even if it was monocular recording, it preserves columns for each eye.
 
 -   IA_1_ID, IA_2_ID and so on: The label of the item that was presented in that region (target/distractor).
--   BIN_SAMPLE_COUNT: The number of samples per bin
+-   BIN_SAMPLE_COUNT: The number of samples per bin.
 -   RIGHT_BLINK_SAMPLE_COUNT: Number of samples in a given bin that were a blink.
 -   RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display.
 -   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on[^1]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
 -   RIGHT_IA_1_SAMPLE_COUNT\_%, RIGHT_IA_2_SAMPLE_COUNT\_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).
 
-[^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded
+[^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded.
+
+:::notes
+split into two slides? too much text here
+:::
 
 ## Output: Visual World Paradigm
 
 But what is 'IA_0'?
 
 -   Participants not only look at the images, they also look at areas where we don't have IAs defined (e.g., the center of the screen).
-    -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything).
-    -   However! You don't know where exactly they were looking at (only that it was not defined!).
+    -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)
+    -   However! You don't know where exactly they were looking at (only that it was not defined!)
+
+:::notes
+suggestion re order of slides: doesn't this part belong somewhere earlier? you already mention IA_0 when discussing the all-samples thing
+:::
 
 ## Output: Visual World Paradigm
 
 .txt → import in Excel and save as .xlsx or .csv
 
 ![](images/session_4/5.png)
+
+# Reading pipeline
+
+## Check data: Reading
+
+More time-consuming than VWP but more conventional
+
+-   Drift (vertical, horizontal)
+-   Blinks
+-   Unusual behaviours
+
+## Check data: Reading
+
+Trial-by-trial check
+
+Horizontal drift
+
+-   Safest -\> exclude such trials.
+-   Especially when you are unsure which AIs certain fixations belong to.
+-   **Never** move fixations to the left or right.
+
+![](images/session_4/26.png){fig-align="center"}
+
+## Check data: Reading
+
+Trial-by-trial check
+
+Vertical drift
+
+-   Correct (move up/down) fixations that fall outside AIs
+    -   Less work if top and bottom margins were big enough.
+-   To move certain fixations up/down: Windows Alt+*arrow*, Mac Option+*arrow*
+
+![](images/session_4/20.png){fig-align="center"}
+
+## Check data: Reading
+
+Trial-by-trial check
+
+Blinks in critical AI
+
+-   Exclude trial? Optional
+    -   Individual participants' behaviour: Exclude participant?
+    -   Happens randomly across conditions, and excluding those trials leads to overall large data loss: Ignore?
+
+![](images/session_4/23.png){fig-align="center"}
+
+## Check data: Reading
+
+Trial-by-trial check
+
+Other
+
+-   If participants were instructed to look at the corner when finished reading but went back to re-read: Remove those extra fixations
+
+![](images/session_4/22.png){fig-align="center"}
+
+## Check data: Reading
+
+Trial-by-trial check
+
+Other
+
+-   Started reading from the middle (critical AI): Exclude trial
+
+![](images/session_4/21.png){fig-align="center"}
+
+## Check data: Reading
+
+Trial-by-trial check
+
+Keep a detailed **log** of all changes!
+
+![](images/session_4/reading_cleaning_logbook.png){fig-align="center"}
+
+## Automatized cleaning
+
+What are we thinking of?
+
+-   Extremely short and long fixations (outliers)
+-   Fixations outside of AIs
+
+Familiarity with previous literature is **key**.
+
+Balanced loss across conditions.
+
+## Automatized cleaning: Reading
+
+Different thresholds --\> report *exactly* what you did.
+
+-   Short outliers
+    -   Merge short nearby fixations and remove those that couldn't be merged.
+    -   Or just remove all fixations that are, e.g. \< 100 ms (Sereno & Rayner, 2003).
+    -   Merging might inflate fixation measures, nor merging might inflate skipping if short critical AI.
+-   Long outliers
+    -   Remove all fixations that are, e.g., \> 800 ms.
+-   Delete fixations outside AIs
+
+## Automatized cleaning: Reading
+
+::: columns
+::: {.column width="50%"}
+<br> <br> <br>
+
+In-built 4-stage fixation cleaning procedure.
+
+Right-click on the whole folder.
+:::
+
+::: {.column width="50%"}
+![](images/session_4/24.png) ![](images/session_4/16.png)
+:::
+:::
+
+## Automatized cleaning: Reading
+
+These are settings from D. Drieghe's lab (non-standard)!
+
+![](images/session_4/16.png){fig-align="center"}
+
+<sup>Stage 1: merge fix shorter than 80 ms and less than 0.5 degrees away from each other. Stage 2: merge remaining fix shorter than 40 ms and less than 1.25 degrees away from each other. Finally (Stage 4), remove all remaining fixations that are shorter than 80 ms or longer than 800 ms. Also, remove all fixations that fall outside the IAs.</sup>
+
+## Example pre-processing in reading
+
+Howard et al., 2017
+
+-   What technical information do we expect the authors to list and where?
+
+::: columns
+::: {.column width="50%"}
+![](images/session_4/17.png)
+:::
+
+::: {.column width="50%"}
+![](images/session_4/15.png)
+:::
+:::
+
+## Example pre-processing in reading
+
+Puebla & Felser, 2022
+
+-   What technical information do we expect the authors to list and where?
+
+![](images/session_4/14.png){fig-align="center"}
+
+## Example pre-processing in reading
+
+Holmqvist et al. (2022). Eye tracking: Empirical foundations for a minimal reporting guideline.[^2]
+
+Jakobi et al. (2024). Reporting eye-tracking data quality: Towards a new standard.
+
+[^2]: This paper was retracted due to some legal issues.
+
+## Exporting: Reading
+
+Recap: Fixations and saccades **in several AIs** (*n-1, n, n+1*)
+
+-   Interest Area report
+
+![](images/session_4/4.png){fig-align="center"}
+
+## Exporting: Reading
+
+Interest Area report
+
+-   Choose variables (or just export all)
+
+![](images/session_4/3.png){fig-align="center"}
+
+## Exporting: Reading
+
+Interest Area report
+
+For analysis, we surely need participant ID (Session_Name_), condition, item ID, and interest area ID (IA_ID). It could also be helpful to include IA_LABEL (text presented in the IA).
+
+Let's choose some common measures:
+
+::: columns
+::: {.column width="50%"}
+-   Skipping
+-   First fixation duration
+-   Gaze duration
+-   Regressions-in
+-   First-pass regressions-out
+-   Regression path duration
+-   Total reading time
+:::
+
+::: {.column width="50%"}
+![](images/session_4/2.png)
+:::
+:::
+
+## Output: Reading
+
+Interest Area report
+
+.txt → import in Excel and save as .xlsx or .csv
+
+![](images/session_4/1.png){fig-align="center"}
+
+-   Here all IAs are listed; for analysis, we look at each IA separately! 
+
+## Regions skipped on first pass
+
+After we exported our Interest Area report and before starting the analysis:
+
+-   In some trials, the region could have been skipped on first pass (IA_SKIP = 1).
+
+-   This affects subsequent reading measures (first fixation? re-reading? etc.)
+
+-   Therefore, we can report and analyze the skipping rate if we want;
+
+-   For other measures, if IA_SKIP = 1, we will change the values to *NA* (label them as *missing values*) before we analyze them.
+
+-   First-pass measures for sure: e.g., first fixation duration, gaze duration, first-pass regressions-out, regression-path duration.
+
+## Regions skipped completely
+
+If IA_SKIP = 1, but we don't want to just assign *NA* to all measures indiscriminately:
+
+-   Later measures (e.g., regressions-in, total reading time): we can assign *NA* if the region was skipped completely (i.e., if IA_DWELL_TIME = 0).
+
+    -   For regressions-in it's already the default;
+
+    -   For total reading time the default is 0. Why would we want *NA* instead of 0? It might be better for statistical analysis (certain models don't deal well with zero values).
+
+## Take-home messages
+
+-   Coding your experiment efficiently (e.g., meaningful variable names) saves you some time during pre-processing and data wrangling.
+-   Eye-tracking data consists of timestamped eye movement events and messages.
+-   Software like Data Viewer make it easy to export what we are interested in.
+-   VWP: important to understand how many samples there are per bin and how many seconds a bin entails.
+-   Reading: important to decide on cleaning criteria beforehand and report them. Remember that pre-processing (trial-by-trial check) might take time.
+
+# Practice time
+
+## Your turn
+
+Process the data you acquired in the lab!
+
+# Wrap-up
+
+## Plan for tomorrow
+
+- Data analysis
+
+## Homework
+
+-   Have the file ready for analysis
+-   Download and install R (if you haven't yet)
+-   Think how you'll visualize your data
+
+## References {.smaller}
+
+Apfelbaum, K. S., Klein-Packard, J., & McMurray, B. (2021). The pictures who shall not be named: Empirical support for benefits of preview in the Visual World Paradigm. Journal of Memory and Language, 121, 104279. https://doi.org/10.1016/j.jml.2021.104279
+
+Arantzeta, M., Bastiaanse, R., Burchert, F., Wieling, M., Martinez-Zabaleta, M., & Laka, I. (2017). Eye-tracking the effect of word order in sentence comprehension in aphasia: Evidence from Basque, a free word order ergative language. Language, Cognition and Neuroscience, 32(10), 1320–1343. https://doi.org/10.1080/23273798.2017.1344715
+
+Holmqvist, K., Örbom, S. L., Hooge, I. T. C., Niehorster, D. C., Alexander, R. G., Andersson, R., Benjamins, J. S., Blignaut, P., Brouwer, A.-M., Chuang, L. L., Dalrymple, K. A., Drieghe, D., Dunn, M. J., Ettinger, U., Fiedler, S., Foulsham, T., van der Geest, J. N., Hansen, D. W., Hutton, S. B., … Hessels, R. S. (2023). Eye tracking: Empirical foundations for a minimal reporting guideline. Behavior Research Methods, 55(1), 364–416. https://doi.org/10.3758/s13428-021-01762-8
+
+## References {.smaller}
+
+Howard, P. L., Liversedge, S. P., & Benson, V. (2017). Processing of co-reference in autism spectrum disorder. Autism Research, 10(12), 1968--1980. https://doi.org/10.1002/aur.1845
+
+Jakobi, D. N., Krakowczyk, D. G., & Jäger, L. A. (2024). Reporting Eye-Tracking Data Quality: Towards a New Standard. ETRA ’24: Proceedings of the 2024 Symposium on Eye Tracking Research and Applications. https://doi.org/10.1145/3649902.3655658
+
+Knoeferle, P., & Crocker, M. W. (2006). The Coordinated Interplay of Scene, Utterance, and World Knowledge: Evidence From Eye Tracking. Cognitive Science, 30(3), 481–529. https://doi.org/10.1207/s15516709cog0000_65
+
+Puebla, C., & Felser, C. (2022). Discourse Prominence and Antecedent Mis-Retrieval during Native and Non-Native Pronoun Resolution. Discours. Revue de Linguistique, Psycholinguistique et Informatique. A Journal of Linguistics, Psycholinguistics and Computational Linguistics, 29, Article 29. https://doi.org/10.4000/discours.11720
+
+Sereno, S. C., & Rayner, K. (2003). Measuring word recognition in reading: Eye movements and event-related potentials. Trends in Cognitive Sciences, 7(11), 489--493. https://doi.org/10.1016/j.tics.2003.09.010

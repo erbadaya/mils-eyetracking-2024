@@ -8,7 +8,7 @@
 <link href="session_4_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="session_4_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="session_4_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.538">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Badaya &amp; Baltais">
   <title>Data pre-processing</title>
@@ -356,11 +356,11 @@ Badaya &amp; Baltais
 <h2>Overview of today</h2>
 <ol type="1">
 <li>Raw data</li>
-<li>Data processing</li>
-<li>General pipeline</li>
-<li>Software for pre-processing</li>
+<li>Data processing steps</li>
+<li>Data Viewer</li>
 <li>Visual World Paradigm pipeline</li>
 <li>Reading pipeline</li>
+<li>Practice time</li>
 </ol>
 </section></section>
 <section>
@@ -383,7 +383,7 @@ Badaya &amp; Baltais
 <p>The eye-tracker is actually just recording gaze coordinates on the screen (i.e., gaze points) as well as timestamps in each interval (defined by the sampling rate).</p>
 <p>It also includes:</p>
 <ul>
-<li>Timestamps for stimuli on- and offsets (i.e., the triggers/messages we sent)</li>
+<li>Timestamps for stimuli on- and offsets (i.e., the triggers/messages we sent).</li>
 <li>Timestamps for participants’ responses.</li>
 <li>What they responded.</li>
 <li>Trial information.</li>
@@ -522,7 +522,7 @@ Badaya &amp; Baltais
 <h2>Assess data</h2>
 <p>Divided into two aspects:</p>
 <ul>
-<li>Pre-processing due to eye-movements.
+<li>Pre-processing due to eye movements.
 <ul>
 <li>Short/long fixations, track loss.</li>
 </ul></li>
@@ -565,7 +565,7 @@ Badaya &amp; Baltais
 <ul>
 <li>Umbrella term: “track loss” (could mean anything: participant sneezed, distraction, too fast)</li>
 </ul></li>
-<li>Field specific.</li>
+<li>Field-specific</li>
 <li>Lab log!</li>
 </ul>
 </section>
@@ -574,7 +574,7 @@ Badaya &amp; Baltais
 <p>Common sense + lab log</p>
 <ul>
 <li>Remove participants (lab log? other exclusion criteria?)</li>
-<li>Items to discard.
+<li>Items to discard
 <ul>
 <li>Misunderstood sentences?</li>
 <li>Unforeseen confounds?</li>
@@ -596,7 +596,8 @@ Badaya &amp; Baltais
 <img data-src="images/session_4/reading_cleaning_logbook.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="exporting" class="slide level2">
 <h2>Exporting</h2>
-<p>Prepare data to be analysed elsewhere (e.g., R, SPSS) Data Viewer has different reports.</p>
+<p>Prepare data to be analysed elsewhere (e.g., R, SPSS).</p>
+<p>Data Viewer has different reports.</p>
 
 <img data-src="images/session_4/9.png" class="r-stretch"></section></section>
 <section>
@@ -644,7 +645,7 @@ Badaya &amp; Baltais
 <ul>
 <li>/results in experiment folder (project directory)</li>
 <li>One .edf per participant</li>
-<li>Always copy and save the entire folder with subfolders.</li>
+<li>Always copy and save the entire experiment folder with subfolders (not just the results)!</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/session_4/33.png"></p>
@@ -672,14 +673,14 @@ Badaya &amp; Baltais
 <ul>
 <li>What do we look for?
 <ul>
-<li>~ Subjective decisions e.g., not looking ~ not processing speech</li>
-<li>Individual differences e.g., different strategies (L1 v L2)</li>
+<li>~ Subjective decisions, e.g., not looking ~ not processing speech</li>
+<li>Individual differences, e.g., different strategies (L1 v L2)</li>
 </ul></li>
 <li>Inspect trials with unusual behaviour for that participant (e.g., fewer fixations than average)</li>
 <li>Check AIs and triggers
 <ul>
 <li>Did we code the AIs name?</li>
-<li>Did the send triggers?</li>
+<li>Did we send triggers?</li>
 </ul></li>
 </ul>
 </section>
@@ -707,6 +708,19 @@ Badaya &amp; Baltais
 <li>Kids v adults</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>DURECTION</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="automatized-cleaning-2" class="slide level2">
 <h2>Automatized cleaning</h2>
@@ -735,7 +749,7 @@ Badaya &amp; Baltais
 <li>Only samples on IAs, or also including on-screen but not on IAs?
 <ul>
 <li>Trade-off.</li>
-<li>Affects how <em>proportions</em> are calculated</li>
+<li>Affects how <em>proportions</em> are calculated.</li>
 <li>But counts are still there.</li>
 </ul></li>
 </ul>
@@ -749,6 +763,19 @@ Badaya &amp; Baltais
 <li>Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.</li>
 <li>Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.</li>
 </ul>
+<aside class="notes">
+<p>each what?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="automatized-cleaning-5" class="slide level2">
 <h2>Automatized cleaning</h2>
@@ -769,11 +796,11 @@ Badaya &amp; Baltais
 </ul></li>
 <li><p>In the All On-Screen Samples:</p>
 <ul>
-<li>The proportion of samples related to IA 1 is 6.7% (10/200 - 30 - 15 - 5)</li>
+<li>The proportion of samples related to IA 1 is 6.7% (10/(200 - 30 - 15 - 5))</li>
 </ul></li>
 <li><p>In All Interest Area Samples:</p>
 <ul>
-<li>The proportion of samples related to IA 1 is 10% (10/200 - 30 - 15 - 5 - 50)</li>
+<li>The proportion of samples related to IA 1 is 10% (10/(200 - 30 - 15 - 5 - 50))</li>
 </ul></li>
 </ul>
 </div>
@@ -784,8 +811,8 @@ Badaya &amp; Baltais
 <ul>
 <li>All Interest Area Samples
 <ul>
-<li>IA_0 == trackloss.</li>
-<li>Trade off</li>
+<li>IA_0 = track loss.</li>
+<li>Trade-off.</li>
 </ul></li>
 <li>All On Screen
 <ul>
@@ -799,9 +826,9 @@ Badaya &amp; Baltais
 <ul>
 <li>All Samples in Fixations and Saccades</li>
 <li>Exclude Samples during Saccades</li>
-<li>Exclude Samples during Saccades and Exclude Bins that Contains Non-Fixation Samples</li>
+<li>Exclude Samples during Saccades and Exclude Bins that Contain Non-Fixation Samples</li>
 </ul>
-<p>Not straightforward answer. Things to consider:</p>
+<p>No straight-forward answer. Things to consider:</p>
 <ul>
 <li>Fixations and Saccades:</li>
 <li>Only fixations: Proportions more ‘true’ to fixation behaviour <strong>but</strong> also less ‘true’ to actual behaviour.</li>
@@ -811,17 +838,30 @@ Badaya &amp; Baltais
 <section id="example-data-pre-processing" class="slide level2">
 <h2>Example data pre-processing</h2>
 <p><img data-src="images/session_4/knoerfele1.JPG" class="quarto-figure quarto-figure-center" alt="Knoeferle &amp; Crocker, 2006"> <img data-src="images/session_4/basque.JPG" class="quarto-figure quarto-figure-center" alt="Arantzeta et al., 2017"> <img data-src="images/session_4/names.JPG" class="quarto-figure quarto-figure-center" alt="Apfelbaum et al., 2021"></p>
+<aside class="notes">
+<p>References are not displayed.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="interest-period-in-vwp" class="slide level2">
 <h2>Interest Period in VWP</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br> <br></p>
-<p>Triggers e.g., target_onset - target_offset</p>
+<p>Triggers, e.g., target_onset - target_offset</p>
 <ul>
 <li>Strict matching unchecked
 <ul>
-<li>What if there is a time out?</li>
+<li>What if there is a time-out?</li>
 </ul></li>
 <li>Several TWs</li>
 </ul>
@@ -850,7 +890,7 @@ Badaya &amp; Baltais
 </section>
 <section id="exporting-visual-world-paradigm" class="slide level2">
 <h2>Exporting: Visual World Paradigm</h2>
-<p>Recap: Fixations <em>over a scene at a particular time</em></p>
+<p>Recap: Fixations <em>over a scene at a particular time</em>.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -873,7 +913,7 @@ Badaya &amp; Baltais
 <ul>
 <li>How much do we want to discretize time?
 <ul>
-<li>Time bins e.g., every 20 or 50 ms.</li>
+<li>Time bins, e.g., every 20 or 50 ms.</li>
 <li>Smaller bins: finer analysis, detect nuanced differences.</li>
 <li>Depends on our sample rate.</li>
 </ul></li>
@@ -886,7 +926,7 @@ Badaya &amp; Baltais
 <div class="column" style="width:50%;">
 <ul>
 <li>Choose variables (or just export all)</li>
-<li>Define the size of your bin.</li>
+<li>Define the size of your bin</li>
 <li>On-screen events only (unless you want that information)</li>
 <li>Separate report unchecked</li>
 </ul>
@@ -894,6 +934,19 @@ Badaya &amp; Baltais
 <p><img data-src="images/session_4/12.png"></p>
 </div>
 </div>
+<aside class="notes">
+<p>suggestion re order of slides: wouldn’t the all-samples info come more naturally after this part?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="output-visual-world-paradigm" class="slide level2">
 <h2>Output: Visual World Paradigm</h2>
@@ -905,38 +958,331 @@ Badaya &amp; Baltais
 <section id="output-visual-world-paradigm-1" class="slide level2">
 <h2>Output: Visual World Paradigm</h2>
 <p>Time binning report</p>
-<p>Non-eye movement related variables that we need, i.e., most (except participant ID &amp; trial number) variables that you coded yourself (can be found at the end of the list in blue)</p>
+<p>Non-eye movement related variables that we need, i.e., most (except participant ID &amp; trial number) variables that you coded yourself (can be found at the end of the list in blue).</p>
 
 <img data-src="images/session_4/6.png" class="r-stretch"></section>
 <section id="output-visual-world-paradigm-2" class="slide level2 smaller">
 <h2>Output: Visual World Paradigm</h2>
 <p>Time binning report</p>
 <p>Variables of interest when looking at fixations: you have duplicated columns per eye. Since you’ll most likely do monocular tracking, you’ll only need one set.</p>
-<p>Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (<em>IA_x</em> &amp; Information duplicated per eye (even if it was monocular recording, it preserves columns for each eye).</p>
+<p>Information duplicated per Interest Area. If you have two visuals, then two; three visuals, then three, and so on (<em>IA_x</em> &amp; Information duplicated per eye). Even if it was monocular recording, it preserves columns for each eye.</p>
 <ul>
 <li>IA_1_ID, IA_2_ID and so on: The label of the item that was presented in that region (target/distractor).</li>
-<li>BIN_SAMPLE_COUNT: The number of samples per bin</li>
+<li>BIN_SAMPLE_COUNT: The number of samples per bin.</li>
 <li>RIGHT_BLINK_SAMPLE_COUNT: Number of samples in a given bin that were a blink.</li>
 <li>RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display.</li>
 <li>RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on<sup>1</sup>: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it’s out of ten).</li>
 <li>RIGHT_IA_1_SAMPLE_COUNT_%, RIGHT_IA_2_SAMPLE_COUNT_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Or AVERAGE_, because we have done binocular reading, the average equals the count on our eye recorded</p></li></ol></aside></section>
+<aside class="notes">
+<p>split into two slides? too much text here</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Or AVERAGE_, because we have done binocular reading, the average equals the count on our eye recorded.</p></li></ol></aside></section>
 <section id="output-visual-world-paradigm-3" class="slide level2">
 <h2>Output: Visual World Paradigm</h2>
 <p>But what is ‘IA_0’?</p>
 <ul>
 <li>Participants not only look at the images, they also look at areas where we don’t have IAs defined (e.g., the center of the screen).
 <ul>
-<li>Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything).</li>
-<li>However! You don’t know where exactly they were looking at (only that it was not defined!).</li>
+<li>Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)</li>
+<li>However! You don’t know where exactly they were looking at (only that it was not defined!)</li>
 </ul></li>
 </ul>
+<aside class="notes">
+<p>suggestion re order of slides: doesn’t this part belong somewhere earlier? you already mention IA_0 when discussing the all-samples thing</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="output-visual-world-paradigm-4" class="slide level2">
 <h2>Output: Visual World Paradigm</h2>
 <p>.txt → import in Excel and save as .xlsx or .csv</p>
-<p><img data-src="images/session_4/5.png"></p>
+
+<img data-src="images/session_4/5.png" class="r-stretch"></section></section>
+<section>
+<section id="reading-pipeline" class="title-slide slide level1 center">
+<h1>Reading pipeline</h1>
+
+</section>
+<section id="check-data-reading" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>More time-consuming than VWP but more conventional</p>
+<ul>
+<li>Drift (vertical, horizontal)</li>
+<li>Blinks</li>
+<li>Unusual behaviours</li>
+</ul>
+</section>
+<section id="check-data-reading-1" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>Trial-by-trial check</p>
+<p>Horizontal drift</p>
+<ul>
+<li>Safest -&gt; exclude such trials.</li>
+<li>Especially when you are unsure which AIs certain fixations belong to.</li>
+<li><strong>Never</strong> move fixations to the left or right.</li>
+</ul>
+
+<img data-src="images/session_4/26.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="check-data-reading-2" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>Trial-by-trial check</p>
+<p>Vertical drift</p>
+<ul>
+<li>Correct (move up/down) fixations that fall outside AIs
+<ul>
+<li>Less work if top and bottom margins were big enough.</li>
+</ul></li>
+<li>To move certain fixations up/down: Windows Alt+<em>arrow</em>, Mac Option+<em>arrow</em></li>
+</ul>
+
+<img data-src="images/session_4/20.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="check-data-reading-3" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>Trial-by-trial check</p>
+<p>Blinks in critical AI</p>
+<ul>
+<li>Exclude trial? Optional
+<ul>
+<li>Individual participants’ behaviour: Exclude participant?</li>
+<li>Happens randomly across conditions, and excluding those trials leads to overall large data loss: Ignore?</li>
+</ul></li>
+</ul>
+
+<img data-src="images/session_4/23.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="check-data-reading-4" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>Trial-by-trial check</p>
+<p>Other</p>
+<ul>
+<li>If participants were instructed to look at the corner when finished reading but went back to re-read: Remove those extra fixations</li>
+</ul>
+
+<img data-src="images/session_4/22.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="check-data-reading-5" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>Trial-by-trial check</p>
+<p>Other</p>
+<ul>
+<li>Started reading from the middle (critical AI): Exclude trial</li>
+</ul>
+
+<img data-src="images/session_4/21.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="check-data-reading-6" class="slide level2">
+<h2>Check data: Reading</h2>
+<p>Trial-by-trial check</p>
+<p>Keep a detailed <strong>log</strong> of all changes!</p>
+
+<img data-src="images/session_4/reading_cleaning_logbook.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="automatized-cleaning-8" class="slide level2">
+<h2>Automatized cleaning</h2>
+<p>What are we thinking of?</p>
+<ul>
+<li>Extremely short and long fixations (outliers)</li>
+<li>Fixations outside of AIs</li>
+</ul>
+<p>Familiarity with previous literature is <strong>key</strong>.</p>
+<p>Balanced loss across conditions.</p>
+</section>
+<section id="automatized-cleaning-reading" class="slide level2">
+<h2>Automatized cleaning: Reading</h2>
+<p>Different thresholds –&gt; report <em>exactly</em> what you did.</p>
+<ul>
+<li>Short outliers
+<ul>
+<li>Merge short nearby fixations and remove those that couldn’t be merged.</li>
+<li>Or just remove all fixations that are, e.g.&nbsp;&lt; 100 ms (Sereno &amp; Rayner, 2003).</li>
+<li>Merging might inflate fixation measures, nor merging might inflate skipping if short critical AI.</li>
+</ul></li>
+<li>Long outliers
+<ul>
+<li>Remove all fixations that are, e.g., &gt; 800 ms.</li>
+</ul></li>
+<li>Delete fixations outside AIs</li>
+</ul>
+</section>
+<section id="automatized-cleaning-reading-1" class="slide level2">
+<h2>Automatized cleaning: Reading</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><br> <br> <br></p>
+<p>In-built 4-stage fixation cleaning procedure.</p>
+<p>Right-click on the whole folder.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_4/24.png"> <img data-src="images/session_4/16.png"></p>
+</div>
+</div>
+</section>
+<section id="automatized-cleaning-reading-2" class="slide level2">
+<h2>Automatized cleaning: Reading</h2>
+<p>These are settings from D. Drieghe’s lab (non-standard)!</p>
+
+<img data-src="images/session_4/16.png" class="quarto-figure quarto-figure-center r-stretch"><p><sup>Stage 1: merge fix shorter than 80 ms and less than 0.5 degrees away from each other. Stage 2: merge remaining fix shorter than 40 ms and less than 1.25 degrees away from each other. Finally (Stage 4), remove all remaining fixations that are shorter than 80 ms or longer than 800 ms. Also, remove all fixations that fall outside the IAs.</sup></p>
+</section>
+<section id="example-pre-processing-in-reading" class="slide level2">
+<h2>Example pre-processing in reading</h2>
+<p>Howard et al., 2017</p>
+<ul>
+<li>What technical information do we expect the authors to list and where?</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/session_4/17.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_4/15.png"></p>
+</div>
+</div>
+</section>
+<section id="example-pre-processing-in-reading-1" class="slide level2">
+<h2>Example pre-processing in reading</h2>
+<p>Puebla &amp; Felser, 2022</p>
+<ul>
+<li>What technical information do we expect the authors to list and where?</li>
+</ul>
+
+<img data-src="images/session_4/14.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="example-pre-processing-in-reading-2" class="slide level2">
+<h2>Example pre-processing in reading</h2>
+<p>Holmqvist et al.&nbsp;(2022). Eye tracking: Empirical foundations for a minimal reporting guideline.<sup>1</sup></p>
+<p>Jakobi et al.&nbsp;(2024). Reporting eye-tracking data quality: Towards a new standard.</p>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>This paper was retracted due to some legal issues.</p></li></ol></aside></section>
+<section id="exporting-reading" class="slide level2">
+<h2>Exporting: Reading</h2>
+<p>Recap: Fixations and saccades <strong>in several AIs</strong> (<em>n-1, n, n+1</em>)</p>
+<ul>
+<li>Interest Area report</li>
+</ul>
+
+<img data-src="images/session_4/4.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="exporting-reading-1" class="slide level2">
+<h2>Exporting: Reading</h2>
+<p>Interest Area report</p>
+<ul>
+<li>Choose variables (or just export all)</li>
+</ul>
+
+<img data-src="images/session_4/3.png" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="exporting-reading-2" class="slide level2">
+<h2>Exporting: Reading</h2>
+<p>Interest Area report</p>
+<p>For analysis, we surely need participant ID (Session_Name_), condition, item ID, and interest area ID (IA_ID). It could also be helpful to include IA_LABEL (text presented in the IA).</p>
+<p>Let’s choose some common measures:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Skipping</li>
+<li>First fixation duration</li>
+<li>Gaze duration</li>
+<li>Regressions-in</li>
+<li>First-pass regressions-out</li>
+<li>Regression path duration</li>
+<li>Total reading time</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_4/2.png"></p>
+</div>
+</div>
+</section>
+<section id="output-reading" class="slide level2">
+<h2>Output: Reading</h2>
+<p>Interest Area report</p>
+<p>.txt → import in Excel and save as .xlsx or .csv</p>
+
+<img data-src="images/session_4/1.png" class="quarto-figure quarto-figure-center r-stretch"><ul>
+<li>Here all IAs are listed; for analysis, we look at each IA separately!</li>
+</ul>
+</section>
+<section id="regions-skipped-on-first-pass" class="slide level2">
+<h2>Regions skipped on first pass</h2>
+<p>After we exported our Interest Area report and before starting the analysis:</p>
+<ul>
+<li><p>In some trials, the region could have been skipped on first pass (IA_SKIP = 1).</p></li>
+<li><p>This affects subsequent reading measures (first fixation? re-reading? etc.)</p></li>
+<li><p>Therefore, we can report and analyze the skipping rate if we want;</p></li>
+<li><p>For other measures, if IA_SKIP = 1, we will change the values to <em>NA</em> (label them as <em>missing values</em>) before we analyze them.</p></li>
+<li><p>First-pass measures for sure: e.g., first fixation duration, gaze duration, first-pass regressions-out, regression-path duration.</p></li>
+</ul>
+</section>
+<section id="regions-skipped-completely" class="slide level2">
+<h2>Regions skipped completely</h2>
+<p>If IA_SKIP = 1, but we don’t want to just assign <em>NA</em> to all measures indiscriminately:</p>
+<ul>
+<li><p>Later measures (e.g., regressions-in, total reading time): we can assign <em>NA</em> if the region was skipped completely (i.e., if IA_DWELL_TIME = 0).</p>
+<ul>
+<li><p>For regressions-in it’s already the default;</p></li>
+<li><p>For total reading time the default is 0. Why would we want <em>NA</em> instead of 0? It might be better for statistical analysis (certain models don’t deal well with zero values).</p></li>
+</ul></li>
+</ul>
+</section>
+<section id="take-home-messages" class="slide level2">
+<h2>Take-home messages</h2>
+<ul>
+<li>Coding your experiment efficiently (e.g., meaningful variable names) saves you some time during pre-processing and data wrangling.</li>
+<li>Eye-tracking data consists of timestamped eye movement events and messages.</li>
+<li>Software like Data Viewer make it easy to export what we are interested in.</li>
+<li>VWP: important to understand how many samples there are per bin and how many seconds a bin entails.</li>
+<li>Reading: important to decide on cleaning criteria beforehand and report them. Remember that pre-processing (trial-by-trial check) might take time.</li>
+</ul>
+</section></section>
+<section>
+<section id="practice-time" class="title-slide slide level1 center">
+<h1>Practice time</h1>
+
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn</h2>
+<p>Process the data you acquired in the lab!</p>
+</section></section>
+<section>
+<section id="wrap-up" class="title-slide slide level1 center">
+<h1>Wrap-up</h1>
+
+</section>
+<section id="plan-for-tomorrow" class="slide level2">
+<h2>Plan for tomorrow</h2>
+<ul>
+<li>Data analysis</li>
+</ul>
+</section>
+<section id="homework" class="slide level2">
+<h2>Homework</h2>
+<ul>
+<li>Have the file ready for analysis</li>
+<li>Download and install R (if you haven’t yet)</li>
+<li>Think how you’ll visualize your data</li>
+</ul>
+</section>
+<section id="references" class="slide level2 smaller">
+<h2>References</h2>
+<p>Apfelbaum, K. S., Klein-Packard, J., &amp; McMurray, B. (2021). The pictures who shall not be named: Empirical support for benefits of preview in the Visual World Paradigm. Journal of Memory and Language, 121, 104279. https://doi.org/10.1016/j.jml.2021.104279</p>
+<p>Arantzeta, M., Bastiaanse, R., Burchert, F., Wieling, M., Martinez-Zabaleta, M., &amp; Laka, I. (2017). Eye-tracking the effect of word order in sentence comprehension in aphasia: Evidence from Basque, a free word order ergative language. Language, Cognition and Neuroscience, 32(10), 1320–1343. https://doi.org/10.1080/23273798.2017.1344715</p>
+<p>Holmqvist, K., Örbom, S. L., Hooge, I. T. C., Niehorster, D. C., Alexander, R. G., Andersson, R., Benjamins, J. S., Blignaut, P., Brouwer, A.-M., Chuang, L. L., Dalrymple, K. A., Drieghe, D., Dunn, M. J., Ettinger, U., Fiedler, S., Foulsham, T., van der Geest, J. N., Hansen, D. W., Hutton, S. B., … Hessels, R. S. (2023). Eye tracking: Empirical foundations for a minimal reporting guideline. Behavior Research Methods, 55(1), 364–416. https://doi.org/10.3758/s13428-021-01762-8</p>
+</section>
+<section id="references-1" class="slide level2 smaller">
+<h2>References</h2>
+<p>Howard, P. L., Liversedge, S. P., &amp; Benson, V. (2017). Processing of co-reference in autism spectrum disorder. Autism Research, 10(12), 1968–1980. https://doi.org/10.1002/aur.1845</p>
+<p>Jakobi, D. N., Krakowczyk, D. G., &amp; Jäger, L. A. (2024). Reporting Eye-Tracking Data Quality: Towards a New Standard. ETRA ’24: Proceedings of the 2024 Symposium on Eye Tracking Research and Applications. https://doi.org/10.1145/3649902.3655658</p>
+<p>Knoeferle, P., &amp; Crocker, M. W. (2006). The Coordinated Interplay of Scene, Utterance, and World Knowledge: Evidence From Eye Tracking. Cognitive Science, 30(3), 481–529. https://doi.org/10.1207/s15516709cog0000_65</p>
+<p>Puebla, C., &amp; Felser, C. (2022). Discourse Prominence and Antecedent Mis-Retrieval during Native and Non-Native Pronoun Resolution. Discours. Revue de Linguistique, Psycholinguistique et Informatique. A Journal of Linguistics, Psycholinguistics and Computational Linguistics, 29, Article 29. https://doi.org/10.4000/discours.11720</p>
+<p>Sereno, S. C., &amp; Rayner, K. (2003). Measuring word recognition in reading: Eye movements and event-related potentials. Trends in Cognitive Sciences, 7(11), 489–493. https://doi.org/10.1016/j.tics.2003.09.010</p>
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_mils.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -1231,6 +1577,24 @@ Badaya &amp; Baltais
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1267,7 +1631,11 @@ Badaya &amp; Baltais
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
