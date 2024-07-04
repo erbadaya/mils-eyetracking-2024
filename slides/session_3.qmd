@@ -70,7 +70,7 @@ We have a wealth of **paradigms** to explore how individuals comprehend a piece 
 -   There seems to be some immediacy[^1] when comprehending a text, but we also get ahead of ourselves
 -   In contrast to spoken language, people can go back when they encounter a difficulty, and indeed they do
 
-[^1]: Cf. linking hypothesis; serial versus parallel processing debate
+[^1]: Cf. linking hypothesis; serial vs. parallel processing debate.
 
 ## Eye movements in reading
 
@@ -142,7 +142,7 @@ Saccadic latency (150-250 ms): time needed to program and launch a saccade. This
 Regressions
 
 -   10-15% of the saccades are regressions to preceding areas
-    -   Correct 'overshooting'
+    -   To correct 'overshooting'
     -   Processing difficulty
 
 ![Data from Mariia Baltais](images/session_3/mariia_sac.JPG){fig-align="center" width="500"}
@@ -166,7 +166,7 @@ Skipping
 Blinking
 
 -   Noise
-    -   Data pre-processing
+    -   Day 4, data pre-processing
 
 ![Data from Mariia Baltais](images/session_3/mariia_blink.JPG){fig-align="center" width="500"}
 
@@ -185,7 +185,7 @@ Reading (during a fixation) entails the use of visual, orthographic, phonologica
 
 Just and Carpenter's (1980) eye-mind hypothesis (recap):
 
--   Where we look at = what we are processing
+-   What we look at = what we are processing
 
     -   Extends beyond linguistic processing (visual attention)
 
@@ -296,13 +296,14 @@ The OB1-Reader model (upgrade of E-Z?) incorporates both serial and parallel pro
 Fixations, regressions, and skipping form multiple reading measures that arguably tap into different cognitive processes.
 
 -   **Global** vs. **local** measures
-    -   Overall reading behaviour versus smaller units of text
--   Local measures: **early** (vs. intermediate) vs. **late** (see also Clifton et al., 2007).
+    -   Overall reading behaviour vs. smaller units of text
+-   Local measures: **early** (vs. **intermediate**) vs. **late** (see also Clifton et al., 2007)
 
 ## Measures
 
 Reading measures \<\-\> specific cognitive events?
-**Linking** depends on researchers' theoretical assumptions (Boland, 2004).
+
+No agreement on **linking**: it depends on researchers' theoretical assumptions (Boland, 2004).
 
 Traditionally,
 
@@ -315,7 +316,7 @@ NB: Different types of linguistic manipulations (e.g., lexical vs. syntactic) ca
 
 First-pass measures (before moving to *n+1*):
 
--   **First fixation duration, single fixation duration, gaze duration (= first-pass reading time / first-run dwell time)**: time spent on an IA
+-   **First fixation duration, single fixation duration, gaze duration (= first-pass reading time = first-run dwell time)**: time spent on an IA
 -   **Skipping rate**: % trials where the IA was skipped on first pass
 -   Influenced by length, frequency, predictability, etc.
 
@@ -340,7 +341,7 @@ GD: sensitive to semantic and syntactic anomalies.
 
 ## Intermediate measures
 
--   **Regression-path duration (go-past time)**: time on *n*, *n-1*, etc., before moving to *n+1*
+-   **Regression-path duration (= go-past time)**: time on *n*, *n-1*, etc., before moving to *n+1*
 - **(First-pass) regressions-out rate**: % trials where there was a regression out of the IA
 - Lexical and integration difficulties
 
@@ -365,6 +366,7 @@ Regr-out: difficulties in higher-level processing (e.g., discourse processing) o
 -   **Re-reading time, second-pass reading time**: different definitions across literature
 -   **Regressions-in rate**: % trials where there was a regression back into the IA
     -   Re-analysis, integration difficulties
+    
 -   **Total reading time (= dwell time)**: sum of all fixations
 -   **Fixation count**
     -   Could be early and/or late processing effects
@@ -382,19 +384,19 @@ TRT: impacted by both early and late processing. Effect in TRT but not in early 
 ![](images/session_3/earlymeasures.jpg){fig-align="center" width="900"}
 :::
 
--   Re-reading time: 5+6 (regression-path duration - gaze duration)
--   Second-pass reading time: 6+9 (total reading time - gaze duration)
+-   Re-reading time: 5+6 (= regression-path duration - gaze duration)
+-   Second-pass reading time: 6+9 (= total reading time - gaze duration)
 - Regressions-in: yes (between fix 8 and 9)
 -   Total reading time: 3+4+6+9
--   Fixation count: 4
+-   Fixation count: four fix
 
 ## Measures
 
-Measures are dependent:
+Measures are dependent on each other:
 
 -   First fixation duration $\subseteq$ gaze duration $\subseteq$ total reading time, etc.
 -   Late measures are cumulative
--   No transparent mapping!
+-   No transparent mapping measures \<-\> cognitive events!
 
 Therefore,
 
@@ -407,7 +409,7 @@ Recap:
 
 ![From Carroll, 2017](images/session_3/reiterate.JPG)
 
-## Measures: Exercise
+## Measures: exercise
 
 ::: {r-stack}
 ![](images/session_3/exercise.jpg){fig-align="center" width="900"}
@@ -425,13 +427,27 @@ Recap:
 3 3 yes(two) 3+4+5+6+7 5+7 3+5+7 three
 :::
 
+## Measures: exercise
+
+::: {r-stack}
+![](images/session_3/exercise.jpg){fig-align="center" width="900"}
+:::
+
+-   First fixation duration: 3
+-   Gaze duration: 3
+-   First-pass regressions-out: yes (between fix 3 and 4, fix 5 and 6)
+-   Regression-path duration: 3+4+5+6+7
+-   Second-pass reading time: 5+7
+-   Total reading time: 3+5+7
+- Fixation count: three fix
+
 # Paradigms in reading research
 
 ## Paradigms
 
 Differ in ecological validity.
 
--   Gaze-contigent paradigms: eye gaze determines changes to the text display
+-   Gaze-contigent paradigms: eye gaze determines changes in the text display
 -   Reading of experimental stimuli
 -   Reading of natural text
 
@@ -528,11 +544,15 @@ Another measure to assess parafoveal processing is the so-called parafoveal-on-f
 
 Linguistic and non-linguistic factors affecting eye movement patterns in reading.
 
-Usually, exploration of how patterns over a IA differ as a function of its properties.
+Usually, exploration of how patterns over an IA differ as a function of its properties.
 
 Frazier & Rayner, 1982
 
 ![](images/session_3/fraz.JPG)
+
+:::notes
+Garden-path sentences: late closure vs. early closure.
+:::
 
 ## Natural text reading (constructed texts)
 
@@ -561,7 +581,7 @@ Elements:
 
 -   A sentence.
 
-Trial sequence: Drift \> Visual presentation.
+Trial sequence: Drift correction \> Visual presentation.
 
 ## Drift correction
 
@@ -595,16 +615,16 @@ Size depends on the research question:
 Target (& spillover) IA:
 
 -   Never beginning/end of the line
-    -   1st and last fixations on a line are 5-7 ls from the edges
-    -   1st word likely to be skipped
-    -   1st fix longer, last fix shorter
+    -   1$^{st}$ and last fixations on a line are 5-7 ls from the edges
+    -   1$^{st}$ word likely to be skipped
+    -   1$^{st}$ fix longer, last fix shorter
 -   Never clause-final
     -   Wrap-up effect
 
 ## Interest Areas
 
 -   Vertically large enough
-    -   Pre-processing: vertical drift correction
+    -   Day 4, pre-processing: vertical drift correction
 
 ![Data from Mariia Baltais](images/session_3/mariia_verticaldrift.png){fig-align="center" width="500"}
 
@@ -651,8 +671,7 @@ Conklin et al., 2018: Aside from the problem of sentence wrap-up effects, fixati
 ::: {.column width="50%"}
 
 -   Line spacing[^4]
-    -   Tracking less accurate for vertical movements
-    -   Vertical drift
+    -   Tracking less accurate for vertical movements (vertical drift)
     -   Double/triple spacing
 :::
 
@@ -669,7 +688,7 @@ Conklin et al., 2018: Aside from the problem of sentence wrap-up effects, fixati
 
 See Clifton et al., 2016; Conklin et al., 2018 (Ch. 4):
 
--   **The Big Three (Frequency, Length, Predictability)**
+-   **The Big Three** (Frequency, Length, Predictability)
 
 As well as...
 
@@ -692,7 +711,7 @@ Foveal vs. parafoveal processing.
         -   Preview benefit, parafoveal-on-foveal effects (see Drieghe, 2011; Hyönä, 2011)
         -   Spillover effects
 
-    -   Match contexts!
+-   Match contexts!
 
 ## Exercise
 
@@ -715,7 +734,7 @@ Seven IAs in total, two critical (target, post-target).
 2.  What factors should be considered for the antecedent?
 
 -   Typicality (IV)
--   No matching! Why?
+-   No matching mentioned! Why?
 
 ![](images/session_3/matching_exercise.JPG){fig-align="center"}
 
@@ -734,7 +753,7 @@ Matching is not important (large distance from the target).
 
 More on Day 5 but:
 
--   Multiple dependent variables (\<-\> stages of processing)
+-   Several dependent variables (\<-\> stages of processing)
 -   Multiple comparisons (Type I error)
 -   Tables!
 
@@ -861,7 +880,7 @@ Drift correction
 
 ## Building a reading experiment
 
-Present stimuli and sending areas of interest done via inline python script
+Stimulus presentation and sending areas of interest done via inline python script
 
 ![The prepare tab](images/session_3/OS/prepare.JPG)
 
@@ -903,7 +922,7 @@ Take a screenshot of the screen + send it to the tracker
 Your turn now!
 
 -   Try:
-    -   This example.
+    -   This example
     -   A mock experiment
     -   Your own research question
 
@@ -945,9 +964,9 @@ Hyönä, J., Olson, R., Defries, J., Fulker, D., Pennington, B., & Smith, S. (19
 
 Howard, P. L., Liversedge, S. P., & Benson, V. (2017). Processing of co-reference in autism spectrum disorder. *Autism Research, 10*(12), 1968--1980. https://doi.org/10.1002/aur.1845
 
-Juhasz, B. J., Pollatsek, A., Hyönä, J., Drieghe, D., & Rayner, K. (2009). Parafoveal processing within and between words. *Quarterly Journal of Experimental Psychology, 62*(7), 1356--1376. https://doi.org/10.1080/17470210802400010
-
 ## References {.smaller}
+
+Juhasz, B. J., Pollatsek, A., Hyönä, J., Drieghe, D., & Rayner, K. (2009). Parafoveal processing within and between words. *Quarterly Journal of Experimental Psychology, 62*(7), 1356--1376. https://doi.org/10.1080/17470210802400010
 
 Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. *Psychological review, 87*(4), 329.
 
@@ -957,19 +976,21 @@ Liversedge, S. P., Rayner, K., White, S. J., Vergilino-Perez, D., Findlay, J. M.
 
 McConkie, G. W., & Rayner, K. (1975). The span of the effective stimulus during a fixation in reading. *Perception & Psychophysics, 17*, 578--586.
 
+## References {.smaller}
+
 Mitchell, D. C., Shen, X., Green, M. J., & Hodgson, T. L. (2008). Accounting for regressive eye-movements in models of sentence processing: A reappraisal of the Selective Reanalysis hypothesis. *Journal of Memory and Language, 59*(3), 266-293.
 
 Morrison, R. E. (1984). Manipulation of stimulus onset delay in reading: Evidence for parallel programming of saccades. Journal of Experimental Psychology: Human Perception and Performance, 10(5), 667–682. https://doi.org/10.1037/0096-1523.10.5.667
 
 Pellicer-Sánchez, A. (2016). INCIDENTAL L2 VOCABULARY ACQUISITION FROM AND WHILE READING: An Eye-Tracking Study. *Studies in Second Language Acquisition, 38*(1), 97--130. https://doi.org/10.1017/S0272263115000224
 
-## References {.smaller}
-
 Pickering, M. J., Frisson, S., McElree, B., & Traxler, M. J. (2004). Eye Movements and Semantic Composition. In M. Carreiras & C. Clifton Jr. (Eds.), *The On-line Study of Sentence Comprehension*. Psychology Press.
 
 Rayner, K. (1975). The perceptual span and peripheral cues in reading. *Cognitive Psychology, 7*, 65--81.
 
 Rayner, K., & Bertera, J. H. (1979). Reading without a fovea. *Science, 206*, 468--469.
+
+## References {.smaller}
 
 Rayner, K., & Duffy, S. A. (1986). Lexical complexity and fixation times in reading: Effects of word frequency, verb complexity, and lexical ambiguity. *Memory & Cognition, 14*(3), 191--201. https://doi.org/10.3758/BF03197692
 
@@ -978,7 +999,5 @@ Sereno, S. C., & Rayner, K. (1992). Fast priming during eye fixations in reading
 Sereno, S. C., & Rayner, K. (2003). Measuring word recognition in reading: Eye movements and event-related potentials. *Trends in Cognitive Sciences, 7*(11), 489--493. https://doi.org/10.1016/j.tics.2003.09.010
 
 Solan, H. A., Feldman, J., & Tujak, L. (1995). Developing Visual and Reading Efficiency in Older Adults. *Optometry and Vision Science, 72*(2), 139.
-
-## References {.smaller}
 
 Staub, A., Rayner, K., Pollatsek, A., Hyönä, J., & Majewski, H. (2007). The time course of plausibility effects on eye movements in reading: Evidence from noun-noun compounds. *Journal of Experimental Psychology. Learning, Memory, and Cognition, 33*(6), 1162--1169. https://doi.org/10.1037/0278-7393.33.6.1162
