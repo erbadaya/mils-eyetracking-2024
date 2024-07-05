@@ -4,7 +4,7 @@ author: "Badaya & Baltais"
 format: 
    clean-revealjs:
     logo: images/logo_mils.png
-    footer: "Introduction to eye-tracking I "
+    footer: "Introduction to eye-tracking"
     include-in-header: 
       text: |
         <style>
@@ -89,10 +89,14 @@ Requirements
 :::
 :::
 
+:::notes
+change to OS & update
+:::
+
 ## Overview of the course
 
 | Date  |              Content              |                Materials                 |
-|:-----------------:|:----------------------------------:|:-----------------:|
+|:-----------------:|:--------------------------------:|:-----------------:|
 | Day 1 |   Introduction to eye-tracking    |                   None                   |
 | Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, PsychoPy |
 | Day 3 |              Reading              |                   RR_2                   |
@@ -100,6 +104,10 @@ Requirements
 | Day 5 |  Data visualization and analysis  |               R, datasets                |
 
 Any issues with installation, come to Mariia or myself!
+
+:::notes
+change to OS & update
+:::
 
 # Introduction to eye-tracking
 
@@ -129,7 +137,8 @@ Eye-tracking is a [non-invasive technique]{.fg style="--col: #e64173"} to explor
 :::
 
 -   As opposed to EEG, fMRI
--   As opposed to offline measures (e.g., questionnaires) - Converging evidence
+-   As opposed to offline measures (e.g., questionnaires) 
+    - Converging evidence
 
 # Why do we track eyes?
 
@@ -162,7 +171,7 @@ Eye-tracking is a [non-invasive technique]{.fg style="--col: #e64173"} to explor
     -   Some light is reflected (Purkinje reflections)
 -   Light enters the eye via the pupil.
 -   The lens reflects the light onto the retina.
-    -   Photosensitive layer with [cones]{.fg style="--col: #e64173"} and [rodes]{.fg style="--col: #e64173"}.
+    -   Photosensitive layer with [cones]{.fg style="--col: #e64173"} and [rods]{.fg style="--col: #e64173"}.
 :::
 
 ::: {.column width="50%"}
@@ -188,7 +197,7 @@ Photoreceptors with different properties (e.g., spectral sensitivity, photopigme
 They also differ in where they are located in the fovea.
 
 -   Cones: Highest density in the [fovea]{.fg style="--col: #e64173"}.
--   Rodes: Higher density in the [fovea's periphery]{.fg style="--col: #e64173"}.
+-   Rods: Higher density in the [fovea's periphery]{.fg style="--col: #e64173"}.
 
 [Consequence]{.fg style="--col: #e64173"}: Vision is sharpest in the fovea.
 
@@ -209,13 +218,17 @@ They also differ in where they are located in the fovea.
 **But** the fovea is a small section of our [visual field]{.fg style="--col: #e64173"}.
 
 -   Space respect to our eyes that we can perceive.
--   Measured in visual angles.
-    -   [Visual angle]{.fg style="--col: #e64173"} = object size/distance.
+-   Measured in degrees of visual angle.
+    -   [Visual angle]{.fg style="--col: #e64173"} = object size / distance.
 :::
 
 ::: {.column width="50%"}
 ![](images/session_1/central_vision.png)
 :::
+:::
+
+:::notes
+"Space respect to our eyes" - ? Is it the definition of visual field or fovea?
 :::
 
 ## The Human Visual System
@@ -226,7 +239,7 @@ Retina:
 
 -   Fovea: 1-2 degrees of visual angle.
 -   Parafovea: 10 degrees of visual angle to either side.
--   Peripheria: Remaining space beyond the parafovea.
+-   Periphery: Remaining space beyond the parafovea.
 :::
 
 ::: {.column width="50%"}
@@ -251,7 +264,7 @@ Therefore, we move our eyes to place visual stimuli in the fovea to process it w
 :::
 
 -   Parafoveal processing: No acute image, words still partially recognizable.
--   Peripheria: Blurred image, no word/letter recognition.
+-   Periphery: Blurred image, no word/letter recognition.
 
 ## Visual attention
 
@@ -278,7 +291,7 @@ Attention determines what we process and the detail of the representation built.
 [Attention]{.fg style="--col: #e64173"} (i.e., [linking hypothesis]{.fg style="--col: #e64173"})
 
 -   [Bottom-up]{.fg style="--col: #e64173"} and [top-down]{.fg style="--col: #e64173"} processes.
-    -   Details that attract individuals' attention (exogeneous) v. Individuals' strategies (endogeneous).
+    -   Details that attract individuals' attention (exogenous) v. Individuals' strategies (endogenous).
 -   Individuals as active viewers.
 :::
 
@@ -289,7 +302,7 @@ Attention determines what we process and the detail of the representation built.
 
 ## Visual attention
 
-Yarbus (1960): Scanpaths guided by attention.
+Yarbus (1960): Scan paths guided by attention.
 
 ![They Did Not Expect Him, Iliá Repin](images/session_1/unexpected_visitor.png){fig-align="center"}
 
@@ -384,7 +397,7 @@ We only have access to overt attention.
 
 ## Fixations
 
-When our eye 'stops' i.e., multiple gaze points close in time and/or space.
+When our eye 'stops', i.e., multiple gaze points close in time and/or space.
 
 -   Automatic, physiological response.
 
@@ -421,13 +434,13 @@ When our eye 'stops'.
     -   Average: 15°.
 -   Average duration: 30 - 80 ms.
 -   Velocity, acceleration and deceleration.
--   Direction: Forward and backwards (i.e., regressions) saccades.
+-   Direction: Forwards and backwards (i.e., regressions).
 -   Accuracy: Over- and under-shooting.
     -   In simple lab conditions, fall slightly short of the target, thus followed by a small corrective saccade.
 
 ## Saccades
 
-Forward and backwards (i.e., regressions) saccades.
+Forwards and backwards (i.e., regressions).
 
 -   Short and long regressions.
 
@@ -457,7 +470,7 @@ Pupil dilates for reasons other than light, e.g., [cognitive effort]{.fg style="
 
     -   Harder tasks = increase in pupil size.
 
--   Increasing interest in language research e.g., accented-speech comprehension.
+-   Increasing interest in language research, e.g., accented-speech comprehension.
 
 -   Changes can take up to 3 s.
 
@@ -528,7 +541,7 @@ Now you can see why nowadays eye-tracking is non-invasive.
 ## How do eye-trackers work?
 
 -   Detects gaze and records its x and y coordinates on the screen.
--   Parse gaze position into eye events e.g., any gaze points nearby close in time are grouped into a *fixation*.
+-   Parse gaze position into eye events, e.g., any gaze points nearby close in time are grouped into a *fixation*.
 
 ## How do eye-trackers work?
 
@@ -537,7 +550,7 @@ Now you can see why nowadays eye-tracking is non-invasive.
 -   Video-based recording of the location of either one point, the pupil, or two points, the pupil and the corneal reflection.
 -   P-CR ([the pupil and the corneal reflection]{.fg style="--col: #e64173"}) is the most common.
     -   Two hardware components: A camera and an infrared illuminator (which are fixed in space).
-    -   [1st corneal reflection (Purkinje reflection 1)]{.fg style="--col: #e64173"}.
+    -   [1$^{st}$ corneal reflection (Purkinje reflection 1)]{.fg style="--col: #e64173"}.
 
 ![](images/session_1/tracking_eyes2.png){fig-align="center"}
 
@@ -624,11 +637,11 @@ Example: 50 Hz sampling frequency.
 
 [This is why sampling frequency matters]{.fg style="--col: #e64173"}.
 
--   Depends on your research question e.g., reading versus observing a scene.
+-   Depends on your research question, e.g., reading versus observing a scene.
 
 -   [Reading]{.fg style="--col: #e64173"} usually requires [higher]{.fg style="--col: #e64173"} sampling frequency.
 
--   Higher sample frequency == [higher precision]{.fg style="--col: #e64173"}.
+-   Higher sample frequency = [higher precision]{.fg style="--col: #e64173"}.
 
 -   Considering as well the size of the object we are interested in.
 
@@ -654,6 +667,8 @@ Relationship between sampling error, sampling frequency, and [data points]{.fg s
 
 -   Lower sampling frequencies = more data points (power).
     -   NB: More data points might not be the solution.
+
+Conventional: min. 500 Hz for picture viewing, min. 1000 Hz for reading.    
 
 ## How do eye-trackers work?
 
@@ -696,17 +711,17 @@ These properties impact data quality.
 
 ## How do eye-trackers work?: Types
 
-Different eye-tracking systems in the market.
+Different eye-tracking systems on the market.
 
 -   SR Research, Tobii, SMI.
 
-Differences in software e.g., parsing of events and subsequent measures.
+Differences in software, e.g., parsing of events and subsequent measures.
 
 -   Research question
 
 ## How do eye-trackers work?: Types
 
-Different types of trackers in the market as a function of:
+Different types of trackers on the market as a function of:
 
 -   Position camera wrt eye.
 
@@ -716,7 +731,7 @@ Different types of trackers in the market as a function of:
 
 -   Pros and cons of each.
 
-    -   e.g., they differ in sampling frequency (head mounted tend to have lower sampling frequencies).
+    -   E.g., they differ in sampling frequency (head-mounted tend to have lower sampling frequencies).
 
 ## How do eye-trackers work?: Types
 
@@ -821,7 +836,7 @@ Let's take a break!
 
 -   Most eye-trackers nowadays are video-based recordings of pupil and corneal reflection.
 -   Two hardware components: A camera and an infrared illuminator.
--   Gaze position is capture every X ms (depends on sample rate).
+-   Gaze position is captured every X ms (depends on sampling rate).
 
 Question is: How does an eye-tracking lab look like? What elements do you think the lab has?
 
@@ -863,7 +878,7 @@ Hardware set up.
     -   [/!\\]{.bg style="--col: #e64173"} Trackable range of the tracker
     -   Constant across participants
 
-All in a sound isolated, no-sunlight room.
+All in a sound-isolated, no-sunlight room.
 
 ## The eye-tracking lab
 
@@ -871,8 +886,8 @@ Camera position:
 
 -   Slightly below when recording .
 -   Not too low (problems in upper areas)/high (problems in lower areas) or you may lose CR.
--   In desktop mounted: Alignment with lower part of the monitor.
--   In tower mounted: Above participants' head.
+-   In desktop-mounted: Alignment with lower part of the monitor.
+-   In tower-mounted: Above participants' head.
 
 ## The eye-tracking lab
 
@@ -984,7 +999,7 @@ Adjust seating
 Access to eye image
 
 -   Hidden image: set-up is automatic.
-    -   Easier to handle but potential for poorer data quality e.g., data recording issues may go unnoticed.
+    -   Easier to handle but potential for poorer data quality, e.g., data recording issues may go unnoticed.
 -   [Access]{.fg style="--col: #e64173"} to image.
     -   Need for technical knowledge.
 :::
@@ -996,7 +1011,7 @@ Access to eye image
 
 ## Camera set up
 
-What eye to track? - Dominant eye (by default, right eye)
+Which eye to track? - Dominant eye (by default, right eye)
 
 Detect the eye
 
@@ -1048,7 +1063,7 @@ Focus
 
 Automatic thresholding + adjustments
 
--   Reflections == impossible eye movements
+-   Reflections = impossible eye movements
 
 Pupil tracking
 
@@ -1064,18 +1079,18 @@ Pupil tracking
 
 -   Ask them to move their eyes around the corners of the screen
     -   Notice whether we lose track at any place
-    -   Especially near your AOIs
+    -   Especially near your AIs
     -   Ensure pupil is not covered
-        -   e.g., hair, glasses frame
+        -   E.g., hair, glasses frame
 
 ## Camera set up: Issues
 
 -   No mascara
     -   Dark lashes lead to issues -\> confounded with the pupil.
 -   Eyelids
-    -   Cover the pupil is lower gaze directions
+    -   Cover the pupil in lower gaze directions
     -   An issue in some cases (e.g., tired participants)
-    -   Recording from lower than useful.
+    -   Recording from lower then useful.
 
 ## Camera set up: Issues
 
@@ -1087,13 +1102,13 @@ Pupil tracking
     -   Reflect infrared light
     -   Clean glasses
     -   Move camera (angle rather than distance)
-        -   Place reflections far awar from pupil and CR
+        -   Place reflections far away from pupil and CR
     -   Move mirror (only possible in tower-mounted eye-trackers)
 
 ## Camera set up: Issues
 
 -   Contact lenses
-    -   Air bubles between eye and contact lense interact with CR
+    -   Air bubbles between eye and contact lense interact with CR
         -   Camera focus
 -   Wet eyes
     -   Split up the CR
@@ -1113,12 +1128,12 @@ Beyond the experiment itself, all eye-tracking experiments share these steps.
 Why?
 
 -   Because of how gaze position is calculated.
-    -   Estimation from known coordinates == calibration points.
+    -   Estimation from known coordinates = calibration points.
 -   Accuracy.
 
 ## Calibration
 
-x,y coordinates of gaze position is estimated from measuring the pupil and the CR on known coordinates (i.e., the calibration points).
+x,y coordinates of gaze position are estimated from measuring the pupil and the CR on known coordinates (i.e., the calibration points).
 
 ::: r-stack
 {{< video images/lab_setup/calibration_cut.mp4 height="500" >}}
@@ -1130,8 +1145,8 @@ x,y coordinates of gaze position is estimated from measuring the pupil and the C
 -   Fixate on a series of points
     -   \# points \~ accuracy
         -   9HV standard
-        -   Smaller AOIs need more calibration points
-        -   Higher precision == more calibration points.
+        -   Smaller AIs need more calibration points
+        -   Higher precision = more calibration points.
 -   Interplay with kind of eye-tracker:
     -   Portable versus fixed.
 
@@ -1140,7 +1155,7 @@ x,y coordinates of gaze position is estimated from measuring the pupil and the C
 -   Automatic versus manual
     -   Participants moving their gaze before they should.
 -   Adults versus children
--   Should cover area where stimuli are presented
+-   Should cover the area where stimuli are presented
 
 ## Calibration
 
@@ -1198,9 +1213,9 @@ Technically speaking, you could now start recording.
 You'd get eye data of your experiment, but...
 
 -   How do we make sure that our calibration points are accurate throughout the experiment?
--   How can we make sense out of the data after the experiment?
--   Areas of Interest
--   Triggers
+-   How can we make sense of the data after the experiment?
+    -   Areas of Interest
+    -   Triggers
 
 ## During the experiment
 
@@ -1219,19 +1234,19 @@ Every so often, re-check our measurement (accuracy): Drift correction.
 
 -   Commonly, each trial/every other trial/blocks
 -   Ensure accuracy
--   Where the drift appears depends on your task.
+-   Where the fixation cross appears depends on your task.
     -   At the position where you want high accuracy.
-    -   Reading e.g., beginning of the sentence/paragraph.
+    -   Reading: e.g., beginning of the sentence/paragraph.
 
 ## Drift correction
 
 ::: columns
 ::: {.column width="50%"}
-![Drift single sentence reading](images/lab_setup/drift_reading.jpg){height="500px"}
+![Drift correction reading](images/lab_setup/drift_reading.jpg){height="500px"}
 :::
 
 ::: {.column width="50%"}
-![Drift VWP](images/lab_setup/drift_vwp.jpg){height="500px"}
+![Drift correction VWP](images/lab_setup/drift_vwp.jpg){height="500px"}
 :::
 :::
 
@@ -1253,7 +1268,7 @@ Areas of display we are interested in measuring and analysing.
 
 ::: columns
 ::: {.column width="50%"}
-Text
+Reading
 
 -   Word
 -   Sequence of words
@@ -1272,9 +1287,9 @@ VWP
 
 ::: columns
 ::: {.column width="50%"}
-Text
+Reading
 
-Careful definition of ROIs.
+Careful definition of AIs.
 
 -   Manually versus automatic (individual words)
 -   Issues: Segmentation of pre-critical and spillover regions.
@@ -1287,7 +1302,7 @@ VWP
 
 Difference between comprehension and production.
 
--   In the latter case, ROIs might not be known in advance.
+-   In the latter case, AIs might not be known in advance.
 :::
 :::
 
@@ -1304,13 +1319,13 @@ Size depends on accuracy and precision of the eye-tracker.
 
 -   Overlapping areas of interest.
 
-Particularly relevant for gaze contingent paradigms too!
+Particularly relevant for gaze-contingent paradigms!
 
 ## Areas of Interest
 
 ::: columns
 ::: {.column width="50%"}
-Text.
+Text
 
 -   Span some pixels below and above.
 :::
@@ -1326,7 +1341,7 @@ Pictures
 
 ## Triggers
 
-Trigger: Information about an event i.e., when it happens.
+Trigger: Information about an event, i.e., when it happens.
 
 -   Synchronization stimulus PC - host PC
 
@@ -1334,7 +1349,7 @@ Most basic trigger:
 
 -   Trial information (e.g., condition, response)
 
-But when you have also audio:
+But when you also have audio:
 
 -   When the audio begins and ends, gaze, for example.
 
@@ -1347,9 +1362,9 @@ Any additional data you may want to explore in relation to eye-tracking data.
 -   Language proficiency?
 -   Personality traits?
 
-Debrief
+Debriefing
 
-See also Rodriguez Ronderos et al. (2018) - Eye Tracking During Visually Situated Language Comprehension: Flexibility and Limitations in Uncovering Visual Context Effects
+See also Rodriguez Ronderos et al. (2018) - Eye Tracking During Visually Situated Language Comprehension: Flexibility and Limitations in Uncovering Visual Context Effects.
 
 # Eye-tracking in language research
 
@@ -1359,13 +1374,13 @@ Thus far, we have covered why we are measuring eye movements, how we measure the
 
 -   How does this transfer to language research?
 
-# Eye-tracking in language research
+## Eye-tracking in language research
 
 Eye-tracking is an *online* measurement of cognitive processes.
 
 -   Different online techniques e.g., EEG, fMRI
     -   Spatial versus temporal resolution.
--   Offline measurements e.g., comprehension questions.
+-   Offline measurements, e.g., comprehension questions.
 
 Ferreira & Yang (2019): [Linking offline and online measures]{.fg style="--col: #e64173"} can provide a better understanding of how speech is processed and represented.
 
@@ -1397,6 +1412,10 @@ Visual World Paradigm
 
 -   Treasure hunt paradigm
 
+:::notes
+don't forget to update this part :)
+:::
+
 ## Eye-tracking in language research
 
 Visual World Paradigm
@@ -1411,7 +1430,7 @@ Visual World Paradigm
 
 Conclusions:
 
--   Participants made their decision shortly after the potential location was said (circa 400 ms.)
+-   Participants made their decision shortly after the potential location was said (circa 400 ms).
 -   The presence of a disfluency not only led to more interpretations of deceit, as reflected in the object selected, but also biased eye movements early.
 -   There was no difference between native and non-native speakers.
 
@@ -1421,36 +1440,33 @@ The interpretation of deceit triggered by disfluencies is inflexible, and likely
 
 Reading
 
--   We investigate naturalistic reading behaviour to make inferences about underlying linguistic processing mechanisms (lexical access, semantic and syntactic integration, prediction...).
--   Stimuli of different length (single sentence vs. text), different tasks (skim for gist, answer specific questions, etc.).
+-   We investigate naturalistic reading behaviour to make inferences about underlying linguistic processing mechanisms (lexical access, semantic and syntactic integration, prediction...)
+-   Stimuli of different length (single sentence vs. text), different tasks (skim for gist, answer specific questions, etc.)
 
 ## Eye-tracking in language research
 
-Reading
+Reading (Baltais & Hartsuiker, in prep.)
 
-Constructions = abstract grammatical patterns.
-Their productivity = the number of different words they can be used with.
-If productivity is high, there are many possible continuations that a sentence containing this construction can have (example: "He started to...").
-If productivity is low, there are very few possible continuations (example: "He burst into... ").
+Constructions = grammatical patterns. Their productivity = the number of different words they can be used with. If productivity is high, there are many possible continuations that a sentence with this construction can have (example: "He started to..."). If productivity is low, there are very few possible continuations (example: "He burst into... ").
 
 -   In this low uncertainty situation, will a prediction error occur if readers see a continuation they did not expect?
     -   Research question: Does low productivity of syntactic constructions lead to processing difficulty for unexpected lexical items?
 
 ## Eye-tracking in language research
 
-Reading
+Reading (Baltais & Hartsuiker, in prep.)
 
 High productivity condition:
 
-- Francisco \| **se metió a** \| [hablar]{.fg style="--col: #e64173"} \| de política \| con sus amigos
+-   Francisco \| **se metió a** \| [hablar]{.fg style="--col: #e64173"} \| de política \| con sus amigos
 
 Low productivity condition:
 
-- Francisco \| **rompió a** \| [hablar]{.fg style="--col: #e64173"} \| de política \| con sus amigos
+-   Francisco \| **rompió a** \| [hablar]{.fg style="--col: #e64173"} \| de política \| con sus amigos
 
 ## Eye-tracking in language research
 
-Reading
+Reading (Baltais & Hartsuiker, in prep.)
 
 -   Single sentence reading
 -   Comprehension questions as attention check
@@ -1459,7 +1475,7 @@ Reading
 
 ## Eye-tracking in language research
 
-Reading
+Reading (Baltais & Hartsuiker, in prep.)
 
 ::: r-stack
 {{< video images/session_1/reading_video.mov height="300" >}}
@@ -1467,7 +1483,7 @@ Reading
 
 ## Eye-tracking in language research
 
-Reading
+Reading (Baltais & Hartsuiker, in prep.)
 
 ::: columns
 ::: {.column width="50%"}
@@ -1487,13 +1503,13 @@ Reading
 
 ## Eye-tracking in language research
 
-Reading
+Reading (Baltais & Hartsuiker, in prep.)
 
 Conclusions:
 
-- Low productivity was not associated with prediction error cost, so processing was not hindered by any unmet expectations.
-- Low productivity affected reading (integration and interpretation) of the construction/sentence as a whole.
-- Psycholinguistic evidence for the reality of the productivity phenomenon.
+-   Low productivity was not associated with prediction error cost, so processing was not hindered by any unmet expectations.
+-   Low productivity affected reading (integration and interpretation) of the construction/sentence as a whole.
+-   Psycholinguistic evidence for the reality of the productivity phenomenon.
 
 # Wrap up
 
@@ -1511,7 +1527,11 @@ Visual World Paradigm
 -   Install PsychoPy
 -   Download template script
 -   Recommended reading:
-    -   Altmann & Kamide
+    -   Altmann & Kamide (1999)
+
+::: notes
+change to OS
+:::
 
 ## Plan for this week
 
@@ -1537,6 +1557,10 @@ Javal, E. (1879). Essai sur la physiologie de la lecture. *Annaels d'oculistique
 Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. *Psychological review, 87*(4), 329.
 
 King, J. P., Loy, J. E., & Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. *Discourse Processes, 55*(2), 123-135.
+
+::: notes
+double-check (all here?)
+:::
 
 ## References {.smaller}
 

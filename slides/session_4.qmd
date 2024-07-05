@@ -4,7 +4,7 @@ author: "Badaya & Baltais"
 format: 
    clean-revealjs:
     logo: images/logo_mils.png
-    footer: Data pre-processing
+    footer: "Data pre-processing"
     include-in-header: 
       text: |
         <style>
@@ -22,14 +22,18 @@ editor: visual
 
 # Welcome back!
 
+## Welcome back!
+
+Any questions from yesterday?
+
 ## Overview of today
 
-1. Raw data
-2. Data processing steps
-3. Data Viewer
-4. Visual World Paradigm pipeline
-5. Reading pipeline
-6. Practice time
+1.  Raw data
+2.  Data processing steps
+3.  Data Viewer
+4.  Visual World Paradigm pipeline
+5.  Reading pipeline
+6.  Practice time
 
 # Raw data
 
@@ -316,15 +320,11 @@ What are we thinking of?
 
 Track loss.
 
--   Trial report: AVERAGE_BLINK_DURECTION, BLINK_DURATION, IP_DURATION
+-   Trial report: AVERAGE_BLINK_DURATION, BLINK_DURATION, IP_DURATION
 -   Proportion of track loss computed as: (AVERAGE_BLINK_DURATION \* BLINK_COUNT) / IP_DURATION
     -   But this will also include blinks! So not ideal.
 -   Not common to encounter this step in reports.
     -   Kids v adults
-
-:::notes
-DURECTION
-:::
 
 ## Automatized cleaning
 
@@ -361,10 +361,6 @@ What does each mean?
 -   Across All Samples: Number of samples in each IA/Total number of samples per bin
 -   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.
 -   Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.
-
-:::notes
-each what?
-:::
 
 ## Automatized cleaning
 
@@ -422,7 +418,7 @@ No straight-forward answer. Things to consider:
 
 ![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} ![Arantzeta et al., 2017](images/session_4/basque.JPG){fig-align="center"} ![Apfelbaum et al., 2021](images/session_4/names.JPG){fig-align="center"}
 
-:::notes
+::: notes
 References are not displayed.
 :::
 
@@ -505,7 +501,7 @@ Time course (binning) analysis report
 :::
 :::
 
-:::notes
+::: notes
 suggestion re order of slides: wouldn't the all-samples info come more naturally after this part?
 :::
 
@@ -544,7 +540,7 @@ Information duplicated per Interest Area. If you have two visuals, then two; thr
 
 [^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded.
 
-:::notes
+::: notes
 split into two slides? too much text here
 :::
 
@@ -556,7 +552,7 @@ But what is 'IA_0'?
     -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)
     -   However! You don't know where exactly they were looking at (only that it was not defined!)
 
-:::notes
+::: notes
 suggestion re order of slides: doesn't this part belong somewhere earlier? you already mention IA_0 when discussing the all-samples thing
 :::
 
@@ -715,9 +711,9 @@ Puebla & Felser, 2022
 
 Holmqvist et al. (2022). Eye tracking: Empirical foundations for a minimal reporting guideline.[^2]
 
-Jakobi et al. (2024). Reporting eye-tracking data quality: Towards a new standard.
-
 [^2]: This paper was retracted due to some legal issues.
+
+Jakobi et al. (2024). Reporting eye-tracking data quality: Towards a new standard.
 
 ## Exporting: Reading
 
@@ -739,7 +735,7 @@ Interest Area report
 
 Interest Area report
 
-For analysis, we surely need participant ID (Session_Name_), condition, item ID, and interest area ID (IA_ID). It could also be helpful to include IA_LABEL (text presented in the IA).
+For analysis, we surely need participant ID (Session_Name\_), condition, item ID, and interest area ID (IA_ID). It could also be helpful to include IA_LABEL (text presented in the IA).
 
 Let's choose some common measures:
 
@@ -767,7 +763,7 @@ Interest Area report
 
 ![](images/session_4/1.png){fig-align="center"}
 
--   Here all IAs are listed; for analysis, we look at each IA separately! 
+-   Here all IAs are listed; for analysis, we look at each IA separately!
 
 ## Regions skipped on first pass
 
@@ -811,7 +807,8 @@ Process the data you acquired in the lab!
 
 ## Plan for tomorrow
 
-- Data analysis
+-   Data visualization
+-   Data analysis
 
 ## Homework
 

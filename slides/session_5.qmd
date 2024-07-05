@@ -30,12 +30,17 @@ Any questions from yesterday? Has anyone gotten around their data?
 
 1.  Data wrangling
 2.  Data visualization
+    i)  VWP
+    ii) Reading
 3.  Data analysis
-4.  Extra: write up
+    i)  VWP
+    ii) Reading
+
+# Data wrangling
 
 ## Data wrangling
 
--   Last week: Data checks & cleaning in Data Viewer
+-   Day 4: Data checks & cleaning in Data Viewer
     -   Visual inspection of raw data (participant and trial exclusion, short/long fixations, fixation adjustment)
     -   Export data for analysis
 
@@ -119,11 +124,11 @@ Recap of variables of interest (besides your experimental variables and session 
 Visual World Paradigm
 
 -   BIN_INDEX
-- BIN_SAMPLE_COUNT, the number of samples per bin (cf. session 4)
+-   BIN_SAMPLE_COUNT, the number of samples per bin (cf. session 4)
 -   IA_X_ID, where X is the number of each interest area in your experiment.
-- RIGHT_IA_X_SAMPLE_COUNT, , where X is the number of the interest area (NB LEFT/RIGHT), counts (cf. session 4).
+-   RIGHT_IA_X_SAMPLE_COUNT, , where X is the number of the interest area (NB LEFT/RIGHT), counts (cf. session 4).
 -   RIGHT_IA_X_SAMPLE_COUNT\_%, where X is the number of the interest area (NB LEFT/RIGHT), proportions (cf. session 4).
-- RIGHT_EXCLUDED_SAMPLE_COUNT, number of samples excluded from counts (NB LEFT/RIGHT; cf. session 4).
+-   RIGHT_EXCLUDED_SAMPLE_COUNT, number of samples excluded from counts (NB LEFT/RIGHT; cf. session 4).
 -   RIGHT_BLINK_SAMPLE_COUNT (NB LEFT/RIGHT)
 :::
 
@@ -138,6 +143,7 @@ Reading
 -   IA_REGRESSION_OUT
 -   IA_REGRESSION_PATH_DURATION
 -   IA_DWELL_TIME
+-   Inter alia
 :::
 :::
 
@@ -149,7 +155,7 @@ Different kinds of data are better explored in different visualizations.
 
 -   What visualization conveys (in an informative way) your research question.
 -   What variables you are interested in.
--   What stimuli did you use.
+-   What stimuli you used.
     -   Principles for effective data visualization (Midway, 2020)
 
 ## Scan path
@@ -178,6 +184,10 @@ Pattern of fixations and saccades during a trial.
 ## Visual World Paradigm
 
 ![](images/session_5/liedetection.jpg){fig-align="center"}
+
+::: notes
+reference?
+:::
 
 ## Visual World Paradigm
 
@@ -223,7 +233,7 @@ Separate table per AI.
 
 ## Reading
 
-Model output
+Model output.
 
 ![Frisson et al., 2017](images/session_5/reading3.png){fig-align="center"}
 
@@ -237,7 +247,7 @@ More interesting plots possible if e.g., repeated exposure (development over tim
 :::
 
 ::: {.column width="50%"}
-![Drighe & Chan Seem, 2022](images/session_5/reading1.png){fig-align="center"}
+![Drieghe & Chan Seem, 2022](images/session_5/reading1.png){fig-align="center"}
 :::
 :::
 
@@ -268,6 +278,14 @@ Reading
 
 ::: columns
 ::: {.column width="50%"}
+VWP
+
+-   NB: Visualizations, DV.
+-   Total fixation duration/Average fixation duration/Fixation count/Saccade count (per IA)
+-   **Proportion of fixations to each IA per time window**
+:::
+
+::: {.column width="50%"}
 Reading
 
 -   Skipping rate (in %)
@@ -277,14 +295,6 @@ Reading
     -   Mean and SD.
     -   Aggregate means per participants \> Mean of means
     -   Duration in ms.
-:::
-
-::: {.column width="50%"}
-VWP
-
-- NB: Visualizations, DV.
--   Total fixation duration/Average fixation duration/Fixation count/Saccade count (per IA)
--   **Proportion of fixations to each IA per time window**
 :::
 :::
 
@@ -300,22 +310,29 @@ What variables are you going to analyse? How are you going to conceptualise them
 Covariates?
 
 ::: aside
-This, in fact, it's done when you're doing data wrangling, but we're discussing it here for the sake of flow.
+This, in fact, is done when you're doing data wrangling, but we're discussing it here for the sake of flow.
 :::
 
-## Data analysis {.smaller}
+## Data analysis
 
-Stimuli variables as covariate in analysis
+Stimuli variables as covariates in analysis
 
+::: columns
+::: {.column width="50%"}
 -   Word length
 -   Phrase length
 -   Sentence length
 -   Word frequency
 -   Familiarity
+:::
+
+::: {.column width="50%"}
 -   Participants' age
 -   Participants' gender
 -   Proficiency
 -   Inter alia
+:::
+:::
 
 This does not mean you have to add them.
 
@@ -335,14 +352,16 @@ This does not mean you have to add them.
 -   (Generalised) linear models cannot account for clusters in our data (e.g., participants' differences, items' differences).
 
 -   Most papers using eye-tracking in the language sciences will employ (generalised) linear mixed models to account for these factors.
-  -   Random effects for participant and item (at least).
-  -   Multiple comparisons problem (see reading).
+
+-   Random effects for participant and item (at least).
+
+-   Multiple comparisons problem (see reading).
 
 ## Data analysis
 
 2.  Models have assumptions that eye-tracking data does not meet.
 
--   Where the eye is at time t depends on where it was at time t-1 (i.e., eye movements are not independent from one another, **autocorrelation**).
+-   Where the eye is at time *t* depends on where it was at time *t-1* (i.e., eye movements are not independent from one another, **autocorrelation**).
 -   Eye-tracking data might not be continuous.
     -   Proportions are bounded.
     -   Reaction times are not normally distributed.
@@ -351,7 +370,7 @@ This does not mean you have to add them.
 
 2.  Models have assumptions that eye-tracking data does not meet.
 
--   Where the eye is at time t depends on where it was at time t-1 (i.e., eye movements are not independent from one another).
+-   Where the eye is at time *t* depends on where it was at time *t-1* (i.e., eye movements are not independent from one another).
     -   Aggregate into time bins and transformations (Barr, 2008).
     -   Include an autocorrelation factor.
 
@@ -363,22 +382,21 @@ This does not mean you have to add them.
 
 -   Eye-tracking data might not be continuous.
     -   Transformation of our dependent variable.
-    -   Work with generalised models to accomodate a different link function.
+    -   Work with generalised models to accommodate a different link function.
 
 ## Visual World Paradigm
 
 -   Binary: Is there a fixation on this area of interest?
-    - Size of time bins
-    - Donnelly & Verkuilen (2017)
+    -   Size of time bins
+    -   Donnelly & Verkuilen (2017)
 -   **Work with proportions**
     -   Bounded \[0, 1\]
     -   Transformation: Empirical logits (Barr, 2008): log(count of fixations + .5 / (N - count of fixations + .5))
         -   Where N will be the number of samples per bin (when working with time binning analysis)
     -   Other authors have proposed different transformations.
-    -   Some might still argue is not ideal (alternative: beta distribution?)
+    -   Some might still argue it's not ideal (alternative: beta distribution?)
 
 ## Visual World Paradigm
-
 
 ```{r echo=FALSE}
 
@@ -441,9 +459,9 @@ etdat <-  etdat %>%
 
 ## Visual World Paradigm
 
-Note that when computing empirical logits you may also substract blinks and off-screen fixations.
+Note that when computing empirical logits you may also subtract blinks and off-screen fixations.
 
-  - No consensus
+-   No consensus
 
 ## Visual World Paradigm
 
@@ -457,7 +475,7 @@ Interest: Time window.
 
 -   Do fixations increase/decrease over time?
 -   When does this increase happen?
-  -   Linear v Non-linear analysis
+-   Linear v Non-linear analysis
 
 ## Visual World Paradigm
 
@@ -484,13 +502,13 @@ mdl_max <- etdat %>%
 
 ## Visual World Paradigm
 
-Example of average empirical logit on a time window: Dijkgraaf et al., 2017
+Example of average empirical logits on a time window: Dijkgraaf et al., 2017
 
 ::: columns
 ::: {.column width="50%"}
 -   4-images array
 -   DV: Average empirical logits on target
--   Time window: Verb onset.
+-   Time window: Verb onset
 :::
 
 ::: {.column width="50%"}
@@ -528,7 +546,7 @@ Example of binary fixations, time course analysis (time continuous): Bosker et a
 
 ## Visual World Paradigm
 
-If you are only interested in whether there is an effect or not over time, a (generalised) linear mixed model, you would be fine (yet cf. assumptions of models).
+If you are only interested in whether there is an effect or not over time, fit a (generalised) linear mixed model, you would be fine (yet cf. assumptions of models).
 
 But sometimes our questions revolve around specific times, or rate of increase/decrease (see also Stone et al., 2021; Ito & Knoeferle, 2022).
 
@@ -544,3 +562,61 @@ Sometimes our questions revolve around specific times, or rate of increase/decre
 ## Visual World Paradigm
 
 ![](images/session_5/9.png){fig-align="center"}
+
+## Reading
+
+Reading.
+
+Dependent variables:
+
+-   Binary (0/1)
+    -   Probabilities of regression/skipping/re-reading...
+    -   Logistic regression (binomial distribution).
+-   Continuous
+    -   Reading times (fixation durations in ms), regression/fixation counts...
+    -   Different approaches possible.
+
+Analysis per region (area of interest)!
+
+## Reading
+
+-   Multiple regions of interest
+-   Multiple dependent measures --\> correct for multiple comparisons!
+
+Not standard yet although should be (von der Malsburg & Angele, 2017).
+
+Bonferroni (most conservative), Holm-Bonferroni...
+
+-   6 measures for target IA --\> $\alpha$ / 6 --\> 0.05 / 6
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+## Reading
+
+# Wrap up
+
+## Wrap up
+
+## References {.smaller}
+
+::: notes
+references missing
+:::

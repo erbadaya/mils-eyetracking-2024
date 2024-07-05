@@ -5,7 +5,7 @@ format:
    clean-revealjs:
     chalkboard: true
     logo: images/logo_mils.png
-    footer: Session 2 - Visual World Paradigm
+    footer: "Visual World Paradigm"
     include-in-header: 
       text: |
         <style>

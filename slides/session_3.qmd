@@ -20,6 +20,8 @@ format:
 editor: visual
 ---
 
+# Welcome back!
+
 ## Welcome back!
 
 Any questions from yesterday?
