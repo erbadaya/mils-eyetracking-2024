@@ -89,14 +89,14 @@ Requirements
 :::
 :::
 
-:::notes
+::: notes
 change to OS & update
 :::
 
 ## Overview of the course
 
 | Date  |              Content              |                Materials                 |
-|:-----------------:|:--------------------------------:|:-----------------:|
+|:---------------:|:-----------------------:|:----------------------------:|
 | Day 1 |   Introduction to eye-tracking    |                   None                   |
 | Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, PsychoPy |
 | Day 3 |              Reading              |                   RR_2                   |
@@ -105,7 +105,7 @@ change to OS & update
 
 Any issues with installation, come to Mariia or myself!
 
-:::notes
+::: notes
 change to OS & update
 :::
 
@@ -137,8 +137,8 @@ Eye-tracking is a [non-invasive technique]{.fg style="--col: #e64173"} to explor
 :::
 
 -   As opposed to EEG, fMRI
--   As opposed to offline measures (e.g., questionnaires) 
-    - Converging evidence
+-   As opposed to offline measures (e.g., questionnaires)
+    -   Converging evidence
 
 # Why do we track eyes?
 
@@ -227,7 +227,7 @@ They also differ in where they are located in the fovea.
 :::
 :::
 
-:::notes
+::: notes
 "Space respect to our eyes" - ? Is it the definition of visual field or fovea?
 :::
 
@@ -518,7 +518,7 @@ Old, rudimentary eye-trackers.
 
 -   Alfred Yarbus
     -   Suction cups reflecting onto a photosensitive surface.
-    -   Scan paths
+    -   Scan paths.
 :::
 
 ::: {.column width="50%"}
@@ -668,7 +668,7 @@ Relationship between sampling error, sampling frequency, and [data points]{.fg s
 -   Lower sampling frequencies = more data points (power).
     -   NB: More data points might not be the solution.
 
-Conventional: min. 500 Hz for picture viewing, min. 1000 Hz for reading.    
+Conventional: min. 500 Hz for picture viewing, min. 1000 Hz for reading.
 
 ## How do eye-trackers work?
 
@@ -708,6 +708,10 @@ Precision
 These properties impact data quality.
 
 -   The [validity of results]{.fg style="--col: #e64173"} based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2012)
+
+::: notes
+did you mean Holmqvist et al., 2011?
+:::
 
 ## How do eye-trackers work?: Types
 
@@ -786,7 +790,7 @@ Eye-tracking without an eye-tracker.
 Eye-tracking without an eye-tracker.
 
 ::: {layout-ncol="2"}
-![King et al., 2019](images/session_1/mt_1.png){fig-align="center" height="500px"}
+![King et al., 2018](images/session_1/mt_1.png){fig-align="center" height="500px"}
 
 ![](images/session_1/mt_2.png){fig-align="center" height="500px"}
 :::
@@ -1412,7 +1416,7 @@ Visual World Paradigm
 
 -   Treasure hunt paradigm
 
-:::notes
+::: notes
 don't forget to update this part :)
 :::
 
@@ -1445,7 +1449,7 @@ Reading
 
 ## Eye-tracking in language research
 
-Reading (Baltais & Hartsuiker, in prep.)
+Reading
 
 Constructions = grammatical patterns. Their productivity = the number of different words they can be used with. If productivity is high, there are many possible continuations that a sentence with this construction can have (example: "He started to..."). If productivity is low, there are very few possible continuations (example: "He burst into... ").
 
@@ -1454,7 +1458,7 @@ Constructions = grammatical patterns. Their productivity = the number of differe
 
 ## Eye-tracking in language research
 
-Reading (Baltais & Hartsuiker, in prep.)
+Reading
 
 High productivity condition:
 
@@ -1466,7 +1470,7 @@ Low productivity condition:
 
 ## Eye-tracking in language research
 
-Reading (Baltais & Hartsuiker, in prep.)
+Reading
 
 -   Single sentence reading
 -   Comprehension questions as attention check
@@ -1475,15 +1479,19 @@ Reading (Baltais & Hartsuiker, in prep.)
 
 ## Eye-tracking in language research
 
-Reading (Baltais & Hartsuiker, in prep.)
+Reading
 
 ::: r-stack
 {{< video images/session_1/reading_video.mov height="300" >}}
 :::
 
+::: aside
+Data from Mariia Baltais
+:::
+
 ## Eye-tracking in language research
 
-Reading (Baltais & Hartsuiker, in prep.)
+Reading
 
 ::: columns
 ::: {.column width="50%"}
@@ -1496,14 +1504,18 @@ Reading (Baltais & Hartsuiker, in prep.)
 :::
 
 ::: {layout-ncol="2"}
-![](images/session_1/reading_resultsV.png){fig-align="center" height="400px"}
+![](images/session_1/reading_resultsV.png){fig-align="center" height="350px"}
 
-![](images/session_1/reading_resultsINF.png){fig-align="center" height="400px"}
+![](images/session_1/reading_resultsINF.png){fig-align="center" height="350px"}
+:::
+
+::: aside
+Data from Mariia Baltais
 :::
 
 ## Eye-tracking in language research
 
-Reading (Baltais & Hartsuiker, in prep.)
+Reading
 
 Conclusions:
 
@@ -1544,32 +1556,32 @@ You can come up with your own idea, or you can take an existing study (see some 
 
 ## References {.smaller}
 
-Conklin, K., Pellicer-Sánchez, A., & Carrol, G. (2018). *Eye-tracking: A guide for applied linguistics research*. Cambridge University Press.
+Altmann, G. T. M., & Kamide, Y. (1999). Incremental interpretation at verbs: Restricting the domain of subsequent reference. *Cognition*, 73(3), 247–264. https://doi.org/10.1016/S0010-0277(99)00059-1
 
-Ferreira, F., & Yang, Z. (2019). The problem of comprehension in psycholinguistics. *Discourse Processes, 56*(7), 485-495.
+Conklin, K., Pellicer-Sánchez, A., & Carrol, G. (2018). *Eye-tracking: A guide for applied linguistics research.* Cambridge University Press.
 
-Holmqvist, K., Nyström, M., Andersson, R., Dewhurst, R., Jarodzka, H., & Van de Weijer, J. (2011). *Eye tracking: A comprehensive guide to methods and measures*. OUP Oxford.
+Ferreira, F., & Yang, Z. (2019). The problem of comprehension in psycholinguistics. *Discourse Processes*, 56(7), 485-495.
+
+Holmqvist, K., Nyström, M., Andersson, R., Dewhurst, R., Jarodzka, H., & Van de Weijer, J. (2011). *Eye tracking: A comprehensive guide to methods and measures.* OUP Oxford.
 
 Hutton, S. B. (2019). Eye tracking methodology. *Eye movement research: An introduction to its scientific foundations and applications*, 277-308.
 
-Javal, E. (1879). Essai sur la physiologie de la lecture. *Annaels d'oculistique, 82*, 242-25.
+Javal, E. (1879). Essai sur la physiologie de la lecture. *Annaels d'oculistique*, 82, 242-25.
 
-Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. *Psychological review, 87*(4), 329.
-
-King, J. P., Loy, J. E., & Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. *Discourse Processes, 55*(2), 123-135.
-
-::: notes
-double-check (all here?)
-:::
+Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. *Psychological review*, 87(4), 329.
 
 ## References {.smaller}
 
-Magnuson, J. S. (2019). Fixations in the visual world paradigm: where, when, why?. *Journal of Cultural Cognitive Science, 3*(2), 113-139.
+King, J. P., Loy, J. E., & Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. *Discourse Processes*, 55(2), 123-135.
 
-Papoutsaki, A., Sangkloy, P., Laskey, J., Daskalova, N., Huang, J., & Hays, J. (2016). WebGazer : Scalable webcam eye tracking using user interactions. *International Joint Conference on Artificial Intelligence*.
+Magnuson, J. S. (2019). Fixations in the visual world paradigm: where, when, why?. *Journal of Cultural Cognitive Science*, 3(2), 113-139.
+
+Papoutsaki, A., Sangkloy, P., Laskey, J., Daskalova, N., Huang, J., & Hays, J. (2016). WebGazer : Scalable webcam eye tracking using user interactions. *International Joint Conference on Artificial Intelligence.*
 
 Pickering, M. J., Frisson, S., McElree, B., & Traxler, M. J. (2004). Eye movements and semantic composition. *On-line study of sentence comprehension: Eyetracking, ERPs and beyond*, 33-50.
 
-Trueswell, J. C. (2008). Using eye movements as a developmental measure within psycholinguistics. Language acquisition and language disorders, 44, 73.
+Rodriguez Ronderos, C., Münster, K., Guerra, E., Kreysa, H., Rodríguez, A., Kröger, J., Kluth, T., Burigo, M., Abashidze, D., Nunnemann, E., & Knoeferle, P. (2018). Eye Tracking During Visually Situated Language Comprehension: Flexibility and Limitations in Uncovering Visual Context Effects. *Journal of Visualized Experiments: JoVE*, 141. https://doi.org/10.3791/57694
 
-Yarbus A. L. (1967). *Eye movements and vision*. New York: Plenum.
+Trueswell, J. C. (2008). Using eye movements as a developmental measure within psycholinguistics. *Language acquisition and language disorders*, 44, 73.
+
+Yarbus A. L. (1967). *Eye movements and vision.* New York: Plenum.
