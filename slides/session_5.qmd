@@ -183,11 +183,7 @@ Pattern of fixations and saccades during a trial.
 
 ## Visual World Paradigm
 
-![](images/session_5/liedetection.jpg){fig-align="center"}
-
-::: notes
-reference?
-:::
+![Badaya et al., in prep.](images/session_5/liedetection.jpg){fig-align="center"}
 
 ## Visual World Paradigm
 

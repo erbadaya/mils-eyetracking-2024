@@ -1094,6 +1094,7 @@ Your turn now!
 ## Plan for tomorrow
 
 -   Eye-tracking-while-reading with Mariia
+    - Recommended reading: Rayner & Duffy (1986)
 -   Coding an experiment in OpenSesame
 
 ## Homework

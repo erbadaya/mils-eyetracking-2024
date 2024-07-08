@@ -77,20 +77,17 @@ Materials (all available on Ufora and GitHub)
 ::: {.column width="50%"}
 Requirements
 
--   Install PsychoPy
-    -   version
+-   Install OpenSesame
+    -   version 4.0
 -   Install R, RStudio
-    -   version
-    -   packages
+    -   version 4.4.1
+    -   packages tidyverse, lme4
 -   Install DataViewer
+    - version 4.4.1
 -   Readings
     -   Experimental design .pdf
     -   Recommended readings per day
 :::
-:::
-
-::: notes
-change to OS & update
 :::
 
 ## Overview of the course
@@ -98,16 +95,12 @@ change to OS & update
 | Date  |              Content              |                Materials                 |
 |:----------------:|:-----------------------:|:---------------------------:|
 | Day 1 |   Introduction to eye-tracking    |                   None                   |
-| Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, PsychoPy |
+| Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, OpenSesame |
 | Day 3 |              Reading              |                   RR_2                   |
-| Day 4 | Lab session & Data pre-processing |         DataViewer / R, datasets         |
+| Day 4 | Lab session & Data pre-processing |         DataViewer, datasets         |
 | Day 5 |  Data visualization and analysis  |               R, datasets                |
 
 Any issues with installation, come to Mariia or myself!
-
-::: notes
-change to OS & update
-:::
 
 # Introduction to eye-tracking
 
@@ -217,7 +210,7 @@ They also differ in where they are located in the fovea.
 
 **But** the fovea is a small section of our [visual field]{.fg style="--col: #e64173"}.
 
--   Space respect to our eyes that we can perceive.
+-   Space with respect to our eyes that we can perceive.
 -   Measured in degrees of visual angle.
     -   [Visual angle]{.fg style="--col: #e64173"} = object size / distance.
 :::
@@ -225,10 +218,6 @@ They also differ in where they are located in the fovea.
 ::: {.column width="50%"}
 ![](images/session_1/central_vision.png)
 :::
-:::
-
-::: notes
-"Space respect to our eyes" - ? Is it the definition of visual field or fovea?
 :::
 
 ## The Human Visual System
@@ -707,11 +696,7 @@ Precision
 
 These properties impact data quality.
 
--   The [validity of results]{.fg style="--col: #e64173"} based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2012)
-
-::: notes
-did you mean Holmqvist et al., 2011?
-:::
+-   The [validity of results]{.fg style="--col: #e64173"} based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2011)
 
 ## How do eye-trackers work?: Types
 
@@ -1536,14 +1521,10 @@ Conclusions:
 
 Visual World Paradigm
 
--   Install PsychoPy
+-   Install OpenSesame
 -   Download template script
 -   Recommended reading:
     -   Altmann & Kamide (1999)
-
-::: notes
-change to OS
-:::
 
 ## Plan for this week
 
