@@ -12,7 +12,6 @@ format:
           margin: 0;
           position: absolute;
           top: 40%;
-          left: 40%;
           -ms-transform: translateY(-50%), translateX(-50%);
           transform: translateY(-50%), translateX(-50%);
         }
@@ -62,19 +61,17 @@ Learning objectives
 
 ## Overview of the course
 
-::: columns
-::: {.column width="50%"}
+
 Materials (all available on Ufora and GitHub)
 
 -   Slides
--   Template scripts in PsychoPy/OpenSesame/Experiment Builder
-    -   Focus in class: PsychoPy
+-   Template scripts in OpenSesame
 -   Eye-tracking datasets
 -   Template scripts for pre-processing and analysis
 -   Further resources (papers & book chapters)
-:::
 
-::: {.column width="50%"}
+## Overview of the course
+
 Requirements
 
 -   Install OpenSesame
@@ -83,22 +80,20 @@ Requirements
     -   version 4.4.1
     -   packages tidyverse, lme4
 -   Install DataViewer
-    - version 4.4.1
+    -   version 4.4.1
 -   Readings
     -   Experimental design .pdf
     -   Recommended readings per day
-:::
-:::
 
 ## Overview of the course
 
-| Date  |              Content              |                Materials                 |
-|:----------------:|:-----------------------:|:---------------------------:|
-| Day 1 |   Introduction to eye-tracking    |                   None                   |
+| Date  |              Content              |                 Materials                  |
+|:-------------:|:-----------------------:|:------------------------------:|
+| Day 1 |   Introduction to eye-tracking    |                    None                    |
 | Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, OpenSesame |
-| Day 3 |              Reading              |                   RR_2                   |
-| Day 4 | Lab session & Data pre-processing |         DataViewer, datasets         |
-| Day 5 |  Data visualization and analysis  |               R, datasets                |
+| Day 3 |              Reading              |                    RR_2                    |
+| Day 4 | Lab session & Data pre-processing |            DataViewer, datasets            |
+| Day 5 |  Data visualization and analysis  |                R, datasets                 |
 
 Any issues with installation, come to Mariia or myself!
 
@@ -475,7 +470,19 @@ Pupil dilates for reasons other than light, e.g., [cognitive effort]{.fg style="
 
 ------------------------------------------------------------------------
 
+::: center-xy
+
+How do you think these measures can be used in language research?
+
+:::
+
+------------------------------------------------------------------------
+
+::: center-xy
+
 Questions so far? Thoughts?
+
+:::
 
 # How do eye-trackers work?
 
@@ -817,7 +824,11 @@ Combination with other techniques.
 
 ------------------------------------------------------------------------
 
+::: center-xy
+
 Let's take a break!
+
+:::
 
 # An eye-tracking experiment
 
@@ -1390,7 +1401,7 @@ Visual World Paradigm
 
 Visual World Paradigm
 
-Communication is multimodal: Both verbal and non-verbal features exist when we produce and comprehend spoken language, and they can facilitate communication. Disfluencies (e.g., um or uh in English) are predominant in spontaneous speech.
+Both verbal and non-verbal features exist when we produce and comprehend spoken language, and they can facilitate communication. Disfluencies (e.g., um or uh in English) are predominant in spontaneous speech.
 
 -   Do they affect listeners because of beliefs about disfluencies, or because of social reasoning?
     -   Research question: Whether and how disfluent speech can be interpreted as deceitful, and whether there is an effect of interlocutors' linguistic background (i.e., native versus non-native interlocutors).
@@ -1399,19 +1410,41 @@ Communication is multimodal: Both verbal and non-verbal features exist when we p
 
 Visual World Paradigm
 
--   Treasure hunt paradigm
 
-::: notes
-don't forget to update this part :)
+:::columns
+:::{.column width=50%}
+
+Treasure-hunt task
+
+:::
+:::{.column width=50%}
+
+![](images/session_1/example_loy2017.JPG)
+
+:::
 :::
 
 ## Eye-tracking in language research
 
 Visual World Paradigm
 
+:::columns
+:::{.column width=50%}
+{{< video images/session_1/fluent-native.mp4 height="400" >}}
+
+:::
+:::{.column width=50%}
+
+{{< video images/session_1/disfluent-native.mp4 height="400" >}}
+
+:::
+:::
+
 ## Eye-tracking in language research
 
 Visual World Paradigm
+
+![](images/session_1/expsdata.JPG)
 
 ## Eye-tracking in language research
 
@@ -1436,7 +1469,7 @@ Reading
 
 Reading
 
-Constructions = grammatical patterns. Their productivity = the number of different words they can be used with. If productivity is high, there are many possible continuations that a sentence with this construction can have (example: "He started to..."). If productivity is low, there are very few possible continuations (example: "He burst into... ").
+Constructions = grammatical patterns. Their productivity = the number of different words they can be used with. If productivity is high, there are many possible continuations that a sentence with this construction can have (example: "He started to..."). If productivity is low, there are very few possible continuations (example: "He burst into...").
 
 -   In this low uncertainty situation, will a prediction error occur if readers see a continuation they did not expect?
     -   Research question: Does low productivity of syntactic constructions lead to processing difficulty for unexpected lexical items?

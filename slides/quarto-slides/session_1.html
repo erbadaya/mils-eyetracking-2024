@@ -10,7 +10,7 @@
 <link href="session_1_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="session_1_files/libs/quarto-contrib/videojs/video.min.js"></script>
 <link href="session_1_files/libs/quarto-contrib/videojs/video-js.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.538">
 
   <meta name="author" content="Badaya &amp; Baltais">
   <title>Introduction to eye-tracking</title>
@@ -327,7 +327,6 @@
     margin: 0;
     position: absolute;
     top: 40%;
-    left: 40%;
     -ms-transform: translateY(-50%), translateX(-50%);
     transform: translateY(-50%), translateX(-50%);
   }
@@ -407,61 +406,46 @@ Badaya &amp; Baltais
 </section>
 <section id="overview-of-the-course-1" class="slide level2">
 <h2>Overview of the course</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
 <p>Materials (all available on Ufora and GitHub)</p>
 <ul>
 <li>Slides</li>
-<li>Template scripts in PsychoPy/OpenSesame/Experiment Builder
-<ul>
-<li>Focus in class: PsychoPy</li>
-</ul></li>
+<li>Template scripts in OpenSesame</li>
 <li>Eye-tracking datasets</li>
 <li>Template scripts for pre-processing and analysis</li>
 <li>Further resources (papers &amp; book chapters)</li>
 </ul>
-</div><div class="column" style="width:50%;">
+</section>
+<section id="overview-of-the-course-2" class="slide level2">
+<h2>Overview of the course</h2>
 <p>Requirements</p>
 <ul>
-<li>Install PsychoPy
+<li>Install OpenSesame
 <ul>
-<li>version</li>
+<li>version 4.0</li>
 </ul></li>
 <li>Install R, RStudio
 <ul>
-<li>version</li>
-<li>packages</li>
+<li>version 4.4.1</li>
+<li>packages tidyverse, lme4</li>
 </ul></li>
-<li>Install DataViewer</li>
+<li>Install DataViewer
+<ul>
+<li>version 4.4.1</li>
+</ul></li>
 <li>Readings
 <ul>
 <li>Experimental design .pdf</li>
 <li>Recommended readings per day</li>
 </ul></li>
 </ul>
-</div>
-</div>
-<aside class="notes">
-<p>change to OS &amp; update</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="overview-of-the-course-2" class="slide level2">
+<section id="overview-of-the-course-3" class="slide level2">
 <h2>Overview of the course</h2>
-<table class="caption-top">
+<table>
 <colgroup>
-<col style="width: 25%">
+<col style="width: 20%">
 <col style="width: 34%">
-<col style="width: 40%">
+<col style="width: 44%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -479,7 +463,7 @@ Badaya &amp; Baltais
 <tr class="even">
 <td style="text-align: center;">Day 2</td>
 <td style="text-align: center;">Visual World Paradigm</td>
-<td style="text-align: center;">Experimental design .pdf, RR_1, PsychoPy</td>
+<td style="text-align: center;">Experimental design .pdf, RR_1, OpenSesame</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Day 3</td>
@@ -489,7 +473,7 @@ Badaya &amp; Baltais
 <tr class="even">
 <td style="text-align: center;">Day 4</td>
 <td style="text-align: center;">Lab session &amp; Data pre-processing</td>
-<td style="text-align: center;">DataViewer / R, datasets</td>
+<td style="text-align: center;">DataViewer, datasets</td>
 </tr>
 <tr class="odd">
 <td style="text-align: center;">Day 5</td>
@@ -499,19 +483,6 @@ Badaya &amp; Baltais
 </tbody>
 </table>
 <p>Any issues with installation, come to Mariia or myself!</p>
-<aside class="notes">
-<p>change to OS &amp; update</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section></section>
 <section>
 <section id="introduction-to-eye-tracking" class="title-slide slide level1 center">
@@ -645,7 +616,7 @@ Badaya &amp; Baltais
 <p><br></p>
 <p><strong>But</strong> the fovea is a small section of our <span class="fg" style="--col: #e64173">visual field</span>.</p>
 <ul>
-<li>Space respect to our eyes that we can perceive.</li>
+<li>Space with respect to our eyes that we can perceive.</li>
 <li>Measured in degrees of visual angle.
 <ul>
 <li><span class="fg" style="--col: #e64173">Visual angle</span> = object size / distance.</li>
@@ -655,19 +626,6 @@ Badaya &amp; Baltais
 <p><img data-src="images/session_1/central_vision.png"></p>
 </div>
 </div>
-<aside class="notes">
-<p>“Space respect to our eyes” - ? Is it the definition of visual field or fovea?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="the-human-visual-system-5" class="slide level2">
 <h2>The Human Visual System</h2>
@@ -690,7 +648,7 @@ Badaya &amp; Baltais
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/session_1/vision_angles.png"></p>
+<p><img data-src="images/session_1/vision_angles.png" class="quarto-figure quarto-figure-center"></p>
 <figcaption>Central vision != foveal vision.</figcaption>
 </figure>
 </div>
@@ -773,7 +731,7 @@ Badaya &amp; Baltais
 <h2>Visual attention</h2>
 <p>Yarbus (1960): Scan paths guided by attention.</p>
 
-<img data-src="images/session_1/unexpected_visitor.png" class="r-stretch quarto-figure-center"><p class="caption">They Did Not Expect Him, Iliá Repin</p></section>
+<img data-src="images/session_1/unexpected_visitor.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">They Did Not Expect Him, Iliá Repin</p></section>
 <section id="visual-attention-5" class="slide level2">
 <h2>Visual attention</h2>
 <div class="quarto-layout-panel" data-layout="[15,-2,10]">
@@ -974,7 +932,7 @@ Badaya &amp; Baltais
 <li>Short and long regressions.</li>
 </ul>
 
-<img data-src="images/session_1/example_reading.JPG" class="r-stretch quarto-figure-center"><p class="caption">From Conklin et al., 2018</p></section>
+<img data-src="images/session_1/example_reading.JPG" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">From Conklin et al., 2018</p></section>
 <section id="blinks" class="slide level2">
 <h2>Blinks</h2>
 <p>By necessity, people blink.</p>
@@ -1022,7 +980,15 @@ Badaya &amp; Baltais
 </section>
 <section class="slide level2">
 
+<div class="center-xy">
+<p>How do you think these measures can be used in language research?</p>
+</div>
+</section>
+<section class="slide level2">
+
+<div class="center-xy">
 <p>Questions so far? Thoughts?</p>
+</div>
 </section></section>
 <section>
 <section id="how-do-eye-trackers-work" class="title-slide slide level1 center">
@@ -1148,7 +1114,7 @@ Badaya &amp; Baltais
 </ul></li>
 </ul>
 
-<img data-src="images/session_1/tracking_eyes4.png" class="r-stretch quarto-figure-center"><p class="caption">Example of view of the pupil when the head moves.</p></section>
+<img data-src="images/session_1/tracking_eyes4.png" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Example of view of the pupil when the head moves.</p></section>
 <section id="how-do-eye-trackers-work-9" class="slide level2">
 <h2>How do eye-trackers work?</h2>
 <p>Detects gaze and <span class="fg" style="--col: #e64173">records</span> its x and y coordinates on the screen.</p>
@@ -1210,7 +1176,7 @@ Badaya &amp; Baltais
 <h2>How do eye-trackers work?: Sampling frequency</h2>
 <p><br> <br></p>
 
-<img data-src="images/session_1/sample_rate.jpg" class="r-stretch quarto-figure-center"><p class="caption">Measurement error represented by dashed line; picture taken when the vertical lines cross the horizontal lines.</p></section>
+<img data-src="images/session_1/sample_rate.jpg" class="quarto-figure quarto-figure-center r-stretch"><p class="caption">Measurement error represented by dashed line; picture taken when the vertical lines cross the horizontal lines.</p></section>
 <section id="how-do-eye-trackers-work-sampling-frequency-4" class="slide level2">
 <h2>How do eye-trackers work?: Sampling frequency</h2>
 <p><span class="fg" style="--col: #e64173">This is why sampling frequency matters</span>.</p>
@@ -1261,7 +1227,7 @@ Badaya &amp; Baltais
 </ul>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/session_1/precision_accuracy.JPG" height="300"></p>
+<p><img data-src="images/session_1/precision_accuracy.JPG" class="quarto-figure quarto-figure-center" height="300"></p>
 <figcaption>From Holmqvist et al., 2011</figcaption>
 </figure>
 </div>
@@ -1294,21 +1260,8 @@ Badaya &amp; Baltais
 <h2>How do eye-trackers work?</h2>
 <p>These properties impact data quality.</p>
 <ul>
-<li>The <span class="fg" style="--col: #e64173">validity of results</span> based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2012)</li>
+<li>The <span class="fg" style="--col: #e64173">validity of results</span> based on eye movement analysis are clearly dependent on the quality of eye movement data (Holmqvist et al., 2011)</li>
 </ul>
-<aside class="notes">
-<p>did you mean Holmqvist et al., 2011?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="how-do-eye-trackers-work-types" class="slide level2">
 <h2>How do eye-trackers work?: Types</h2>
@@ -1392,7 +1345,7 @@ Badaya &amp; Baltais
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/session_1/mt_1.png" height="500"></p>
+<p><img data-src="images/session_1/mt_1.png" class="quarto-figure quarto-figure-center" height="500"></p>
 <figcaption>King et al., 2018</figcaption>
 </figure>
 </div>
@@ -1453,7 +1406,9 @@ Badaya &amp; Baltais
 <aside><ol class="aside-footnotes"><li id="fn3"><p>Dual eye-tracking experiments are being done!</p></li></ol></aside></section>
 <section class="slide level2">
 
+<div class="center-xy">
 <p>Let’s take a break!</p>
+</div>
 </section></section>
 <section>
 <section id="an-eye-tracking-experiment" class="title-slide slide level1 center">
@@ -1987,14 +1942,14 @@ Badaya &amp; Baltais
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/session_1/ia_reading.png" height="200"></p>
+<p><img data-src="images/session_1/ia_reading.png" class="quarto-figure quarto-figure-center" height="200"></p>
 <figcaption>Single sentence reading</figcaption>
 </figure>
 </div>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/session_1/ia_vwp.png" height="300"></p>
+<p><img data-src="images/session_1/ia_vwp.png" class="quarto-figure quarto-figure-center" height="300"></p>
 <figcaption>VWP</figcaption>
 </figure>
 </div>
@@ -2141,7 +2096,7 @@ Badaya &amp; Baltais
 <section id="eye-tracking-in-language-research-5" class="slide level2">
 <h2>Eye-tracking in language research</h2>
 <p>Visual World Paradigm</p>
-<p>Communication is multimodal: Both verbal and non-verbal features exist when we produce and comprehend spoken language, and they can facilitate communication. Disfluencies (e.g., um or uh in English) are predominant in spontaneous speech.</p>
+<p>Both verbal and non-verbal features exist when we produce and comprehend spoken language, and they can facilitate communication. Disfluencies (e.g., um or uh in English) are predominant in spontaneous speech.</p>
 <ul>
 <li>Do they affect listeners because of beliefs about disfluencies, or because of social reasoning?
 <ul>
@@ -2152,31 +2107,30 @@ Badaya &amp; Baltais
 <section id="eye-tracking-in-language-research-6" class="slide level2">
 <h2>Eye-tracking in language research</h2>
 <p>Visual World Paradigm</p>
-<ul>
-<li>Treasure hunt paradigm</li>
-</ul>
-<aside class="notes">
-<p>don’t forget to update this part :)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Treasure-hunt task</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/session_1/example_loy2017.JPG"></p>
+</div>
+</div>
 </section>
 <section id="eye-tracking-in-language-research-7" class="slide level2">
 <h2>Eye-tracking in language research</h2>
 <p>Visual World Paradigm</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<video id="video_shortcode_videojs_video3" height="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="images/session_1/fluent-native.mp4"></video>
+</div><div class="column" style="width:50%;">
+<video id="video_shortcode_videojs_video4" height="400" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="images/session_1/disfluent-native.mp4"></video>
+</div>
+</div>
 </section>
 <section id="eye-tracking-in-language-research-8" class="slide level2">
 <h2>Eye-tracking in language research</h2>
 <p>Visual World Paradigm</p>
-</section>
+
+<img data-src="images/session_1/expsdata.JPG" class="r-stretch"></section>
 <section id="eye-tracking-in-language-research-9" class="slide level2">
 <h2>Eye-tracking in language research</h2>
 <p>Visual World Paradigm</p>
@@ -2232,7 +2186,7 @@ Badaya &amp; Baltais
 <h2>Eye-tracking in language research</h2>
 <p>Reading</p>
 <div class="r-stack">
-<video id="video_shortcode_videojs_video3" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="images/session_1/reading_video.mov"></video>
+<video id="video_shortcode_videojs_video5" height="300" class="video-js vjs-default-skin " controls="" preload="auto" data-setup="{}" title=""><source src="images/session_1/reading_video.mov"></video>
 </div>
 
 <aside><div>
@@ -2298,26 +2252,13 @@ Badaya &amp; Baltais
 <h2>Plan for tomorrow</h2>
 <p>Visual World Paradigm</p>
 <ul>
-<li>Install PsychoPy</li>
+<li>Install OpenSesame</li>
 <li>Download template script</li>
 <li>Recommended reading:
 <ul>
 <li>Altmann &amp; Kamide (1999)</li>
 </ul></li>
 </ul>
-<aside class="notes">
-<p>change to OS</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="plan-for-this-week" class="slide level2">
 <h2>Plan for this week</h2>
@@ -2644,24 +2585,6 @@ Badaya &amp; Baltais
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2698,11 +2621,7 @@ Badaya &amp; Baltais
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {
@@ -2747,6 +2666,8 @@ Badaya &amp; Baltais
     <script>videojs(video_shortcode_videojs_video1);</script>
     <script>videojs(video_shortcode_videojs_video2);</script>
     <script>videojs(video_shortcode_videojs_video3);</script>
+    <script>videojs(video_shortcode_videojs_video4);</script>
+    <script>videojs(video_shortcode_videojs_video5);</script>
     
 
 </body></html>
