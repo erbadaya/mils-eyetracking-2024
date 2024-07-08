@@ -10,7 +10,7 @@ In this folder, you can find a folder for each day of the summer school (referen
 
 2. Experimental scripts
 
-Part of this module's goal is to give you a hands-down training with eye-tracking experiments. This also means building an experiment! In this folder, you can find the scripts we will walk you through in class, divided in VWP and reading. These scripts are built in OpenSesame. Additionally, there is a detailed Walkthrough for each script (except for a more Python-esque code for the VWP).
+Part of this module's goal is to give you a hands-on training with eye-tracking experiments. This also means building an experiment! In this folder, you can find the scripts we will walk you through in class, divided into VWP and reading. These scripts are built in OpenSesame. Additionally, there is a detailed Walkthrough for each script (except for a more Python-esque code for the VWP).
 
 3. Resources
 
