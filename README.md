@@ -18,7 +18,7 @@ You can find a README file with links to different databases for stimuli.
 
 4. Slides
 
-Here you can find the .qmd files used to create the slides. These slides are made on Quarto. We have used the clean template by Grant McDermott and Kyle Butts (see here: https://github.com/grantmcdermott/quarto-revealjs-clean/tree/main) with a few edits. Section heads on the slide are from Megan Hall (see here: https://meghan.rbind.io/blog/quarto-slides/). **We recommend you download the .pdf files**, unless you want to download all the dependencies (which are stored in the 'quarto-slides' folder).
+Here you can find the .qmd files used to create the slides. These slides are made on Quarto. We have used the clean template by Grant McDermott and Kyle Butts (see [here](https://github.com/grantmcdermott/quarto-revealjs-clean/tree/main)) with a few edits. **We recommend you download the .pdf files**, unless you want to download all the dependencies (which are stored in the 'quarto-slides' folder).
 
 5. Software
 
