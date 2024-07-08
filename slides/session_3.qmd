@@ -933,7 +933,7 @@ Your turn now!
 
 Blythe, H. I., Häikiö, T., Bertam, R., Liversedge, S. P., & Hyönä, J. (2011). Reading disappearing text: Why do children refixate words? *Vision Research, 51*(1), 84--92. https://doi.org/10.1016/j.visres.2010.10.003
 
-Boland, J. E. (2004). Linking eye movements to sentence comprehension in reading and listening. *The on-line study of sentence comprehension: Eyetracking, ERP, and beyond*, 51-76.
+Boland, J. E. (2004). Linking eye movements to sentence comprehension in reading and listening. *The on-line study of sentence comprehension: Eyetracking, ERP, and beyond*, 51--76.
 
 Brysbaert, M. (2019). How many words do we read per minute? A review and meta-analysis of reading rate. *Journal of Memory and Language, 109*, 104047. https://doi.org/10.1016/j.jml.2019.104047
 
@@ -941,7 +941,7 @@ Carrol, G., Conklin, K., & Gyllstad, H. (2016). FOUND IN TRANSLATION: The Influe
 
 Carroll, T. (2017). Eye Behavior While Reading Words of Sanskrit and Urdu Origin in Hindi. Brigham Young University.
 
-Clifton, C., Staub, A., & Rayner, K. (2007). Eye movements in reading words and sentences. *Eye movements*, 341-371.
+Clifton, C., Staub, A., & Rayner, K. (2007). Eye movements in reading words and sentences. *Eye movements*, 341--371.
 
 ## References {.smaller}
 
@@ -975,15 +975,15 @@ Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations 
 
 Keating, G. D. (2009). Sensitivity to Violations of Gender Agreement in Native and Nonnative Spanish: An Eye-Movement Investigation. *Language Learning, 59*(3), 503--535. https://doi.org/10.1111/j.1467-9922.2009.00516.x
 
-Liversedge, S. P., Rayner, K., White, S. J., Vergilino-Perez, D., Findlay, J. M., & Kentridge, R. W. (2004). Eye movements when reading disappearing text: is there a gap effect in reading?. *Vision research, 44*(10), 1013-1024.
+Liversedge, S. P., Rayner, K., White, S. J., Vergilino-Perez, D., Findlay, J. M., & Kentridge, R. W. (2004). Eye movements when reading disappearing text: is there a gap effect in reading?. *Vision research, 44*(10), 1013--1024.
 
 McConkie, G. W., & Rayner, K. (1975). The span of the effective stimulus during a fixation in reading. *Perception & Psychophysics, 17*, 578--586.
 
 ## References {.smaller}
 
-Mitchell, D. C., Shen, X., Green, M. J., & Hodgson, T. L. (2008). Accounting for regressive eye-movements in models of sentence processing: A reappraisal of the Selective Reanalysis hypothesis. *Journal of Memory and Language, 59*(3), 266-293.
+Mitchell, D. C., Shen, X., Green, M. J., & Hodgson, T. L. (2008). Accounting for regressive eye-movements in models of sentence processing: A reappraisal of the Selective Reanalysis hypothesis. *Journal of Memory and Language, 59*(3), 266--293.
 
-Morrison, R. E. (1984). Manipulation of stimulus onset delay in reading: Evidence for parallel programming of saccades. Journal of Experimental Psychology: Human Perception and Performance, 10(5), 667–682. https://doi.org/10.1037/0096-1523.10.5.667
+Morrison, R. E. (1984). Manipulation of stimulus onset delay in reading: Evidence for parallel programming of saccades. *Journal of Experimental Psychology: Human Perception and Performance, 10*(5), 667--682. https://doi.org/10.1037/0096-1523.10.5.667
 
 Pellicer-Sánchez, A. (2016). INCIDENTAL L2 VOCABULARY ACQUISITION FROM AND WHILE READING: An Eye-Tracking Study. *Studies in Second Language Acquisition, 38*(1), 97--130. https://doi.org/10.1017/S0272263115000224
 

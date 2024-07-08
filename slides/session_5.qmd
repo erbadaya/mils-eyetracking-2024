@@ -565,58 +565,220 @@ Sometimes our questions revolve around specific times, or rate of increase/decre
 
 ## Reading
 
-Reading.
+**Analysis per interest area!**
 
-Dependent variables:
+- Create data subsets
 
--   Binary (0/1)
-    -   Probabilities of regression/skipping/re-reading...
+If IA skipped on first pass --\> assign *NA* to certain measures
+
+-   Day 4, data pre-processing
+
+## Reading
+
+In R
+
+``` r
+
+# NB this is dependent on how many IAs you have
+# in this example, we have five
+
+precritIA <- rd_dat %>% filter(IA_ID == 2)
+critIA <- rd_dat %>% filter(IA_ID == 3)
+postcritIA <- rd_dat %>% filter(IA_ID == 4)
+
+# filter for skipping, introduce NAs
+
+# FFD, GD, RPD, regressions-out: remove trials (assign NAs) where IA was skipped on first pass
+for (i in critIA$IA_SKIP) {
+  ifelse(critIA$IA_SKIP[critIA$IA_SKIP == i] == 1, critIA$IA_FIRST_FIXATION_DURATION[critIA$IA_SKIP == i] <- NA, critIA$IA_FIRST_FIXATION_DURATION[critIA$IA_SKIP == i])
+  ifelse(critIA$IA_SKIP[critIA$IA_SKIP == i] == 1, critIA$IA_FIRST_RUN_DWELL_TIME[critIA$IA_SKIP == i] <- NA, critIA$IA_FIRST_RUN_DWELL_TIME[critIA$IA_SKIP == i])
+  ifelse(critIA$IA_SKIP[critIA$IA_SKIP == i] == 1, critIA$IA_REGRESSION_PATH_DURATION[critIA$IA_SKIP == i] <- NA, critIA$IA_REGRESSION_PATH_DURATION[critIA$IA_SKIP == i])
+  ifelse(critIA$IA_SKIP[critIA$IA_SKIP == i] == 1, critIA$IA_REGRESSION_OUT[critIA$IA_SKIP == i] <- NA, critIA$IA_REGRESSION_OUT[critIA$IA_SKIP == i])}
+```
+
+## Reading
+
+In jamovi
+
+![](images/session_5/readjam1.JPG){fig-align="center"}
+
+![](images/session_5/radjam2.JPG){fig-align="center"}
+
+## Reading
+
+Dependent variables
+
+-   **Binary (0/1)**
+    -   Probabilities of regression/skipping/re-reading.
     -   Logistic regression (binomial distribution).
--   Continuous
-    -   Reading times (fixation durations in ms), regression/fixation counts...
+-   **Continuous**
+    -   Reading times (fixation durations in ms), regression/fixation counts.
     -   Different approaches possible.
 
-Analysis per region (area of interest)!
+## Reading
+
+Continuous DV: reaction (incl. reading) times tend to be positively skewed compared to a normal distribution.
+
+![Lo & Andrews, 2015](images/session_5/11.png){fig-align="center"}
 
 ## Reading
 
--   Multiple regions of interest
--   Multiple dependent measures --\> correct for multiple comparisons!
+Continuous DV: reaction (incl. reading) times tend to be positively skewed compared to a normal distribution.
 
-Not standard yet although should be (von der Malsburg & Angele, 2017).
+::: columns
+::: {.column width="50%"}
+-   Option 1: Linear Mixed Models anyway
+    -   Log or inverse transformation to satisfy normality assumption
+    -   Box-Cox procedure (Osborne, 2019)
+:::
 
-Bonferroni (most conservative), Holm-Bonferroni...
-
--   6 measures for target IA --\> $\alpha$ / 6 --\> 0.05 / 6
-
-## Reading
-
-## Reading
-
-## Reading
-
-## Reading
+::: {.column width="50%"}
+![](images/session_5/12.png){fig-align="center"}
+:::
+:::
 
 ## Reading
 
-## Reading
+Continuous DV: reaction (incl. reading) times tend to be positively skewed compared to a normal distribution.
+
+::: columns
+::: {.column width="50%"}
+-   Option 1: Linear Mixed Models anyway
+    -   Log or inverse transformation to satisfy normality assumption
+    -   Box-Cox procedure (Osborne, 2019)
+:::
+
+::: {.column width="50%"}
+<br>
+
+![Puebla & Felser, 2022](images/session_5/14.png){fig-align="center"}
+:::
+:::
 
 ## Reading
 
-## Reading
+Continuous DV
+
+-   Option 1: Linear Mixed Models
+    -   Some researchers combine data transformation with cutting off the outliers: \> 2.5 SD from the average per participant and per condition.
+    -   But - potential loss of precious informative data.
 
 ## Reading
 
-## Reading
+Continuous DV
+
+::: columns
+::: {.column width="50%"}
+-   Option 2: Generalized Linear Mixed Models
+
+"Rather than transforming the dependent variable to eliminate this deviation from normality, GLMM allows the researcher to select a theoretical distribution that matches the properties of measured RT." (Lo & Andrews, 2015)
+
+- E.g., Gamma distribution (identity link)
+:::
+
+::: {.column width="50%"}
+![Lo & Andrews, 2015](images/session_5/11.png){fig-align="center"}
+:::
+:::
 
 ## Reading
+
+Continuous DV
+
+-   Option 2: Generalized Linear Mixed Models
+
+![Hermena et al., 2021](images/session_5/15.png){fig-align="center"}
+
+## Reading
+
+-   Several dependent measures on the same IA
+    - **Correct for multiple comparisons!**
+
+- Not standard yet although should be
+    - See von der Malsburg & Angele (2017). False positives and other statistical errors in standard analyses of eye movements in reading.
+
+Bonferroni (most conservative), also Holm-Bonferroni, FDR... 
+
+- E.g., 6 measures for the critical IA
+    -   $\alpha$ / 6 = 0.05 / 6 = `r round(0.05/6,4)`
+
+## Reading
+
+In R
+
+``` r
+
+#### Skipping
+summary(skip0 <- glmer(IA_SKIP ~ condition + (1 + condition | item) + (1 + condition | participant), family = binomial, data = critIA))
+
+#### First fixation duration
+summary(ffd0 <- glmer(IA_FIRST_FIXATION_DURATION ~ condition + (1 + condition | item) + (1 + condition | participant), family = Gamma(link = "identity"), data = critIA))
+
+#### Etc. for the rest of the measures and IAs
+
+# Correction for multiple comparisons, e.g., Holm-Bonferroni
+# For each IA separately
+# formula: p.adjust(<p-value>, method = <correction method>, n = <number of comparisons>)
+```
+
+## Reading
+
+In jamovi, for one area and one measure at a time
+
+![](images/session_5/readjam2.JPG){fig-align="center"}
 
 # Wrap up
 
 ## Wrap up
 
+:::notes
+anything to say here?
+:::
+
 ## References {.smaller}
 
+Amos, R. M., Seeber, K. G., & Pickering, M. J. (2022). Prediction during simultaneous interpreting: Evidence from the visual-world paradigm. *Cognition*, 220, 104987.
+
+Barr, D. J. (2008). Analyzing 'visual world'eyetracking data using multilevel logistic regression. *Journal of memory and language, 59*(4), 457-474.
+
+Bosker, H. R., Quené, H., Sanders, T., & De Jong, N. H. (2014). Native 'um's elicit prediction of low-frequency referents, but non-native 'um's do not. *Journal of memory and language, 75*, 104-116.
+
+Clifton, C., Staub, A., & Rayner, K. (2007). Eye movements in reading words and sentences. In R. P. G. Van Gompel, M. H. Fischer, W. S. Murray, & R. L. Hill (Eds.) *Eye Movements: A window on mind and brain* (pp. 341--371). Oxford: Elsevier.
+
+Cop, U., Dirix, N., Assche, E. V., Drieghe, D., & Duyck, W. (2017). Reading a book in one or two languages? An eye movement study of cognate facilitation in L1 and L2 reading. *Bilingualism: Language and Cognition, 20*(4), 747--769. https://doi.org/10.1017/S1366728916000213
+
+Corley, M. (2010). Making predictions from speech with repairs: Evidence from eye movements. *Language and Cognitive Processes, 25*(5), 706-727.
+
 ::: notes
-references missing
+check references 
 :::
+
+## References {.smaller}
+
+Dijkgraaf, A., Hartsuiker, R. J., & Duyck, W. (2017). Predicting upcoming information in native-language and non-native-language auditory word recognition. *Bilingualism: Language and Cognition, 20*(5), 917-930.
+
+Drieghe, D., & Chan Seem, R. (2022). Parafoveal processing of repeated words during reading. *Psychonomic Bulletin & Review, 29*(4), 1451--1460. https://doi.org/10.3758/s13423-021-02054-0
+
+Frisson, S., Harvey, D. R., & Staub, A. (2017). No prediction error cost in reading: Evidence from eye movements. *Journal of Memory and Language, 95*, 200--214. https://doi.org/10.1016/j.jml.2017.04.007
+
+Hermena, E. W., Bouamama, S., Liversedge, S. P., & Drieghe, D. (2021). Does diacritics‐based lexical disambiguation modulate word frequency, length, and predictability effects? An eye‐movements investigation of processing Arabic diacritics. *PLOS ONE, 16*(11), e0259987. https://doi.org/10.1371/journal.pone.0259987
+
+Ito, A., Pickering, M. J., & Corley, M. (2018). Investigating the time-course of phonological prediction in native and non-native speakers of English: A visual world eye-tracking study. *Journal of Memory and Language, 98*, 1-11.
+
+Ito, A., & Knoeferle, P. (2022). Analysing data from the psycholinguistic visual-world paradigm: Comparison of different analysis methods. *Behavior Research Methods*, 1-33.
+
+## References {.smaller}
+
+Lo, S., & Andrews, S. (2015). To transform or not to transform: Using generalized linear mixed models to analyse reaction time data. *Frontiers in Psychology, 6*. https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01171
+
+Osborne, J. (2010). Improving your data transformations: Applying the Box-Cox transformation. *Practical Assessment, Research, and Evaluation, 15*(1). https://doi.org/10.7275/qbpc-gk17
+
+Puebla, C., & Felser, C. (2022). Discourse Prominence and Antecedent Mis-Retrieval during Native and Non-Native Pronoun Resolution. Discours. Revue de Linguistique, Psycholinguistique et Informatique. A Journal of Linguistics, *Psycholinguistics and Computational Linguistics, 29*, Article 29. https://doi.org/10.4000/discours.11720
+
+Staub, A., Rayner, K., Pollatsek, A., Hyönä, J., & Majewski, H. (2007). The time course of plausibility effects on eye movements in reading: Evidence from noun-noun compounds. Journal of Experimental Psychology. *Learning, Memory, and Cognition, 33*(6), 1162--1169. https://doi.org/10.1037/0278-7393.33.6.1162
+
+## References {.smaller}
+
+Stone, K., Lago, S., & Schad, D. J. (2021). Divergence point analyses of visual world data: Applications to bilingual research. *Bilingualism: Language and Cognition, 24*(5), 833-841.
+
+von der Malsburg, T., & Angele, B. (2017). False positives and other statistical errors in standard analyses of eye movements in reading. *Journal of Memory and Language, 94*, 119--133. https://doi.org/10.1016/j.jml.2016.10.003

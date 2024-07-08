@@ -10,7 +10,7 @@ Holmqvist, K., Nyström, M., Andersson, R., Dewhurst, R., Jarodzka, H., & Van de
 
 Hutton, S. B. (2019). Eye tracking methodology. Eye movement research: An introduction to its scientific foundations and applications, 277-308.
 
-Javal, E. (1879). Essai sur la physiologie de la lecture. Annaels d'oculistique, 82, 242-25.
+Javal, E. (1879). Essai sur la physiologie de la lecture. Annales d'oculistique, 82, 242-253.
 
 Just, M. A., & Carpenter, P. A. (1980). A theory of reading: from eye fixations to comprehension. Psychological review, 87(4), 329.
 

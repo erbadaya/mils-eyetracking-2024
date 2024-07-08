@@ -997,67 +997,196 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 <img data-src="images/session_5/9.png" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="reading-6" class="slide level2">
 <h2>Reading</h2>
-<p>Reading.</p>
-<p>Dependent variables:</p>
+<p><strong>Analysis per interest area!</strong></p>
 <ul>
-<li>Binary (0/1)
-<ul>
-<li>Probabilities of regression/skipping/re-reading…</li>
-<li>Logistic regression (binomial distribution).</li>
-</ul></li>
-<li>Continuous
-<ul>
-<li>Reading times (fixation durations in ms), regression/fixation counts…</li>
-<li>Different approaches possible.</li>
-</ul></li>
+<li>Create data subsets</li>
 </ul>
-<p>Analysis per region (area of interest)!</p>
+<p>If IA skipped on first pass –&gt; assign <em>NA</em> to certain measures</p>
+<ul>
+<li>Day 4, data pre-processing</li>
+</ul>
 </section>
 <section id="reading-7" class="slide level2">
 <h2>Reading</h2>
-<ul>
-<li>Multiple regions of interest</li>
-<li>Multiple dependent measures –&gt; correct for multiple comparisons!</li>
-</ul>
-<p>Not standard yet although should be (von der Malsburg &amp; Angele, 2017).</p>
-<p>Bonferroni (most conservative), Holm-Bonferroni…</p>
-<ul>
-<li>6 measures for target IA –&gt; <span class="math inline">\(\alpha\)</span> / 6 –&gt; 0.05 / 6</li>
-</ul>
+<p>In R</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a></span>
+<span id="cb7-2"><a href=""></a><span class="co"># NB this is dependent on how many IAs you have</span></span>
+<span id="cb7-3"><a href=""></a><span class="co"># in this example, we have five</span></span>
+<span id="cb7-4"><a href=""></a></span>
+<span id="cb7-5"><a href=""></a>precritIA <span class="ot">&lt;-</span> rd_dat <span class="sc">%&gt;%</span> <span class="fu">filter</span>(IA_ID <span class="sc">==</span> <span class="dv">2</span>)</span>
+<span id="cb7-6"><a href=""></a>critIA <span class="ot">&lt;-</span> rd_dat <span class="sc">%&gt;%</span> <span class="fu">filter</span>(IA_ID <span class="sc">==</span> <span class="dv">3</span>)</span>
+<span id="cb7-7"><a href=""></a>postcritIA <span class="ot">&lt;-</span> rd_dat <span class="sc">%&gt;%</span> <span class="fu">filter</span>(IA_ID <span class="sc">==</span> <span class="dv">4</span>)</span>
+<span id="cb7-8"><a href=""></a></span>
+<span id="cb7-9"><a href=""></a><span class="co"># filter for skipping, introduce NAs</span></span>
+<span id="cb7-10"><a href=""></a></span>
+<span id="cb7-11"><a href=""></a><span class="co"># FFD, GD, RPD, regressions-out: remove trials (assign NAs) where IA was skipped on first pass</span></span>
+<span id="cb7-12"><a href=""></a><span class="cf">for</span> (i <span class="cf">in</span> critIA<span class="sc">$</span>IA_SKIP) {</span>
+<span id="cb7-13"><a href=""></a>  <span class="fu">ifelse</span>(critIA<span class="sc">$</span>IA_SKIP[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="sc">==</span> <span class="dv">1</span>, critIA<span class="sc">$</span>IA_FIRST_FIXATION_DURATION[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="ot">&lt;-</span> <span class="cn">NA</span>, critIA<span class="sc">$</span>IA_FIRST_FIXATION_DURATION[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i])</span>
+<span id="cb7-14"><a href=""></a>  <span class="fu">ifelse</span>(critIA<span class="sc">$</span>IA_SKIP[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="sc">==</span> <span class="dv">1</span>, critIA<span class="sc">$</span>IA_FIRST_RUN_DWELL_TIME[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="ot">&lt;-</span> <span class="cn">NA</span>, critIA<span class="sc">$</span>IA_FIRST_RUN_DWELL_TIME[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i])</span>
+<span id="cb7-15"><a href=""></a>  <span class="fu">ifelse</span>(critIA<span class="sc">$</span>IA_SKIP[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="sc">==</span> <span class="dv">1</span>, critIA<span class="sc">$</span>IA_REGRESSION_PATH_DURATION[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="ot">&lt;-</span> <span class="cn">NA</span>, critIA<span class="sc">$</span>IA_REGRESSION_PATH_DURATION[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i])</span>
+<span id="cb7-16"><a href=""></a>  <span class="fu">ifelse</span>(critIA<span class="sc">$</span>IA_SKIP[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="sc">==</span> <span class="dv">1</span>, critIA<span class="sc">$</span>IA_REGRESSION_OUT[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i] <span class="ot">&lt;-</span> <span class="cn">NA</span>, critIA<span class="sc">$</span>IA_REGRESSION_OUT[critIA<span class="sc">$</span>IA_SKIP <span class="sc">==</span> i])}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="reading-8" class="slide level2">
 <h2>Reading</h2>
+<p>In jamovi</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/session_5/readjam1.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/session_5/radjam2.JPG" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
 </section>
 <section id="reading-9" class="slide level2">
 <h2>Reading</h2>
+<p>Dependent variables</p>
+<ul>
+<li><strong>Binary (0/1)</strong>
+<ul>
+<li>Probabilities of regression/skipping/re-reading.</li>
+<li>Logistic regression (binomial distribution).</li>
+</ul></li>
+<li><strong>Continuous</strong>
+<ul>
+<li>Reading times (fixation durations in ms), regression/fixation counts.</li>
+<li>Different approaches possible.</li>
+</ul></li>
+</ul>
 </section>
 <section id="reading-10" class="slide level2">
 <h2>Reading</h2>
-</section>
+<p>Continuous DV: reaction (incl.&nbsp;reading) times tend to be positively skewed compared to a normal distribution.</p>
+
+<img data-src="images/session_5/11.png" class="r-stretch quarto-figure-center"><p class="caption">Lo &amp; Andrews, 2015</p></section>
 <section id="reading-11" class="slide level2">
 <h2>Reading</h2>
+<p>Continuous DV: reaction (incl.&nbsp;reading) times tend to be positively skewed compared to a normal distribution.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Option 1: Linear Mixed Models anyway
+<ul>
+<li>Log or inverse transformation to satisfy normality assumption</li>
+<li>Box-Cox procedure (Osborne, 2019)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/session_5/12.png" class="quarto-figure quarto-figure-center"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reading-12" class="slide level2">
 <h2>Reading</h2>
+<p>Continuous DV: reaction (incl.&nbsp;reading) times tend to be positively skewed compared to a normal distribution.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Option 1: Linear Mixed Models anyway
+<ul>
+<li>Log or inverse transformation to satisfy normality assumption</li>
+<li>Box-Cox procedure (Osborne, 2019)</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><br></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/session_5/14.png"></p>
+<figcaption>Puebla &amp; Felser, 2022</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reading-13" class="slide level2">
 <h2>Reading</h2>
+<p>Continuous DV</p>
+<ul>
+<li>Option 1: Linear Mixed Models
+<ul>
+<li>Some researchers combine data transformation with cutting off the outliers: &gt; 2.5 SD from the average per participant and per condition.</li>
+<li>But - potential loss of precious informative data.</li>
+</ul></li>
+</ul>
 </section>
 <section id="reading-14" class="slide level2">
 <h2>Reading</h2>
+<p>Continuous DV</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Option 2: Generalized Linear Mixed Models</li>
+</ul>
+<p>“Rather than transforming the dependent variable to eliminate this deviation from normality, GLMM allows the researcher to select a theoretical distribution that matches the properties of measured RT.” (Lo &amp; Andrews, 2015)</p>
+<ul>
+<li>E.g., Gamma distribution (identity link)</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/session_5/11.png"></p>
+<figcaption>Lo &amp; Andrews, 2015</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="reading-15" class="slide level2">
 <h2>Reading</h2>
-</section>
+<p>Continuous DV</p>
+<ul>
+<li>Option 2: Generalized Linear Mixed Models</li>
+</ul>
+
+<img data-src="images/session_5/15.png" class="r-stretch quarto-figure-center"><p class="caption">Hermena et al., 2021</p></section>
 <section id="reading-16" class="slide level2">
 <h2>Reading</h2>
+<ul>
+<li>Several dependent measures on the same IA
+<ul>
+<li><strong>Correct for multiple comparisons!</strong></li>
+</ul></li>
+<li>Not standard yet although should be
+<ul>
+<li>See von der Malsburg &amp; Angele (2017). False positives and other statistical errors in standard analyses of eye movements in reading.</li>
+</ul></li>
+</ul>
+<p>Bonferroni (most conservative), also Holm-Bonferroni, FDR…</p>
+<ul>
+<li>E.g., 6 measures for the critical IA
+<ul>
+<li><span class="math inline">\(\alpha\)</span> / 6 = 0.05 / 6 = 0.0083</li>
+</ul></li>
+</ul>
 </section>
 <section id="reading-17" class="slide level2">
 <h2>Reading</h2>
+<p>In R</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href=""></a></span>
+<span id="cb8-2"><a href=""></a><span class="do">#### Skipping</span></span>
+<span id="cb8-3"><a href=""></a><span class="fu">summary</span>(skip0 <span class="ot">&lt;-</span> <span class="fu">glmer</span>(IA_SKIP <span class="sc">~</span> condition <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> condition <span class="sc">|</span> item) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> condition <span class="sc">|</span> participant), <span class="at">family =</span> binomial, <span class="at">data =</span> critIA))</span>
+<span id="cb8-4"><a href=""></a></span>
+<span id="cb8-5"><a href=""></a><span class="do">#### First fixation duration</span></span>
+<span id="cb8-6"><a href=""></a><span class="fu">summary</span>(ffd0 <span class="ot">&lt;-</span> <span class="fu">glmer</span>(IA_FIRST_FIXATION_DURATION <span class="sc">~</span> condition <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> condition <span class="sc">|</span> item) <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">+</span> condition <span class="sc">|</span> participant), <span class="at">family =</span> <span class="fu">Gamma</span>(<span class="at">link =</span> <span class="st">"identity"</span>), <span class="at">data =</span> critIA))</span>
+<span id="cb8-7"><a href=""></a></span>
+<span id="cb8-8"><a href=""></a><span class="do">#### Etc. for the rest of the measures and IAs</span></span>
+<span id="cb8-9"><a href=""></a></span>
+<span id="cb8-10"><a href=""></a><span class="co"># Correction for multiple comparisons, e.g., Holm-Bonferroni</span></span>
+<span id="cb8-11"><a href=""></a><span class="co"># For each IA separately</span></span>
+<span id="cb8-12"><a href=""></a><span class="co"># formula: p.adjust(&lt;p-value&gt;, method = &lt;correction method&gt;, n = &lt;number of comparisons&gt;)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="reading-18" class="slide level2">
 <h2>Reading</h2>
-</section></section>
+<p>In jamovi, for one area and one measure at a time</p>
+
+<img data-src="images/session_5/readjam2.JPG" class="quarto-figure quarto-figure-center r-stretch"></section></section>
 <section>
 <section id="wrap-up" class="title-slide slide level1 center">
 <h1>Wrap up</h1>
@@ -1065,11 +1194,8 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
 </section>
 <section id="wrap-up-1" class="slide level2">
 <h2>Wrap up</h2>
-</section>
-<section id="references" class="slide level2 smaller">
-<h2>References</h2>
 <aside class="notes">
-<p>references missing</p>
+<p>anything to say here?</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -1081,6 +1207,49 @@ RIGHT_IA_0_SAMPLE_COUNT_%                   clicked                     d_pos
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="references" class="slide level2 smaller">
+<h2>References</h2>
+<p>Amos, R. M., Seeber, K. G., &amp; Pickering, M. J. (2022). Prediction during simultaneous interpreting: Evidence from the visual-world paradigm. <em>Cognition</em>, 220, 104987.</p>
+<p>Barr, D. J. (2008). Analyzing ’visual world’eyetracking data using multilevel logistic regression. <em>Journal of memory and language, 59</em>(4), 457-474.</p>
+<p>Bosker, H. R., Quené, H., Sanders, T., &amp; De Jong, N. H. (2014). Native ’um’s elicit prediction of low-frequency referents, but non-native ’um’s do not. <em>Journal of memory and language, 75</em>, 104-116.</p>
+<p>Clifton, C., Staub, A., &amp; Rayner, K. (2007). Eye movements in reading words and sentences. In R. P. G. Van Gompel, M. H. Fischer, W. S. Murray, &amp; R. L. Hill (Eds.) <em>Eye Movements: A window on mind and brain</em> (pp.&nbsp;341–371). Oxford: Elsevier.</p>
+<p>Cop, U., Dirix, N., Assche, E. V., Drieghe, D., &amp; Duyck, W. (2017). Reading a book in one or two languages? An eye movement study of cognate facilitation in L1 and L2 reading. <em>Bilingualism: Language and Cognition, 20</em>(4), 747–769. https://doi.org/10.1017/S1366728916000213</p>
+<p>Corley, M. (2010). Making predictions from speech with repairs: Evidence from eye movements. <em>Language and Cognitive Processes, 25</em>(5), 706-727.</p>
+<aside class="notes">
+<p>check references</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="references-1" class="slide level2 smaller">
+<h2>References</h2>
+<p>Dijkgraaf, A., Hartsuiker, R. J., &amp; Duyck, W. (2017). Predicting upcoming information in native-language and non-native-language auditory word recognition. <em>Bilingualism: Language and Cognition, 20</em>(5), 917-930.</p>
+<p>Drieghe, D., &amp; Chan Seem, R. (2022). Parafoveal processing of repeated words during reading. <em>Psychonomic Bulletin &amp; Review, 29</em>(4), 1451–1460. https://doi.org/10.3758/s13423-021-02054-0</p>
+<p>Frisson, S., Harvey, D. R., &amp; Staub, A. (2017). No prediction error cost in reading: Evidence from eye movements. <em>Journal of Memory and Language, 95</em>, 200–214. https://doi.org/10.1016/j.jml.2017.04.007</p>
+<p>Hermena, E. W., Bouamama, S., Liversedge, S. P., &amp; Drieghe, D. (2021). Does diacritics‐based lexical disambiguation modulate word frequency, length, and predictability effects? An eye‐movements investigation of processing Arabic diacritics. <em>PLOS ONE, 16</em>(11), e0259987. https://doi.org/10.1371/journal.pone.0259987</p>
+<p>Ito, A., Pickering, M. J., &amp; Corley, M. (2018). Investigating the time-course of phonological prediction in native and non-native speakers of English: A visual world eye-tracking study. <em>Journal of Memory and Language, 98</em>, 1-11.</p>
+<p>Ito, A., &amp; Knoeferle, P. (2022). Analysing data from the psycholinguistic visual-world paradigm: Comparison of different analysis methods. <em>Behavior Research Methods</em>, 1-33.</p>
+</section>
+<section id="references-2" class="slide level2 smaller">
+<h2>References</h2>
+<p>Lo, S., &amp; Andrews, S. (2015). To transform or not to transform: Using generalized linear mixed models to analyse reaction time data. <em>Frontiers in Psychology, 6</em>. https://www.frontiersin.org/articles/10.3389/fpsyg.2015.01171</p>
+<p>Osborne, J. (2010). Improving your data transformations: Applying the Box-Cox transformation. <em>Practical Assessment, Research, and Evaluation, 15</em>(1). https://doi.org/10.7275/qbpc-gk17</p>
+<p>Puebla, C., &amp; Felser, C. (2022). Discourse Prominence and Antecedent Mis-Retrieval during Native and Non-Native Pronoun Resolution. Discours. Revue de Linguistique, Psycholinguistique et Informatique. A Journal of Linguistics, <em>Psycholinguistics and Computational Linguistics, 29</em>, Article 29. https://doi.org/10.4000/discours.11720</p>
+<p>Staub, A., Rayner, K., Pollatsek, A., Hyönä, J., &amp; Majewski, H. (2007). The time course of plausibility effects on eye movements in reading: Evidence from noun-noun compounds. Journal of Experimental Psychology. <em>Learning, Memory, and Cognition, 33</em>(6), 1162–1169. https://doi.org/10.1037/0278-7393.33.6.1162</p>
+</section>
+<section id="references-3" class="slide level2 smaller">
+<h2>References</h2>
+<p>Stone, K., Lago, S., &amp; Schad, D. J. (2021). Divergence point analyses of visual world data: Applications to bilingual research. <em>Bilingualism: Language and Cognition, 24</em>(5), 833-841.</p>
+<p>von der Malsburg, T., &amp; Angele, B. (2017). False positives and other statistical errors in standard analyses of eye movements in reading. <em>Journal of Memory and Language, 94</em>, 119–133. https://doi.org/10.1016/j.jml.2016.10.003</p>
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_mils.png" class="slide-logo"></p>
 <div class="footer footer-default">
