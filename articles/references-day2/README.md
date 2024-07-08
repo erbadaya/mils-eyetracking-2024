@@ -1,6 +1,5 @@
 This is the entire list of references in the slides of Day 2. NB not all articles are in this list due to availability.
 
-
 Allopenna, P. D., Magnuson, J. S., & Tanenhaus, M. K. (1998). Tracking the time course of spoken word recognition using eye movements: Evidence for continuous mapping models. Journal of memory and language, 38(4), 419-439.
 
 Altmann, G. T., & Kamide, Y. (1999). Incremental interpretation at verbs: Restricting the domain of subsequent reference. Cognition, 73(3), 247-264.
@@ -52,6 +51,8 @@ Mirman, D., Yee, E., Blumstein, S. E., & Magnuson, J. S. (2011). Theories of spo
 Papafragou, A., Hulbert, J., & Trueswell, J. (2008). Does language guide event perception? Evidence from eye movements. Cognition, 108(1), 155-184.
 
 Pistono, A., & Hartsuiker, R. J. (2021). Eye-movements can help disentangle mechanisms underlying disfluency. Language, Cognition and Neuroscience, 36(8), 1038-1055.
+
+Rayner, K., & Duffy, S. A. (1986). Lexical complexity and fixation times in reading: Effects of word frequency, verb complexity, and lexical ambiguity. Memory & Cognition, 14(3), 191–201. https://doi.org/10.3758/BF03197692
 
 Snodgrass, J. G., & Vanderwart, M. (1980). A standardized set of 260 pictures: norms for name agreement, image agreement, familiarity, and visual complexity. Journal of experimental psychology: Human learning and memory, 6(2), 174.
 

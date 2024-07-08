@@ -923,10 +923,11 @@ Your turn now!
 
 -   Visit to the lab (data collection)
 -   Data pre-processing
+    -   Install Data Viewer, R
 
 ## Homework
 
--   Prepare a toy script for tomorrow in OpenSesame
+-   Prepare a toy script for tomorrow
 -   Reading/VWP: your choice!
 
 ## References {.smaller}

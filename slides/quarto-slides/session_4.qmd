@@ -416,11 +416,21 @@ No straight-forward answer. Things to consider:
 
 ## Example data pre-processing
 
-![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} ![Arantzeta et al., 2017](images/session_4/basque.JPG){fig-align="center"} ![Apfelbaum et al., 2021](images/session_4/names.JPG){fig-align="center"}
+VWP
 
-::: notes
-References are not displayed.
-:::
+![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} 
+
+## Example data pre-processing
+
+VWP
+
+![Arantzeta et al., 2017](images/session_4/basque.JPG){height="400px"}
+
+## Example data pre-processing
+
+VWP
+
+![Apfelbaum et al., 2021](images/session_4/names.JPG){fig-align="center"}
 
 ## Interest Period in VWP
 
@@ -523,7 +533,7 @@ Non-eye movement related variables that we need, i.e., most (except participant 
 
 ![](images/session_4/6.png)
 
-## Output: Visual World Paradigm {.smaller}
+## Output: Visual World Paradigm
 
 Time binning report
 
@@ -534,15 +544,16 @@ Information duplicated per Interest Area. If you have two visuals, then two; thr
 -   IA_1_ID, IA_2_ID and so on: The label of the item that was presented in that region (target/distractor).
 -   BIN_SAMPLE_COUNT: The number of samples per bin.
 -   RIGHT_BLINK_SAMPLE_COUNT: Number of samples in a given bin that were a blink.
+
+## Output: Visual World Paradigm
+
+Time binning report
+
 -   RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display.
 -   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on[^1]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
 -   RIGHT_IA_1_SAMPLE_COUNT\_%, RIGHT_IA_2_SAMPLE_COUNT\_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).
 
 [^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded.
-
-::: notes
-split into two slides? too much text here
-:::
 
 ## Output: Visual World Paradigm
 

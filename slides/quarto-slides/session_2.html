@@ -8,10 +8,10 @@
 <link href="session_2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="session_2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="session_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.538">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="Badaya">
-  <title>Eye-tracking - Session 2</title>
+  <title>Visual World Paradigm</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -338,7 +338,7 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Eye-tracking - Session 2</h1>
+  <h1 class="title">Visual World Paradigm</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -1498,12 +1498,12 @@ Badaya
 </section>
 <section id="building-a-vwp-experiment-4" class="slide level2">
 <h2>Building a VWP experiment</h2>
-<p>Example: Manner of delivery (fluent/disfluent) biasing interpretations of deceit (Loy et al., 2017)</p>
+<p>Example: Lexical access (loose adaptation of Allopenna et al., 1996)</p>
 <ul>
-<li>DV: Fixations on either item on the screen.</li>
-<li>IV: Manner of delivery</li>
+<li>DV: Fixations on referred item on the screen.</li>
+<li>IV: Relationship target and other items on the screen (cohort competitor, rhyme competitor, distractor)</li>
 </ul>
-<p>2-images visual array (target v distractor)</p>
+<p>4-images visual array</p>
 </section>
 <section id="building-a-vwp-experiment-5" class="slide level2">
 <h2>Building a VWP experiment</h2>
@@ -1511,12 +1511,12 @@ Badaya
 <div class="column" style="width:50%;">
 <p>The stimuli:</p>
 <ul>
-<li>8 images (4 pairs, because we have 4 trials)</li>
-<li>8 audios (4 carrier sentences, 4 nouns, to ease sending triggers)</li>
+<li>18 images (some pictures are recycled)</li>
+<li>32 audios (16 carrier sentences, 16 nouns, to ease sending triggers)</li>
 </ul>
 <p>You don’t need to send the stimuli outside of the script, everything is in the file!</p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/session_2/stimuli.png"></p>
+<p><img data-src="images/session_2/OS/items.JPG"></p>
 </div>
 </div>
 </section>
@@ -1527,7 +1527,6 @@ Badaya
 <li>We want to counterbalance the position of the target.</li>
 <li>We want to have a preview window and then the audio.</li>
 <li>We want participants to click on an item only after the noun is said.</li>
-<li>We want participants to only be able to click for 5000 ms.</li>
 <li>We want to show participants the instructions at the beginning of the experiment.</li>
 </ul>
 </section>
@@ -1536,10 +1535,7 @@ Badaya
 <p>The constraints of the eye tracker:</p>
 <ul>
 <li>We want three triggers (audio onset - noun onset - trial offset).</li>
-<li>We want two areas of interest (target versus distractor).
-<ul>
-<li>Dynamic values!</li>
-</ul></li>
+<li>We want four areas of interest (target versus distractor).</li>
 <li>We want a drift correction at the beginning of every trial.</li>
 </ul>
 </section>
@@ -1551,22 +1547,28 @@ Badaya
 <li>What does the first row represent?</li>
 </ul>
 
-<img data-src="images/session_2/loopvwp.png" class="r-stretch"></section>
+<img data-src="images/session_2/OS/datasource.jpg" class="r-stretch"></section>
 <section id="building-a-vwp-experiment-9" class="slide level2">
 <h2>Building a VWP experiment</h2>
 <p>The trial sequence</p>
 
-<img data-src="images/session_2/trialsequencevwp.png" class="r-stretch"></section>
+<img data-src="images/session_2/OS/trialsequence.JPG" class="r-stretch"></section>
 <section id="building-a-vwp-experiment-10" class="slide level2">
 <h2>Building a VWP experiment</h2>
-<p>Send Areas of Interest - inline python script</p>
+<p>Send Areas of Interest</p>
+<ul>
+<li>inline python script (but NB label is position, not object on position)</li>
+</ul>
 
-<img data-src="images/session_2/inlinescript1.png" class="r-stretch"></section>
+<img data-src="images/session_2/OS/sendIAs.JPG" class="r-stretch"></section>
 <section id="building-a-vwp-experiment-11" class="slide level2">
 <h2>Building a VWP experiment</h2>
 <p>Dynamic visual stimuli</p>
+<ul>
+<li>NB pseudo-randomised</li>
+</ul>
 
-<img data-src="images/session_2/canvas1.png" class="r-stretch"></section>
+<img data-src="images/session_2/OS/dynamicposition.JPG" class="r-stretch"></section>
 <section id="building-a-vwp-experiment-12" class="slide level2">
 <h2>Building a VWP experiment</h2>
 <p>Auditory stimuli</p>
@@ -1576,16 +1578,20 @@ Badaya
 <li>Cross splicing</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/session_2/audio1.png"></p>
+<p><img data-src="images/session_2/OS/carrier.JPG"></p>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/session_2/audio2.png"></p>
+<p><img data-src="images/session_2/OS/noun.JPG"></p>
 </div>
 </div>
 </section>
 <section id="building-a-vwp" class="slide level2">
 <h2>Building a VWP</h2>
-<p>Send triggers - inline python script</p>
-</section>
+<p>Send triggers</p>
+<ul>
+<li>inline python script (NB order of sending! <em>before</em> the event)</li>
+</ul>
+
+<img data-src="images/session_2/OS/trigger_code.JPG" class="r-stretch"></section>
 <section id="building-a-vwp-experiment-13" class="slide level2">
 <h2>Building a VWP experiment</h2>
 <p>Your turn now!</p>
@@ -1606,12 +1612,15 @@ Badaya
 <section id="plan-for-tomorrow" class="slide level2">
 <h2>Plan for tomorrow</h2>
 <ul>
-<li>Eye-tracking-while-reading with Mariia</li>
+<li>Eye-tracking-while-reading with Mariia
+<ul>
+<li>Recommended reading: Rayner &amp; Duffy (1986)</li>
+</ul></li>
 <li>Coding an experiment in OpenSesame</li>
 </ul>
 </section>
 <section id="homework" class="slide level2">
-<h2>“Homework:</h2>
+<h2>Homework</h2>
 <ul>
 <li>Play around with OpenSesame</li>
 <li>Try to come up with a RQ within your own field where VWP would be useful</li>
@@ -1648,6 +1657,7 @@ Badaya
 <section id="references-3" class="slide level2 smaller">
 <h2>References</h2>
 <p>Pistono, A., &amp; Hartsuiker, R. J. (2023). Can object identification difficulty be predicted based on disfluencies and eye-movements in connected speech?. <em>Plos one, 18</em>(3), e0281589.</p>
+<p>Rayner, K., &amp; Duffy, S. A. (1986). Lexical complexity and fixation times in reading: Effects of word frequency, verb complexity, and lexical ambiguity. <em>Memory &amp; Cognition, 14</em>(3), 191–201. https://doi.org/10.3758/BF03197692</p>
 <p>Slim, M. S., &amp; Hartsuiker, R. J. (2023). Moving visual world experiments online? A web-based replication of Dijkgraaf, Hartsuiker, and Duyck (2017) using PCIbex and WebGazer. js. <em>Behavior Research Methods, 55</em>(7), 3786-3804.</p>
 <p>Tanenhaus, M. K., Spivey-Knowlton, M. J., Eberhard, K. M., &amp; Sedivy, J. C. (1995). Integration of visual and linguistic information in spoken language comprehension. <em>Science, 268</em>(5217), 1632-1634.</p>
 <p>Tanenhaus, M. K., Magnuson, J. S., Dahan, D., &amp; Chambers, C. (2000). Eye movements and lexical access in spoken-language comprehension: Evaluating a linking hypothesis between fixations and linguistic processing. <em>Journal of Psycholinguistic Research,29</em>, 557–580.</p>
@@ -1655,7 +1665,7 @@ Badaya
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_mils.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>Session 2 - Visual World Paradigm</p>
+<p>Visual World Paradigm</p>
 </div>
 </div>
 </section></section>
@@ -1947,6 +1957,24 @@ Badaya
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -1983,7 +2011,11 @@ Badaya
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
