@@ -49,6 +49,10 @@ Data directory (eye data & behavioural data)
 
 ![](images/session_4/projdir2.JPG){fig-align="center"}
 
+:::notes
+QUE: is this how the folder really looks? check! (with background images for reading)
+:::
+
 ## Raw data
 
 The eye-tracker is actually just recording gaze coordinates on the screen (i.e., gaze points) as well as timestamps in each interval (defined by the sampling rate).
@@ -69,6 +73,10 @@ ASCIII files
 
 ![](images/session_4/asciii1.JPG){fig-align="center"}
 
+:::notes
+EDF in text format. DV applies algorithms to convert this to a more user-friendly format. Here: some info about the eye-tracker and coordinates for calibration points.
+:::
+
 ## Raw data
 
 ASCIII files
@@ -77,6 +85,10 @@ ASCIII files
 -   x,y coordinates of gaze
 
 ![](images/session_4/asciii2.png){fig-align="center"}
+
+:::notes
+And this is experimental data. SFIX R - start of a fixation with a timestamp. First column = timestamp in ms. Can you guess the sampling rate? 500 Hz (every 2 ms). Columns 2 and 3: coordinates for the gaze position (X, Y).
+:::
 
 ## Software
 
@@ -132,6 +144,8 @@ EDF files
 
 ## Data processing
 
+All steps:
+
 -   Pre-process data
 -   Export data
 -   Visualization
@@ -140,13 +154,15 @@ EDF files
 
 ## Data processing
 
+Today: 
+
 -   [Pre-process data]{.fg style="--col: #e64173"}
 -   [Export data for analysis]{.fg style="--col: #e64173"}
 -   Visualization
 -   Data wrangling
 -   Analysis
 
-## Data processing
+## Data pre-processing
 
 1.  Import data into software
 2.  Assess data
@@ -169,7 +185,7 @@ Different software = additional steps.
 
 ## Assess data
 
-Divided into two aspects:
+Two aspects:
 
 -   Pre-processing due to eye movements.
     -   Short/long fixations, track loss.
@@ -183,6 +199,10 @@ Divided into two aspects:
 -   Does everything make sense?
 -   Is there anything missing?
     -   Trial-by-trial visual check
+
+:::notes
+Espe: have them think of AIs, missing timestamps, missing participants/trials…
+:::
 
 ## Assess data
 
@@ -206,7 +226,7 @@ Unusable trials
 
 ## Assess data
 
-Common sense + lab log
+Common sense + **lab log**
 
 -   Remove participants (lab log? other exclusion criteria?)
 -   Items to discard
@@ -217,7 +237,7 @@ Common sense + lab log
 
 ## Cleaning
 
--   Keep a log of all changes (trial & participant exclusion)
+-   Keep a **log of all changes** (trial & participant exclusion)
     -   Especially if you did not save the viewing session.
     -   Write up e.g., % trials removed.
 
@@ -241,7 +261,11 @@ Data Viewer has different reports.
 
 ## Interface
 
-![](images/session_4/viewing_dv2.jpg)
+![](images/session_4/viewing_dv2.jpg){height="500px"}
+
+:::aside
+Grouping of trials can be changed (see "Edit").
+:::
 
 ## Interface
 
@@ -249,13 +273,17 @@ Time window of analysis
 
 ![](images/session_4/25.png){fig-align="center"}
 
+:::aside
+Here: named as "sentence" (from stimulus presentation to button press).
+:::
+
 ## Interface
 
 ::: columns
 ::: {.column width="50%"}
 <br>
 
-Make sure your AIs are displayed when setting TW.
+Make sure your AIs are displayed when setting the TW.
 
 -   Preferences \> Data Filters \> Show AIs
 :::
@@ -285,6 +313,10 @@ Make sure your AIs are displayed when setting TW.
 :::
 :::
 
+:::notes
+QUE: check here about the folder and subfolders
+:::
+
 ## Importing data
 
 **Tip** : After importing, save the session (e.g. "data-uncleaned") and then save it again in a separate copy where you'll perform cleaning.
@@ -297,7 +329,47 @@ Note: **You can't go back with DataViewer**
 
 # Visual World Paradigm pipeline
 
-## Check data
+## Interest Period: VWP
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+Make sure your AIs are displayed when setting the TW.
+
+-   Preferences \> Data Filters \> Show AIs
+:::
+
+::: {.column width="50%"}
+![](images/session_4/29.png){fig-align="center"}
+:::
+:::
+
+## Interest Period: VWP
+
+::: columns
+::: {.column width="50%"}
+<br> <br>
+
+Triggers, e.g., target_onset - target_offset
+
+-   Strict matching unchecked
+    -   What if there is a time-out?
+-   Several TWs
+:::
+
+::: {.column width="50%"}
+![](images/session_4/27.png)
+:::
+:::
+
+:::notes
+QUE: time-out? several TWs?
+What about adding 200ms from the onset or smth?
+Is it correct to set TW before visual check?
+:::
+
+## Check data: VWP
 
 Fixations etc. across the screen (both in defined AIs and elsewhere).
 
@@ -309,24 +381,36 @@ Fixations etc. across the screen (both in defined AIs and elsewhere).
     -   Did we code the AIs name?
     -   Did we send triggers?
 
-## Automatized cleaning
+:::notes
+Espe:
+
+The idea here is that in VWP things are harder to clean because we don’t have much to clean, e.g., if a fixation is short, or there are fewer fixations, it can be because of our own manipulation. Most of the time, we deal with these issues when we are exporting data. Note that participants can fixate not only in our AIs, but also elsewhere in the screen and outside of the screen.
+
+For us, deciding how to clean the data is a bit harder, because a participant not looking at an AI does not necessarily not mean that they are not processing speech. There are also individual differences in eye-movements: Eye movements are unconscious, but also strategic: Some people might decide to “not explore” and just perform an action once they hear the word (which is also why how we deliver instructions in VWP is crucial, cause we can also affect their own behaviours), likewise, some populations tend to fixate on ROIs less than others (bilinguals tends to ‘wait’). The only rule that we might thus have is if there is a trial where there are comparatively fewer fixations than on other trials.
+:::
+
+## Automatized cleaning: VWP
 
 What are we thinking of?
 
 -   Track loss: When there is no data of eye recorded (e.g., blinks, participant moves, low validity of the sample)
     -   In DV, marked as blinks -\> no direct report.
 
-## Automatized cleaning
+## Automatized cleaning: VWP
 
-Track loss.
+Track loss
 
 -   Trial report: AVERAGE_BLINK_DURATION, BLINK_DURATION, IP_DURATION
 -   Proportion of track loss computed as: (AVERAGE_BLINK_DURATION \* BLINK_COUNT) / IP_DURATION
     -   But this will also include blinks! So not ideal.
 -   Not common to encounter this step in reports.
-    -   Kids v adults
+    -   Kids vs. adults
 
-## Automatized cleaning
+:::notes
+QUE: kids blink more?
+:::
+
+## Automatized cleaning: VWP
 
 What are we thinking of?
 
@@ -343,26 +427,36 @@ What are we thinking of?
 :::
 :::
 
-## Automatized cleaning
+:::notes
+QUE: time-weighted, stop merging? what is recommended?
+:::
 
-Automatized cleaning done together with exporting data.
+## Automatized cleaning: VWP
 
--   Only samples on IAs, or also including on-screen but not on IAs?
+Remaining automatized cleaning done **together with exporting data**.
+
+-   Only samples on AIs, or also including on-screen but not on AIs?
     -   Trade-off.
     -   Affects how *proportions* are calculated.
     -   But counts are still there.
 
 Familiarity with previous literature is **key**.
 
-## Automatized cleaning
+:::notes
+QUE: is this specific for the binning report?
+:::
+
+## Automatized cleaning: VWP
 
 What does each mean?
 
 -   Across All Samples: Number of samples in each IA/Total number of samples per bin
--   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/sum of samples where fixations laid on IAs and Null interest area.
--   Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/sum of samples where fixations laid on IAs.
+-   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/Sum of samples where fixations landed on IAs and Null interest area[^3].
+-   Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/Sum of samples where fixations landed on IAs.
 
-## Automatized cleaning
+[^3]: Areas where we don't have IAs defined (e.g., the center of the screen).
+
+## Automatized cleaning: VWP
 
 What does this really mean?
 
@@ -392,15 +486,27 @@ Assuming that we have 200 samples in a bin:
 :::
 :::
 
-## Automatized cleaning
+## Automatized cleaning: VWP
 
+-   All On Screen
+    -   Overall increased attention.
 -   All Interest Area Samples
     -   IA_0 = track loss.
     -   Trade-off.
--   All On Screen
-    -   Overall increased attention.
 
-## Automatized cleaning
+:::notes
+QUE: overall increased attention - but still analyzed per IA so why?
+:::
+
+## Automatized cleaning: VWP
+
+IA_0
+
+-   Participants not only look at the images, they also look at areas where we don't have IAs defined (e.g., the center of the screen).
+    -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)
+    -   However! You don't know where exactly they were looking at (only that it was not defined!)
+
+## Automatized cleaning: VWP
 
 What do we count as samples for analysis?
 
@@ -414,59 +520,19 @@ No straight-forward answer. Things to consider:
 -   Only fixations: Proportions more 'true' to fixation behaviour **but** also less 'true' to actual behaviour.
 -   Only bins with fixations: Loss of data.
 
-## Example data pre-processing
+## Example data pre-processing: VWP
 
-VWP
+![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"}
 
-![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} 
-
-## Example data pre-processing
-
-VWP
+## Example data pre-processing: VWP
 
 ![Arantzeta et al., 2017](images/session_4/basque.JPG){height="400px"}
 
-## Example data pre-processing
-
-VWP
+## Example data pre-processing: VWP
 
 ![Apfelbaum et al., 2021](images/session_4/names.JPG){fig-align="center"}
 
-## Interest Period in VWP
-
-::: columns
-::: {.column width="50%"}
-<br> <br>
-
-Triggers, e.g., target_onset - target_offset
-
--   Strict matching unchecked
-    -   What if there is a time-out?
--   Several TWs
-:::
-
-::: {.column width="50%"}
-![](images/session_4/27.png)
-:::
-:::
-
-## Interest Period in VWP
-
-::: columns
-::: {.column width="50%"}
-<br>
-
-Make sure your AIs are displayed when setting TW.
-
--   Preferences \> Data Filters \> Show AIs
-:::
-
-::: {.column width="50%"}
-![](images/session_4/29.png){fig-align="center"}
-:::
-:::
-
-## Exporting: Visual World Paradigm
+## Exporting: VWP
 
 Recap: Fixations *over a scene at a particular time*.
 
@@ -483,9 +549,18 @@ Recap: Fixations *over a scene at a particular time*.
 :::
 :::
 
-## Exporting: Visual World Paradigm
+:::notes
+QUE: wym by keep AIs? where?
+:::
+
+## Exporting: VWP
 
 Common reports: Time binning and Interest Area
+
+-   But time binning allows to measure proportions of fixations and saccades *across time*
+    -   We can export info pertaining to a specific AI by doing some data wrangling manually
+
+## Exporting: VWP
 
 Time course (binning) analysis report
 
@@ -496,13 +571,28 @@ Time course (binning) analysis report
 
 ![](images/session_4/11.png){fig-align="center"}
 
-## Exporting: Visual World Paradigm
+## Exporting: VWP
+
+Recap: sampling rate of X Hz = X number of samples per second.
+
+-   Higher sample rate, less space between samples. 
+-   1000 Hz is a 1000 sample (one per ms). We can create a bin of 20 ms, that comprises 20 samples.
+
+-   500 Hz would yield 10 samples in a 20 ms bin.
+
+-   Sampling rate also limits the size of our bins!
+    -   If we gather a sample every 25 ms (i.e., tracking at 40 Hz, 1000/40), we cannot make 20 ms bins.
+
+## Exporting: VWP
+
+Time binning report
 
 ::: columns
 ::: {.column width="50%"}
 -   Choose variables (or just export all)
 -   Define the size of your bin
 -   On-screen events only (unless you want that information)
+-   E.g., samples in fixations and saccades
 -   Separate report unchecked
 :::
 
@@ -511,11 +601,11 @@ Time course (binning) analysis report
 :::
 :::
 
-::: notes
-suggestion re order of slides: wouldn't the all-samples info come more naturally after this part?
+:::notes
+Espe: they might ask you how come the report doesn't include saccades if you can select the data here: the answer is that here you are deciding whether to count what happened during a saccade. It’s a bit difficult to explain, the important bit is that when they write it up they need to report (if they are analysing fixations) if they included samples in saccades or not.
 :::
 
-## Output: Visual World Paradigm
+## Output: VWP
 
 Time binning report
 
@@ -525,7 +615,7 @@ BIN_INDEX: Which bin it is. This will help us figure out time (by taking the bin
 
 ![](images/session_4/7.png)
 
-## Output: Visual World Paradigm
+## Output: VWP
 
 Time binning report
 
@@ -533,7 +623,7 @@ Non-eye movement related variables that we need, i.e., most (except participant 
 
 ![](images/session_4/6.png)
 
-## Output: Visual World Paradigm
+## Output: VWP
 
 Time binning report
 
@@ -545,7 +635,7 @@ Information duplicated per Interest Area. If you have two visuals, then two; thr
 -   BIN_SAMPLE_COUNT: The number of samples per bin.
 -   RIGHT_BLINK_SAMPLE_COUNT: Number of samples in a given bin that were a blink.
 
-## Output: Visual World Paradigm
+## Output: VWP
 
 Time binning report
 
@@ -555,25 +645,43 @@ Time binning report
 
 [^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded.
 
-## Output: Visual World Paradigm
-
-But what is 'IA_0'?
-
--   Participants not only look at the images, they also look at areas where we don't have IAs defined (e.g., the center of the screen).
-    -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)
-    -   However! You don't know where exactly they were looking at (only that it was not defined!)
-
-::: notes
-suggestion re order of slides: doesn't this part belong somewhere earlier? you already mention IA_0 when discussing the all-samples thing
-:::
-
-## Output: Visual World Paradigm
+## Output: VWP
 
 .txt → import in Excel and save as .xlsx or .csv
 
 ![](images/session_4/5.png)
 
 # Reading pipeline
+
+## Interest Period: Reading
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+Make sure your AIs are displayed when setting the TW.
+
+-   Preferences \> Data Filters \> Show AIs
+:::
+
+::: {.column width="50%"}
+![](images/session_4/29.png){fig-align="center"}
+:::
+:::
+
+## Interest period: Reading
+
+::: columns
+::: {.column width="50%"}
+<br>
+
+From stimulus presentation to button press (trial end)
+:::
+
+::: {.column width="50%"}
+![](images/session_4/28.png){fig-align="center"}
+:::
+:::
 
 ## Check data: Reading
 
@@ -694,7 +802,7 @@ These are settings from D. Drieghe's lab (non-standard)!
 
 <sup>Stage 1: merge fix shorter than 80 ms and less than 0.5 degrees away from each other. Stage 2: merge remaining fix shorter than 40 ms and less than 1.25 degrees away from each other. Finally (Stage 4), remove all remaining fixations that are shorter than 80 ms or longer than 800 ms. Also, remove all fixations that fall outside the IAs.</sup>
 
-## Example pre-processing in reading
+## Example pre-processing: Reading
 
 Howard et al., 2017
 
@@ -710,7 +818,7 @@ Howard et al., 2017
 :::
 :::
 
-## Example pre-processing in reading
+## Example pre-processing: Reading
 
 Puebla & Felser, 2022
 
@@ -718,7 +826,7 @@ Puebla & Felser, 2022
 
 ![](images/session_4/14.png){fig-align="center"}
 
-## Example pre-processing in reading
+## Example pre-processing: Reading
 
 Holmqvist et al. (2022). Eye tracking: Empirical foundations for a minimal reporting guideline.[^2]
 
@@ -776,7 +884,7 @@ Interest Area report
 
 -   Here all IAs are listed; for analysis, we look at each IA separately!
 
-## Regions skipped on first pass
+## Reading: Regions skipped on first pass
 
 After we exported our Interest Area report and before starting the analysis:
 
@@ -790,7 +898,7 @@ After we exported our Interest Area report and before starting the analysis:
 
 -   First-pass measures for sure: e.g., first fixation duration, gaze duration, first-pass regressions-out, regression-path duration.
 
-## Regions skipped completely
+## Reading: Regions skipped completely
 
 If IA_SKIP = 1, but we don't want to just assign *NA* to all measures indiscriminately:
 
