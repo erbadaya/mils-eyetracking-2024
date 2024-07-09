@@ -50,7 +50,7 @@ Data directory (eye data & behavioural data)
 ![](images/session_4/projdir2.JPG){fig-align="center"}
 
 :::notes
-QUE: is this how the folder really looks? check! (with background images for reading)
+QUE: is this how the folder really looks? check! (with background images for reading). probably. copy entire experiment folder for OS as well
 :::
 
 ## Raw data
@@ -177,7 +177,7 @@ Today:
 Different software = different data files.
 
 -   Data Viewer: .edf files
--   R packages: ASCIII files, reports from DV.
+-   R packages: ASCIII files; reports from DV
 
 Different software = additional steps.
 
@@ -208,7 +208,7 @@ Espe: have them think of AIs, missing timestamps, missing participants/trials…
 
 Unusable participants
 
--   Rare?
+-   Rare
 -   File corrupted?
     -   Lab log
     -   Example: A participant blinked too much during the experiment, too many unusable trials.
@@ -219,7 +219,7 @@ Unusable participants
 Unusable trials
 
 -   More common
--   Poor calibration (cf. drift correction)
+-   Poor calibration (cf. drift correction)?
     -   Umbrella term: "track loss" (could mean anything: participant sneezed, distraction, too fast)
 -   Field-specific
 -   Lab log!
@@ -314,7 +314,7 @@ Make sure your AIs are displayed when setting the TW.
 :::
 
 :::notes
-QUE: check here about the folder and subfolders
+QUE: check here about the folder and subfolders. see above
 :::
 
 ## Importing data
@@ -364,9 +364,9 @@ Triggers, e.g., target_onset - target_offset
 :::
 
 :::notes
-QUE: time-out? several TWs?
-What about adding 200ms from the onset or smth?
-Is it correct to set TW before visual check?
+QUE: time-out? (TIME event offset + blank instead of target_offset trigger). several TWs - then several periods
+What about adding 200ms from the onset or smth? (yes).
+Is it correct to set TW before visual check? YES.
 :::
 
 ## Check data: VWP
@@ -407,7 +407,7 @@ Track loss
     -   Kids vs. adults
 
 :::notes
-QUE: kids blink more?
+QUE: kids blink more? yes. noisy data. vwp no established criterion how to clean. should be standard for all?
 :::
 
 ## Automatized cleaning: VWP
@@ -428,7 +428,7 @@ What are we thinking of?
 :::
 
 :::notes
-QUE: time-weighted, stop merging? what is recommended?
+QUE: yes, stop merging option. Espe never does anything of this. We don't recommend anything, we give options.
 :::
 
 ## Automatized cleaning: VWP
@@ -443,7 +443,7 @@ Remaining automatized cleaning done **together with exporting data**.
 Familiarity with previous literature is **key**.
 
 :::notes
-QUE: is this specific for the binning report?
+QUE: is this specific for the binning report? probably yes.
 :::
 
 ## Automatized cleaning: VWP
@@ -495,7 +495,7 @@ Assuming that we have 200 samples in a bin:
     -   Trade-off.
 
 :::notes
-QUE: overall increased attention - but still analyzed per IA so why?
+QUE: overall increased attention - but still analyzed per IA so why? they look more at pictures than screen in general. they still look more at 1 picture than at the other but Magnitude of effect differs depending on report
 :::
 
 ## Automatized cleaning: VWP
@@ -550,7 +550,7 @@ Recap: Fixations *over a scene at a particular time*.
 :::
 
 :::notes
-QUE: wym by keep AIs? where?
+QUE: wym by keep AIs? where? data filters (show IA) - BEFORE TIME WINDOW!!!
 :::
 
 ## Exporting: VWP
