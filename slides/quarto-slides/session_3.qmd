@@ -308,7 +308,9 @@ Traditionally,
 -   **Early measures**: highly automatic word *recognition* and lexical access processes
 -   **Late measures**: more conscious, controlled, strategic processes, such as syntactic and semantic *integration*
 
-NB: Different types of linguistic manipulations (e.g., lexical vs. syntactic) can produce effects in the same reading measures, so it's conventional to report both early and late measures.
+:::aside
+Different types of linguistic manipulations (e.g., lexical vs. syntactic) can produce effects in the same measure --\> report both early and late measures.
+:::
 
 ## Early measures
 
@@ -402,7 +404,7 @@ Recap:
 
 ![From Carroll, 2017](images/session_3/reiterate.JPG)
 
-## Measures: exercise
+## Measures: exercise {.smaller}
 
 ::: {r-stack}
 ![](images/session_3/exercise.jpg){fig-align="center" width="900"}
@@ -420,7 +422,7 @@ Recap:
 3 3 yes(two) 3+4+5+6+7 5+7 3+5+7 three
 :::
 
-## Measures: exercise
+## Measures: exercise {.smaller}
 
 ::: {r-stack}
 ![](images/session_3/exercise.jpg){fig-align="center" width="900"}
@@ -800,7 +802,7 @@ Let's take a break!
 
 ## Building a reading experiment
 
-We are going to code an eye-tracking during reading experiment on OS.
+We are going to code an eye-tracking during reading experiment in OpenSesame.
 
 -   Many of the things we learnt yesterday can be used today!
     -   Especially, we will use the same eye-tracking plug-ins

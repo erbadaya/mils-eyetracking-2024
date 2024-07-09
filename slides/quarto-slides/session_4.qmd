@@ -418,7 +418,7 @@ No straight-forward answer. Things to consider:
 
 VWP
 
-![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"} 
+![Knoeferle & Crocker, 2006](images/session_4/knoerfele1.JPG){fig-align="center"}
 
 ## Example data pre-processing
 
