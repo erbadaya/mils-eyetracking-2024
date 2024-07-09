@@ -1,5 +1,5 @@
 ---
-title: "Eye-tracking - Session 2"
+title: "Visual World Paradigm"
 author: "Badaya"
 format: 
    clean-revealjs:
@@ -1094,7 +1094,7 @@ Your turn now!
 ## Plan for tomorrow
 
 -   Eye-tracking-while-reading with Mariia
-    - Recommended reading: Rayner & Duffy (1986)
+    -   Recommended reading: Rayner & Duffy (1986)
 -   Coding an experiment in OpenSesame
 
 ## Homework
@@ -1149,6 +1149,8 @@ Pickering, M. J., & Gambi, C. (2018). Predicting while comprehending language: A
 ## References {.smaller}
 
 Pistono, A., & Hartsuiker, R. J. (2023). Can object identification difficulty be predicted based on disfluencies and eye-movements in connected speech?. *Plos one, 18*(3), e0281589.
+
+Rayner, K., & Duffy, S. A. (1986). Lexical complexity and fixation times in reading: Effects of word frequency, verb complexity, and lexical ambiguity. *Memory & Cognition, 14*(3), 191–201. https://doi.org/10.3758/BF03197692
 
 Slim, M. S., & Hartsuiker, R. J. (2023). Moving visual world experiments online? A web-based replication of Dijkgraaf, Hartsuiker, and Duyck (2017) using PCIbex and WebGazer. js. *Behavior Research Methods, 55*(7), 3786-3804.
 

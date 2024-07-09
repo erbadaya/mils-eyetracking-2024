@@ -61,7 +61,6 @@ Learning objectives
 
 ## Overview of the course
 
-
 Materials (all available on Ufora and GitHub)
 
 -   Slides
@@ -88,10 +87,10 @@ Requirements
 ## Overview of the course
 
 | Date  |              Content              |                 Materials                  |
-|:-------------:|:-----------------------:|:------------------------------:|
+|:----------------:|:----------------------:|:-----------------------------:|
 | Day 1 |   Introduction to eye-tracking    |                    None                    |
 | Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, OpenSesame |
-| Day 3 |              Reading              |                    RR_2                    |
+| Day 3 |              Reading              |                    RR_2, OpenSesame                    |
 | Day 4 | Lab session & Data pre-processing |            DataViewer, datasets            |
 | Day 5 |  Data visualization and analysis  |                R, datasets                 |
 
@@ -471,17 +470,13 @@ Pupil dilates for reasons other than light, e.g., [cognitive effort]{.fg style="
 ------------------------------------------------------------------------
 
 ::: center-xy
-
 How do you think these measures can be used in language research?
-
 :::
 
 ------------------------------------------------------------------------
 
 ::: center-xy
-
 Questions so far? Thoughts?
-
 :::
 
 # How do eye-trackers work?
@@ -825,9 +820,7 @@ Combination with other techniques.
 ------------------------------------------------------------------------
 
 ::: center-xy
-
 Let's take a break!
-
 :::
 
 # An eye-tracking experiment
@@ -1410,17 +1403,13 @@ Both verbal and non-verbal features exist when we produce and comprehend spoken 
 
 Visual World Paradigm
 
-
-:::columns
-:::{.column width=50%}
-
+::: columns
+::: {.column width="50%"}
 Treasure-hunt task
-
 :::
-:::{.column width=50%}
 
+::: {.column width="50%"}
 ![](images/session_1/example_loy2017.JPG)
-
 :::
 :::
 
@@ -1428,15 +1417,13 @@ Treasure-hunt task
 
 Visual World Paradigm
 
-:::columns
-:::{.column width=50%}
+::: columns
+::: {.column width="50%"}
 {{< video images/session_1/fluent-native.mp4 height="400" >}}
-
 :::
-:::{.column width=50%}
 
+::: {.column width="50%"}
 {{< video images/session_1/disfluent-native.mp4 height="400" >}}
-
 :::
 :::
 
