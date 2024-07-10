@@ -141,7 +141,7 @@ Now we have the x, y coordinates of the text, and its width and height on the sc
 Firstly, we want to have a space between the two words. To do that, we are going to create an invisible character (we do so by setting it to the same colour as the background). The logic is the same: We draw it, and then we draw a rectangle around it. We will do this four times (one per area of interest except for the last one).
 
 ```
-reading_canvas['_1'] = Text("n", center = False, x = -416 + w1, y = 0, color = 'white') #note that it takes as the start -416 _plus the size of our first area of interest
+reading_canvas['_1'] = Text("n", center = False, x = -416 + w1, y = 0, color = 'white') #note that it takes as the start -416 _plus_ the size of our first area of interest
 
 x1u, y1u, w1u, h1u = reading_canvas['_1'].rect
 
@@ -249,8 +249,7 @@ self.experiment.window.flip()
 
 6.1.4. Log variables in the .edf file
 
-At the end of each trial we want to save information in the .edf file (e.g., what trial it was, condition, etc.). We do this with the pygaze log plugin ![](images/pluginlog.JPG). Note that although you could automatically log all variables (by selecting this option), it is not recommendable: First, because you will save unnecessary information and secondly - and most importantly - because it can disrupt your intertrial interval: Logging in _all_ variables creates a delay. Therefore, you should write only record those variables that are of interest for you by using the script in this plugin and the following syntax: ```
-!V TRIAL_VAR variable [variable]```, where the variable within brackets is the name of the variable in the experiment, and the variable outside is the name with which we want to save it in the eye-tracking data. 
+At the end of each trial we want to save information in the .edf file (e.g., what trial it was, condition, etc.). We do this with the pygaze log plugin ![](images/pluginlog.JPG). Note that although you could automatically log all variables (by selecting this option), it is not recommendable: First, because you will save unnecessary information and secondly - and most importantly - because it can disrupt your intertrial interval: Logging in _all_ variables creates a delay. Therefore, you should only record those variables that are of interest for you by using the script in this plugin and the following syntax: ```!V TRIAL_VAR variable [variable]```, where the variable within brackets is the name of the variable in the experiment, and the variable outside is the name with which we want to save it in the eye-tracking data.
 
 In this experiment, for example, I want to save sentence, condition, counterbalance, type and identifier, so I write down the following:
 
@@ -273,10 +272,10 @@ At the end of each trial, we stop recording eye-tracking data![](images/pluginst
 
 Its architecture is the same as that of the first loop, the only thing that changes are the stimuli we include.
 
+Note that participants will only see the loop group1 or group2 depending on what we select in the counterbalance form. Those in group1 will skip the group2 loop, and the inverse. However, the trial sequence in group1 and group2 loops is identical: Unless you want to make any difference in trials per counterbalancing group, you may want to copy and paste the sequence of one group to the other.
+
 8. Goodbye screen
 
-Once our participants have gone through all the selected rows of our loop (e.g., all, a section, depending on what we specify), we want to show them a goodbye screen to thank them for their time and inform them the experiment is over. We do this with a canvas plugin.
-
-Note that participants will only see the loop group1 or group2 depending on what we select in the counterbalance form. Those in group1 will skip the group2 loop, and the inverse. However, the trial sequence in group1 and group2 loops is identical: Unless you want to make any difference in trials per counterbalancing group, you may want to copy and paste the sequence of one group to the other.
+Once our participants have gone through all the selected rows of our loop (e.g., all of them, or a section, depending on what we specify), we want to show them a goodbye screen to thank them for their time and inform them that the experiment is over. We do this with a canvas plugin.
 
 Happy coding!

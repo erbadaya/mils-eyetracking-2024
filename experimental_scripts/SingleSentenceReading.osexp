@@ -196,7 +196,7 @@ define inline_script import_modules
 	set description "Executes Python code"
 	___run__
 	import os
-	import pylink # remember that you need to download this beforehand
+	import pylink # remember that you need to install this beforehand in the python console
 	global ppt_folder
 	
 	ppt_folder = os.makedirs(os.path.join(exp.experiment_path, "sub_" + str(var.subject_nr))) # first, we create the directory with the function os.makedirs, which takes the directory of where our experimental script is saved, and adds a new folder named "sub_" and the participant number, saved in "subject_nr"
