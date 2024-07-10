@@ -6,6 +6,8 @@ This script will walk you through the SingleSentenceReading.OS script and its ey
 - Change the position of the drift correct.
 - Send each trial's set up (i.e., the image) to the tracker to the .edf file for later data pre-processing.
 
+Note that to take screenshots of each trial for later visualization of our data we are using the module _pylink_. You will need to install it (we will discuss how to in class).
+
 # The experiment
 
 This experiment is based on [Rayner and Duffy's (1986)](https://link.springer.com/article/10.3758/bf03197692) Experiment 1, where they examined fixation times in reading as a function of word frequency, verb complexity and lexical ambiguity. In this case, we are working only with the materials where they manipulated word frequency: either high or low (e.g., The slow _music_ captured her attention v The slow _waltz_ captured her attention). There were three areas of interest: the word preceding the target word (in italics), the target word, and the word following the target word. We additionally add two more: The first word of the sentence and the rest of the sentence (i.e., five areas of interest). **Note** that this divide will vary depending on the specifics of each reading experiment, here we are doing it this way for learning purposes. Likewise, these areas of interest could be smaller or larger vertically. 
