@@ -157,39 +157,39 @@ The syntax is the same, but we add the width of our first area of interest and t
 x, y, w2, h2 = reading_canvas['IA2'].rect
 ```
 
-Once we have done this five times (one per area of interest), we can now also calculate the spaces for the areas of interest to send to the tracker. Remember that the coordinate system in Data Viewer (and for EyeLink) differs from that of OpenSesame: While 0,0 for the latter is the middle of the screen, 0,0 in EyeLink is the top left corner of the screen. 
+Once we have done this five times (one per area of interest), we can now also calculate the spaces for the areas of interest to send to the tracker. Remember that the coordinate system in Data Viewer (and for EyeLink) differs from that of OpenSesame: While 0,0 for the latter is the middle of the screen, 0,0 in EyeLink is the top left corner of the screen. This means that to coordinates increase as we move to the right and to the bottom of the screen. 
 
 To define areas of interest, we pass to the tracker the coordinates of a rectangle (in this case). Specifically, we pass the coordinate of the center of the left side, center of the top side, center of the right side, and center of the bottom side. Therefore, to get these coordinates, we also need to know the width and height the text we are presenting occupies on the screen.
 
-This means we need to transform our -416 (for the x-coordinate) to the new coordinate system: In this case, it is 544 (monitor width = 1920, middle = 960, 960-416 = 544). We also need to transform the y-coordinate (0), which becomes 540 (monitor height = 1080, middle = 540). For the widths of each area of interest, we need to do calculations akin to those we did for getting the starting point on the screen for each area of interest (note that you also need to add the invisible spaces!). We want the area of interest to stop between the space between the two words, so we do that by adding _half_ of the white space. For the heights of each area of interest, we need to work with the hX values we got and add them to 540.
+This means we need to transform our -416 (for the x-coordinate) to the new coordinate system: In this case, it is 544 (monitor width = 1920, middle = 960, 960-416 = 544). We also need to transform the y-coordinate (0), which becomes 540 (monitor height = 1080, middle = 540). For the widths of each area of interest, we need to do calculations akin to those we did for getting the starting point on the screen for each area of interest (note that you also need to add the invisible spaces!). We want the area of interest to stop between the space between the two words, so we do that by adding _half_ of the white space. For the heights of each area of interest, we need to work with the hX values we got. Because of how text is rendered in OpenSesame, our y-coordinate does not refer to the vertical center of the text, but rather to its top. This means that 540 is our top-coordinate for our area of interest. To get the bottom coordinate, we add the hX value of each area of interest. Further, for pre-processing (cf. vertical correction), we will add 20 pixels more.
 
 ```
 start_IA_left = 544
 
 part1_left = start_IA_left 
 part1_right = start_IA_left + w1 + w1u/2
-part1_top = 540 + h1
-part1_bottom = 540 - h1
+part1_top = 540 - 20
+part1_bottom = 540 + h1 + 20
 
 part2_left = start_IA_left + w1 + w1u/2
 part2_right = start_IA_left + w1 + w1u + w2 + w2u/2
-part2_top = 540 + h2
-part2_bottom = 540 - h2
+part2_top = 540 - 20
+part2_bottom = 540 + h2 + 20
 
 part3_left = start_IA_left + w1 + w1u + w2 + w2u/2
 part3_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2
-part3_top = 540 + h3
-part3_bottom = 540 - h3
+part3_top = 540 - 20
+part3_bottom = 540 + h3 + 20
 
 part4_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2 
 part4_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
-part4_top = 540 + h4
-part4_bottom = 540 - h4
+part4_top = 540 - 20
+part4_bottom = 540 + h4 20
 
 part5_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
 part5_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4+ w4u + w5
-part5_top = 540 + h5
-part5_bottom = 540 - h5
+part5_top = 540 - h5
+part5_bottom = 540 + h5 + 20
 ```
 
 We can now draw our text on the screen:
@@ -228,10 +228,13 @@ filepath = os.path.join(ppt_folder, scn_name)
 self.experiment.window.saveMovieFrames(filepath)
 ```
 
-Now that we have taken the screenshot and saved it in the folder, we can send it to the tracker. We do this with the syntax ```sendMessage('!V IMGLOAD FILL %s' % filepath)```.
+Now that we have taken the screenshot and saved it in the folder, we can send it to the tracker. However, our ```filepath``` includes a path that is specific to the machine where the experiment is run. Most likely, you will take the data from the lab computer and explore it in your own computer. This means that your software might not be able to link the edf to the image: After all, that path does not exist in your computer. To work around this issue, we are going to create a new path, called ```file_foredf``` that contains the information of the path that will remian the same regardless of the computer where it is: the folder of the subject and the name of the image. We create this path with the ```os``` module, and then we send it to the tracker as a background image. We do this with the syntax ```sendMessage('!V IMGLOAD FILL %s' % file_toedf)```.
 Further, ```sendMessage()``` belongs to the ```pylink``` module, meaning that we need to import it (again, done in the import_module plugin) and create an eye-tracker object.
 
 ```
+
+file_foredf = os.path.join("sub_"+ str(var.subject_nr), scn_name)
+
 el = pylink.getEYELINK()
 
 bgcolor = (116, 116, 116)
