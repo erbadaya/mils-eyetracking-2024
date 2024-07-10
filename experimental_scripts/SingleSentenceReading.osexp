@@ -24,7 +24,7 @@ set foreground black
 set font_underline no
 set font_size 18
 set font_italic False
-set font_family sans
+set font_family mono
 set font_bold False
 set experiment_path "/Users/mariiabaltais/Library/CloudStorage/OneDrive-UGent/mils-eyetracking-2024/experimental_scripts"
 set disable_garbage_collection False
@@ -196,7 +196,7 @@ define inline_script import_modules
 	set description "Executes Python code"
 	___run__
 	import os
-	import pylink
+	import pylink # remember that you need to download this beforehand
 	global ppt_folder
 	
 	ppt_folder = os.makedirs(os.path.join(exp.experiment_path, "sub_" + str(var.subject_nr))) # first, we create the directory with the function os.makedirs, which takes the directory of where our experimental script is saved, and adds a new folder named "sub_" and the participant number, saved in "subject_nr"
@@ -211,7 +211,7 @@ define inline_script import_modules
 	set _prepare ""
 
 define pygaze_init initialise_eyetracker
-	set tracker_type "Simple dummy"
+	set tracker_type EyeLink
 	set tobiiglasses_udpport 49152
 	set tobiiglasses_address "192.168.71.50"
 	set smi_send_port 4444
