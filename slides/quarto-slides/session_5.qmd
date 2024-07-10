@@ -563,7 +563,7 @@ Sometimes our questions revolve around specific times, or rate of increase/decre
 
 **Analysis per interest area!**
 
-- Create data subsets
+-   Create data subsets
 
 If IA skipped on first pass --\> assign *NA* to certain measures
 
@@ -669,7 +669,7 @@ Continuous DV
 
 "Rather than transforming the dependent variable to eliminate this deviation from normality, GLMM allows the researcher to select a theoretical distribution that matches the properties of measured RT." (Lo & Andrews, 2015)
 
-- E.g., Gamma distribution (identity link)
+-   E.g., Gamma distribution (identity link)
 :::
 
 ::: {.column width="50%"}
@@ -688,14 +688,13 @@ Continuous DV
 ## Reading
 
 -   Several dependent measures on the same IA
-    - **Correct for multiple comparisons!**
+    -   **Correct for multiple comparisons!**
+-   Not standard yet although should be
+    -   See von der Malsburg & Angele (2017). False positives and other statistical errors in standard analyses of eye movements in reading.
 
-- Not standard yet although should be
-    - See von der Malsburg & Angele (2017). False positives and other statistical errors in standard analyses of eye movements in reading.
+Bonferroni (most conservative), also Holm-Bonferroni, FDR...
 
-Bonferroni (most conservative), also Holm-Bonferroni, FDR... 
-
-- E.g., 6 measures for the critical IA
+-   E.g., 6 measures for the critical IA
     -   $\alpha$ / 6 = 0.05 / 6 = `r round(0.05/6,4)`
 
 ## Reading
@@ -727,7 +726,7 @@ In jamovi, for one area and one measure at a time
 
 ## Wrap up
 
-:::notes
+::: notes
 anything to say here?
 :::
 
@@ -746,7 +745,7 @@ Cop, U., Dirix, N., Assche, E. V., Drieghe, D., & Duyck, W. (2017). Reading a bo
 Corley, M. (2010). Making predictions from speech with repairs: Evidence from eye movements. *Language and Cognitive Processes, 25*(5), 706-727.
 
 ::: notes
-check references 
+check references
 :::
 
 ## References {.smaller}
