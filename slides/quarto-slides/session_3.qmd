@@ -915,7 +915,7 @@ Record the areas of interest
 
 Take a screenshot of the screen + send it to the tracker
 
-![The run tab](images/session_3/OS/sendIAs.JPG)
+![The run tab](images/session_3sendimages.JPG.JPG)
 
 ## Building a reading experiment
 
