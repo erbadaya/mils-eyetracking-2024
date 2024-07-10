@@ -247,12 +247,12 @@ Boland, 2004: The eyes do not leave a word until it has been structurally integr
 
 -   Too strong?
 
-    -   Pickering et al. (2004): some aspects of processing take more time than the eye is “prepared to wait”
+    -   Pickering et al. (2004): some aspects of processing take more time than the eye is "prepared to wait"
 
     -   Mitchell et al. (2008): regressions are not only linguistically supervised
 
 ::: notes
-Pickering et al. (2004): some aspects of lexical, syntactic, and semantic processing do (largely) respect the immediacy and eye-mind assumptions (with some important caveats), but that **many aspects of sentence interpretation are somewhat delayed**. Semantic processing may not all occur “at once” (readers do look at difficult words such as Finland - in "A lot of Americans protested during Finland", - but they largely do this during later processing rather than during first pass).
+Pickering et al. (2004): some aspects of lexical, syntactic, and semantic processing do (largely) respect the immediacy and eye-mind assumptions (with some important caveats), but that **many aspects of sentence interpretation are somewhat delayed**. Semantic processing may not all occur "at once" (readers do look at difficult words such as Finland - in "A lot of Americans protested during Finland", - but they largely do this during later processing rather than during first pass).
 
 Mitchell et al. (2008): the purpose of regressive fixations (and, indeed, re-fixations on the same word) is not to refresh the evidence but merely a delaying tactic used to provide "time out" for as-yet-incomplete parsing operations (to postpone new input). Linguistic and other forms of eye-movement control are rather loosely-, not tightly-coupled.
 :::
@@ -308,7 +308,7 @@ Traditionally,
 -   **Early measures**: highly automatic word *recognition* and lexical access processes
 -   **Late measures**: more conscious, controlled, strategic processes, such as syntactic and semantic *integration*
 
-:::aside
+::: aside
 Different types of linguistic manipulations (e.g., lexical vs. syntactic) can produce effects in the same measure --\> report both early and late measures.
 :::
 
@@ -831,6 +831,13 @@ The constraints of the eye tracker:
 -   We want five areas of interest
 -   We want a drift correction at the beginning of every trial
     -   Drift should appear where the sentence starts
+
+## Building a reading experiment
+
+Font and space
+
+![](images/session_3/OS/font.JPG)
+
 
 ## Building a reading experiment
 
