@@ -69,7 +69,7 @@ ASCIII files
 
 ![](images/session_4/asciii1.JPG){fig-align="center"}
 
-:::notes
+::: notes
 EDF in text format. DV applies algorithms to convert this to a more user-friendly format. Here: some info about the eye-tracker and coordinates for calibration points.
 :::
 
@@ -82,7 +82,7 @@ ASCIII files
 
 ![](images/session_4/asciii2.png){fig-align="center"}
 
-:::notes
+::: notes
 And this is experimental data. SFIX R - start of a fixation with a timestamp. First column = timestamp in ms. Can you guess the sampling rate? 500 Hz (every 2 ms). Columns 2 and 3: coordinates for the gaze position (X, Y).
 :::
 
@@ -150,7 +150,7 @@ All steps:
 
 ## Data processing
 
-Today: 
+Today:
 
 -   [Pre-process data]{.fg style="--col: #e64173"}
 -   [Export data for analysis]{.fg style="--col: #e64173"}
@@ -196,7 +196,7 @@ Two aspects:
 -   Is there anything missing?
     -   Trial-by-trial visual check
 
-:::notes
+::: notes
 Espe: have them think of AIs, missing timestamps, missing participants/trials…
 :::
 
@@ -259,7 +259,7 @@ Data Viewer has different reports.
 
 ![](images/session_4/viewing_dv2.jpg){height="500px"}
 
-:::aside
+::: aside
 Grouping of trials can be changed (see "Edit").
 :::
 
@@ -269,7 +269,7 @@ Time window of analysis
 
 ![](images/session_4/25.png){fig-align="center"}
 
-:::aside
+::: aside
 Here: named as "sentence" (from stimulus presentation to button press).
 :::
 
@@ -369,7 +369,7 @@ Fixations etc. across the screen (both in defined AIs and elsewhere).
     -   Did we code the AIs name?
     -   Did we send triggers?
 
-:::notes
+::: notes
 Espe:
 
 The idea here is that in VWP things are harder to clean because we don’t have much to clean, e.g., if a fixation is short, or there are fewer fixations, it can be because of our own manipulation. Most of the time, we deal with these issues when we are exporting data. Note that participants can fixate not only in our AIs, but also elsewhere in the screen and outside of the screen.
@@ -394,7 +394,7 @@ Track loss
 -   Not common to encounter this step in reports.
     -   Kids vs. adults
 
-:::notes
+::: notes
 Kids blink more, noisy data. It doesn't mean that we don't need to report track loss for adults, just that there are no established criteria for cleaning in VWP, unfortunately.
 :::
 
@@ -432,10 +432,10 @@ Familiarity with previous literature is **key**.
 What does each mean?
 
 -   Across All Samples: Number of samples in each IA/Total number of samples per bin
--   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/Sum of samples where fixations landed on IAs and Null interest area[^3].
+-   Across All On-Screen Samples (both defined and undefined): Number of samples in each IA/Sum of samples where fixations landed on IAs and Null interest area[^1].
 -   Across All Samples Assigned to Predefined Interest Areas Only: Number of samples in each IA/Sum of samples where fixations landed on IAs.
 
-[^3]: Areas where we don't have IAs defined (e.g., the center of the screen).
+[^1]: Areas where we don't have IAs defined (e.g., the center of the screen).
 
 ## Automatized cleaning: VWP
 
@@ -474,7 +474,7 @@ Assuming that we have 200 samples in a bin:
 -   All Interest Area Samples
     -   IA_0 = track loss (trade-off).
 
-:::notes
+::: notes
 Overall increased attention - they look more at pictures than screen in general. They still look more at one picture than the other but magnitude of effect differs depending on report (proportions are different).
 :::
 
@@ -550,12 +550,14 @@ Time course (binning) analysis report
 
 Recap: sampling rate of X Hz = X number of samples per second.
 
--   Higher sample rate, less space between samples. 
+-   Higher sample rate, less space between samples.
+
 -   1000 Hz is a 1000 sample (one per ms). We can create a bin of 20 ms, that comprises 20 samples.
 
 -   500 Hz would yield 10 samples in a 20 ms bin.
 
 -   Sampling rate also limits the size of our bins!
+
     -   If we gather a sample every 25 ms (i.e., tracking at 40 Hz, 1000/40), we cannot make 20 ms bins.
 
 ## Exporting: VWP
@@ -576,7 +578,7 @@ Time binning report
 :::
 :::
 
-:::notes
+::: notes
 Espe: they might ask you how come the report doesn't include saccades if you can select the data here: the answer is that here you are deciding whether to count what happened during a saccade. It’s a bit difficult to explain, the important bit is that when they write it up they need to report (if they are analysing fixations) if they included samples in saccades or not.
 :::
 
@@ -615,10 +617,10 @@ Information duplicated per Interest Area. If you have two visuals, then two; thr
 Time binning report
 
 -   RIGHT_OFF_SCREEN_SAMPLE_COUNT: Number of samples in a given bin that fall outside of the display.
--   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on[^1]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
+-   RIGHT_IA_1_SAMPLE_COUNT, RIGHT_IA_2_SAMPLE_COUNT and so on[^2]: The number of fixations that fell in that area per bin (out of the number of samples per bin, i.e., if each bin has 10 samples, then it's out of ten).
 -   RIGHT_IA_1_SAMPLE_COUNT\_%, RIGHT_IA_2_SAMPLE_COUNT\_% and so on: The proportion of fixations that fell in that area (i.e., a transformation of count).
 
-[^1]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded.
+[^2]: Or AVERAGE\_, because we have done binocular reading, the average equals the count on our eye recorded.
 
 ## Output: VWP
 
@@ -803,9 +805,9 @@ Puebla & Felser, 2022
 
 ## Example pre-processing: Reading
 
-Holmqvist et al. (2022). Eye tracking: Empirical foundations for a minimal reporting guideline.[^2]
+Holmqvist et al. (2022). Eye tracking: Empirical foundations for a minimal reporting guideline.[^3]
 
-[^2]: This paper was retracted due to some legal issues.
+[^3]: This paper was retracted due to some legal issues.
 
 Jakobi et al. (2024). Reporting eye-tracking data quality: Towards a new standard.
 
