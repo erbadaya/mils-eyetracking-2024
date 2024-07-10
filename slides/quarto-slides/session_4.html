@@ -381,20 +381,7 @@ Badaya &amp; Baltais
 <h2>Raw data</h2>
 <p>Data directory (eye data &amp; behavioural data)</p>
 
-<img data-src="images/session_4/projdir2.JPG" class="quarto-figure quarto-figure-center r-stretch"><aside class="notes">
-<p>QUE: is this how the folder really looks? check! (with background images for reading)</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
+<img data-src="images/session_4/projdir2.JPG" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="raw-data-3" class="slide level2">
 <h2>Raw data</h2>
 <p>The eye-tracker is actually just recording gaze coordinates on the screen (i.e., gaze points) as well as timestamps in each interval (defined by the sampling rate).</p>
@@ -556,7 +543,7 @@ Badaya &amp; Baltais
 <p>Different software = different data files.</p>
 <ul>
 <li>Data Viewer: .edf files</li>
-<li>R packages: ASCIII files, reports from DV.</li>
+<li>R packages: ASCIII files; reports from DV</li>
 </ul>
 <p>Different software = additional steps.</p>
 <ul>
@@ -605,7 +592,7 @@ Badaya &amp; Baltais
 <h2>Assess data</h2>
 <p>Unusable participants</p>
 <ul>
-<li>Rare?</li>
+<li>Rare</li>
 <li>File corrupted?
 <ul>
 <li>Lab log</li>
@@ -619,7 +606,7 @@ Badaya &amp; Baltais
 <p>Unusable trials</p>
 <ul>
 <li>More common</li>
-<li>Poor calibration (cf.&nbsp;drift correction)
+<li>Poor calibration (cf.&nbsp;drift correction)?
 <ul>
 <li>Umbrella term: “track loss” (could mean anything: participant sneezed, distraction, too fast)</li>
 </ul></li>
@@ -691,7 +678,7 @@ Badaya &amp; Baltais
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br></p>
-<p>Make sure your AIs are displayed when setting the TW.</p>
+<p>Make sure your AIs are displayed <strong>before</strong> setting the TW.</p>
 <ul>
 <li>Preferences &gt; Data Filters &gt; Show AIs</li>
 </ul>
@@ -711,28 +698,15 @@ Badaya &amp; Baltais
 <p><br></p>
 <p>.edf (Eyelink Data File) –&gt; .evs (Eyelink Viewing Session)</p>
 <ul>
-<li>/results in experiment folder (project directory)</li>
+<li>/results (data) in experiment folder (project directory)</li>
 <li>One .edf per participant</li>
-<li>Always copy and save the entire experiment folder with subfolders (not just the results)!</li>
+<li>After data collection, always copy and save the entire experiment folder with subfolders (not just the results)!</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/session_4/33.png"></p>
 <p><img data-src="images/session_4/32.png"></p>
 </div>
 </div>
-<aside class="notes">
-<p>QUE: check here about the folder and subfolders</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="importing-data-1" class="slide level2">
 <h2>Importing data</h2>
@@ -753,7 +727,7 @@ Badaya &amp; Baltais
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br></p>
-<p>Make sure your AIs are displayed when setting the TW.</p>
+<p>Make sure your AIs are displayed before setting the TW.</p>
 <ul>
 <li>Preferences &gt; Data Filters &gt; Show AIs</li>
 </ul>
@@ -770,32 +744,26 @@ Badaya &amp; Baltais
 <h2>Interest Period: VWP</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><br> <br></p>
 <p>Triggers, e.g., target_onset - target_offset</p>
 <ul>
-<li>Strict matching unchecked
+<li>What if there is a time-out?
 <ul>
-<li>What if there is a time-out?</li>
+<li>Strict Event Matching unchecked, Offset message blank</li>
 </ul></li>
-<li>Several TWs</li>
+<li>Several TWs possible
+<ul>
+<li>Different reports when exporting</li>
+</ul></li>
+<li>Launching a saccade takes ± 200 ms
+<ul>
+<li>Change Start Event Offset, End Event Offset</li>
+<li>Consult previous literature!</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/session_4/27.png"></p>
 </div>
 </div>
-<aside class="notes">
-<p>QUE: time-out? several TWs? What about adding 200ms from the onset or smth? Is it correct to set TW before visual check?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="check-data-vwp" class="slide level2">
 <h2>Check data: VWP</h2>
@@ -854,7 +822,7 @@ Badaya &amp; Baltais
 </ul></li>
 </ul>
 <aside class="notes">
-<p>QUE: kids blink more?</p>
+<p>Kids blink more, noisy data. It doesn’t mean that we don’t need to report track loss for adults, just that there are no established criteria for cleaning in VWP, unfortunately.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -875,36 +843,24 @@ Badaya &amp; Baltais
 <ul>
 <li>(Short and too long) fixations and blinks.
 <ul>
-<li>Merge fixations (~inspection)</li>
-<li>Add blinks and fixations to the previous one.
+<li>Merge nearby fixations (thresholds)?</li>
+<li>Merge fixations separated by blink?
 <ul>
 <li>A blink can interrupt a fixation and make it look like two.</li>
 </ul></li>
 </ul></li>
+<li>Consult literature!</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/session_4/dv_filter.JPG" height="500"></p>
 </div>
 </div>
-<aside class="notes">
-<p>QUE: time-weighted, stop merging? what is recommended?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="automatized-cleaning-vwp-3" class="slide level2">
 <h2>Automatized cleaning: VWP</h2>
 <p>Remaining automatized cleaning done <strong>together with exporting data</strong>.</p>
 <ul>
-<li>Only samples on AIs, or also including on-screen but not on AIs?
+<li>Time binning report: Only samples on AIs, or also including on-screen samples that are not on AIs?
 <ul>
 <li>Trade-off.</li>
 <li>Affects how <em>proportions</em> are calculated.</li>
@@ -912,19 +868,6 @@ Badaya &amp; Baltais
 </ul></li>
 </ul>
 <p>Familiarity with previous literature is <strong>key</strong>.</p>
-<aside class="notes">
-<p>QUE: is this specific for the binning report?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="automatized-cleaning-vwp-4" class="slide level2">
 <h2>Automatized cleaning: VWP</h2>
@@ -967,18 +910,17 @@ Badaya &amp; Baltais
 <section id="automatized-cleaning-vwp-6" class="slide level2">
 <h2>Automatized cleaning: VWP</h2>
 <ul>
-<li>All On Screen
+<li>All On-Screen
 <ul>
-<li>Overall increased attention.</li>
+<li>Overall increased attention towards the images.</li>
 </ul></li>
 <li>All Interest Area Samples
 <ul>
-<li>IA_0 = track loss.</li>
-<li>Trade-off.</li>
+<li>IA_0 = track loss (trade-off).</li>
 </ul></li>
 </ul>
 <aside class="notes">
-<p>QUE: overall increased attention - but still analyzed per IA so why?</p>
+<p>Overall increased attention - they look more at pictures than screen in general. They still look more at one picture than the other but magnitude of effect differs depending on report (proportions are different).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -995,11 +937,8 @@ Badaya &amp; Baltais
 <h2>Automatized cleaning: VWP</h2>
 <p>IA_0</p>
 <ul>
-<li>Participants not only look at the images, they also look at areas where we don’t have IAs defined (e.g., the center of the screen).
-<ul>
 <li>Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)</li>
 <li>However! You don’t know where exactly they were looking at (only that it was not defined!)</li>
-</ul></li>
 </ul>
 </section>
 <section id="automatized-cleaning-vwp-8" class="slide level2">
@@ -1045,25 +984,12 @@ Badaya &amp; Baltais
 <li>Trigger timestamp: zero, beginning of the timeline.</li>
 <li>Determines which gaze points are counted as part of the same fixation by DV algorithms.</li>
 </ul></li>
-<li>Keep AIs in the report.</li>
+<li>Keep AIs in the report (Data Filters – Show AIs before defining the time window!).</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/session_4/10.png"></p>
 </div>
 </div>
-<aside class="notes">
-<p>QUE: wym by keep AIs? where?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
 <section id="exporting-vwp-1" class="slide level2">
 <h2>Exporting: VWP</h2>
@@ -1179,7 +1105,7 @@ Badaya &amp; Baltais
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><br></p>
-<p>Make sure your AIs are displayed when setting the TW.</p>
+<p>Make sure your AIs are displayed before setting the TW.</p>
 <ul>
 <li>Preferences &gt; Data Filters &gt; Show AIs</li>
 </ul>

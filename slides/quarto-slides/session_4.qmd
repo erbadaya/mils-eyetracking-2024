@@ -49,10 +49,6 @@ Data directory (eye data & behavioural data)
 
 ![](images/session_4/projdir2.JPG){fig-align="center"}
 
-:::notes
-QUE: is this how the folder really looks? check! (with background images for reading). probably. copy entire experiment folder for OS as well
-:::
-
 ## Raw data
 
 The eye-tracker is actually just recording gaze coordinates on the screen (i.e., gaze points) as well as timestamps in each interval (defined by the sampling rate).
@@ -283,7 +279,7 @@ Here: named as "sentence" (from stimulus presentation to button press).
 ::: {.column width="50%"}
 <br>
 
-Make sure your AIs are displayed when setting the TW.
+Make sure your AIs are displayed **before** setting the TW.
 
 -   Preferences \> Data Filters \> Show AIs
 :::
@@ -301,9 +297,9 @@ Make sure your AIs are displayed when setting the TW.
 
 .edf (Eyelink Data File) --\> .evs (Eyelink Viewing Session)
 
--   /results in experiment folder (project directory)
+-   /results (data) in experiment folder (project directory)
 -   One .edf per participant
--   Always copy and save the entire experiment folder with subfolders (not just the results)!
+-   After data collection, always copy and save the entire experiment folder with subfolders (not just the results)!
 :::
 
 ::: {.column width="50%"}
@@ -311,10 +307,6 @@ Make sure your AIs are displayed when setting the TW.
 
 ![](images/session_4/32.png)
 :::
-:::
-
-:::notes
-QUE: check here about the folder and subfolders. see above
 :::
 
 ## Importing data
@@ -335,7 +327,7 @@ Note: **You can't go back with DataViewer**
 ::: {.column width="50%"}
 <br>
 
-Make sure your AIs are displayed when setting the TW.
+Make sure your AIs are displayed before setting the TW.
 
 -   Preferences \> Data Filters \> Show AIs
 :::
@@ -349,24 +341,20 @@ Make sure your AIs are displayed when setting the TW.
 
 ::: columns
 ::: {.column width="50%"}
-<br> <br>
-
 Triggers, e.g., target_onset - target_offset
 
--   Strict matching unchecked
-    -   What if there is a time-out?
--   Several TWs
+-   What if there is a time-out?
+    -   Strict Event Matching unchecked, Offset message blank
+-   Several TWs possible
+    -   Different reports when exporting
+-   Launching a saccade takes ± 200 ms
+    -   Change Start Event Offset, End Event Offset
+    -   Consult previous literature!
 :::
 
 ::: {.column width="50%"}
 ![](images/session_4/27.png)
 :::
-:::
-
-:::notes
-QUE: time-out? (TIME event offset + blank instead of target_offset trigger). several TWs - then several periods
-What about adding 200ms from the onset or smth? (yes).
-Is it correct to set TW before visual check? YES.
 :::
 
 ## Check data: VWP
@@ -407,7 +395,7 @@ Track loss
     -   Kids vs. adults
 
 :::notes
-QUE: kids blink more? yes. noisy data. vwp no established criterion how to clean. should be standard for all?
+Kids blink more, noisy data. It doesn't mean that we don't need to report track loss for adults, just that there are no established criteria for cleaning in VWP, unfortunately.
 :::
 
 ## Automatized cleaning: VWP
@@ -417,9 +405,10 @@ What are we thinking of?
 ::: columns
 ::: {.column width="50%"}
 -   (Short and too long) fixations and blinks.
-    -   Merge fixations (\~inspection)
-    -   Add blinks and fixations to the previous one.
+    -   Merge nearby fixations (thresholds)?
+    -   Merge fixations separated by blink?
         -   A blink can interrupt a fixation and make it look like two.
+-   Consult literature!
 :::
 
 ::: {.column width="50%"}
@@ -427,24 +416,16 @@ What are we thinking of?
 :::
 :::
 
-:::notes
-QUE: yes, stop merging option. Espe never does anything of this. We don't recommend anything, we give options.
-:::
-
 ## Automatized cleaning: VWP
 
 Remaining automatized cleaning done **together with exporting data**.
 
--   Only samples on AIs, or also including on-screen but not on AIs?
+-   Time binning report: Only samples on AIs, or also including on-screen samples that are not on AIs?
     -   Trade-off.
     -   Affects how *proportions* are calculated.
     -   But counts are still there.
 
 Familiarity with previous literature is **key**.
-
-:::notes
-QUE: is this specific for the binning report? probably yes.
-:::
 
 ## Automatized cleaning: VWP
 
@@ -488,23 +469,21 @@ Assuming that we have 200 samples in a bin:
 
 ## Automatized cleaning: VWP
 
--   All On Screen
-    -   Overall increased attention.
+-   All On-Screen
+    -   Overall increased attention towards the images.
 -   All Interest Area Samples
-    -   IA_0 = track loss.
-    -   Trade-off.
+    -   IA_0 = track loss (trade-off).
 
 :::notes
-QUE: overall increased attention - but still analyzed per IA so why? they look more at pictures than screen in general. they still look more at 1 picture than at the other but Magnitude of effect differs depending on report
+Overall increased attention - they look more at pictures than screen in general. They still look more at one picture than the other but magnitude of effect differs depending on report (proportions are different).
 :::
 
 ## Automatized cleaning: VWP
 
 IA_0
 
--   Participants not only look at the images, they also look at areas where we don't have IAs defined (e.g., the center of the screen).
-    -   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)
-    -   However! You don't know where exactly they were looking at (only that it was not defined!)
+-   Interesting when exploring some RQs (i.e., do people prefer to not fixate on anything?)
+-   However! You don't know where exactly they were looking at (only that it was not defined!)
 
 ## Automatized cleaning: VWP
 
@@ -541,16 +520,12 @@ Recap: Fixations *over a scene at a particular time*.
 -   Time window, defined \@ triggers.
     -   Trigger timestamp: zero, beginning of the timeline.
     -   Determines which gaze points are counted as part of the same fixation by DV algorithms.
--   Keep AIs in the report.
+-   Keep AIs in the report (Data Filters -- Show AIs before defining the time window!).
 :::
 
 ::: {.column width="50%"}
 ![](images/session_4/10.png)
 :::
-:::
-
-:::notes
-QUE: wym by keep AIs? where? data filters (show IA) - BEFORE TIME WINDOW!!!
 :::
 
 ## Exporting: VWP
@@ -659,7 +634,7 @@ Time binning report
 ::: {.column width="50%"}
 <br>
 
-Make sure your AIs are displayed when setting the TW.
+Make sure your AIs are displayed before setting the TW.
 
 -   Preferences \> Data Filters \> Show AIs
 :::
