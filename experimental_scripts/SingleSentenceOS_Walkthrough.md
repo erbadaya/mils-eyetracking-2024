@@ -155,48 +155,48 @@ The syntax is the same, but we add the width of our first area of interest and t
 x, y, w2, h2 = reading_canvas['IA2'].rect
 ```
 
-Once we have done this five times (one per area of interest), we can now also calculate the spaces for the areas of interest to send to the tracker. Remember that the coordinate system in Data Viewer (and for EyeLink) differs from that of OpenSesame: While 0,0 for the latter is the middle of the screen, 0,0 in EyeLink is the top, left corner of the screen. 
+Once we have done this five times (one per area of interest), we can now also calculate the spaces for the areas of interest to send to the tracker. Remember that the coordinate system in Data Viewer (and for EyeLink) differs from that of OpenSesame: While 0,0 for the latter is the middle of the screen, 0,0 in EyeLink is the top left corner of the screen. 
 
 To define areas of interest, we pass to the tracker the coordinates of a rectangle (in this case). Specifically, we pass the coordinate of the center of the left side, center of the top side, center of the right side, and center of the bottom side. Therefore, to get these coordinates, we also need to know the width and height the text we are presenting occupies on the screen.
 
-This means we need to transform our -416 (for the x-coordinate) to the new coordinate system: In this case, it is 554. We also need to transform the y-coordinate (0), which becomes 544. For the widths of each area of interest, we need to do calculations akin to those we did for getting the starting point on the screen for each area of interest (note that you also need to add the invisible spaces!). For the heights of each area of interest, we need to work with the hX values we got and add them to 384.
+This means we need to transform our -416 (for the x-coordinate) to the new coordinate system: In this case, it is 544 (monitor width = 1920, middle = 960, 960-416 = 544). We also need to transform the y-coordinate (0), which becomes 540 (monitor height = 1080, middle = 540). For the widths of each area of interest, we need to do calculations akin to those we did for getting the starting point on the screen for each area of interest (note that you also need to add the invisible spaces!). We want the area of interest to stop between the space between the two words, so we do that by adding _half_ of the white space. For the heights of each area of interest, we need to work with the hX values we got and add them to 540.
 
 ```
 start_IA_left = 544
 
 part1_left = start_IA_left 
-part1_right = start_IA_left + w1
+part1_right = start_IA_left + w1 + w1u/2
 part1_top = 540 + h1
 part1_bottom = 540 - h1
 
-part2_left = start_IA_left + w1 + w1u
-part2_right = start_IA_left + w1 + w1u + w2
+part2_left = start_IA_left + w1 + w1u/2
+part2_right = start_IA_left + w1 + w1u + w2 + w2u/2
 part2_top = 540 + h2
 part2_bottom = 540 - h2
 
-part3_left = start_IA_left + w1 + w1u + w2 + w2u
-part3_right = start_IA_left + w1 + w1u + w2 + w2u + w3
+part3_left = start_IA_left + w1 + w1u + w2 + w2u/2
+part3_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2
 part3_top = 540 + h3
 part3_bottom = 540 - h3
 
-part4_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u 
-part4_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 
+part4_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2 
+part4_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
 part4_top = 540 + h4
 part4_bottom = 540 - h4
 
-part5_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4
+part5_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
 part5_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4+ w4u + w5
 part5_top = 540 + h5
 part5_bottom = 540 - h5
 ```
 
-We can now draw our text on the screen
+We can now draw our text on the screen:
 
 ```
 reading_canvas.show()
 ```
 
-We are going to send the areas of interest to the tracker. We do this by using the function ```pygaze_eyetracker.log('!V IAREA RECTANGLE 1 {0} {1} {2} {3} PART1)```, where {0}, {1}, {2}, {3} refer to the right side, top side, left side, and bottom side of our area of interest (i.e., what we calculated at the end of the prepare tab). We are going to call this five times, because we have five areas of interest. Note that the {X} syntax means we are formatting the string(see [here]()). The code goes as follows:
+We are going to send the areas of interest to the tracker. We do this by using the function ```pygaze_eyetracker.log('!V IAREA RECTANGLE 1 {0} {1} {2} {3} PART1)```, where {0}, {1}, {2}, {3} refer to the right side, top side, left side, and bottom side of our area of interest (i.e., what we calculated at the end of the prepare tab). We are going to call this five times, because we have five areas of interest. Note that the {X} syntax means we are formatting the string. The code goes as follows:
 
 ```
 exp.experiment.pygaze_eyetracker.log('!V IAREA RECTANGLE 1 {0} {1} {2} {3} PART1'.format(part1_right,part1_top,part1_left,part1_bottom))
@@ -214,9 +214,9 @@ Yes it is! You could instead create a function (in the import module inline scri
 The important part in that script is: How do you update the starting position of each area of interest? 
 </details>
 
-The next steps of the code will help us save the trial screenshot and send it to the .edf for later pre-processing (e.g., you may want to correct fixations vertically/horizontally, or check whether fixations where on particular areas of interest, and this is easier done if you can see the text on the software).
+The next steps of the code will help us save the trial screenshot and send it to the .edf for later pre-processing (e.g., you may want to correct fixations vertically/horizontally, or check whether fixations were on particular areas of interest, and this is easier done if you can see the text on the software).
 
-For doing this, we are going to use the functions ```getMovieFrame()``` and  ```moveFrames[].save()```. Note that these functions work on a ```window``` object that is from PsychoPy: Therefore, your experiment needs to run on PsychoPy (i.e., in the experiment first tab).
+For doing this, we are going to use the functions ```getMovieFrame()``` and  ```moveFrames[].save()```. Note that these functions work on a ```window``` object that is from PsychoPy: Therefore, your experiment needs to run on PsychoPy (specified in the experiment first tab).
 
 ```
 self.experiment.window.getMovieFrame() # takes a screenshot of the canvas
@@ -226,7 +226,8 @@ filepath = os.path.join(ppt_folder, scn_name)
 self.experiment.window.saveMovieFrames(filepath)
 ```
 
-Now that we have taken the screenshot and saved it in the folder, we can refer send it to the tracker. We do this with the syntax ```sendMessage('!V IMGLOAD FILL %s' % filepath)```. Further. ```sendMessage()``` belongs to the ```pylink``` module, meaning that we need to import it (again, done in the import_module plugin) and create an eye-tracker object.
+Now that we have taken the screenshot and saved it in the folder, we can send it to the tracker. We do this with the syntax ```sendMessage('!V IMGLOAD FILL %s' % filepath)```.
+Further, ```sendMessage()``` belongs to the ```pylink``` module, meaning that we need to import it (again, done in the import_module plugin) and create an eye-tracker object.
 
 ```
 el = pylink.getEYELINK()
@@ -240,7 +241,7 @@ Finally, we wait until the participant performs a response with the keyboard and
 
 ```
 my_keyboard.get_key()
-#clean the screen
+# clean the screen
 self.experiment.window.flip()
 ```
 
