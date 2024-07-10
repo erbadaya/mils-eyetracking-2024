@@ -8,7 +8,9 @@ This script will walk you through the SingleSentenceReading.OS script and its ey
 
 # The experiment
 
-This experiment is based on [Rayner and Duffy's (1986)]() Experiment 1, where they examined fixation times in reading as a function of word frequency, verb complexity and lexical ambiguity. In this case, we are working only with the materials where they manipulated word frequency: either high or low (e.g., The slow _music_ captured her attention v The slow _waltz_ captured her attention). There were three areas of interest: the word preceding the target word (in italics), the target word, and the word following the target word. We additionally add two more: The first word of the sentence and the rest of the sentence (i.e., five areas of interest). **Note** that this divide (esp. wrt IA_1 and IA_5) is appropriate for reading experiment, we are doing it for learning purposes. Likewise, these areas of interest should be larger vertically, but we are not covering that. 
+This experiment is based on [Rayner and Duffy's (1986)](https://link.springer.com/article/10.3758/bf03197692) Experiment 1, where they examined fixation times in reading as a function of word frequency, verb complexity and lexical ambiguity. In this case, we are working only with the materials where they manipulated word frequency: either high or low (e.g., The slow _music_ captured her attention v The slow _waltz_ captured her attention). There were three areas of interest: the word preceding the target word (in italics), the target word, and the word following the target word. We additionally add two more: The first word of the sentence and the rest of the sentence (i.e., five areas of interest). **Note** that this divide (esp. wrt IA_1 and IA_5) is appropriate for reading experiment, we are doing it for learning purposes. Likewise, these areas of interest should be larger vertically, but we are not covering that. 
+
+Likewise, OpenSesame is not an ideal software for building an reading eye-tracking experiment. In particular, drawing areas of interest is a bit difficult given that they change size throughout the experiment, and that the tools we use to define them do not consider spaces between words. These obstacles are overcome by adding an invisible character between words (a great suggestion by Sebastian Mathôt [here](https://forum.cogsci.nl/discussion/9372/text-size-when-text-ends-with-a-whitspace#latest)). Likewise, note that the font of the text is not changed, but it might not be ideal for a reading experiment.
 
 # The set up
 
@@ -78,9 +80,7 @@ my_keyboard = keyboard(exp)
 
 To better understand this plugin and its function within the experiment, visit [this page](https://osdoc.cogsci.nl/4.0/manual/structure/loop/). In our experiment, we have divided the sentence into areas of interest - where each area of interest is one column (which we will later on use to present the text and to draw the areas of interest). Further columns include the condition (high/low), an identifier per sentence, type (critical/filler, for example), and counterbalance (1/2).
 
-There is one important thing to note, however, and is that at the end of every area of interest (except the last one), we have the text ```&nbsp'```: This HTML code for a space. We are adding this (as opposed to just typing a space) because of how we are calculating our areas of interest.
-
-5. The trial sequence
+1. The trial sequence
 
 To better understand this plugin and its function within the experiment, visit [this page](https://osdoc.cogsci.nl/4.0/manual/structure/sequence/).
 
@@ -132,10 +132,20 @@ x, y, w1, h1 = reading_canvas['IA1'].rect
 
 Now we have the x, y coordinates of the text, and its width and height on the screen. We only need ```w1``` and ```h1```. Let's move to our second area of interest:
 
+Firstly, we want to have a space between the two words. To do that, we are going to create an invisible character (we do so by setting it to the same colour as the background). The logic is the same: We draw it, and then we draw a rectangle around it. We will do this four times (one per area of interest except for the last one).
+
 ```
-reading_canvas['IA2'] = Text(part2, x = -416 + w1, y = 0, center = False)
+reading_canvas['_1'] = Text("n", center = False, x = -416 + w1, y = 0, color = 'white') #note that it takes as the start -416 _plus the size of our first area of interest
+
+x1u, y1u, w1u, h1u = reading_canvas['_1'].rect
+
+```
+We can now move onto our second area of interest:
+
+```
+reading_canvas['IA2'] = Text(part2, x = -416 + w1 + w1u, y = 0, center = False)
 ``` 
-The syntax is the same, but we add the width of our first area of interest to ```x```, so that this second part of the sentence appears where the first one ends. Then we get its values:
+The syntax is the same, but we add the width of our first area of interest and the first invisible space to ```x```, so that this second part of the sentence appears where the first one ends. Then we get its values:
 
 ```
 x, y, w2, h2 = reading_canvas['IA2'].rect
@@ -145,39 +155,35 @@ Once we have done this five times (one per area of interest), we can now also ca
 
 To define areas of interest, we pass to the tracker the coordinates of a rectangle (in this case). Specifically, we pass the coordinate of the center of the left side, center of the top side, center of the right side, and center of the bottom side. Therefore, to get these coordinates, we also need to know the width and height the text we are presenting occupies on the screen.
 
-This means we need to transform our -416 (for the x-coordinate) to the new coordinate system: In this case, it is 96. We also need to transform the y-coordinate (0), which becomes 384. 
-
-To calculate the spaces of the areas of interest, we need to get their width and their height. The tracker needs to know the coordinate of the left and right sides of the rectangle, and well as the top and bottom sides.
-
-For the widths of each area of interest, we need to do calculations akin to those we did for getting the starting point on the screen for each area of interest. For the heights of each area of interest, we need to work with the hX values we got and add them to 384.
+This means we need to transform our -416 (for the x-coordinate) to the new coordinate system: In this case, it is 554. We also need to transform the y-coordinate (0), which becomes 544. For the widths of each area of interest, we need to do calculations akin to those we did for getting the starting point on the screen for each area of interest (note that you also need to add the invisible spaces!). For the heights of each area of interest, we need to work with the hX values we got and add them to 384.
 
 ```
-start_IA_left = 96
+start_IA_left = 544
 
-part1_right = start_IA_left 
-part1_left = start_IA_left + w1 
-part1_top = 384 + h1
-part1_bottom = 384 - h1
+part1_left = start_IA_left 
+part1_right = start_IA_left + w1
+part1_top = 540 + h1
+part1_bottom = 540 - h1
 
-part2_right = start_IA_left + w1 
-part2_left = start_IA_left + w1 + w2 
-part2_top = 384 + h2
-part2_bottom = 384 - h2
+part2_left = start_IA_left + w1 + w1u
+part2_right = start_IA_left + w1 + w1u + w2
+part2_top = 540 + h2
+part2_bottom = 540 - h2
 
-part3_right = start_IA_left + w1 + w2 
-part3_left = start_IA_left + w1 + w2 + w3
-part3_top = 384 + h3
-part3_bottom = 384 - h3
+part3_left = start_IA_left + w1 + w1u + w2 + w2u
+part3_right = start_IA_left + w1 + w1u + w2 + w2u + w3
+part3_top = 540 + h3
+part3_bottom = 540 - h3
 
-part4_right = start_IA_left + w1 + w2 + w3 
-part4_left = start_IA_left + w1 + w2 + w3 +w4 
-part4_top = 384 + h4
-part4_bottom = 384 - h4
+part4_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u 
+part4_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 
+part4_top = 540 + h4
+part4_bottom = 540 - h4
 
-part5_right = start_IA_left + w1 + w2 + w3 +w4 
-part5_left = start_IA_left + w1 + w2 + w3 +w4 + w5 
-part5_top = 384 + h5
-part5_bottom = 384 - h5
+part5_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4
+part5_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4+ w4u + w5
+part5_top = 540 + h5
+part5_bottom = 540 - h5
 ```
 
 We can now draw our text on the screen
@@ -242,7 +248,6 @@ At the end of each trial we want to save information in the .edf file (e.g., wha
 In this experiment, for example, I want to save sentence, condition, counterbalance, type and identifier, so I write down the following:
 
 ```
-!V TRIAL_VAR sentence [sentence]
 !V TRIAL_VAR condition [condition]
 !V TRIAL_VAR counterbalance [counterbalance]
 !V TRIAL_VAR type [type]

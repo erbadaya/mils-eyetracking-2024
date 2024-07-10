@@ -1,6 +1,6 @@
 ---
 API: 3
-OpenSesame: 4.0.1
+OpenSesame: 4.0.24
 Platform: nt
 ---
 set width 1920
@@ -24,9 +24,9 @@ set foreground black
 set font_underline no
 set font_size 18
 set font_italic False
-set font_family mono
+set font_family sans
 set font_bold False
-set experiment_path "C:\\Users\\eramosba\\OneDrive - UGent\\Misc - Eye-tracking support\\ugent-eyetracking\\experimental-scripts\\opensesame\\SingleSentenceReading"
+set experiment_path "F:\\dataMILS\\Reading"
 set disable_garbage_collection False
 set description "The main experiment item"
 set coordinates uniform
@@ -98,40 +98,40 @@ define loop group1_four_trials
 	set continuous no
 	set break_if_on_first yes
 	set break_if never
-	setcycle 0 IA_1 "The&nbsp;"
-	setcycle 0 IA_2 "shiny&nbsp;"
-	setcycle 0 IA_3 "gondola&nbsp;"
-	setcycle 0 IA_4 "moved&nbsp;"
+	setcycle 0 IA_1 The
+	setcycle 0 IA_2 shiny
+	setcycle 0 IA_3 gondola
+	setcycle 0 IA_4 moved
 	setcycle 0 IA_5 "slowly."
 	setcycle 0 item infreq_1
 	setcycle 0 condition infrequent
 	setcycle 0 counterbalance 1
 	setcycle 0 type critical
 	setcycle 0 identifier 1
-	setcycle 1 IA_1 "The&nbsp;"
-	setcycle 1 IA_2 "large&nbsp;"
-	setcycle 1 IA_3 "mosque&nbsp;"
-	setcycle 1 IA_4 "remained&nbsp;"
+	setcycle 1 IA_1 The
+	setcycle 1 IA_2 large
+	setcycle 1 IA_3 mosque
+	setcycle 1 IA_4 remained
 	setcycle 1 IA_5 "mostly empty."
 	setcycle 1 item infreq_2
 	setcycle 1 condition infrequent
 	setcycle 1 counterbalance 1
 	setcycle 1 type critical
 	setcycle 1 identifier 2
-	setcycle 2 IA_1 "The&nbsp;"
-	setcycle 2 IA_2 "noisy&nbsp;"
-	setcycle 2 IA_3 "chicken&nbsp;"
-	setcycle 2 IA_4 "chased&nbsp;"
+	setcycle 2 IA_1 The
+	setcycle 2 IA_2 noisy
+	setcycle 2 IA_3 chicken
+	setcycle 2 IA_4 chased
 	setcycle 2 IA_5 "the sparrows."
 	setcycle 2 item freq_3
 	setcycle 2 condition frequent
 	setcycle 2 counterbalance 1
 	setcycle 2 type critical
 	setcycle 2 identifier 3
-	setcycle 3 IA_1 "The&nbsp;"
-	setcycle 3 IA_2 "sandy&nbsp;"
-	setcycle 3 IA_3 "beach&nbsp;"
-	setcycle 3 IA_4 "stretched&nbsp;"
+	setcycle 3 IA_1 The
+	setcycle 3 IA_2 sandy
+	setcycle 3 IA_3 beach
+	setcycle 3 IA_4 stretched
 	setcycle 3 IA_5 "for many miles."
 	setcycle 3 item freq_4
 	setcycle 3 condition frequent
@@ -249,7 +249,6 @@ define logger log_variables_behavioural_2
 define pygaze_log log_variables_eyetracker
 	set throttle 2
 	__msg__
-	!V TRIAL_VAR sentence [sentence]
 	!V TRIAL_VAR condition [condition]
 	!V TRIAL_VAR counterbalance [counterbalance]
 	!V TRIAL_VAR type [type]
@@ -260,37 +259,66 @@ define pygaze_log log_variables_eyetracker
 
 define pygaze_log log_variables_eyetracker_2
 	set throttle 2
-	set msg ""
+	__msg__
+	!V TRIAL_VAR condition [condition]
+	!V TRIAL_VAR counterbalance [counterbalance]
+	!V TRIAL_VAR type [type]
+	!V TRIAL_VAR identifier [identifier]
+	__end__
 	set description "Writes information to the eye-tracker logfile"
-	set auto_log yes
+	set auto_log no
 
 define inline_script read_sentence_sizes
 	set description "Executes Python code"
 	___run__
 	# draw each part on canvas
 	# calculate a rectangle around it (for ROIs & to calculate the start of the next part of the sentence) 
+	# the problem with OS is that spaces are not counted for drawing rectangles, which is our method for defining the areas of interest
+	
+	# we separate each IA with an character (n) that we will present with the same colour as the background (thus effectively our participants won't see it')
+	# it is not an ideal solution, however (preferrably, you would run a reading experiment on PsychoPy)
+	
+	# note as well 
 	
 	# draw
 	
-	reading_canvas['IA1'] = Text(part1, center = False, x = -416, y = 0, html = True)
+	reading_canvas['IA1'] = Text(part1, center = False, x = -416, y = 0, html = True, font_size = 18)
 	
 	# calculate rectangle
 	
 	x, y, w1, h1 = reading_canvas['IA1'].rect
 	
-	reading_canvas['IA2'] = Text(part2, x = -416 + w1, y = 0, center = False)
+	#we need to draw one per word because we also need to say its starting point
+	
+	reading_canvas['_1'] = Text("i", center = False, x = -416 + w1, y = 0, font_size = 18, color = 'white')
+	
+	x1u, y1u, w1u, h1u = reading_canvas['_1'].rect
+	
+	reading_canvas['IA2'] = Text(part2, x = -416 + w1 + w1u, y = 0, center = False, font_size = 18)
 	
 	x, y, w2, h2 = reading_canvas['IA2'].rect
 	
-	reading_canvas['IA3'] = Text(part3, x = -416 + w1 + w2, y = 0, center = False)
+	reading_canvas['_2'] = Text("i", center = False, x = -416 + w1 + w1u + w2, y = 0, color = 'white', font_size = 18)
+	
+	x2u, y2u, w2u, h2u = reading_canvas['_2'].rect
+	
+	reading_canvas['IA3'] = Text(part3, x = -416 + w1 + w1u + w2 + w2u, y = 0, center = False, font_size = 18)
 	
 	x, y, w3, h3 = reading_canvas['IA3'].rect
 	
-	reading_canvas['IA4'] = Text(part4, x = -416 + w1 + w2 + w3, y = 0, center = False)
+	reading_canvas['_3'] = Text("i", center = False, x = -416 + w1 + w1u + w2 + w2u + w3, y = 0, color = 'white', font_size = 18)
+	
+	x3u, y3u, w3u, h3u = reading_canvas['_3'].rect
+	
+	reading_canvas['IA4'] = Text(part4, x = -416 + w1 + w1u + w2 + w2u + w3 + w3u, y = 0, center = False, font_size = 18)
 	
 	x, y, w4, h4 = reading_canvas['IA4'].rect
 	
-	reading_canvas['IA5'] = Text(part5, x = -416 + w1 + w2 + w3 + w4, y = 0, center = False)
+	reading_canvas['_4'] = Text("i", center = False, x = -416 + w1 + w1u + w2 + w2u + w3 + w3u + w4, y = 0, color = 'white', font_size = 18)
+	
+	x4u, y4u, w4u, h4u = reading_canvas['_4'].rect
+	
+	reading_canvas['IA5'] = Text(part5, x = -416 + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u, y = 0, center = False, font_size = 18)
 	
 	x, y, w5, h5 = reading_canvas['IA5'].rect
 	
@@ -302,31 +330,32 @@ define inline_script read_sentence_sizes
 	# NB: We need to transform -416 to the set of coordinates of the eye-tracker! (i.e., 0,0 is the top left)
 	# therefore, -416 is this case becomes 96 (W is 1920, then 0,0 is 960, 960 -416 is 544
 	# and 0 becomes 540 (H is 1080/2 = 540)
+	# we want the area of interest to stop between the space between the two words, so we do that by adding _half_ of the white space
 	
 	start_IA_left = 544
 	
 	part1_left = start_IA_left 
-	part1_right = start_IA_left + w1
+	part1_right = start_IA_left + w1 + w1u/2
 	part1_top = 540 + h1
 	part1_bottom = 540 - h1
 	
-	part2_left = start_IA_left + w1
-	part2_right = start_IA_left + w1 + w2 
+	part2_left = start_IA_left + w1 + w1u/2
+	part2_right = start_IA_left + w1 + w1u + w2 + w2u/2
 	part2_top = 540 + h2
 	part2_bottom = 540 - h2
 	
-	part3_left = start_IA_left + w1 + w2
-	part3_right = start_IA_left + w1 + w2 + w3
+	part3_left = start_IA_left + w1 + w1u + w2 + w2u/2
+	part3_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2
 	part3_top = 540 + h3
 	part3_bottom = 540 - h3
 	
-	part4_left = start_IA_left + w1 + w2 + w3 
-	part4_right = start_IA_left + w1 + w2 + w3 + w4 
+	part4_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2 
+	part4_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
 	part4_top = 540 + h4
 	part4_bottom = 540 - h4
 	
-	part5_left = start_IA_left + w1 + w2 + w3 + w4 
-	part5_right = start_IA_left + w1 + w2 + w3 + w4 + w5
+	part5_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
+	part5_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4+ w4u + w5
 	part5_top = 540 + h5
 	part5_bottom = 540 - h5
 	
@@ -380,28 +409,52 @@ define inline_script read_sentence_sizes_2
 	___run__
 	# draw each part on canvas
 	# calculate a rectangle around it (for ROIs & to calculate the start of the next part of the sentence) 
+	# the problem with OS is that spaces are not counted for drawing rectangles, which is our method for defining the areas of interest
+	
+	# we separate each IA with an character (n) that we will present with the same colour as the background (thus effectively our participants won't see it')
+	# it is not an ideal solution, however (preferrably, you would run a reading experiment on PsychoPy)
+	
+	# note as well 
 	
 	# draw
 	
-	reading_canvas['IA1'] = Text(part1, center = False, x = -416, y = 0, html = True)
+	reading_canvas['IA1'] = Text(part1, center = False, x = -416, y = 0, html = True, font_size = 18)
 	
 	# calculate rectangle
 	
 	x, y, w1, h1 = reading_canvas['IA1'].rect
 	
-	reading_canvas['IA2'] = Text(part2, x = -416 + w1, y = 0, center = False)
+	#we need to draw one per word because we also need to say its starting point
+	
+	reading_canvas['_1'] = Text("i", center = False, x = -416 + w1, y = 0, font_size = 18, color = 'white')
+	
+	x1u, y1u, w1u, h1u = reading_canvas['_1'].rect
+	
+	reading_canvas['IA2'] = Text(part2, x = -416 + w1 + w1u, y = 0, center = False, font_size = 18)
 	
 	x, y, w2, h2 = reading_canvas['IA2'].rect
 	
-	reading_canvas['IA3'] = Text(part3, x = -416 + w1 + w2, y = 0, center = False)
+	reading_canvas['_2'] = Text("i", center = False, x = -416 + w1 + w1u + w2, y = 0, color = 'white', font_size = 18)
+	
+	x2u, y2u, w2u, h2u = reading_canvas['_2'].rect
+	
+	reading_canvas['IA3'] = Text(part3, x = -416 + w1 + w1u + w2 + w2u, y = 0, center = False, font_size = 18)
 	
 	x, y, w3, h3 = reading_canvas['IA3'].rect
 	
-	reading_canvas['IA4'] = Text(part4, x = -416 + w1 + w2 + w3, y = 0, center = False)
+	reading_canvas['_3'] = Text("i", center = False, x = -416 + w1 + w1u + w2 + w2u + w3, y = 0, color = 'white', font_size = 18)
+	
+	x3u, y3u, w3u, h3u = reading_canvas['_3'].rect
+	
+	reading_canvas['IA4'] = Text(part4, x = -416 + w1 + w1u + w2 + w2u + w3 + w3u, y = 0, center = False, font_size = 18)
 	
 	x, y, w4, h4 = reading_canvas['IA4'].rect
 	
-	reading_canvas['IA5'] = Text(part5, x = -416 + w1 + w2 + w3 + w4, y = 0, center = False)
+	reading_canvas['_4'] = Text("i", center = False, x = -416 + w1 + w1u + w2 + w2u + w3 + w3u + w4, y = 0, color = 'white', font_size = 18)
+	
+	x4u, y4u, w4u, h4u = reading_canvas['_4'].rect
+	
+	reading_canvas['IA5'] = Text(part5, x = -416 + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u, y = 0, center = False, font_size = 18)
 	
 	x, y, w5, h5 = reading_canvas['IA5'].rect
 	
@@ -413,31 +466,32 @@ define inline_script read_sentence_sizes_2
 	# NB: We need to transform -416 to the set of coordinates of the eye-tracker! (i.e., 0,0 is the top left)
 	# therefore, -416 is this case becomes 96 (W is 1920, then 0,0 is 960, 960 -416 is 544
 	# and 0 becomes 540 (H is 1080/2 = 540)
+	# we want the area of interest to stop between the space between the two words, so we do that by adding _half_ of the white space
 	
 	start_IA_left = 544
 	
 	part1_left = start_IA_left 
-	part1_right = start_IA_left + w1
+	part1_right = start_IA_left + w1 + w1u/2
 	part1_top = 540 + h1
 	part1_bottom = 540 - h1
 	
-	part2_left = start_IA_left + w1
-	part2_right = start_IA_left + w1 + w2 
+	part2_left = start_IA_left + w1 + w1u/2
+	part2_right = start_IA_left + w1 + w1u + w2 + w2u/2
 	part2_top = 540 + h2
 	part2_bottom = 540 - h2
 	
-	part3_left = start_IA_left + w1 + w2
-	part3_right = start_IA_left + w1 + w2 + w3
+	part3_left = start_IA_left + w1 + w1u + w2 + w2u/2
+	part3_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2
 	part3_top = 540 + h3
 	part3_bottom = 540 - h3
 	
-	part4_left = start_IA_left + w1 + w2 + w3 
-	part4_right = start_IA_left + w1 + w2 + w3 + w4 
+	part4_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u/2 
+	part4_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
 	part4_top = 540 + h4
 	part4_bottom = 540 - h4
 	
-	part5_left = start_IA_left + w1 + w2 + w3 + w4 
-	part5_right = start_IA_left + w1 + w2 + w3 + w4 + w5
+	part5_left = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4 + w4u/2
+	part5_right = start_IA_left + w1 + w1u + w2 + w2u + w3 + w3u + w4+ w4u + w5
 	part5_top = 540 + h5
 	part5_bottom = 540 - h5
 	
