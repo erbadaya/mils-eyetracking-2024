@@ -8,7 +8,7 @@
 <link href="session_2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="session_2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="session_2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.555">
+  <meta name="generator" content="quarto-1.4.538">
 
   <meta name="author" content="Badaya">
   <title>Visual World Paradigm</title>
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="session_2_files/libs/revealjs/dist/theme/quarto.css">
   <link href="session_2_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -441,7 +506,7 @@ Badaya
 <li>When &amp; where</li>
 <li>Operationalisation
 <ul>
-<li>Fixation counts, proportion on ROIs,…</li>
+<li>Fixation counts, proportion on ROIs,… (day 5)</li>
 </ul></li>
 <li>100-200 ms to launch a saccade (Matin et al., 1993)</li>
 </ul>
@@ -463,8 +528,11 @@ Badaya
 <h2>What are we interested in?</h2>
 <p>(Newer) Pupil size</p>
 <ul>
-<li>Ease of processing</li>
-<li>Challenges for experimental design</li>
+<li>Ease of processing (thus particularly relevant for auditory stimuli)</li>
+<li>Challenges for experimental design
+<ul>
+<li>See Winn et al.&nbsp;(2018)</li>
+</ul></li>
 </ul>
 </section>
 <section id="linking-hypothesis" class="slide level2">
@@ -486,7 +554,10 @@ Badaya
 <h2>Linking hypothesis</h2>
 <p>“Default”: Increases in fixation == increases in activation.</p>
 <ul>
-<li>Automatised routines; recognising a name triggers these routines, in turn, these routines trigger a saccade and thus fixations on objects (Tanenhaus et al., 2000).</li>
+<li>Automatised routines; recognising a name triggers these routines, in turn, these routines trigger a saccade and thus fixations on objects (Tanenhaus et al., 2000).
+<ul>
+<li>Easier to follow verbal instructions if you look at the objects you have to interact with.</li>
+</ul></li>
 </ul>
 </section>
 <section id="linking-hypothesis-2" class="slide level2">
@@ -500,7 +571,7 @@ Badaya
 <aside class="notes">
 <p>A much better discussion of this can be found in Magnuson (2019). I am only mentioning this because these linking hypothesis highlight different aspects we need to consider about the VWP and how we interpret fixations and saccades (e.g., whether they are language-mediated). Magnuson discusses models for those, as well as caveats for each.</p>
 <p>In fact, most papers will not discuss what hypothesis they are relying on (and usually, the assumption is the default one, by Tanenhaus et al., 2010)</p>
-<p>The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors.</p>
+<p>The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors. For example, in Allopenna et al., they found that there were effects driven by neighbourhood size: frequency of words, rhymes, etc.</p>
 <p>The second one suggests that visual information can partially mediate fixations. This is idea is much more developed in Huettig et al.&nbsp;(2011). The idea is that representations are activated prior to speech, you can think of it as a way of ‘priming’. They also discuss that by necessity, vision and language need to be connected as we need to move our eyes towards something, so we need to link the linguistic information to spatial information (e.g., where is said object). Visual display activates visual features which in turn activate phonological and semantic features associated to those. Similarly, speech activates these. The overlap leads to even more activation. Note that this kind of entails that you are constantly activating labels when you are looking at the world.</p>
 <p>The mental world goes back a bit to the first one, but instead of purely describing phonological input, it also considers the possibility that individuals are building a mental world (kind of like a mental representation of what is being said). They then explore scenes with this mental representation. This was developed by Altmann and Kamide, so it kind of makes sense they advocate for something like this: They need to accomodate for prediction.</p>
 <p>The final one has components of the other three. Visual and linguistic information interact, what leads what is following Huettig and McQueen e.g., timing and task. One components is deep interaction: when one type of infor alters the other, for example, no showing examples of garden-path when nothing in the display does not support such interpretation (visual information gets ahead of whatever linguistic information may come up, and alters it, as opposed to biasing it).</p>
@@ -522,7 +593,7 @@ Badaya
 <ul>
 <li>Role of instructions and presentation
 <ul>
-<li>Click on the red [target]</li>
+<li>Click on the red [target] (see Spivey et al., 2004)</li>
 </ul></li>
 <li>Role of preview window
 <ul>
@@ -538,6 +609,7 @@ Badaya
 </ul></li>
 </ul>
 <aside class="notes">
+<p>Indeed, Spivey et al.&nbsp;(2004) added a linguistic twist to a classic visual search paradigm, where time to respond varied with set size and target presence (there either was or was not a target item with a unique conjunction of color and orientation in the display). A spoken instruction (e.g., Is there a green vertical?) either preceded the visual display (auditory first) or was offset such that the first dimension (e.g., green) was aligned just after visual display onset (A/V concurrent). Participants were much less affected by set size (number of distractors) in the A/V concurrent condition. Spivey et al.&nbsp;proposed that in the concurrent condition, the timing of the spoken input allowed participants to serially filter the display, first identifying items matching in color and then in orientation; essentially, it allowed participants to conduct two single-feature searches. In the auditory first condition, having all of the details (both features) in advance relatively impaired performance because it promoted a conjunction (dual-feature) search (see also Chiu and Spivey 2014; Reali et al.&nbsp;2006). Thus, the nature of the parallel contingency is flexible and can flux with simple parameters like relative timing.</p>
 <p>Bottom-up and top-down has to do with mental world</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -909,7 +981,7 @@ Badaya
 <section id="exercise-rq-measures-of-interest" class="slide level2">
 <h2>Exercise: RQ &amp; measures of interest</h2>
 <ul>
-<li>Go [here] and type your idea!</li>
+<li>Go <a href="https://docs.google.com/document/d/1TdjmVutw2PpQvvS09bjW5HF8EeGFbMUE5y4Dof7BzjU/edit?usp=sharing">here</a> and type your idea!</li>
 </ul>
 <p>What would you be interested in? How would the design look like?</p>
 </section>
@@ -1013,15 +1085,12 @@ Badaya
 <img data-src="images/session_1/vwp_data.JPG" class="r-stretch"></section>
 <section id="exercise-huettig-mcqueen-2007" class="slide level2">
 <h2>Exercise: Huettig &amp; McQueen (2007)</h2>
-<p>Any questions on the paper?</p>
-<div class="fragment">
 <ol type="1">
 <li>What is the visual display? Why?</li>
 <li>How many samples in 20 ms bins?</li>
 <li>What is the time window of analysis? Why?</li>
 <li>What is the difference between Exp 1 and Exp 2?</li>
 </ol>
-</div>
 </section>
 <section id="exercise-huettig-mcqueen-2007-1" class="slide level2">
 <h2>Exercise: Huettig &amp; McQueen (2007)</h2>
@@ -1173,7 +1242,7 @@ Badaya
 </section>
 <section id="variations" class="slide level2">
 <h2>Variations</h2>
-<p>Preferential look paradigm (~ VWP for infants)</p>
+<p>Preferential look paradigm/Head-turn preference (~ VWP for infants)</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -1184,12 +1253,27 @@ Badaya
 </ul></li>
 <li>Messier data, fewer trials</li>
 </ul>
+<p>Example of a lab protocol: Stone &amp; Bosworth (2017)</p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/session_2/preferential_kids.png"></p>
 </div>
 </div>
 </section>
 <section id="variations-1" class="slide level2">
+<h2>Variations</h2>
+<p><strong>Do children’s and adults’ eye movements differ?</strong></p>
+<p>Scene viewing (Helo et al., 2014):</p>
+<ul>
+<li>Shorter fixations, bigger saccades as kids age (2, 4-6, 6-8, 8-10)</li>
+<li>Main effect of time (changes when viewing a scene)</li>
+<li>Different attentional modes?</li>
+</ul>
+<p>Biases for information?</p>
+<ul>
+<li>Social information, semantic information (see Linka et al., 2023)</li>
+</ul>
+</section>
+<section id="variations-2" class="slide level2">
 <h2>Variations</h2>
 <p>Language production.</p>
 <ul>
@@ -1200,7 +1284,7 @@ Badaya
 </ul></li>
 </ul>
 </section>
-<section id="variations-2" class="slide level2">
+<section id="variations-3" class="slide level2">
 <h2>Variations</h2>
 <ul>
 <li>The link between planning and eye movements is less direct.</li>
@@ -1217,7 +1301,17 @@ Badaya
 </ul></li>
 </ul>
 </section>
-<section id="variations-3" class="slide level2">
+<section id="variations-4" class="slide level2">
+<h2>Variations</h2>
+<p>Language production.</p>
+<ul>
+<li>A direct fixation is not necessary to identify an object or when producing a label.
+<ul>
+<li>Speakers tend to look at the next object they will name (about 1 s before articulation).</li>
+</ul></li>
+</ul>
+</section>
+<section id="variations-5" class="slide level2">
 <h2>Variations</h2>
 <p>Language production.</p>
 <div class="columns">
@@ -1237,18 +1331,35 @@ Badaya
 <p><br></p>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/session_3/example_pistono.JPG"></p>
+<p><img data-src="images/session_2/example_pistono.JPG"></p>
 <figcaption>Pistono &amp; Hartsuiker, 2023</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="variations-4" class="slide level2">
+<section id="variations-6" class="slide level2">
+<h2>Variations</h2>
+<p>Mouse-tracking e.g., King et al., 2019</p>
+<ul>
+<li>Same logic as eye-tracking: track x,y coordinates every X ms (bounded by refresh rate)</li>
+<li>Motor movements taken to reflect mental trajectories (Spivey et al., 2005).</li>
+</ul>
+</section>
+<section id="variations-7" class="slide level2">
 <h2>Variations</h2>
 <ul>
-<li>Virtual reality e.g., Eichert et al., 2018</li>
-<li>Mouse-tracking e.g., King et al., 2019</li>
+<li>Can be run online (less costly, e.g., large-scale experiments; wider audience e.g., clinical groups).</li>
+<li>Validity has been proven several times (see Loy (2017), chapter 7).</li>
+<li>Computer requirements.</li>
+<li>Participant instructions (e.g., emphasize they need to move the mouse, but not too much!).</li>
+<li>Eye movements are temporally sensitive, mouse movements are spatially sensitive.</li>
+<li>Motor movements are delayed in comparison to eye movements (Farmer et al., 2007).</li>
+</ul>
+</section>
+<section id="variations-8" class="slide level2">
+<h2>Variations</h2>
+<ul>
 <li>Web-cam tracking e.g., Slim &amp; Hartsuiker, 2023
 <ul>
 <li>ROIs size</li>
@@ -1311,15 +1422,29 @@ Badaya
 <li>Best trade-off
 <ul>
 <li>Adaptation to other trackers</li>
-<li>Coding/plugins</li>
+<li>Coding/plugins <strong>But</strong>:</li>
+<li>Less ideal for reading
+<ul>
+<li>PsychoPy (check MultiplEYE project too!)</li>
+</ul></li>
 </ul></li>
 </ul>
 </section>
 <section id="opensesame" class="slide level2">
 <h2>OpenSesame</h2>
+<p>We need to install <em>pylink</em> and <em>pygaze</em>.</p>
+<ul>
+<li>Open OpenSesame &amp; type in the terminal</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a></span>
+<span id="cb1-2"><a href=""></a>pip install pylink</span>
+<span id="cb1-3"><a href=""></a>pip install python<span class="sc">-</span>pygaze <span class="co"># for those using Windows, this is not necessary</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="opensesame-1" class="slide level2">
+<h2>OpenSesame</h2>
 
 <img data-src="images/session_2/OS_layout.PNG" class="r-stretch"></section>
-<section id="opensesame-1" class="slide level2">
+<section id="opensesame-2" class="slide level2">
 <h2>OpenSesame</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1332,11 +1457,11 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-2" class="slide level2">
+<section id="opensesame-3" class="slide level2">
 <h2>OpenSesame</h2>
 
 <img data-src="images/session_2/OS_beginning.PNG" class="r-stretch"></section>
-<section id="opensesame-3" class="slide level2">
+<section id="opensesame-4" class="slide level2">
 <h2>OpenSesame</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -1353,7 +1478,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-4" class="slide level2">
+<section id="opensesame-5" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Sequence</p>
 <ul>
@@ -1362,7 +1487,7 @@ Badaya
 </ul>
 
 <img data-src="images/session_2/OS_trialsequence.PNG" class="r-stretch"></section>
-<section id="opensesame-5" class="slide level2">
+<section id="opensesame-6" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Presentation plugins</p>
 <div class="columns">
@@ -1375,7 +1500,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-6" class="slide level2">
+<section id="opensesame-7" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Eye-tracking components</p>
 <p>What is the structure of an experiment?</p>
@@ -1388,7 +1513,7 @@ Badaya
 </ul>
 </div>
 </section>
-<section id="opensesame-7" class="slide level2">
+<section id="opensesame-8" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Calibration and validation</p>
 <div class="columns">
@@ -1405,7 +1530,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-8" class="slide level2">
+<section id="opensesame-9" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Drift correction</p>
 <div class="columns">
@@ -1422,7 +1547,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-9" class="slide level2">
+<section id="opensesame-10" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Start recording</p>
 <div class="columns">
@@ -1436,7 +1561,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-10" class="slide level2">
+<section id="opensesame-11" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Log variables</p>
 <div class="columns">
@@ -1453,7 +1578,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-11" class="slide level2">
+<section id="opensesame-12" class="slide level2">
 <h2>OpenSesame</h2>
 <p>Stop recording</p>
 <div class="columns">
@@ -1467,7 +1592,7 @@ Badaya
 </div>
 </div>
 </section>
-<section id="opensesame-12" class="slide level2">
+<section id="opensesame-13" class="slide level2">
 <h2>OpenSesame</h2>
 
 <img data-src="images/session_2/os_initiallook.PNG" class="r-stretch"></section></section>
@@ -1638,29 +1763,37 @@ Badaya
 <section id="references-1" class="slide level2 smaller">
 <h2>References</h2>
 <p>Grodner, D. J., Klein, N. M., Carbary, K. M., &amp; Tanenhaus, M. K. (2010). “Some,” and possibly all, scalar inferences are not delayed: Evidence for immediate pragmatic enrichment. <em>Cognition, 116</em>(1), 42-55.</p>
+<p>Helo, A., Pannasch, S., Sirri, L., &amp; Rämä, P. (2014). The maturation of eye movement behavior: Scene viewing characteristics in children and adults. <em>Vision research, 103</em>, 83-91.</p>
 <p>Huettig, F., &amp; McQueen, J. M. (2007). The tug of war between phonological, semantic and shape information in language-mediated visual search. <em>Journal of memory and language, 57</em>(4), 460-482.</p>
 <p>Huettig, F., Olivers, C. N., &amp; Hartsuiker, R. J. (2011). Looking, language, and memory: Bridging research from the visual world and visual search paradigms. <em>Acta psychologica, 137</em>(2), 138-150.</p>
 <p>Huettig, F., Rommers, J., &amp; Meyer, A. S. (2011). Using the visual world paradigm to study language processing: A review and critical evaluation. <em>Acta psychologica, 137</em>(2), 151-171.</p>
 <p>Ito, A., &amp; Knoeferle, P. (2023). Analysing data from the psycholinguistic visual-world paradigm: Comparison of different analysis methods. <em>Behavior Research Methods, 55</em>(7), 3461-3493.</p>
-<p>Ito, A., Pickering, M. J., &amp; Corley, M. (2018). Investigating the time-course of phonological prediction in native and non-native speakers of English: A visual world eye-tracking study. <em>Journal of Memory and Language, 98</em>, 1-11.</p>
 </section>
 <section id="references-2" class="slide level2 smaller">
 <h2>References</h2>
+<p>Ito, A., Pickering, M. J., &amp; Corley, M. (2018). Investigating the time-course of phonological prediction in native and non-native speakers of English: A visual world eye-tracking study. <em>Journal of Memory and Language, 98</em>, 1-11.</p>
 <p>King, J. P., Loy, J. E., &amp; Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. <em>Discourse Processes, 55</em>(2), 123-135.</p>
 <p>Knoeferle, P., Crocker, M. W., Scheepers, C., &amp; Pickering, M. J. (2005). The influence of the immediate visual context on incremental thematic role-assignment: Evidence from eye-movements in depicted events. <em>Cognition, 95</em>(1), 95-127.</p>
+<p>Linka, M., Sensoy, Ö., Karimpur, H., Schwarzer, G., &amp; de Haas, B. (2023). Free viewing biases for complex scenes in preschoolers and adults. <em>Scientific reports, 13</em>(1), 11803.</p>
 <p>Magnuson, J. S. (2019). Fixations in the visual world paradigm: where, when, why?. <em>Journal of Cultural Cognitive Science, 3</em>(2), 113-139.</p>
 <p>Matin, E., Shao, K. C., &amp; Boff, K. R. (1993). Saccadic overhead: Information-processing time with and without saccades. <em>Perception &amp; psychophysics, 53</em>, 372-380.</p>
 <p>Mirman, D., Yee, E., Blumstein, S. E., &amp; Magnuson, J. S. (2011). Theories of spoken word recognition deficits in aphasia: Evidence from eye-tracking and computational modeling. <em>Brain and language, 117</em>(2), 53-68.</p>
 <p>Papafragou, A., Hulbert, J., &amp; Trueswell, J. (2008). Does language guide event perception? Evidence from eye movements. <em>Cognition, 108</em>(1), 155-184.</p>
-<p>Pickering, M. J., &amp; Gambi, C. (2018). Predicting while comprehending language: A theory and review. <em>Psychological bulletin, 144</em>(10), 1002.</p>
 </section>
 <section id="references-3" class="slide level2 smaller">
 <h2>References</h2>
+<p>Pickering, M. J., &amp; Gambi, C. (2018). Predicting while comprehending language: A theory and review. <em>Psychological bulletin, 144</em>(10), 1002.</p>
 <p>Pistono, A., &amp; Hartsuiker, R. J. (2023). Can object identification difficulty be predicted based on disfluencies and eye-movements in connected speech?. <em>Plos one, 18</em>(3), e0281589.</p>
 <p>Rayner, K., &amp; Duffy, S. A. (1986). Lexical complexity and fixation times in reading: Effects of word frequency, verb complexity, and lexical ambiguity. <em>Memory &amp; Cognition, 14</em>(3), 191–201. https://doi.org/10.3758/BF03197692</p>
 <p>Slim, M. S., &amp; Hartsuiker, R. J. (2023). Moving visual world experiments online? A web-based replication of Dijkgraaf, Hartsuiker, and Duyck (2017) using PCIbex and WebGazer. js. <em>Behavior Research Methods, 55</em>(7), 3786-3804.</p>
+<p>Spivey, M. J., Richardson, D. C., &amp; Fitneva, S. A. (2004). Thinking outside the brain: Spatial indices to visual and linguistic information. In J. M. Henderson &amp; F. Ferreira (Eds.), <em>The interface of language, vision, and action: Eye movements and the visual world</em> (pp.&nbsp;161–189). New York, NY, US: Psychology Press.</p>
+<p>Stone, A., &amp; Bosworth, R. G. (2019). Exploring infant sensitivity to visual language using eye tracking and the preferential looking paradigm. <em>JoVE (Journal of Visualized Experiments)</em>, (147), e59581.</p>
 <p>Tanenhaus, M. K., Spivey-Knowlton, M. J., Eberhard, K. M., &amp; Sedivy, J. C. (1995). Integration of visual and linguistic information in spoken language comprehension. <em>Science, 268</em>(5217), 1632-1634.</p>
+</section>
+<section id="references-4" class="slide level2 smaller">
+<h2>References</h2>
 <p>Tanenhaus, M. K., Magnuson, J. S., Dahan, D., &amp; Chambers, C. (2000). Eye movements and lexical access in spoken-language comprehension: Evaluating a linking hypothesis between fixations and linguistic processing. <em>Journal of Psycholinguistic Research,29</em>, 557–580.</p>
+<p>Winn, M. B., Wendt, D., Koelewijn, T., &amp; Kuchinsky, S. E. (2018). Best practices and advice for using pupillometry to measure listening effort: An introduction for those who want to get started. <em>Trends in hearing, 22</em>, 2331216518800869.</p>
 <p>Van Bergen, G., &amp; Bosker, H. R. (2018). Linguistic expectation management in online discourse processing: An investigation of Dutch inderdaad’indeed’and eigenlijk’actually’. <em>Journal of Memory and Language, 103</em>, 191-209.</p>
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_mils.png" class="slide-logo"></p>
@@ -1957,24 +2090,6 @@ Badaya
         // clear code selection
         e.clearSelection();
       });
-        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-        var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp('/' + window.location.host + '/');
-        var isInternal = (href) => {
-            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-        }
-        // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-        for (var i=0; i<links.length; i++) {
-          const link = links[i];
-          if (!isInternal(link.href)) {
-            // undo the damage that might have been done by quarto-nav.js in the case of
-            // links that we want to consider external
-            if (link.dataset.originalHref !== undefined) {
-              link.href = link.dataset.originalHref;
-            }
-          }
-        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2011,11 +2126,7 @@ Badaya
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          if (note) {
-            return note.innerHTML;
-          } else {
-            return "";
-          }
+          return note.innerHTML;
         });
       }
       const findCites = (el) => {

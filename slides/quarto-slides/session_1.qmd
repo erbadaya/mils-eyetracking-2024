@@ -420,6 +420,11 @@ When our eye 'stops'.
 -   Direction: Forwards and backwards (i.e., regressions).
 -   Accuracy: Over- and under-shooting.
     -   In simple lab conditions, fall slightly short of the target, thus followed by a small corrective saccade.
+    
+:::notes
+
+glissades
+:::
 
 ## Saccades
 
@@ -660,6 +665,10 @@ Relationship between sampling error, sampling frequency, and [data points]{.fg s
     -   NB: More data points might not be the solution.
 
 Conventional: min. 500 Hz for picture viewing, min. 1000 Hz for reading.
+
+:::notes
+for onset - offset, more data points is not a solution, for duration it may increase power
+:::
 
 ## How do eye-trackers work?
 
@@ -1143,6 +1152,11 @@ x,y coordinates of gaze position are estimated from measuring the pupil and the 
 -   Interplay with kind of eye-tracker:
     -   Portable versus fixed.
 
+:::notes
+
+more points for small areas of interest, 
+:::
+
 ## Calibration
 
 -   Automatic versus manual
@@ -1223,13 +1237,15 @@ During trials
 
 ## Drift correction
 
-Every so often, re-check our measurement (accuracy): Drift correction.
+Every so often, re-check our measurement (accuracy): Drift correction/check.
 
 -   Commonly, each trial/every other trial/blocks
 -   Ensure accuracy
+  - But cf. what it actually does - move grid?
 -   Where the fixation cross appears depends on your task.
     -   At the position where you want high accuracy.
     -   Reading: e.g., beginning of the sentence/paragraph.
+- Trigger a calibration?
 
 ## Drift correction
 

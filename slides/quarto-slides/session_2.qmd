@@ -87,19 +87,21 @@ Different populations
 
 -   When & where
 -   Operationalisation
-    -   Fixation counts, proportion on ROIs,...
+    -   Fixation counts, proportion on ROIs,... (day 5)
 -   100-200 ms to launch a saccade (Matin et al., 1993)
 
 ::: notes
 The former much more common than the latter. Because we launch a saccade when we want to fixate on something, we take saccade latency as a measure too. When you consider fixations, you need to acount for the time it takes people to launch a saccade.
 :::
 
+
 ## What are we interested in?
 
 (Newer) Pupil size
 
--   Ease of processing
+-   Ease of processing (thus particularly relevant for auditory stimuli)
 -   Challenges for experimental design
+    - See Winn et al. (2018)
 
 ## Linking hypothesis
 
@@ -118,6 +120,7 @@ Visual World Parading = [Linguistic + non-linguistic information.]{.fg style="--
 "Default": Increases in fixation == increases in activation.
 
 -   Automatised routines; recognising a name triggers these routines, in turn, these routines trigger a saccade and thus fixations on objects (Tanenhaus et al., 2000).
+    - Easier to follow verbal instructions if you look at the objects you have to interact with. 
 
 ## Linking hypothesis
 
@@ -132,7 +135,7 @@ A much better discussion of this can be found in Magnuson (2019). I am only ment
 
 In fact, most papers will not discuss what hypothesis they are relying on (and usually, the assumption is the default one, by Tanenhaus et al., 2010)
 
-The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors.
+The first one has its origins in experiments showing that fixations are usualyl mediated by language-dependent factors. For example, in Allopenna et al., they found that there were effects driven by neighbourhood size: frequency of words, rhymes, etc.
 
 The second one suggests that visual information can partially mediate fixations. This is idea is much more developed in Huettig et al. (2011). The idea is that representations are activated prior to speech, you can think of it as a way of 'priming'. They also discuss that by necessity, vision and language need to be connected as we need to move our eyes towards something, so we need to link the linguistic information to spatial information (e.g., where is said object). Visual display activates visual features which in turn activate phonological and semantic features associated to those. Similarly, speech activates these. The overlap leads to even more activation. Note that this kind of entails that you are constantly activating labels when you are looking at the world.
 
@@ -146,7 +149,7 @@ The final one has components of the other three. Visual and linguistic informati
 But why do we care?
 
 -   Role of instructions and presentation
-    -   Click on the red \[target\]
+    -   Click on the red \[target\] (see Spivey et al., 2004)
 -   Role of preview window
     -   Activation of phonological and semantic information
 -   Bottom-up versus top-down effects
@@ -155,6 +158,9 @@ But why do we care?
     -   Lexical access v Sentence comprehension versus Discourse comprehension
 
 ::: notes
+
+Indeed, Spivey et al. (2004) added a linguistic twist to a classic visual search paradigm, where time to respond varied with set size and target presence (there either was or was not a target item with a unique conjunction of color and orientation in the display). A spoken instruction (e.g., Is there a green vertical?) either preceded the visual display (auditory first) or was offset such that the first dimension (e.g., green) was aligned just after visual display onset (A/V concurrent). Participants were much less affected by set size (number of distractors) in the A/V concurrent condition. Spivey et al. proposed that in the concurrent condition, the timing of the spoken input allowed participants to serially filter the display, first identifying items matching in color and then in orientation; essentially, it allowed participants to conduct two single-feature searches. In the auditory first condition, having all of the details (both features) in advance relatively impaired performance because it promoted a conjunction (dual-feature) search (see also Chiu and Spivey 2014; Reali et al. 2006). Thus, the nature of the parallel contingency is flexible and can flux with simple parameters like relative timing.
+
 Bottom-up and top-down has to do with mental world
 :::
 
@@ -441,7 +447,7 @@ Length?
 
 ## Exercise: RQ & measures of interest
 
--   Go \[here\] and type your idea!
+-   Go [here](https://docs.google.com/document/d/1TdjmVutw2PpQvvS09bjW5HF8EeGFbMUE5y4Dof7BzjU/edit?usp=sharing) and type your idea!
 
 What would you be interested in? How would the design look like?
 
@@ -534,10 +540,6 @@ Commonly, plots.
 ![](images/session_1/vwp_data.JPG)
 
 ## Exercise: Huettig & McQueen (2007)
-
-Any questions on the paper?
-
-. . .
 
 1.  What is the visual display? Why?
 2.  How many samples in 20 ms bins?
@@ -682,7 +684,7 @@ Audio properties
 
 ## Variations
 
-Preferential look paradigm (\~ VWP for infants)
+Preferential look paradigm/Head-turn preference (\~ VWP for infants)
 
 ::: columns
 ::: {.column width="50%"}
@@ -690,12 +692,29 @@ Preferential look paradigm (\~ VWP for infants)
 -   Stimuli presentation
     -   What is discourse-old versus difficult.
 -   Messier data, fewer trials
+
+Example of a lab protocol: Stone & Bosworth (2017)
+
 :::
 
 ::: {.column width="50%"}
 ![](images/session_2/preferential_kids.png)
 :::
 :::
+
+## Variations
+
+**Do children's  and adults' eye movements differ?**
+
+Scene viewing (Helo et al., 2014): 
+
+  - Shorter fixations, bigger saccades as kids age (2, 4-6, 6-8, 8-10)
+  - Main effect of time (changes when viewing a scene)
+  - Different attentional modes?
+
+Biases for information?
+
+- Social information, semantic information (see Linka et al., 2023)
 
 ## Variations
 
@@ -720,6 +739,14 @@ Language production.
 
 Language production.
 
+- A direct fixation is not necessary to identify an object or when producing a label.
+  - Speakers tend to look at the next object they will name (about 1 s before articulation).
+
+
+## Variations
+
+Language production.
+
 ::: columns
 ::: {.column width="50%"}
 -   Only images.
@@ -732,14 +759,28 @@ Language production.
 ::: {.column width="50%"}
 <br>
 
-![Pistono & Hartsuiker, 2023](images/session_3/example_pistono.JPG)
+![Pistono & Hartsuiker, 2023](images/session_2/example_pistono.JPG)
 :::
 :::
 
 ## Variations
 
--   Virtual reality e.g., Eichert et al., 2018
--   Mouse-tracking e.g., King et al., 2019
+Mouse-tracking e.g., King et al., 2019
+
+- Same logic as eye-tracking: track x,y coordinates every X ms (bounded by refresh rate)
+- Motor movements taken to reflect mental trajectories (Spivey et al., 2005).
+
+## Variations
+
+- Can be run online (less costly, e.g., large-scale experiments; wider audience e.g., clinical groups).
+- Validity has been proven several times (see Loy (2017), chapter 7).
+- Computer requirements.
+- Participant instructions (e.g., emphasize they need to move the mouse, but not too much!).
+- Eye movements are temporally sensitive, mouse movements are spatially sensitive.
+- Motor movements are delayed in comparison to eye movements (Farmer et al., 2007).
+
+## Variations
+
 -   Web-cam tracking e.g., Slim & Hartsuiker, 2023
     -   ROIs size
     -   Display size
@@ -796,22 +837,20 @@ In this course: OpenSesame
 
 -   Best trade-off
     -   Adaptation to other trackers
-    -   Coding/plugins
-**But**:
-    - Less ideal for reading
-      - PsychoPy (check MultiplEYE project too!)
+    -   Coding/plugins **But**:
+    -   Less ideal for reading
+        -   PsychoPy (check MultiplEYE project too!)
 
 ## OpenSesame
 
-We need to install _pylink_ and _pygaze_.
+We need to install *pylink* and *pygaze*.
 
-- Open OpenSesame & type in the terminal
+-   Open OpenSesame & type in the terminal
 
-```r
+``` r
 
 pip install pylink
 pip install python-pygaze # for those using Windows, this is not necessary
-
 ```
 
 ## OpenSesame
@@ -1136,6 +1175,8 @@ Eichert, N., Peeters, D., & Hagoort, P. (2018). Language-driven anticipatory eye
 
 Grodner, D. J., Klein, N. M., Carbary, K. M., & Tanenhaus, M. K. (2010). "Some," and possibly all, scalar inferences are not delayed: Evidence for immediate pragmatic enrichment. *Cognition, 116*(1), 42-55.
 
+Helo, A., Pannasch, S., Sirri, L., & Rämä, P. (2014). The maturation of eye movement behavior: Scene viewing characteristics in children and adults. *Vision research, 103*, 83-91.
+
 Huettig, F., & McQueen, J. M. (2007). The tug of war between phonological, semantic and shape information in language-mediated visual search. *Journal of memory and language, 57*(4), 460-482.
 
 Huettig, F., Olivers, C. N., & Hartsuiker, R. J. (2011). Looking, language, and memory: Bridging research from the visual world and visual search paradigms. *Acta psychologica, 137*(2), 138-150.
@@ -1144,13 +1185,16 @@ Huettig, F., Rommers, J., & Meyer, A. S. (2011). Using the visual world paradigm
 
 Ito, A., & Knoeferle, P. (2023). Analysing data from the psycholinguistic visual-world paradigm: Comparison of different analysis methods. *Behavior Research Methods, 55*(7), 3461-3493.
 
+## References {.smaller}
+
 Ito, A., Pickering, M. J., & Corley, M. (2018). Investigating the time-course of phonological prediction in native and non-native speakers of English: A visual world eye-tracking study. *Journal of Memory and Language, 98*, 1-11.
 
-## References {.smaller}
 
 King, J. P., Loy, J. E., & Corley, M. (2018). Contextual effects on online pragmatic inferences of deception. *Discourse Processes, 55*(2), 123-135.
 
 Knoeferle, P., Crocker, M. W., Scheepers, C., & Pickering, M. J. (2005). The influence of the immediate visual context on incremental thematic role-assignment: Evidence from eye-movements in depicted events. *Cognition, 95*(1), 95-127.
+
+Linka, M., Sensoy, Ö., Karimpur, H., Schwarzer, G., & de Haas, B. (2023). Free viewing biases for complex scenes in preschoolers and adults. *Scientific reports, 13*(1), 11803.
 
 Magnuson, J. S. (2019). Fixations in the visual world paradigm: where, when, why?. *Journal of Cultural Cognitive Science, 3*(2), 113-139.
 
@@ -1160,9 +1204,9 @@ Mirman, D., Yee, E., Blumstein, S. E., & Magnuson, J. S. (2011). Theories of spo
 
 Papafragou, A., Hulbert, J., & Trueswell, J. (2008). Does language guide event perception? Evidence from eye movements. *Cognition, 108*(1), 155-184.
 
-Pickering, M. J., & Gambi, C. (2018). Predicting while comprehending language: A theory and review. *Psychological bulletin, 144*(10), 1002.
-
 ## References {.smaller}
+
+Pickering, M. J., & Gambi, C. (2018). Predicting while comprehending language: A theory and review. *Psychological bulletin, 144*(10), 1002.
 
 Pistono, A., & Hartsuiker, R. J. (2023). Can object identification difficulty be predicted based on disfluencies and eye-movements in connected speech?. *Plos one, 18*(3), e0281589.
 
@@ -1170,8 +1214,16 @@ Rayner, K., & Duffy, S. A. (1986). Lexical complexity and fixation times in read
 
 Slim, M. S., & Hartsuiker, R. J. (2023). Moving visual world experiments online? A web-based replication of Dijkgraaf, Hartsuiker, and Duyck (2017) using PCIbex and WebGazer. js. *Behavior Research Methods, 55*(7), 3786-3804.
 
+Spivey, M. J., Richardson, D. C., & Fitneva, S. A. (2004). Thinking outside the brain: Spatial indices to visual and linguistic information. In J. M. Henderson & F. Ferreira (Eds.), *The interface of language, vision, and action: Eye movements and the visual world* (pp. 161–189). New York, NY, US: Psychology Press.
+
+Stone, A., & Bosworth, R. G. (2019). Exploring infant sensitivity to visual language using eye tracking and the preferential looking paradigm. *JoVE (Journal of Visualized Experiments)*, (147), e59581.
+
 Tanenhaus, M. K., Spivey-Knowlton, M. J., Eberhard, K. M., & Sedivy, J. C. (1995). Integration of visual and linguistic information in spoken language comprehension. *Science, 268*(5217), 1632-1634.
 
+## References {.smaller}
+
 Tanenhaus, M. K., Magnuson, J. S., Dahan, D., & Chambers, C. (2000). Eye movements and lexical access in spoken-language comprehension: Evaluating a linking hypothesis between fixations and linguistic processing. *Journal of Psycholinguistic Research,29*, 557--580.
+
+Winn, M. B., Wendt, D., Koelewijn, T., & Kuchinsky, S. E. (2018). Best practices and advice for using pupillometry to measure listening effort: An introduction for those who want to get started. *Trends in hearing, 22*, 2331216518800869.
 
 Van Bergen, G., & Bosker, H. R. (2018). Linguistic expectation management in online discourse processing: An investigation of Dutch inderdaad'indeed'and eigenlijk'actually'. *Journal of Memory and Language, 103*, 191-209.
