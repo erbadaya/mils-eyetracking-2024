@@ -21,17 +21,25 @@ format:
 editor: visual
 ---
 
+::: {style="text-align: center"}
+
 How is everyone doing today? Any questions from yesterday?
+
+:::
 
 ## Plan of today
 
 Visual World Paradigm
 
 1.  History
-2.  Visual World Paradigm
-3.  Confounds of the Visual World Paradigm
-4.  Uses
-5.  Pros & cons
+2. Measures & linking hypotheses
+2.  Visual World Paradigm   
+2.1. Elements
+2.2. Task
+2.3. Structure
+3.  Analysis & results
+5.  Confounds
+6. Variations
 
 # The Visual World Paradigm
 
@@ -787,7 +795,9 @@ Mouse-tracking e.g., King et al., 2019
 
 ------------------------------------------------------------------------
 
+::: {style="text-align: center"}
 Let's take a break!
+:::
 
 # Building an eye-tracking experiment
 

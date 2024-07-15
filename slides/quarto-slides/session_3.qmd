@@ -838,7 +838,6 @@ Font and space
 
 ![](images/session_3/OS/font.JPG)
 
-
 ## Building a reading experiment
 
 The loop

@@ -87,10 +87,10 @@ Requirements
 ## Overview of the course
 
 | Date  |              Content              |                 Materials                  |
-|:----------------:|:----------------------:|:-----------------------------:|
+|:----------------:|:----------------------:|:----------------------------:|
 | Day 1 |   Introduction to eye-tracking    |                    None                    |
 | Day 2 |       Visual World Paradigm       | Experimental design .pdf, RR_1, OpenSesame |
-| Day 3 |              Reading              |                    RR_2, OpenSesame                    |
+| Day 3 |              Reading              |              RR_2, OpenSesame              |
 | Day 4 | Lab session & Data pre-processing |            DataViewer, datasets            |
 | Day 5 |  Data visualization and analysis  |                R, datasets                 |
 
@@ -420,9 +420,8 @@ When our eye 'stops'.
 -   Direction: Forwards and backwards (i.e., regressions).
 -   Accuracy: Over- and under-shooting.
     -   In simple lab conditions, fall slightly short of the target, thus followed by a small corrective saccade.
-    
-:::notes
 
+::: notes
 glissades
 :::
 
@@ -666,7 +665,7 @@ Relationship between sampling error, sampling frequency, and [data points]{.fg s
 
 Conventional: min. 500 Hz for picture viewing, min. 1000 Hz for reading.
 
-:::notes
+::: notes
 for onset - offset, more data points is not a solution, for duration it may increase power
 :::
 
@@ -1152,9 +1151,8 @@ x,y coordinates of gaze position are estimated from measuring the pupil and the 
 -   Interplay with kind of eye-tracker:
     -   Portable versus fixed.
 
-:::notes
-
-more points for small areas of interest, 
+::: notes
+more points for small areas of interest,
 :::
 
 ## Calibration
@@ -1241,11 +1239,11 @@ Every so often, re-check our measurement (accuracy): Drift correction/check.
 
 -   Commonly, each trial/every other trial/blocks
 -   Ensure accuracy
-  - But cf. what it actually does - move grid?
+-   But cf. what it actually does - move grid?
 -   Where the fixation cross appears depends on your task.
     -   At the position where you want high accuracy.
     -   Reading: e.g., beginning of the sentence/paragraph.
-- Trigger a calibration?
+-   Trigger a calibration?
 
 ## Drift correction
 
