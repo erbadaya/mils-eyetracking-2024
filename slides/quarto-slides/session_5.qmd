@@ -88,6 +88,56 @@ head(etdat)
 
 ```
 
+```{r echo=FALSE}
+
+etdat <- etdat %>% filter(IN_ANALYSIS == "YES")
+# trials removal
+
+etdat <- etdat %>% filter(trialtype == 1) %>% filter(clicked != "none")
+
+# keep variables of interest
+
+etdat <- select(etdat, c("subject", "trial", "sample_count", "LEFTC1", "LEFTC2", "C1", "C2", "LEFTP1", "LEFTP2", "P1", "P2", "trialtype", "item", "t_pos", "nativeness", "fluency", "current_bin"))
+
+etdat$exp <- "exp1"
+
+
+# create DV & code variables
+
+etdat <- etdat %>%
+  mutate(
+    Cfix_R = ifelse(subject == "sub_193", LEFTC2, C2),
+    Cfix_L = ifelse(subject == "sub_193", LEFTC1, C1),
+    Pfix_R = ifelse(subject == "sub_193", LEFTP2, P2),
+    Pfix_L = ifelse(subject == "sub_193", LEFTP1, P1),
+    allSamples = sample_count
+  ) %>%
+  mutate(
+    subject = as.factor(subject),
+    trial = as.factor(trial),
+    fluency = factor(fluency, levels = c(0,1), labels = c("Fluent", "Disfluent")),
+    nativeness = factor(nativeness, levels = c(0, 1), labels = c("Native", "Non-native")),
+    time = current_bin *20,
+    exp = as.factor(exp),
+    ref_Cfix = ifelse(t_pos == "(-256. 0)", Cfix_L, Cfix_R),
+    dis_Cfix = ifelse(t_pos == "(-256. 0)" , Cfix_R, Cfix_L),
+    ref_Pfix = ifelse(t_pos == "(-256. 0)", Pfix_L, Pfix_R),
+    dis_Pfix = ifelse(t_pos == "(-256. 0)" , Pfix_R, Pfix_L),
+    item = as.factor(item)
+  ) %>%
+  select(., -c(LEFTC1, LEFTC2, C1, C2, t_pos, Cfix_R, Cfix_L))
+
+etdat <- etdat %>%
+  mutate(
+    eref = log(ref_Cfix + .5 / (allSamples - ref_Cfix + .5)),
+    edis = log(dis_Cfix + .5 / (allSamples - dis_Cfix + .5))
+  ) %>%
+  mutate(
+    dis_adv = edis - eref
+  )
+
+```
+
 ## Data wrangling
 
 Identify your variables of interest & ensure they are the appropriate class
@@ -96,23 +146,11 @@ Identify your variables of interest & ensure they are the appropriate class
 
 # for VWP
 
-etdat <- select(etdat, c(RECORDING_SESSION_LABEL, TRIAL_LABEL, TRIAL_INDEX, BIN_INDEX, IA_1_ID, IA_2_ID, IA_0_ID, `RIGHT_IA_1_SAMPLE_COUNT_%`, `RIGHT_IA_2_SAMPLE_COUNT_%`, `RIGHT_IA_0_SAMPLE_COUNT_%`, clicked, d_pos, dist, feedback, fluency, honesty, nativeness, rt, t_pos, targ, trialtype))
+etdat <- select(etdat, c(RECORDING_SESSION_LABEL, TRIAL_LABEL, TRIAL_INDEX, BIN_INDEX, IA_1_ID, IA_2_ID, IA_0_ID, `RIGHT_IA_1_SAMPLE_COUNT`, `RIGHT_IA_2_SAMPLE_COUNT`, `RIGHT_IA_0_SAMPLE_COUNT`,`RIGHT_IA_1_SAMPLE_COUNT_%`, `RIGHT_IA_2_SAMPLE_COUNT_%`, `RIGHT_IA_0_SAMPLE_COUNT_%`, clicked, d_pos, dist, feedback, fluency, honesty, nativeness, rt, t_pos, targ, trialtype))
 
 # identify they are the relevant class
 
 unlist(lapply(etdat, class))
-```
-
-```{r}
-
-#| echo: true
-
-etdat <- select(etdat, c(RECORDING_SESSION_LABEL, TRIAL_LABEL, TRIAL_INDEX, BIN_INDEX, IA_1_ID, IA_2_ID, IA_0_ID, `RIGHT_IA_1_SAMPLE_COUNT_%`, `RIGHT_IA_2_SAMPLE_COUNT_%`, `RIGHT_IA_0_SAMPLE_COUNT_%`, clicked, d_pos, dist, feedback, fluency, honesty, nativeness, rt, t_pos, targ, trialtype))
-
-# identify they are the relevant class
-
-unlist(lapply(etdat, class))
-
 ```
 
 ## Data wrangling {.smaller}
@@ -120,19 +158,19 @@ unlist(lapply(etdat, class))
 Recap of variables of interest (besides your experimental variables and session variables, for the analysis taught in this course)
 
 ::: columns
-::: {.column width="50%"}
+::: {.column width="60%"}
 Visual World Paradigm
 
 -   BIN_INDEX
 -   BIN_SAMPLE_COUNT, the number of samples per bin (cf. session 4)
 -   IA_X_ID, where X is the number of each interest area in your experiment.
--   RIGHT_IA_X_SAMPLE_COUNT, , where X is the number of the interest area (NB LEFT/RIGHT), counts (cf. session 4).
+-   RIGHT_IA_X_SAMPLE_COUNT, where X is the number of the interest area (NB LEFT/RIGHT), counts (cf. session 4).
 -   RIGHT_IA_X_SAMPLE_COUNT\_%, where X is the number of the interest area (NB LEFT/RIGHT), proportions (cf. session 4).
 -   RIGHT_EXCLUDED_SAMPLE_COUNT, number of samples excluded from counts (NB LEFT/RIGHT; cf. session 4).
 -   RIGHT_BLINK_SAMPLE_COUNT (NB LEFT/RIGHT)
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 Reading
 
 -   IA_ID
@@ -399,9 +437,9 @@ This does not mean you have to add them.
 library(tidyverse)
 library(patchwork)
 
-etdat <- read_csv('et_experimentdata.csv')
+etdat_plot <- read_csv('et_experimentdataplot.csv')
 
-etdat <- etdat %>%
+etdat_plot <- etdat_plot %>%
   select(., c(RECORDING_SESSION_LABEL, TRIAL_INDEX, BIN_INDEX, AVERAGE_IA_1_SAMPLE_COUNT, `AVERAGE_IA_1_SAMPLE_COUNT_%`, BIN_SAMPLE_COUNT, AVERAGE_IA_2_SAMPLE_COUNT, `AVERAGE_IA_2_SAMPLE_COUNT_%`, d_pos)) %>%
   rename(., subject = RECORDING_SESSION_LABEL) %>%
   mutate(
@@ -414,14 +452,14 @@ etdat <- etdat %>%
 
 # visualization
 
-dist_prop <- etdat %>%
+dist_prop <- etdat_plot %>%
   ggplot(., aes(x = ref_prop)) + geom_density() + labs(
     title = "Density plot of proportion of fixations on the target",
     x = "Proportion of fixations",
     y = "Density"
   ) + theme_bw()
   
-dist_elog <- etdat %>%
+dist_elog <- etdat_plot %>%
   ggplot(., aes(x = ref_elog)) + geom_density() + labs(
     title = "Density plot of empirical logit fixations on the target",
     x = "Empirical logit of fixations",
@@ -455,6 +493,12 @@ etdat <-  etdat %>%
 
 ## Visual World Paradigm
 
+In jamovi
+
+![](images/session_5/trans1.png)![](images/session_5/trans2.JPG)
+
+## Visual World Paradigm
+
 Note that when computing empirical logits you may also subtract blinks and off-screen fixations.
 
 -   No consensus
@@ -471,7 +515,7 @@ Interest: Time window.
 
 -   Do fixations increase/decrease over time?
 -   When does this increase happen?
--   Linear v Non-linear analysis
+-   Linear v "Non-linear" analysis
 
 ## Visual World Paradigm
 
@@ -553,11 +597,23 @@ Sometimes our questions revolve around specific times, or rate of increase/decre
 -   Growth Curve Analysis
 -   Divergent Point Analysis
 -   Generalised Additive Mixed Models
--   Cluster Analysis
+-   Cluster Permutation Analysis
 
 ## Visual World Paradigm
 
 ![](images/session_5/9.png){fig-align="center"}
+
+## VWP: Example GAMMs
+
+![](images/session_5/example_gamms.png){fig-align="center"}
+
+## VWP: Example DPA
+
+![](images/session_5/fig3A_exp1elog.png){fig-align="center"}
+
+## VWP: Example DPA
+
+![](images/session_5/fig4_distribution_onsets.png){fig-align="center"}
 
 ## Reading
 
@@ -725,6 +781,32 @@ In jamovi, for one area and one measure at a time
 # Wrap up
 
 ## Wrap up
+
+-   Visualizations are somehow field-conventional.
+-   Analysis requires you to understand your data.
+    -   Experimental design & distribution (e.g., skewness of RTs)
+-   When running experiments, it is important to understand if what we have observed is truly attributable to our manipulation or just chance.
+-   Depending on what you ask yourself, you may be interested in modelling linear or non-linear trends.
+-   Commonly, we account for clusters within eye-tracking data with (G)LMM for participants and items.
+
+## Exercise
+
+Different kind of exercise this time!
+
+-   Organise in groups of 5.
+    -   Each group decides a RQ (with the underlying theory behind)\*.
+    -   Design the experiment.
+    -   Sample rate?
+    -   Areas of Interest?
+    -   Any additional measurements after the experiment? Assume that the hypothesis is met and show the results.
+
+\*Doesn't have to be real. You can definitely come up with something just for the fun of it.
+
+## Wrap up of the course
+
+Throughout this course, we have aimed to explain what is eye-tracking, and how it looks like in language research. We have focused on two paradigms, with the goal of explaining what is their underlying logic so you can easily transfer it to your own questions within your field. We have also focused on giving you a hands-down approach to eye-tracking, so that you feel confident about your abilities after this course!
+
+Thoughts? You will send be a link on Ufora to give feedback :)
 
 ::: notes
 anything to say here?
